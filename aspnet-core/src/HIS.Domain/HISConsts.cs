@@ -5,6 +5,9 @@
 /// </summary>
 public static class HISConsts
 {
+    /// <summary>
+    /// Default pass phrase for encryption.
+    /// </summary>
     public const string DbTablePrefix = "App";
 
     public const string DbSchema = null;
