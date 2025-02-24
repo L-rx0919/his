@@ -4,13 +4,14 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <RootNamespace>HIS</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HIS.Domain\HIS.Domain.csproj" />
     <ProjectReference Include="..\HIS.Application.Contracts\HIS.Application.Contracts.csproj" />
+    <ProjectReference Include="..\HIS.EntityFrameworkCore\HIS.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>
