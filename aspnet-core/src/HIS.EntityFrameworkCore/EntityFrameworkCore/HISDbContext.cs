@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HIS.SettlementSystem;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -14,38 +15,70 @@ namespace HIS.EntityFrameworkCore;
 [ConnectionStringName("Default")]
 public class HISDbContext :
     AbpDbContext<HISDbContext>
-
 {
-    /* Add DbSet properties for your Aggregate Roots / Entities here. */
 
-    #region Entities from the modules
 
-    /* Notice: We only implemented IIdentityDbContext and ITenantManagementDbContext
-     * and replaced them for this DbContext. This allows you to perform JOIN
-     * queries for the entities of these modules over the repositories easily. You
-     * typically don't need that for other modules. But, if you need, you can
-     * implement the DbContext interface of the needed module and use ReplaceDbContext
-     * attribute just like IIdentityDbContext and ITenantManagementDbContext.
-     *
-     * More info: Replacing a DbContext of a module ensures that the related module
-     * uses this DbContext on runtime. Otherwise, it will use its own DbContext class.
-     */
 
-    //Identity
-    public DbSet<IdentityUser> Users { get; set; }
-    public DbSet<IdentityRole> Roles { get; set; }
-    public DbSet<IdentityClaimType> ClaimTypes { get; set; }
-    public DbSet<OrganizationUnit> OrganizationUnits { get; set; }
-    public DbSet<IdentitySecurityLog> SecurityLogs { get; set; }
-    public DbSet<IdentityLinkUser> LinkUsers { get; set; }
-    public DbSet<IdentityUserDelegation> UserDelegations { get; set; }
-    public DbSet<IdentitySession> Sessions { get; set; }
-    // Tenant Management
-    public DbSet<Tenant> Tenants { get; set; }
-    public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
-
-    #endregion
-
+    /// <summary>
+    /// 科室
+    /// </summary>
+    public DbSet<Department> Departments { get; set; }
+    /// <summary>
+    /// 费用折扣
+    /// </summary>
+    public DbSet<Discount> Discounts { get; set; }
+    /// <summary>
+    /// 医生
+    /// </summary>
+    public DbSet<Doctor> Doctors { get; set; }
+    /// <summary>
+    /// 费用类别
+    /// </summary>
+    public DbSet<Fee_Category> Fee_Categorys { get; set; }
+    /// <summary>
+    /// 结算明细
+    /// </summary>
+    public DbSet<Fee_Detail> Fee_Details { get; set; }
+    /// <summary>
+    /// 退款记录
+    /// </summary>
+    public DbSet<Refund_Record> Refund_Records { get; set; }
+    /// <summary>
+    /// 票据
+    /// </summary>
+    public DbSet<Receipt> Receipts { get; set; }
+    /// <summary>
+    /// 支付方式
+    /// </summary>
+    public DbSet<Payment_Method> Payment_Methods { get; set; }
+    /// <summary>
+    /// 住院账单
+    /// </summary>
+    public DbSet<Hospital_Bill> Hospital_Bills { get; set; }
+    /// <summary>
+    /// 医保记录
+    /// </summary>
+    public DbSet<Insurance_Record> Insurance_Records { get; set; }
+    /// <summary>
+    /// 支付记录
+    /// </summary>
+    public DbSet<Payment_Record> Payment_Records { get; set; }
+    /// <summary>
+    /// 费用项目
+    /// </summary>
+    public DbSet<FeeItem> FeeItems { get; set; }
+    /// <summary>
+    /// 结算记录
+    /// </summary>
+    public DbSet<Settlement_Record> Settlement_Records { get; set; }
+    /// <summary>
+    /// 患者
+    /// </summary>
+    public DbSet<Patient> Patients { get; set; }
+    /// <summary>
+    /// 住院记录
+    /// </summary>
+    public DbSet<InpatientRecord> InpatientRecords { get; set; }
     public HISDbContext(DbContextOptions<HISDbContext> options)
         : base(options)
     {
@@ -56,19 +89,12 @@ public class HISDbContext :
     {
         base.OnModelCreating(builder);
 
-        /* Include modules to your migration db context */
+
 
         builder.ConfigureSettingManagement();
         builder.ConfigureBackgroundJobs();
         builder.ConfigureAuditLogging();
-   
-        /* Configure your own tables/entities inside here */
 
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(HISConsts.DbTablePrefix + "YourEntities", HISConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+
     }
 }
