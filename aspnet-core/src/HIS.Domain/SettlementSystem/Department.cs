@@ -13,7 +13,7 @@ namespace HIS.SettlementSystem
     public class Department
     {
         /// <summary>
-        /// 科室ID
+        /// 科室IDsssssssss
         /// </summary>
         [Key]
         public int department_id { get; set; }
