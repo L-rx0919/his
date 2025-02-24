@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HIS.SettlementSystem
 {
     /// <summary>
-    /// 
+    /// 收费项目表
     /// </summary>
   public  class FeeItem
     {

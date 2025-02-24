@@ -17,7 +17,10 @@ public class EntityFrameworkCoreHISDbSchemaMigrator
     {
         _serviceProvider = serviceProvider;
     }
-
+    /// <summary>
+    /// 迁移数据库
+    /// </summary>
+    /// <returns></returns>
     public async Task MigrateAsync()
     {
         /* We intentionally resolve the HISDbContext

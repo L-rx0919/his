@@ -20,7 +20,7 @@ namespace HIS.SettlementSystem
         public int patient_id { get; set; }
         /// <summary>
         ///     住院记录ID
-        /// </summary>
+        /// </summa
         public int record_id { get; set; }
           /// <summary>
         ///     总金额

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HIS.SettlementSystem
 {
     /// <summary>
-    /// 科室   公司电话卡还款稍等哈斯卡哈打卡
+    /// 科室   
     /// </summary>
     public class Department
     {
