@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HIS
-{
+{/// <summary>
+/// API返回结果
+/// </summary>
     public class APIResult
     {
         /// <summary>
