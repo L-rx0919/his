@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HIS.SettlementSystem
 {
     /// <summary>
-    /// 医生
+    /// 医生表
     /// </summary>
    public class Doctor
     {
