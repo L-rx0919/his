@@ -1,4 +1,5 @@
-﻿using HIS.SettlementSystem;
+﻿using HIS.RBAC;
+using HIS.SettlementSystem;
 using HIS.System_Administration;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
@@ -100,6 +101,28 @@ public class HISDbContext :
     /// 发票配置表
     /// </summary>
     public DbSet<InvoiceConfiguration> InvoiceConfigurations { get; set; }
+
+    /// <summary>
+    /// 权限表
+    /// </summary>
+    public DbSet<Permissions> Permissionss { get; set; }
+    /// <summary>
+    /// 角色表
+    /// </summary>
+    public DbSet<Role> Roles { get; set; }
+    /// <summary>
+    /// 角色权限表
+    /// </summary>
+    public DbSet<RolePermissions> RolePermissionss { get; set; }
+    /// <summary>
+    /// 用户表
+    /// </summary>
+    public DbSet<User> Users { get; set; }
+    /// <summary>
+    /// 用户角色表
+    /// </summary>
+    public DbSet<UserRole> UserRole { get; set; }
+
 
     public HISDbContext(DbContextOptions<HISDbContext> options)
         : base(options)
