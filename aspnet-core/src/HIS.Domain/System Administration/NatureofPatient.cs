@@ -4,19 +4,16 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.System_Administration
 {
     /// <summary>
     /// 病人性质
     /// </summary>
-    public class NatureofPatient
+    public class NatureofPatient:FullAuditedEntity<Guid>
     {
-        /// <summary>
-        /// 病人性质ID
-        /// </summary>
-        [Key]
-       public string NatureofPatientID { get; set; }
+      
         /// <summary>
         /// 病人性质名称
         /// </summary>

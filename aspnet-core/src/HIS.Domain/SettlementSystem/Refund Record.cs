@@ -8,7 +8,10 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.SettlementSystem
 {
-  public  class Refund_Record : FullAuditedAggregateRoot<Guid>
+    /// <summary>
+    /// 退费记录表
+    /// </summary>
+    public class Refund_Record : FullAuditedAggregateRoot<Guid>
     {
       
         /// <summary>

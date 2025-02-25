@@ -83,7 +83,23 @@ public class HISDbContext :
 
 
 
-    public DbSet<NatureofPatient> NatureofPatients { get; set; } 
+    /// <summary>
+    /// 病人性质
+    /// </summary>
+    public DbSet<NatureofPatient> NatureofPatients { get; set; }
+
+    /// <summary>
+    /// 收费模块表
+    /// </summary>
+    public DbSet<Chargingmodule> Chargingmodules { get; set; }
+    /// <summary>
+    /// 收费项目表
+    /// </summary>
+    public DbSet<Chargingprojects> Chargingprojects { get; set; }
+    /// <summary>
+    /// 发票配置表
+    /// </summary>
+    public DbSet<InvoiceConfiguration> InvoiceConfigurations { get; set; }
 
     public HISDbContext(DbContextOptions<HISDbContext> options)
         : base(options)

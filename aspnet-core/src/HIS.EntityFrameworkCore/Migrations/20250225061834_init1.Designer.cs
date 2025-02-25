@@ -13,8 +13,8 @@ using Volo.Abp.EntityFrameworkCore;
 namespace HIS.Migrations
 {
     [DbContext(typeof(HISDbContext))]
-    [Migration("20250225051525_init2")]
-    partial class init2
+    [Migration("20250225061834_init1")]
+    partial class init1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -286,7 +286,7 @@ namespace HIS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FeeItems");
+                    b.ToTable("FeeItem");
                 });
 
             modelBuilder.Entity("HIS.SettlementSystem.Fee_Category", b =>
@@ -341,7 +341,7 @@ namespace HIS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Fee_Categorys");
+                    b.ToTable("Fee_Category");
                 });
 
             modelBuilder.Entity("HIS.SettlementSystem.Fee_Detail", b =>
@@ -391,13 +391,13 @@ namespace HIS.Migrations
                         .HasColumnType("char(36)")
                         .HasColumnName("LastModifierId");
 
+                    b.Property<int>("amount")
+                        .HasColumnType("int");
+
                     b.Property<int>("item_id")
                         .HasColumnType("int");
 
                     b.Property<int>("quantity")
-                        .HasColumnType("int");
-
-                    b.Property<int>("settlement_id")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -461,9 +461,6 @@ namespace HIS.Migrations
                     b.Property<decimal>("outstanding_balance")
                         .HasColumnType("decimal(65,30)");
 
-                    b.Property<int>("patient_id")
-                        .HasColumnType("int");
-
                     b.Property<int>("record_id")
                         .HasColumnType("int");
 
@@ -477,11 +474,8 @@ namespace HIS.Migrations
 
             modelBuilder.Entity("HIS.SettlementSystem.InpatientRecord", b =>
                 {
-                    b.Property<int>("record_id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("record_id"));
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -510,9 +504,6 @@ namespace HIS.Migrations
                         .IsRequired()
                         .HasColumnType("longtext")
                         .HasColumnName("ExtraProperties");
-
-                    b.Property<Guid>("Id")
-                        .HasColumnType("char(36)");
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -552,7 +543,7 @@ namespace HIS.Migrations
                     b.Property<string>("room_type")
                         .HasColumnType("longtext");
 
-                    b.HasKey("record_id");
+                    b.HasKey("Id");
 
                     b.ToTable("InpatientRecords");
                 });
@@ -1041,6 +1032,217 @@ namespace HIS.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Settlement_Records");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.Chargingmodule", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<int>("DepartmentID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<int>("NumberCutions")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Parts")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Singltreatment")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TemplateName")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("TypeRehabil")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Unittime")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Chargingmodules");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.Chargingprojects", b =>
+                {
+                    b.Property<int>("ChargingprojectsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ChargingprojectsID"));
+
+                    b.Property<string>("Codingpackages")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Detailed")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("DiagnosisName")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("HealinName")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Organization")
+                        .HasColumnType("int");
+
+                    b.HasKey("ChargingprojectsID");
+
+                    b.ToTable("Chargingprojects");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.InvoiceConfiguration", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<string>("Currentdocument")
+                        .HasColumnType("longtext");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<string>("Endnumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("InitialNumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Initials")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("InvoiceConfigurationID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("InvoiceConfigurations");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.NatureofPatient", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<string>("Hospitallogo")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<string>("Medicaltype")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NatureTypeCard")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Naturecode")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NatureofPatientName")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Typeinsurance")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NatureofPatients");
                 });
 
             modelBuilder.Entity("Volo.Abp.AuditLogging.AuditLog", b =>

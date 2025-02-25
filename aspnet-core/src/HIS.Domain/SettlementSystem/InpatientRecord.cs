@@ -13,11 +13,7 @@ namespace HIS.SettlementSystem
     /// </summary>
     public class InpatientRecord:FullAuditedAggregateRoot<Guid>
     {
-        /// <summary>
-        /// 住院记录ID
-        /// </summary>
-        [Key]
-        public int record_id { get; set; }
+        
         /// <summary>
         /// 病人ID
         /// </summary>

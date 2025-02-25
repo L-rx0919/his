@@ -8,12 +8,12 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.SettlementSystem
 {
+    /// <summary>
+    /// 账单表
+    /// </summary>
     public class Hospital_Bill:FullAuditedAggregateRoot<Guid>
     {
-        /// <summary>
-        ///     病人ID
-        /// </summary>  
-        public int patient_id { get; set; }
+       
         /// <summary>
         ///     住院记录ID
         /// </summary>
