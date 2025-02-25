@@ -87,7 +87,7 @@ public class HISHttpApiHostModule : AbpModule
 
                                 //是否验证密钥
                                 ValidateIssuerSigningKey = true,
-                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtConfig:Bearer:SecurityKey"])),
+                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtConfig:Bearer:SecurityKey"]!)),
 
                                 ValidateLifetime = true, //验证生命周期
 
@@ -176,7 +176,8 @@ public class HISHttpApiHostModule : AbpModule
      {
 
 
-         options.SwaggerDoc("v1", new OpenApiInfo { Title = "业务接口", Version = "v1" });
+         options.SwaggerDoc("v1", new OpenApiInfo { Title = "基础接口", Version = "v1" });
+         options.SwaggerDoc("v2", new OpenApiInfo { Title = "业务接口", Version = "v2" });
 
          options.DocInclusionPredicate((doc, desc) =>
          {
@@ -297,7 +298,8 @@ public class HISHttpApiHostModule : AbpModule
         app.UseSwagger();
         app.UseAbpSwaggerUI(c =>
         {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "HIS API");
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "基础接口");
+            c.SwaggerEndpoint("/swagger/v2/swagger.json", "业务接口");
 
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
             c.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
