@@ -3,11 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
-using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
-using Volo.Abp.Identity;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
-using Volo.Abp.TenantManagement;
 
 namespace HIS.EntityFrameworkCore;
 
@@ -88,13 +85,8 @@ public class HISDbContext :
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-
-
-
-        builder.ConfigureSettingManagement();
+        builder.ConfigureSettingManagement(); 
         builder.ConfigureBackgroundJobs();
         builder.ConfigureAuditLogging();
-
-
     }
 }

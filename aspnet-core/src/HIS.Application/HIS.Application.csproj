@@ -11,10 +11,10 @@
   <ItemGroup>
     <ProjectReference Include="..\HIS.Domain\HIS.Domain.csproj" />
     <ProjectReference Include="..\HIS.Application.Contracts\HIS.Application.Contracts.csproj" />
-    <ProjectReference Include="..\HIS.EntityFrameworkCore\HIS.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
     <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="9.0.5" />
   </ItemGroup>
 

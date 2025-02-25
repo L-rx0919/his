@@ -4,19 +4,16 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.SettlementSystem
 {
     /// <summary>
     /// 票据
     /// </summary>
-    public class Receipt
+    public class Receipt : FullAuditedAggregateRoot<Guid>
     {
-        /// <summary>
-        /// 票据ID
-        /// </summary>
-        [Key]
-        public string receipt_id { get; set; }
+        
         /// <summary>
         /// 结算ID
         /// </summary>

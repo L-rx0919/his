@@ -12,6 +12,8 @@ namespace HIS.Patients
     /// </summary>
     public class PatientDto
     {
+
+
         /// <summary>
         /// 患者姓名
         /// </summary>

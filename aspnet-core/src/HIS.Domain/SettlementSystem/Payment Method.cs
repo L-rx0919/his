@@ -4,16 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.SettlementSystem
 {
-    public class Payment_Method
+    public class Payment_Method:FullAuditedAggregateRoot<Guid>
     {
-        /// <summary>
-        /// 支付方式ID
-        /// </summary>
-        [Key]
-        public int payment_method_id { get; set; }
+     
 
         /// <summary>
         /// 支付方式名称

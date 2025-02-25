@@ -1,24 +1,28 @@
-using HIS.EntityFrameworkCore;
+﻿using HIS.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
+using Volo.Abp.AspNetCore.Mvc.AntiForgery;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
+using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
-using Volo.Abp.Security.Claims;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
@@ -35,20 +39,19 @@ namespace HIS;
 )]
 public class HISHttpApiHostModule : AbpModule
 {
+
     /// <summary>
-    /// Pre-configure services.
-    /// </summary>
-    /// <param name="context"></param>
-    public override void PreConfigureServices(ServiceConfigurationContext context)
-    {
-        
-    }
-    /// <summary>
-    ///  ���÷���
+    ///  配置服务
     /// </summary>
     /// <param name="context"></param>
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
+        Configure<AbpAntiForgeryOptions>(a =>
+        {
+            a.TokenCookie.Expiration = TimeSpan.FromDays(1);
+            a.AutoValidate = false;
+        });
+
         var configuration = context.Services.GetConfiguration();
         var hostingEnvironment = context.Services.GetHostingEnvironment();
 
@@ -59,21 +62,44 @@ public class HISHttpApiHostModule : AbpModule
         ConfigureVirtualFileSystem(context);
         ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context, configuration);
+        ConfigureLocalization();
     }
-    /// <summary>
-    ///  Ԥ����
-    /// </summary>
-    /// <param name="context"></param>
     private void ConfigureAuthentication(ServiceConfigurationContext context)
-    { 
-
-        context.Services.Configure<AbpClaimsPrincipalFactoryOptions>(options =>
+    {
+        var configuration = context.Services.GetConfiguration();
+        //Jwt
+        context.Services.AddAuthentication(option =>
         {
-            options.IsDynamicClaimsEnabled = true;
-        });
+            option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        }).AddJwtBearer(
+                        option =>
+                        {
+                            option.TokenValidationParameters = new TokenValidationParameters
+                            {
+                                //是否验证发行人
+                                ValidateIssuer = true,
+                                ValidIssuer = configuration["JwtConfig:Bearer:Issuer"],//发行人
+
+                                //是否验证受众人
+                                ValidateAudience = true,
+                                ValidAudience = configuration["JwtConfig:Bearer:Audience"],//受众人
+
+                                //是否验证密钥
+                                ValidateIssuerSigningKey = true,
+                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtConfig:Bearer:SecurityKey"])),
+
+                                ValidateLifetime = true, //验证生命周期
+
+                                RequireExpirationTime = true, //过期时间
+
+                                ClockSkew = TimeSpan.FromSeconds(30)   //平滑过期偏移时间
+                            };
+                        }
+                    );
     }
     /// <summary>
-    /// ������Դ��
+    /// 不修改
     /// </summary>
     private void ConfigureBundles()
     {
@@ -89,7 +115,7 @@ public class HISHttpApiHostModule : AbpModule
         });
     }
     /// <summary>
-    /// ����Url
+    /// 配置Url
     /// </summary>
     /// <param name="configuration"></param>
     private void ConfigureUrls(IConfiguration configuration)
@@ -101,7 +127,7 @@ public class HISHttpApiHostModule : AbpModule
         });
     }
     /// <summary>
-    /// ����Լ��������
+    /// 不修改
     /// </summary>
     /// <param name="context"></param>
     private void ConfigureVirtualFileSystem(ServiceConfigurationContext context)
@@ -128,8 +154,9 @@ public class HISHttpApiHostModule : AbpModule
         }
     }
     /// <summary>
-    /// ����Լ��������
+    /// 不修改
     /// </summary>
+    /// <param name="context"></param>
     private void ConfigureConventionalControllers()
     {
         Configure<AbpAspNetCoreMvcOptions>(options =>
@@ -138,27 +165,80 @@ public class HISHttpApiHostModule : AbpModule
         });
     }
     /// <summary>
-    /// ����Swagger����
+    /// 配置Swagger服务
     /// </summary>
     /// <param name="context"></param>
     /// <param name="configuration"></param>
     private static void ConfigureSwaggerServices(ServiceConfigurationContext context, IConfiguration configuration)
     {
-        context.Services.AddAbpSwaggerGenWithOAuth(
-            configuration["AuthServer:Authority"]!,
-            new Dictionary<string, string>
-            {
-                    {"HIS", "HIS API"}
-            },
-            options =>
-            {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "HIS API", Version = "v1" });
-                options.DocInclusionPredicate((docName, description) => true);
-                options.CustomSchemaIds(type => type.FullName);
-            });
+        context.Services.AddSwaggerGen(
+     options =>
+     {
+
+
+         options.SwaggerDoc("v1", new OpenApiInfo { Title = "业务接口", Version = "v1" });
+
+         options.DocInclusionPredicate((doc, desc) =>
+         {
+             return desc.GroupName == doc;
+         });
+
+
+         //开启权限小锁
+         options.OperationFilter<AddResponseHeadersFilter>();
+         options.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
+         options.OperationFilter<SecurityRequirementsOperationFilter>();
+         options.CustomSchemaIds(type => type.FullName);
+
+         //给参数设置默认值
+         //options.SchemaFilter<SchemaFilter>();
+
+         //在header中添加token，传递到后台
+         options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+         {
+             Description = "JWT授权(数据将在请求头中进行传递)直接在下面框中输入Bearer {token}(注意两者之间是一个空格) \"",
+             Name = "Authorization",//jwt默认的参数名称
+             In = ParameterLocation.Header,//jwt默认存放Authorization信息的位置(请求头中)
+             Type = SecuritySchemeType.ApiKey
+         });
+
+         //就是这里！！！！！！！！！
+         var basePath = AppDomain.CurrentDomain.BaseDirectory;
+         var xmlPath = Path.Combine(basePath, "HIS.HttpApi.Host.xml");//这个就是刚刚配置的xml文件名
+         options.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
+     }
+ );
+
+    }
+
+    private void ConfigureLocalization()
+    {
+        Configure<AbpLocalizationOptions>(options =>
+        {
+            options.Languages.Add(new LanguageInfo("ar", "ar", "العربية"));
+            options.Languages.Add(new LanguageInfo("cs", "cs", "Čeština"));
+            options.Languages.Add(new LanguageInfo("en", "en", "English"));
+            options.Languages.Add(new LanguageInfo("en-GB", "en-GB", "English (UK)"));
+            options.Languages.Add(new LanguageInfo("fi", "fi", "Finnish"));
+            options.Languages.Add(new LanguageInfo("fr", "fr", "Français"));
+            //options.Languages.Add(new LanguageInfo("hi", "hi", "Hindi", "in"));
+            //options.Languages.Add(new LanguageInfo("is", "is", "Icelandic", "is"));
+            //options.Languages.Add(new LanguageInfo("it", "it", "Italiano", "it"));
+            options.Languages.Add(new LanguageInfo("hu", "hu", "Magyar"));
+            options.Languages.Add(new LanguageInfo("pt-BR", "pt-BR", "Português"));
+            options.Languages.Add(new LanguageInfo("ro-RO", "ro-RO", "Română"));
+            options.Languages.Add(new LanguageInfo("ru", "ru", "Русский"));
+            options.Languages.Add(new LanguageInfo("sk", "sk", "Slovak"));
+            options.Languages.Add(new LanguageInfo("tr", "tr", "Türkçe"));
+            options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
+            options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "繁體中文"));
+            //options.Languages.Add(new LanguageInfo("de-DE", "de-DE", "Deutsch", "de"));
+            //options.Languages.Add(new LanguageInfo("es", "es", "Español", "es"));
+            options.Languages.Add(new LanguageInfo("el", "el", "Ελληνικά"));
+        });
     }
     /// <summary>
-    /// ����Cors
+    /// 配置Cors
     /// </summary>
     /// <param name="context"></param>
     /// <param name="configuration"></param>
@@ -182,7 +262,7 @@ public class HISHttpApiHostModule : AbpModule
         });
     }
     /// <summary>
-    /// ����Ӧ��
+    /// 配置应用
     /// </summary>
     /// <param name="context"></param>
     public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -207,9 +287,9 @@ public class HISHttpApiHostModule : AbpModule
         app.UseRouting();
         app.UseCors();
         app.UseAuthentication();
-       
 
-      
+
+
         app.UseUnitOfWork();
         app.UseDynamicClaims();
         app.UseAuthorization();

@@ -4,19 +4,16 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.SettlementSystem
 {
     /// <summary>
     /// 结算记录
     /// </summary>
-    public class Settlement_Record
+    public class Settlement_Record : FullAuditedAggregateRoot<Guid>
     {
-        /// <summary>
-        /// 结算ID
-        /// </summary>
-        [Key]
-        public string settlement_id { get; set; }
+       
         /// <summary>
         /// 病人ID
         /// </summary>
