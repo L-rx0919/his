@@ -53,16 +53,16 @@ namespace HIS.Patients
                     Message = "添加患者失败"
                 };
             }
-            ////判断名称 是否重复
-            //var patientName = await _patientRepository.AllAsync(x => x.patient_name == patient.patient_name);
-            //if (patientName!= null)
-            //{
-            //    return new APIResult<PatientDto>()
-            //    {
-            //        Code = CodeEnum.error,
-            //        Message = "患者名称重复"
-            //    };
-            //}   
+            //判断名称 是否重复
+            var patientName = await _patientRepository.AllAsync(x => x.patient_name == patient.patient_name);
+            if (patientName != null)
+            {
+                return new APIResult<PatientDto>()
+                {
+                    Code = CodeEnum.error,
+                    Message = "患者名称重复"
+                };
+            }
             return new APIResult<PatientDto>()
             {
                 Code = 0,
