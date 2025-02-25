@@ -21,6 +21,7 @@ namespace HIS.SettlementSystem
         ///         数量
         /// </summary>
             public int quantity { get; set; }
+            public int amount { get; set; }
     }
 //    detail_id：费用明细ID
 //settlement_id：结算ID（外键）
