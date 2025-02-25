@@ -9,7 +9,7 @@ using Volo.Abp.Domain.Entities.Auditing;
 namespace HIS.SettlementSystem
 {
     /// <summary>
-    /// 医生
+    /// 医生表
     /// </summary>
    public class Doctor : FullAuditedAggregateRoot<Guid>
     {

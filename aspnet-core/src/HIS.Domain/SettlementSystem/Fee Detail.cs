@@ -13,11 +13,6 @@ namespace HIS.SettlementSystem
     /// </summary>
     public class Fee_Detail:FullAuditedAggregateRoot<Guid>
     {
-       
-        /// <summary>
-        ///         结算ID
-        /// </summary>
-            public int settlement_id { get; set; }
         /// <summary>
         ///         费用项目ID
         /// </summary>

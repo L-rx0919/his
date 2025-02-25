@@ -9,11 +9,11 @@ using Volo.Abp.Domain.Entities.Auditing;
 namespace HIS.SettlementSystem
 {
     /// <summary>
-    /// 科室
+    /// 科室   
     /// </summary>
     public class Department : FullAuditedAggregateRoot<Guid>
     {
-        
+ 
         /// <summary>
         /// 科室名称
         /// </summary>
@@ -34,8 +34,3 @@ namespace HIS.SettlementSystem
         public string department_type { get; set; }
     }
 }
-//department_id：科室ID
-//name：科室名称
-//location：科室位置
-//phone：联系电话
-//department_type：科室类型（如内科、外科、急诊等）

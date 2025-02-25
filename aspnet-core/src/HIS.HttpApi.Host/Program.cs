@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace HIS;
 
+/// <summary>
+/// 
+/// </summary>
 public class Program
 {
     public async static Task<int> Main(string[] args)

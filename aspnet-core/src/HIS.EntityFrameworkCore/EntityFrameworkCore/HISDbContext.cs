@@ -1,4 +1,5 @@
 ﻿using HIS.SettlementSystem;
+using HIS.System_Administration;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -12,70 +13,78 @@ namespace HIS.EntityFrameworkCore;
 [ConnectionStringName("Default")]
 public class HISDbContext :
     AbpDbContext<HISDbContext>
+
+
 {
-
-
-
+    /* Add DbSet properties for your Aggregate Roots / Entities here. */
     /// <summary>
-    /// 科室
+    /// 科室表
     /// </summary>
     public DbSet<Department> Departments { get; set; }
+
     /// <summary>
-    /// 费用折扣
+    /// 费用折扣表
     /// </summary>
     public DbSet<Discount> Discounts { get; set; }
     /// <summary>
-    /// 医生
+    /// 医生表
     /// </summary>
     public DbSet<Doctor> Doctors { get; set; }
     /// <summary>
-    /// 费用类别
+    /// 费用类别表
     /// </summary>
-    public DbSet<Fee_Category> Fee_Categorys { get; set; }
+    public DbSet<Fee_Category> Fee_Category { get; set; }
     /// <summary>
-    /// 结算明细
+    /// 费用明细表
     /// </summary>
     public DbSet<Fee_Detail> Fee_Details { get; set; }
     /// <summary>
-    /// 退款记录
+    /// 费用项目表
     /// </summary>
-    public DbSet<Refund_Record> Refund_Records { get; set; }
+    public DbSet<FeeItem> FeeItem { get; set; }
     /// <summary>
-    /// 票据
-    /// </summary>
-    public DbSet<Receipt> Receipts { get; set; }
-    /// <summary>
-    /// 支付方式
-    /// </summary>
-    public DbSet<Payment_Method> Payment_Methods { get; set; }
-    /// <summary>
-    /// 住院账单
+    /// 账单表
     /// </summary>
     public DbSet<Hospital_Bill> Hospital_Bills { get; set; }
     /// <summary>
-    /// 医保记录
+    /// 住院记录表
+    /// </summary>
+    public DbSet<InpatientRecord> InpatientRecords { get; set; }
+    /// <summary>
+    /// 医保记录表
     /// </summary>
     public DbSet<Insurance_Record> Insurance_Records { get; set; }
     /// <summary>
-    /// 支付记录
-    /// </summary>
-    public DbSet<Payment_Record> Payment_Records { get; set; }
-    /// <summary>
-    /// 费用项目
-    /// </summary>
-    public DbSet<FeeItem> FeeItems { get; set; }
-    /// <summary>
-    /// 结算记录
-    /// </summary>
-    public DbSet<Settlement_Record> Settlement_Records { get; set; }
-    /// <summary>
-    /// 患者
+    /// 患者信息表
     /// </summary>
     public DbSet<Patient> Patients { get; set; }
     /// <summary>
-    /// 住院记录
+    /// 支付方式表
     /// </summary>
-    public DbSet<InpatientRecord> InpatientRecords { get; set; }
+    public DbSet<Payment_Method> Payment_Methods { get; set; }
+    /// <summary>
+    /// 支付记录表
+    /// </summary>
+    public DbSet<Payment_Record> Payment_Records { get; set; }
+    /// <summary>
+    /// 处方表
+    /// </summary>
+    public DbSet<Receipt> Receipts { get; set; }
+    /// <summary>
+    /// 退费记录表
+    /// </summary>
+    public DbSet<Refund_Record> Refund_Records { get; set; }
+    /// <summary>
+    /// 结算表
+    /// </summary>
+    public DbSet<Settlement_Record> Settlement_Records { get; set; }
+
+
+
+
+
+    public DbSet<NatureofPatient> NatureofPatients { get; set; } 
+
     public HISDbContext(DbContextOptions<HISDbContext> options)
         : base(options)
     {
