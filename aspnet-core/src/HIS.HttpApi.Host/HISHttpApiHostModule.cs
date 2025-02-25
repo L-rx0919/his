@@ -87,7 +87,7 @@ public class HISHttpApiHostModule : AbpModule
 
                                 //是否验证密钥
                                 ValidateIssuerSigningKey = true,
-                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtConfig:Bearer:SecurityKey"])),
+                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtConfig:Bearer:SecurityKey"]!)),
 
                                 ValidateLifetime = true, //验证生命周期
 

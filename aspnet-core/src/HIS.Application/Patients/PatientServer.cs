@@ -50,7 +50,7 @@ namespace HIS.Patients
             }
             //判断名称 是否重复
             var patientName = await _patientRepository.AllAsync(x => x.patient_name == patient.patient_name);
-            if (patientName != null)
+            if (patientName == false)
             {
                 return new APIResult<PatientDto>()
                 {
