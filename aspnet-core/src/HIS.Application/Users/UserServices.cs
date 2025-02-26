@@ -11,14 +11,36 @@ namespace HIS.Users
     [ApiExplorerSettings(GroupName = "v1")]
     public class UserServices : ApplicationService, IServicesUsers
     {
+        /// <summary>
+        /// 用户仓储
+        /// </summary>
         private readonly IRepository<User> Userrepository;
-       
 
+        /// <summary>
+        /// 角色仓储
+        /// </summary>
         private readonly IRepository<Role> Rolerepository;
+        /// <summary>
+        /// 角色权限仓储
+        /// </summary>
         private readonly IRepository<RolePermissions> RolePermissionsrepository;
+        /// <summary>
+        /// 用户角色仓储
+        /// </summary>
         private readonly IRepository<UserRole> UserRolerepository;
+        /// <summary>
+        /// 权限仓储
+        /// </summary>
         private readonly IRepository<Permissions> Permissionsrepository;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="userrepository"></param>
+        /// <param name="rolerepository"></param>
+        /// <param name="rolePermissionsrepository"></param>
+        /// <param name="userRolerepository"></param>
+        /// <param name="permissionsrepository"></param>
         public UserServices(IRepository<HIS.RBAC.User> userrepository, IRepository<Role> rolerepository, IRepository<RolePermissions> rolePermissionsrepository, IRepository<UserRole> userRolerepository, IRepository<Permissions> permissionsrepository)
         {
             Userrepository = userrepository;
