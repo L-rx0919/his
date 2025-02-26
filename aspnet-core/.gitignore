@@ -6,7 +6,8 @@
 *.user
 *.userosscache
 *.sln.docstates
-
+# 忽略日志文件
+*.log
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
