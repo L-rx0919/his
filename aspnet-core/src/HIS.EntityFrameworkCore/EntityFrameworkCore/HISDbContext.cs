@@ -21,12 +21,6 @@ namespace HIS.EntityFrameworkCore
         /// 科室表
         /// </summary>
         public DbSet<Department> Departments { get; set; }
-
-
-        /// <summary>
-        /// 费用折扣表
-        /// </summary>
-
         /// <summary>
         /// 费用折扣表
         /// </summary>
@@ -90,16 +84,9 @@ namespace HIS.EntityFrameworkCore
         /// 病人性质
         /// </summary>
         public DbSet<NatureofPatient> NatureofPatients { get; set; }
-
-
         /// <summary>
         /// 收费模块表
         /// </summary>
-
-        /// <summary>
-        /// 收费模块表
-        /// </summary>
-
         public DbSet<Chargingmodule> Chargingmodules { get; set; }
         /// <summary>
         /// 收费项目表
@@ -110,6 +97,10 @@ namespace HIS.EntityFrameworkCore
         /// 发票配置表
         /// </summary>
         public DbSet<InvoiceConfiguration> InvoiceConfigurations { get; set; }
+        /// <summary>
+        /// 病人一卡通信息表
+        /// </summary>
+        public DbSet<Patient_Card_Info> Patient_Card_Infos { get; set; }
 
         public HISDbContext(DbContextOptions<HISDbContext> options)
             : base(options)
