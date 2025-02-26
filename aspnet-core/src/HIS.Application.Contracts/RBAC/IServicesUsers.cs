@@ -22,5 +22,7 @@ namespace HIS.RBAC
         /// <param name="UserPwd"></param>
         /// <returns></returns>
         Task<APIResult<UserDTO>> Login(string UserName, string UserPwd);
+
+        APIResult<CaptchaDto> Captcha(string id);
     }
 }
