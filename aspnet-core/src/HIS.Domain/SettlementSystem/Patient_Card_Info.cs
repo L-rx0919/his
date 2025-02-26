@@ -1,13 +1,14 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.SettlementSystem
 {
     /// <summary>
     /// 病人一卡通信息表
     /// </summary>
-    public class Patient_Card_Info
+    public class Patient_Card_Info: FullAuditedAggregateRoot<Guid>
     {
         /// <summary>
         /// 病人ID
