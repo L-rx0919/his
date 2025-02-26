@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
-
+                                                                                                                                                                                                                                                                                                      
 namespace HIS.Patients
 {
     [ApiExplorerSettings(GroupName = "v1")]
