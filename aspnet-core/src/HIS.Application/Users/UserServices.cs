@@ -1,13 +1,10 @@
-﻿using HIS.Patients;
-using HIS.RBAC;
+﻿using HIS.RBAC;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
+
 
 namespace HIS.Users
 {
@@ -15,12 +12,14 @@ namespace HIS.Users
     public class UserServices : ApplicationService, IServicesUsers
     {
         private readonly IRepository<User> Userrepository;
+       
+
         private readonly IRepository<Role> Rolerepository;
         private readonly IRepository<RolePermissions> RolePermissionsrepository;
         private readonly IRepository<UserRole> UserRolerepository;
         private readonly IRepository<Permissions> Permissionsrepository;
 
-        public UserServices(IRepository<User> userrepository, IRepository<Role> rolerepository, IRepository<RolePermissions> rolePermissionsrepository, IRepository<UserRole> userRolerepository, IRepository<Permissions> permissionsrepository)
+        public UserServices(IRepository<HIS.RBAC.User> userrepository, IRepository<Role> rolerepository, IRepository<RolePermissions> rolePermissionsrepository, IRepository<UserRole> userRolerepository, IRepository<Permissions> permissionsrepository)
         {
             Userrepository = userrepository;
             Rolerepository = rolerepository;
@@ -36,12 +35,12 @@ namespace HIS.Users
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
         [HttpPost("api/registration")]
-        public async Task<APIResult> AddUser(UserDTO user)
+        public async Task<APIResult<UserDTO>> AddUser(UserDTO user)
         {
-            var users = await Userrepository.FirstOrDefaultAsync(c => c.UserName == user.UserName);
-            if (users == null)
+            var users = await Userrepository.AllAsync(c => c.UserName == user.UserName);
+            if (users == true)
             {
-                var list = ObjectMapper.Map<UserDTO, User>(user);
+                var list = ObjectMapper.Map<UserDTO, HIS.RBAC.User>(user);
                 await Userrepository.InsertAsync(list);
 
                 var userRole = new UserRole()
@@ -49,12 +48,20 @@ namespace HIS.Users
                     UserId = list.Id,
                     RoleId = user.RoleId
                 };
+                return new APIResult<UserDTO>()
+                {
+                    Code = CodeEnum.success,
+                    Message = "注册成功",
+                }; ;
             }
-            return new APIResult()
+            else
             {
-                Code = CodeEnum.success,
-                Message = "注册成功",
-            }; ;
+                return new APIResult<UserDTO>()
+                {
+                    Code = CodeEnum.error,
+                    Message = "注册失败",
+                }; ;
+            }
         }
 
         /// <summary>
@@ -63,13 +70,12 @@ namespace HIS.Users
         /// <param name="UserName"></param>
         /// <param name="UserPwd"></param>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
         [HttpPost("api/Login")]
         public async Task<APIResult<UserDTO>> Login(string UserName, string UserPwd)
         {
-            var user = await Userrepository.GetAsync(c => c.UserName == UserName);
-
-            if (user == null)
+            //查询用户
+            var userlist = await Userrepository.GetAsync(c => c.UserName ==UserName);
+            if (userlist == null)
             {
                 return new APIResult<UserDTO>()
                 {
@@ -80,7 +86,7 @@ namespace HIS.Users
             else
             {
                 // 检查用户是否被锁定
-                if (user.UserIsLock)
+                if (userlist.UserIsLock)
                 {
                     return new APIResult<UserDTO>()
                     {
@@ -88,24 +94,23 @@ namespace HIS.Users
                         Message = "用户已锁定",
                     };
                 }
-
                 // 密码验证
-                if (user.UserPwd != UserPwd)
+                if (userlist.UserPwd != UserPwd)
                 {
                     // 增加密码错误次数
-                    user.UserErrorCount++;
+                    userlist.UserErrorCount++;
 
                     // 如果错误次数超过或等于3次，锁定用户
-                    if (user.UserErrorCount >= 3)
+                    if (userlist.UserErrorCount >= 3)
                     {
-                        user.UserIsLock = true;
+                        userlist.UserIsLock = true;
                     }
 
                     // 更新用户的错误次数及锁定状态
-                    await Userrepository.UpdateAsync(user);
+                    await Userrepository.UpdateAsync(userlist);
 
                     // 如果锁定了，返回锁定信息
-                    if (user.UserIsLock)
+                    if (userlist.UserIsLock)
                     {
                         return new APIResult<UserDTO>()
                         {
@@ -118,19 +123,27 @@ namespace HIS.Users
                         return new APIResult<UserDTO>()
                         {
                             Code = CodeEnum.error,
-                            Message = $"密码错误，剩余尝试次数：{3 - user.UserErrorCount}",
+                            Message = $"密码错误，剩余尝试次数：{3 - userlist.UserErrorCount}",
                         };
                     }
                 }
             }
 
-            // 登录成功
+            // 登录成功，返回用户信息
+            var userDTO = new UserDTO
+            {
+                UserName = userlist.UserName,
+                UserId = userlist.Id,
+            };
+
             return new APIResult<UserDTO>()
             {
                 Code = CodeEnum.success,
                 Message = "登录成功",
+                Data = userDTO
             };
         }
+
 
     }
 }
