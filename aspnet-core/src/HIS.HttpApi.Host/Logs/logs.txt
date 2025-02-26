@@ -2230,3 +2230,817 @@
 2025-02-26 19:30:23.894 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
 2025-02-26 19:30:24.024 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 130.4899ms
 >>>>>>> 6b5caaaa18996b15949acb2154e9e92e3f3eda78
+2025-02-26 21:27:52.834 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-02-26 21:27:54.631 +08:00 [INF] Loaded ABP modules:
+2025-02-26 21:27:54.631 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-02-26 21:27:54.631 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]   - HIS.HISApplicationModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - HIS.HISDomainModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-02-26 21:27:54.631 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-02-26 21:27:54.631 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-02-26 21:27:54.631 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-02-26 21:27:54.631 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-02-26 21:27:54.631 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-02-26 21:27:54.631 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-02-26 21:27:54.631 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-02-26 21:27:54.631 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-02-26 21:27:54.631 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-02-26 21:27:54.631 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-02-26 21:27:54.631 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-02-26 21:27:54.631 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-02-26 21:27:54.631 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-02-26 21:27:54.632 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-02-26 21:27:54.632 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-02-26 21:27:54.632 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-02-26 21:27:54.632 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-02-26 21:27:54.632 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-02-26 21:27:54.650 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-02-26 21:27:55.143 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-26 21:27:55.190 +08:00 [INF] Initialized all ABP modules.
+2025-02-26 21:27:55.316 +08:00 [INF] Now listening on: https://localhost:44323
+2025-02-26 21:27:55.345 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-26 21:27:55.345 +08:00 [INF] Hosting environment: Development
+2025-02-26 21:27:55.345 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 21:27:55.641 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-02-26 21:27:56.652 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:27:56.667 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-02-26 21:27:56.682 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-02-26 21:27:56.685 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 15.5136ms
+2025-02-26 21:27:56.685 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:27:56.691 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1053.2759ms
+2025-02-26 21:27:56.696 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-02-26 21:27:56.727 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 30.5364ms
+2025-02-26 21:27:56.732 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-26 21:27:56.734 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-02-26 21:27:56.736 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.6912ms
+2025-02-26 21:27:56.738 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-02-26 21:27:56.739 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 7.1522ms
+2025-02-26 21:27:56.759 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.4327ms
+2025-02-26 21:27:56.787 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-02-26 21:27:56.865 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.1276ms
+2025-02-26 21:27:59.877 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-02-26 21:27:59.879 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:27:59.880 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-02-26 21:27:59.886 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 5.643ms
+2025-02-26 21:27:59.886 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:27:59.886 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 9.6184ms
+2025-02-26 21:27:59.905 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-02-26 21:27:59.907 +08:00 [INF] Executing endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:27:59.913 +08:00 [INF] Route matched with {action = "Captcha", controller = "UserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.RBAC.CaptchaDto] Captcha(System.String) on controller HIS.Users.UserServices (HIS.Application).
+2025-02-26 21:27:59.932 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-02-26 21:27:59.932 +08:00 [ERR] An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Castle.Proxies.UserServicesProxy' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User] userrepository' of constructor 'Void .ctor(Castle.DynamicProxy.IInterceptor[], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Role], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.RolePermissions], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.UserRole], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Permissions], Lazy.Captcha.Core.ICaptcha)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass41_0.<PropertiesAutowired>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Extensions.DependencyInjection.KeyedServiceMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass35_0.<OnPreparing>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CoreEventMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest& request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest& request)
+   at Autofac.Core.Lifetime.LifetimeScope.Autofac.IComponentContext.ResolveComponent(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-02-26 21:27:59.937 +08:00 [ERR] ---------- Exception Data ----------
+ActivatorChain = Castle.Proxies.UserServicesProxy
+
+2025-02-26 21:27:59.947 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-02-26 21:27:59.949 +08:00 [INF] Executed action HIS.Users.UserServices.Captcha (HIS.Application) in 36.0004ms
+2025-02-26 21:27:59.949 +08:00 [INF] Executed endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:27:59.949 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/v1/auth/captcha - 500 null application/json; charset=utf-8 44.3184ms
+2025-02-26 21:28:11.529 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-02-26 21:28:12.829 +08:00 [INF] Loaded ABP modules:
+2025-02-26 21:28:12.830 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-02-26 21:28:12.830 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]   - HIS.HISApplicationModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - HIS.HISDomainModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-02-26 21:28:12.830 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-02-26 21:28:12.830 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-02-26 21:28:12.830 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-02-26 21:28:12.830 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-02-26 21:28:12.830 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-02-26 21:28:12.830 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-02-26 21:28:12.830 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-02-26 21:28:12.830 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-02-26 21:28:12.830 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-02-26 21:28:12.830 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-02-26 21:28:12.830 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-02-26 21:28:12.830 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-02-26 21:28:12.830 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-02-26 21:28:12.830 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-02-26 21:28:12.830 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-02-26 21:28:12.851 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-02-26 21:28:13.207 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-26 21:28:13.277 +08:00 [INF] Initialized all ABP modules.
+2025-02-26 21:28:13.405 +08:00 [INF] Now listening on: https://localhost:44323
+2025-02-26 21:28:13.432 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-26 21:28:13.432 +08:00 [INF] Hosting environment: Development
+2025-02-26 21:28:13.432 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 21:28:13.766 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-02-26 21:28:14.581 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:28:14.595 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-02-26 21:28:14.608 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-02-26 21:28:14.610 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 12.8522ms
+2025-02-26 21:28:14.610 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:28:14.616 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 853.4188ms
+2025-02-26 21:28:14.622 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-02-26 21:28:14.654 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 31.8808ms
+2025-02-26 21:28:14.658 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-26 21:28:14.658 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-02-26 21:28:14.661 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.0533ms
+2025-02-26 21:28:14.666 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 8.2211ms
+2025-02-26 21:28:14.669 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-02-26 21:28:14.688 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.9279ms
+2025-02-26 21:28:14.716 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-02-26 21:28:14.799 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.4151ms
+2025-02-26 21:28:28.379 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-02-26 21:28:28.382 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:28:28.383 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-02-26 21:28:28.392 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 8.6078ms
+2025-02-26 21:28:28.392 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:28:28.393 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 13.2067ms
+2025-02-26 21:28:28.410 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/v1/auth/captcha?id=11111 - null null
+2025-02-26 21:28:28.414 +08:00 [INF] Executing endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:28:28.418 +08:00 [INF] Route matched with {action = "Captcha", controller = "UserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.RBAC.CaptchaDto] Captcha(System.String) on controller HIS.Users.UserServices (HIS.Application).
+2025-02-26 21:28:28.435 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-02-26 21:28:28.435 +08:00 [ERR] An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Castle.Proxies.UserServicesProxy' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User] userrepository' of constructor 'Void .ctor(Castle.DynamicProxy.IInterceptor[], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Role], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.RolePermissions], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.UserRole], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Permissions], Lazy.Captcha.Core.ICaptcha)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass41_0.<PropertiesAutowired>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass35_0.<OnPreparing>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CoreEventMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-02-26 21:28:28.436 +08:00 [ERR] ---------- Exception Data ----------
+ActivatorChain = Castle.Proxies.UserServicesProxy
+
+2025-02-26 21:28:28.452 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-02-26 21:28:28.455 +08:00 [INF] Executed action HIS.Users.UserServices.Captcha (HIS.Application) in 36.5061ms
+2025-02-26 21:28:28.455 +08:00 [INF] Executed endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:28:28.455 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/v1/auth/captcha?id=11111 - 500 null application/json; charset=utf-8 44.9512ms
+2025-02-26 21:44:10.501 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-02-26 21:44:11.979 +08:00 [INF] Loaded ABP modules:
+2025-02-26 21:44:11.979 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-02-26 21:44:11.979 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-02-26 21:44:11.979 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-02-26 21:44:11.979 +08:00 [INF]   - HIS.HISApplicationModule
+2025-02-26 21:44:11.979 +08:00 [INF]     - HIS.HISDomainModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-02-26 21:44:11.979 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-02-26 21:44:11.979 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-02-26 21:44:11.979 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-02-26 21:44:11.979 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-02-26 21:44:11.979 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-02-26 21:44:11.979 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-02-26 21:44:11.979 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-02-26 21:44:11.979 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-02-26 21:44:11.979 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-02-26 21:44:11.979 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-02-26 21:44:11.979 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-02-26 21:44:11.979 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-02-26 21:44:11.979 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-02-26 21:44:11.979 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-02-26 21:44:11.979 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-02-26 21:44:11.979 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-02-26 21:44:11.980 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-02-26 21:44:11.980 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-02-26 21:44:11.980 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-02-26 21:44:11.980 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-02-26 21:44:11.980 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-02-26 21:44:11.980 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-02-26 21:44:11.980 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-02-26 21:44:11.980 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-02-26 21:44:11.980 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-02-26 21:44:11.980 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-02-26 21:44:11.980 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-02-26 21:44:11.980 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-02-26 21:44:11.980 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-02-26 21:44:11.980 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-02-26 21:44:11.980 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-02-26 21:44:11.980 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-02-26 21:44:11.980 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-02-26 21:44:11.980 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-02-26 21:44:11.980 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-02-26 21:44:11.980 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-02-26 21:44:11.980 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-02-26 21:44:11.980 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-02-26 21:44:11.980 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-02-26 21:44:11.980 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-02-26 21:44:11.980 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-02-26 21:44:11.980 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-02-26 21:44:11.998 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-02-26 21:44:12.388 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-26 21:44:12.486 +08:00 [INF] Initialized all ABP modules.
+2025-02-26 21:44:12.616 +08:00 [INF] Now listening on: https://localhost:44323
+2025-02-26 21:44:12.641 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-26 21:44:12.642 +08:00 [INF] Hosting environment: Development
+2025-02-26 21:44:12.642 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 21:44:12.972 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-02-26 21:44:13.970 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:44:13.984 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-02-26 21:44:13.999 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-02-26 21:44:14.001 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 15.4ms
+2025-02-26 21:44:14.001 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:44:14.006 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1037.348ms
+2025-02-26 21:44:14.012 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-02-26 21:44:14.039 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 27.1524ms
+2025-02-26 21:44:14.043 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-26 21:44:14.044 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-02-26 21:44:14.046 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.154ms
+2025-02-26 21:44:14.049 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 5.7945ms
+2025-02-26 21:44:14.051 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-02-26 21:44:14.073 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.2191ms
+2025-02-26 21:44:14.098 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-02-26 21:44:14.180 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.3994ms
+2025-02-26 21:44:48.663 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-02-26 21:44:48.725 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:44:48.726 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-02-26 21:44:48.733 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 6.7623ms
+2025-02-26 21:44:48.733 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:44:48.733 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 70.0895ms
+2025-02-26 21:44:48.747 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/v1/auth/captcha?id=11 - null null
+2025-02-26 21:44:48.751 +08:00 [INF] Executing endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:44:48.758 +08:00 [INF] Route matched with {action = "Captcha", controller = "UserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.RBAC.CaptchaDto] Captcha(System.String) on controller HIS.Users.UserServices (HIS.Application).
+2025-02-26 21:44:48.784 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-02-26 21:44:48.785 +08:00 [ERR] An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Castle.Proxies.UserServicesProxy' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User] userrepository' of constructor 'Void .ctor(Castle.DynamicProxy.IInterceptor[], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Role], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.RolePermissions], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.UserRole], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Permissions], Lazy.Captcha.Core.ICaptcha)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass41_0.<PropertiesAutowired>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass35_0.<OnPreparing>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CoreEventMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-02-26 21:44:48.846 +08:00 [ERR] ---------- Exception Data ----------
+ActivatorChain = Castle.Proxies.UserServicesProxy
+
+2025-02-26 21:44:48.858 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-02-26 21:44:48.860 +08:00 [INF] Executed action HIS.Users.UserServices.Captcha (HIS.Application) in 102.4205ms
+2025-02-26 21:44:48.860 +08:00 [INF] Executed endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:44:48.860 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/v1/auth/captcha?id=11 - 500 null application/json; charset=utf-8 113.3379ms
+2025-02-26 21:45:44.658 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-02-26 21:45:44.661 +08:00 [INF] Executing endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:45:44.661 +08:00 [INF] Route matched with {action = "Captcha", controller = "UserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.RBAC.CaptchaDto] Captcha(System.String) on controller HIS.Users.UserServices (HIS.Application).
+2025-02-26 21:45:44.663 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-02-26 21:45:44.663 +08:00 [ERR] An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Castle.Proxies.UserServicesProxy' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User] userrepository' of constructor 'Void .ctor(Castle.DynamicProxy.IInterceptor[], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Role], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.RolePermissions], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.UserRole], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Permissions], Lazy.Captcha.Core.ICaptcha)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass41_0.<PropertiesAutowired>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass35_0.<OnPreparing>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CoreEventMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-02-26 21:45:44.663 +08:00 [ERR] ---------- Exception Data ----------
+ActivatorChain = Castle.Proxies.UserServicesProxy
+
+2025-02-26 21:45:44.663 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-02-26 21:45:44.664 +08:00 [INF] Executed action HIS.Users.UserServices.Captcha (HIS.Application) in 3.3855ms
+2025-02-26 21:45:44.664 +08:00 [INF] Executed endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:45:44.665 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 500 null application/json; charset=utf-8 6.3366ms
+2025-02-26 21:45:45.872 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-02-26 21:45:45.873 +08:00 [INF] Executing endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:45:45.873 +08:00 [INF] Route matched with {action = "Captcha", controller = "UserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.RBAC.CaptchaDto] Captcha(System.String) on controller HIS.Users.UserServices (HIS.Application).
+2025-02-26 21:45:45.875 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-02-26 21:45:45.875 +08:00 [ERR] An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Castle.Proxies.UserServicesProxy' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User] userrepository' of constructor 'Void .ctor(Castle.DynamicProxy.IInterceptor[], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Role], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.RolePermissions], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.UserRole], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Permissions], Lazy.Captcha.Core.ICaptcha)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass41_0.<PropertiesAutowired>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass35_0.<OnPreparing>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CoreEventMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-02-26 21:45:45.875 +08:00 [ERR] ---------- Exception Data ----------
+ActivatorChain = Castle.Proxies.UserServicesProxy
+
+2025-02-26 21:45:45.875 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-02-26 21:45:45.875 +08:00 [INF] Executed action HIS.Users.UserServices.Captcha (HIS.Application) in 2.0247ms
+2025-02-26 21:45:45.875 +08:00 [INF] Executed endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:45:45.876 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 500 null application/json; charset=utf-8 4.0803ms
+2025-02-26 21:45:53.033 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-02-26 21:45:53.035 +08:00 [INF] Executing endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:45:53.035 +08:00 [INF] Route matched with {action = "Captcha", controller = "UserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.RBAC.CaptchaDto] Captcha(System.String) on controller HIS.Users.UserServices (HIS.Application).
+2025-02-26 21:45:53.036 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-02-26 21:45:53.037 +08:00 [ERR] An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Castle.Proxies.UserServicesProxy' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User] userrepository' of constructor 'Void .ctor(Castle.DynamicProxy.IInterceptor[], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Role], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.RolePermissions], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.UserRole], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Permissions], Lazy.Captcha.Core.ICaptcha)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass41_0.<PropertiesAutowired>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass35_0.<OnPreparing>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CoreEventMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-02-26 21:45:53.037 +08:00 [ERR] ---------- Exception Data ----------
+ActivatorChain = Castle.Proxies.UserServicesProxy
+
+2025-02-26 21:45:53.037 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-02-26 21:45:53.037 +08:00 [INF] Executed action HIS.Users.UserServices.Captcha (HIS.Application) in 2.2498ms
+2025-02-26 21:45:53.037 +08:00 [INF] Executed endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:45:53.037 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 500 null application/json; charset=utf-8 4.3111ms
+2025-02-26 21:58:58.535 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-02-26 21:59:18.793 +08:00 [INF] Loaded ABP modules:
+2025-02-26 21:59:18.794 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-02-26 21:59:18.794 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]   - HIS.HISApplicationModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - HIS.HISDomainModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-02-26 21:59:18.794 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-02-26 21:59:18.794 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-02-26 21:59:18.794 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-02-26 21:59:18.794 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-02-26 21:59:18.794 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-02-26 21:59:18.794 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-02-26 21:59:18.794 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-02-26 21:59:18.794 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-02-26 21:59:18.794 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-02-26 21:59:18.794 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-02-26 21:59:18.794 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-02-26 21:59:18.794 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-02-26 21:59:18.794 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-02-26 21:59:18.794 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-02-26 21:59:18.794 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-02-26 21:59:18.816 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-02-26 21:59:21.789 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-26 21:59:21.838 +08:00 [INF] Initialized all ABP modules.
+2025-02-26 21:59:22.325 +08:00 [INF] Now listening on: https://localhost:44323
+2025-02-26 21:59:22.389 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-26 21:59:22.389 +08:00 [INF] Hosting environment: Development
+2025-02-26 21:59:22.389 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 21:59:22.501 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-02-26 21:59:25.120 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:59:25.133 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-02-26 21:59:25.145 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-02-26 21:59:25.147 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 11.9588ms
+2025-02-26 21:59:25.147 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-02-26 21:59:25.152 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 2654.334ms
+2025-02-26 21:59:25.157 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-02-26 21:59:25.185 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 27.6085ms
+2025-02-26 21:59:25.189 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-26 21:59:25.189 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-02-26 21:59:25.191 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.0456ms
+2025-02-26 21:59:25.196 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 7.2172ms
+2025-02-26 21:59:25.196 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-02-26 21:59:25.213 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.8543ms
+2025-02-26 21:59:25.242 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-02-26 21:59:25.326 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.0395ms
+2025-02-26 21:59:30.904 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-02-26 21:59:30.906 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:59:30.907 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-02-26 21:59:30.916 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 9.0926ms
+2025-02-26 21:59:30.916 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-02-26 21:59:30.917 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 12.3442ms
+2025-02-26 21:59:30.934 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/captcha?id=999 - null null
+2025-02-26 21:59:30.940 +08:00 [INF] Executing endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:59:30.946 +08:00 [INF] Route matched with {action = "Captcha", controller = "UserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.RBAC.CaptchaDto] Captcha(System.String) on controller HIS.Users.UserServices (HIS.Application).
+2025-02-26 21:59:30.962 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-02-26 21:59:30.962 +08:00 [ERR] An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Castle.Proxies.UserServicesProxy.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Castle.Proxies.UserServicesProxy' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User] userrepository' of constructor 'Void .ctor(Castle.DynamicProxy.IInterceptor[], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.User], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Role], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.RolePermissions], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.UserRole], Volo.Abp.Domain.Repositories.IRepository`1[HIS.RBAC.Permissions], Lazy.Captcha.Core.ICaptcha)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass41_0.<PropertiesAutowired>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Builder.RegistrationBuilder`3.<>c__DisplayClass35_0.<OnPreparing>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CoreEventMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-02-26 21:59:30.965 +08:00 [ERR] ---------- Exception Data ----------
+ActivatorChain = Castle.Proxies.UserServicesProxy
+
+2025-02-26 21:59:30.983 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-02-26 21:59:30.985 +08:00 [INF] Executed action HIS.Users.UserServices.Captcha (HIS.Application) in 38.465ms
+2025-02-26 21:59:30.985 +08:00 [INF] Executed endpoint 'HIS.Users.UserServices.Captcha (HIS.Application)'
+2025-02-26 21:59:30.985 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/captcha?id=999 - 500 null application/json; charset=utf-8 51.1862ms

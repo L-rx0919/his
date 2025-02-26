@@ -152,7 +152,8 @@ namespace HIS.Users
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("/api/v1/auth/captcha")]
+        [HttpGet("/api/captcha")]
+        ///v1/auth
         public APIResult<CaptchaDto> Captcha(string id)
         {
             var captchaCode = captcha.Generate(id);
