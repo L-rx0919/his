@@ -16,7 +16,7 @@ public class HISDbContext :
 
 
 {
-    /* Add DbSet properties for your Aggregate Roots / Entities here. */
+
     /// <summary>
     /// 科室表
     /// </summary>
@@ -110,7 +110,7 @@ public class HISDbContext :
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.ConfigureSettingManagement(); 
+        builder.ConfigureSettingManagement();
         builder.ConfigureBackgroundJobs();
         builder.ConfigureAuditLogging();
     }
