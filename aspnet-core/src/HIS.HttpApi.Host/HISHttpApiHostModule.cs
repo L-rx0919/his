@@ -71,6 +71,13 @@ public class HISHttpApiHostModule : AbpModule
 
     }
 
+
+
+
+    /// <summary>
+    /// 配置验证码
+    /// </summary>
+    /// <param name="context"></param>
     private void ConfigureCaptcha(ServiceConfigurationContext context)
     {
         var builder = context.Services;
@@ -101,6 +108,10 @@ public class HISHttpApiHostModule : AbpModule
             option.ImageOption.TextBold = true; // 粗体
         });
     }
+    /// <summary>
+    /// 配置认证
+    /// </summary>
+    /// <param name="context"></param>
     private void ConfigureAuthentication(ServiceConfigurationContext context)
     {
         var configuration = context.Services.GetConfiguration();
@@ -233,12 +244,15 @@ public class HISHttpApiHostModule : AbpModule
 
          //就是这里！！！！！！！！！
          var basePath = AppDomain.CurrentDomain.BaseDirectory;
-         var xmlPath = Path.Combine(basePath, "HIS.HttpApi.Host.xml");//这个就是刚刚配置的xml文件名
+         var xmlPath = Path.Combine(basePath, "HIS.Application.xml");//这个就是刚刚配置的xml文件名
          options.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
      }
  );
 
     }
+    /// <summary>
+    /// 配置本地化
+    /// </summary>
     private void ConfigureLocalization()
     {
         Configure<AbpLocalizationOptions>(options =>
@@ -338,4 +352,38 @@ public class HISHttpApiHostModule : AbpModule
         app.UseAbpSerilogEnrichers();
         app.UseConfiguredEndpoints();
     }
+
+//    /// <summary>
+//    /// 配置应用服务  
+//    /// </summary>
+//    /// <param name="context"></param>
+//    public override void OnPreApplicationInitialization(ApplicationInitializationContext context)
+//{
+//    var app = context.GetApplicationBuilder();
+//    var env = context.GetEnvironment();
+    
+//    if (env.IsDevelopment())
+//    {
+//        app.UseDeveloperExceptionPage();
+//    }
+
+//    // 启用Swagger
+//    app.UseSwagger();
+//    app.UseSwaggerUI(options =>
+//    {
+//        options.SwaggerEndpoint("/swagger/v1/swagger.json", "HIS API");
+//    });
+
+//    // 加载XML注释文件
+//    var assembly = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(a => a.FullName.StartsWith("YourProjectName"));
+//    var xmlFile = Path.Combine(AppContext.BaseDirectory, "YourProjectName.xml");
+    
+//    if (File.Exists(xmlFile))
+//    {
+//        services.AddSwaggerGen(c =>
+//        {
+//            c.IncludeXmlComments(xmlFile); // 加载XML注释文件
+//        });
+//    }
+//}
 }
