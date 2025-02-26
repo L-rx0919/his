@@ -6,6 +6,7 @@ using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 
 namespace HIS.EntityFrameworkCore;
@@ -22,7 +23,6 @@ public class HISDbContext :
     /// 科室表
     /// </summary>
     public DbSet<Department> Departments { get; set; }
-
     /// <summary>
     /// 费用折扣表
     /// </summary>
@@ -79,16 +79,10 @@ public class HISDbContext :
     /// 结算表
     /// </summary>
     public DbSet<Settlement_Record> Settlement_Records { get; set; }
-
-
-
-
-
     /// <summary>
     /// 病人性质
     /// </summary>
     public DbSet<NatureofPatient> NatureofPatients { get; set; }
-
     /// <summary>
     /// 收费模块表
     /// </summary>
@@ -133,8 +127,15 @@ public class HISDbContext :
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.ConfigureSettingManagement(); 
+        builder.ConfigureSettingManagement();
         builder.ConfigureBackgroundJobs();
         builder.ConfigureAuditLogging();
+
+        //builder.Entity<Department>(b =>
+        //{
+        //    b.ToTable(HISConsts.DbTablePrefix + "Departments", HISConsts.DbSchema);
+        //    b.ConfigureByConvention();
+
+        //});
     }
 }

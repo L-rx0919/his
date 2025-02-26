@@ -10,7 +10,5 @@ namespace HIS.Patients
     public interface IPatientServer:IApplicationService
     {
        Task<APIResult<PatientDto>> CreatePatient(PatientDto patient);
-
-      
     }
 }
