@@ -1,10 +1,12 @@
-﻿using HIS.SettlementSystem;
+﻿using HIS.RBAC;
+using HIS.SettlementSystem;
 using HIS.System_Administration;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 
 namespace HIS.EntityFrameworkCore;
@@ -21,7 +23,6 @@ public class HISDbContext :
     /// 科室表
     /// </summary>
     public DbSet<Department> Departments { get; set; }
-
     /// <summary>
     /// 费用折扣表
     /// </summary>
@@ -78,16 +79,10 @@ public class HISDbContext :
     /// 结算表
     /// </summary>
     public DbSet<Settlement_Record> Settlement_Records { get; set; }
-
-
-
-
-
     /// <summary>
     /// 病人性质
     /// </summary>
     public DbSet<NatureofPatient> NatureofPatients { get; set; }
-
     /// <summary>
     /// 收费模块表
     /// </summary>
@@ -101,6 +96,28 @@ public class HISDbContext :
     /// </summary>
     public DbSet<InvoiceConfiguration> InvoiceConfigurations { get; set; }
 
+    /// <summary>
+    /// 权限表
+    /// </summary>
+    public DbSet<Permissions> Permissionss { get; set; }
+    /// <summary>
+    /// 角色表
+    /// </summary>
+    public DbSet<Role> Roles { get; set; }
+    /// <summary>
+    /// 角色权限表
+    /// </summary>
+    public DbSet<RolePermissions> RolePermissionss { get; set; }
+    /// <summary>
+    /// 用户表
+    /// </summary>
+    public DbSet<User> Users { get; set; }
+    /// <summary>
+    /// 用户角色表
+    /// </summary>
+    public DbSet<UserRole> UserRole { get; set; }
+
+
     public HISDbContext(DbContextOptions<HISDbContext> options)
         : base(options)
     {
@@ -110,8 +127,15 @@ public class HISDbContext :
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.ConfigureSettingManagement(); 
+        builder.ConfigureSettingManagement();
         builder.ConfigureBackgroundJobs();
         builder.ConfigureAuditLogging();
+
+        //builder.Entity<Department>(b =>
+        //{
+        //    b.ToTable(HISConsts.DbTablePrefix + "Departments", HISConsts.DbSchema);
+        //    b.ConfigureByConvention();
+
+        //});
     }
 }
