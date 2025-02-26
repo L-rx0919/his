@@ -7,7 +7,7 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.RBAC
 {
-    public class UserDTO:FullAuditedEntity<Guid>
+    public class UserDTO:FullAuditedAggregateRoot<Guid>
     {
         /// <summary>
         /// 用户名
