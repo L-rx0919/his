@@ -26,7 +26,9 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
-
+using Lazy.Captcha.Core;
+using SkiaSharp;
+using Lazy.Captcha.Core.Generator;
 namespace HIS;
 
 [DependsOn(
@@ -52,9 +54,12 @@ public class HISHttpApiHostModule : AbpModule
             a.AutoValidate = false;
         });
 
+
         var configuration = context.Services.GetConfiguration();
         var hostingEnvironment = context.Services.GetHostingEnvironment();
 
+
+        ConfigureCaptcha(context); // 添加验证码配置
         ConfigureAuthentication(context);
         ConfigureBundles();
         ConfigureUrls(configuration);
@@ -63,6 +68,38 @@ public class HISHttpApiHostModule : AbpModule
         ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context, configuration);
         ConfigureLocalization();
+
+    }
+
+    private void ConfigureCaptcha(ServiceConfigurationContext context)
+    {
+        var builder = context.Services;
+        var configuration = context.Services.GetConfiguration();
+
+        builder.AddCaptcha(configuration, option =>
+        {
+            option.CaptchaType = CaptchaType.WORD; // 验证码类型
+            option.CodeLength = 6; // 验证码长度
+            option.ExpirySeconds = 30; // 验证码过期时间
+            option.IgnoreCase = true; // 比较时是否忽略大小写
+            option.StoreageKeyPrefix = ""; // 存储键前缀
+
+            option.ImageOption.Animation = true; // 是否启用动画
+            option.ImageOption.FrameDelay = 30; // 每帧延迟
+            option.ImageOption.Width = 150; // 验证码宽度
+            option.ImageOption.Height = 50; // 验证码高度
+            option.ImageOption.BackgroundColor = SkiaSharp.SKColors.White; // 验证码背景色
+
+            option.ImageOption.BubbleCount = 2; // 气泡数量
+            option.ImageOption.BubbleMinRadius = 5; // 气泡最小半径
+            option.ImageOption.BubbleMaxRadius = 15; // 气泡最大半径
+            option.ImageOption.BubbleThickness = 1; // 气泡边沿厚度
+
+            option.ImageOption.InterferenceLineCount = 2; // 干扰线数量
+            option.ImageOption.FontSize = 36; // 字体大小
+            option.ImageOption.FontFamily = DefaultFontFamilys.Instance.Actionj; // 字体
+            option.ImageOption.TextBold = true; // 粗体
+        });
     }
     private void ConfigureAuthentication(ServiceConfigurationContext context)
     {
@@ -202,7 +239,6 @@ public class HISHttpApiHostModule : AbpModule
  );
 
     }
-
     private void ConfigureLocalization()
     {
         Configure<AbpLocalizationOptions>(options =>
@@ -273,7 +309,7 @@ public class HISHttpApiHostModule : AbpModule
         {
             app.UseErrorPage();
         }
-
+        //app.UseCaptcha(); // 添加验证码中间件（如果需要）
         app.UseCorrelationId();
         app.MapAbpStaticAssets();
         app.UseRouting();

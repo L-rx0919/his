@@ -1,6 +1,8 @@
 ﻿using HIS.RBAC;
+using Lazy.Captcha.Core;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -15,10 +17,8 @@ namespace HIS.Users
         /// 用户仓储
         /// </summary>
         private readonly IRepository<User> Userrepository;
+        private readonly ICaptcha captcha;
 
-        /// <summary>
-        /// 角色仓储
-        /// </summary>
         private readonly IRepository<Role> Rolerepository;
         /// <summary>
         /// 角色权限仓储
@@ -33,21 +33,14 @@ namespace HIS.Users
         /// </summary>
         private readonly IRepository<Permissions> Permissionsrepository;
 
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        /// <param name="userrepository"></param>
-        /// <param name="rolerepository"></param>
-        /// <param name="rolePermissionsrepository"></param>
-        /// <param name="userRolerepository"></param>
-        /// <param name="permissionsrepository"></param>
-        public UserServices(IRepository<HIS.RBAC.User> userrepository, IRepository<Role> rolerepository, IRepository<RolePermissions> rolePermissionsrepository, IRepository<UserRole> userRolerepository, IRepository<Permissions> permissionsrepository)
+        public UserServices(IRepository<HIS.RBAC.User> userrepository, IRepository<Role> rolerepository, IRepository<RolePermissions> rolePermissionsrepository, IRepository<UserRole> userRolerepository, IRepository<Permissions> permissionsrepository, ICaptcha captcha = null)
         {
             Userrepository = userrepository;
             Rolerepository = rolerepository;
             RolePermissionsrepository = rolePermissionsrepository;
             UserRolerepository = userRolerepository;
             Permissionsrepository = permissionsrepository;
+            this.captcha = captcha;
         }
 
         /// <summary>
@@ -92,7 +85,7 @@ namespace HIS.Users
         /// <param name="UserName"></param>
         /// <param name="UserPwd"></param>
         /// <returns></returns>
-        [HttpPost("api/Login")]
+        [HttpPost("/api/v1/auth/Login")]
         public async Task<APIResult<UserDTO>> Login(string UserName, string UserPwd)
         {
             //查询用户
@@ -166,6 +159,28 @@ namespace HIS.Users
             };
         }
 
-
+        /// <summary>
+        ///  获取验证码
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("/api/v1/auth/captcha")]
+        public APIResult<CaptchaDto> Captcha(string id)
+        {
+            var captchaCode = captcha.Generate(id);
+            var stream = new MemoryStream(captchaCode.Bytes);
+            var base64 = $"data:image/png;base64,{Convert.ToBase64String(stream.ToArray())}";
+            var captchaDto = new CaptchaDto
+            {
+                CaptchaKey = Guid.NewGuid().ToString("n"),
+                CaptchaBase64 = base64
+            };
+            return new APIResult<CaptchaDto>
+            {
+                Code = CodeEnum.success,
+                Data = captchaDto,
+                Message = "获取验证码成功"
+            };
+        }
     }
 }
