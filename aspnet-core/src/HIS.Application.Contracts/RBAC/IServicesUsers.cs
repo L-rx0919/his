@@ -18,12 +18,12 @@ namespace HIS.RBAC
         /// <returns></returns>
         Task<APIResult> AddUser(UserDTO user);
 
-        ///// <summary>
-        ///// 异步用户登录
-        ///// </summary>
-        ///// <param name="UserName"></param>
-        ///// <param name="UserPwd"></param>
-        ///// <returns></returns>
-        //Task<APIResult> Login(string UserName,string UserPwd);
+        /// <summary>
+        /// 异步用户登录
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <param name="UserPwd"></param>
+        /// <returns></returns>
+        Task<APIResult<UserDTO>> Login(string UserName, string UserPwd);
     }
 }
