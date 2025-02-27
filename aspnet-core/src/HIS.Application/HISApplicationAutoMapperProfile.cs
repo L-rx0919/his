@@ -12,7 +12,9 @@ namespace HIS;
 
 public class HISApplicationAutoMapperProfile : Profile
 {
-
+    /// <summary>
+    /// 映射配置
+    /// </summary>
     public HISApplicationAutoMapperProfile()
     {
         CreateMap<PatientDto, Patient>().ReverseMap();
