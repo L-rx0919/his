@@ -36,14 +36,14 @@ namespace HIS.Chargingmodules
         /// <exception cref="NotImplementedException"></exception>
         /// 
         [HttpPost("api/AddCharging")]
-        public async Task<APIResult<NewchargingmoduleDTO>> AddCharging(NewchargingmoduleDTO charging)
+        public async Task<APIResult1<NewchargingmoduleDTO>> AddCharging(NewchargingmoduleDTO charging)
         {
             Chargingmodule entity = ObjectMapper.Map<NewchargingmoduleDTO, Chargingmodule>(charging);
             var patientName = await chargingRepository.AllAsync(x => x.TemplateName == charging.TemplateName);
 
             if (patientName == false)
             {
-                return new APIResult<NewchargingmoduleDTO>()
+                return new APIResult1<NewchargingmoduleDTO>()
                 {
                     Code = CodeEnum.error,
                     Message = "模版名称重复"
@@ -52,7 +52,7 @@ namespace HIS.Chargingmodules
             else
             {
                 await chargingRepository.InsertAsync(entity);
-                return new APIResult<NewchargingmoduleDTO>()
+                return new APIResult1<NewchargingmoduleDTO>()
                 {
                     Code = 0,
                     Message = "添加收费项目成功",
