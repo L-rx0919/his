@@ -122,11 +122,26 @@ namespace HIS.EntityFrameworkCore
         /// 病人一卡通信息表
         /// </summary>
         public DbSet<Patient_Card_Info> Patient_Card_Infos { get; set; }
+        /// <summary>
+        /// 挂号表表
+        /// </summary>
+        public DbSet<Registration> Registrations { get; set; }
+        /// <summary>
+        /// 门诊类型与医生排班表
+        /// </summary>
+        public DbSet<Clinic_type_schedule> Clinic_type_schedules { get; set; }
+        /// <summary>
+        /// 门诊类型与科室关联表
+        /// </summary>
+        public DbSet<Clinic_type_department> Clinic_type_departments { get; set; }
+        /// <summary>
+        /// 门诊类型表
+        /// </summary>
+        public DbSet<Clinic_type> Clinic_types { get; set; }
 
         public HISDbContext(DbContextOptions<HISDbContext> options)
             : base(options)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -138,3 +153,4 @@ namespace HIS.EntityFrameworkCore
         }
     }
 }
+

@@ -3,6 +3,7 @@ using HIS.Chargingmodules;
 using HIS.InpatientRecords;
 using HIS.Patients;
 using HIS.RBAC;
+using HIS.RegistrationServices;
 using HIS.SettlementSystem;
 
 using HIS.System_Administration;
