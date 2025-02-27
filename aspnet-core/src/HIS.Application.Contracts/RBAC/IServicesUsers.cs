@@ -13,7 +13,7 @@ namespace HIS.RBAC
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        Task<APIResult<UserDTO>> AddUser(UserDTO user);
+        Task<APIResult1<UserDTO>> AddUser(UserDTO user);
 
         /// <summary>
         /// 异步用户登录
@@ -21,8 +21,30 @@ namespace HIS.RBAC
         /// <param name="UserName"></param>
         /// <param name="UserPwd"></param>
         /// <returns></returns>
-        Task<APIResult<UserDTO>> Login(string UserName, string UserPwd);
-
-        APIResult<CaptchaDto> Captcha(string id);
+        Task<APIResult1<UserDTO>> Login(string UserName, string UserPwd);
+        /// <summary>
+        /// 获取验证码
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        APIResult1<CaptchaDto> Captcha(string id);
+        /// <summary>
+        ///  角色添加
+        /// </summary>
+        /// <param name="insertRoleDto"></param>
+        /// <returns></returns>
+        Task<APIResult1<InsertRoleDto>> InsertRole(InsertRoleDto insertRoleDto);
+        /// <summary>
+        /// 添加角色权限
+        /// </summary>
+        /// <param name="insertRolePermissionsDto"></param>
+        /// <returns></returns>
+        Task<APIResult1<RolePermissionDTO>> InsertRolePermissions(RolePermissionDTO insertRolePermissionsDto);
+        /// <summary>
+        /// 添加用户角色
+        /// </summary>
+        /// <param name="insertUserRoleDto"></param>
+        /// <returns></returns>
+        Task<APIResult1<UserRoleDto>> InsertUserRole(UserRoleDto insertUserRoleDto);
     }
 }

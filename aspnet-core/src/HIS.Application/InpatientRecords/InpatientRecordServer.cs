@@ -27,11 +27,11 @@ namespace HIS.InpatientRecords
             this._mapper = mapper;
         }
         [HttpPost("api/InpatientRecords")]
-        public async Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient)
+        public async Task<APIResult1<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient)
         {
             InpatientRecord entity = ObjectMapper.Map<InpatientRecordDto, InpatientRecord>(patient);
 
-            return new APIResult<InpatientRecordDto>()
+            return new APIResult1<InpatientRecordDto>()
             {
                 Code = 0,
                 Message = "添加住院记录成功",

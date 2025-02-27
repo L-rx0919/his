@@ -1,11 +1,13 @@
 ﻿using HIS.RBAC;
 using Lazy.Captcha.Core;
 using Microsoft.AspNetCore.Mvc;
+using RabbitManage.EntityFrameworkCore;
 using System;
 using System.IO;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
+using Volo.Abp.ObjectMapping;
 
 
 namespace HIS.Users
@@ -50,7 +52,7 @@ namespace HIS.Users
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
         [HttpPost("api/registration")]
-        public async Task<APIResult<UserDTO>> AddUser(UserDTO user)
+        public async Task<APIResult1<UserDTO>> AddUser(UserDTO user)
         {
             var users = await Userrepository.AllAsync(c => c.UserName == user.UserName);
             if (users == true)
@@ -63,7 +65,7 @@ namespace HIS.Users
                     UserId = list.Id,
                     RoleId = user.RoleId
                 };
-                return new APIResult<UserDTO>()
+                return new APIResult1<UserDTO>()
                 {
                     Code = CodeEnum.success,
                     Message = "注册成功",
@@ -71,7 +73,7 @@ namespace HIS.Users
             }
             else
             {
-                return new APIResult<UserDTO>()
+                return new APIResult1<UserDTO>()
                 {
                     Code = CodeEnum.error,
                     Message = "注册失败",
@@ -86,13 +88,13 @@ namespace HIS.Users
         /// <param name="UserPwd"></param>
         /// <returns></returns>
         [HttpPost("/api/v1/auth/Login")]
-        public async Task<APIResult<UserDTO>> Login(string UserName, string UserPwd)
+        public async Task<APIResult1<UserDTO>> Login(string UserName, string UserPwd)
         {
             //查询用户
-            var userlist = await Userrepository.GetAsync(c => c.UserName ==UserName);
+            var userlist = await Userrepository.GetAsync(c => c.UserName == UserName);
             if (userlist == null)
             {
-                return new APIResult<UserDTO>()
+                return new APIResult1<UserDTO>()
                 {
                     Code = CodeEnum.error,
                     Message = "用户名或密码错误",
@@ -103,7 +105,7 @@ namespace HIS.Users
                 // 检查用户是否被锁定
                 if (userlist.UserIsLock)
                 {
-                    return new APIResult<UserDTO>()
+                    return new APIResult1<UserDTO>()
                     {
                         Code = CodeEnum.error,
                         Message = "用户已锁定",
@@ -127,7 +129,7 @@ namespace HIS.Users
                     // 如果锁定了，返回锁定信息
                     if (userlist.UserIsLock)
                     {
-                        return new APIResult<UserDTO>()
+                        return new APIResult1<UserDTO>()
                         {
                             Code = CodeEnum.error,
                             Message = "用户已锁定，密码错误次数超过限制。",
@@ -135,7 +137,7 @@ namespace HIS.Users
                     }
                     else
                     {
-                        return new APIResult<UserDTO>()
+                        return new APIResult1<UserDTO>()
                         {
                             Code = CodeEnum.error,
                             Message = $"密码错误，剩余尝试次数：{3 - userlist.UserErrorCount}",
@@ -151,7 +153,7 @@ namespace HIS.Users
                 UserId = userlist.Id,
             };
 
-            return new APIResult<UserDTO>()
+            return new APIResult1<UserDTO>()
             {
                 Code = CodeEnum.success,
                 Message = "登录成功",
@@ -164,9 +166,8 @@ namespace HIS.Users
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("/api/captcha")]
-        ///v1/auth
-        public APIResult<CaptchaDto> Captcha(string id)
+        [HttpGet("/api/v1/auth/captcha")]
+        public APIResult1<CaptchaDto> Captcha(string id)
         {
             var captchaCode = captcha.Generate(id);
             var stream = new MemoryStream(captchaCode.Bytes);
@@ -176,12 +177,85 @@ namespace HIS.Users
                 CaptchaKey = Guid.NewGuid().ToString("n"),
                 CaptchaBase64 = base64
             };
-            return new APIResult<CaptchaDto>
+            return new APIResult1<CaptchaDto>
             {
                 Code = CodeEnum.success,
                 Data = captchaDto,
                 Message = "获取验证码成功"
             };
         }
+
+
+        /// <summary>
+        /// 添加角色
+        /// </summary>
+        /// <param name="insertRoleDto"></param>
+        /// <returns></returns>
+        [HttpPost("/api/v1/auth/Role")]
+        public async Task<APIResult1<InsertRoleDto>> InsertRole(InsertRoleDto insertRoleDto)
+        {
+
+            var role = ObjectMapper.Map<InsertRoleDto, Role>(insertRoleDto);
+            await Rolerepository.InsertAsync(role);
+            return new APIResult1<InsertRoleDto>()
+            {
+                Code = CodeEnum.success,
+                Message = "添加成功",
+            };
+        }
+
+        /// <summary>
+        /// 权限添加
+        /// </summary>
+        /// <param name="insertPermissionDto"></param>
+        /// <returns></returns>
+       [HttpPost("/api/v1/auth/Permissions")]
+       public async Task<APIResult1<InsertPermissionDto>> InsertPermission(InsertPermissionDto insertPermissionDto)
+        {
+            var permission = ObjectMapper.Map<InsertPermissionDto, Permissions>(insertPermissionDto);
+            await Permissionsrepository.InsertAsync(permission);
+            return new APIResult1<InsertPermissionDto>()
+            {
+                Code = CodeEnum.success,
+                Message = "添加成功",
+            };
+        }
+
+        /// <summary>
+        /// 角色权限添加
+        /// </summary>
+        /// <param name="insertRolePermissionsDto"></param>
+        /// <returns></returns>
+        [HttpPost("/api/v1/auth/InsertRolePermissions")]
+        public async Task<APIResult1<RolePermissionDTO>> InsertRolePermissions(RolePermissionDTO insertRolePermissionsDto)
+        {
+            var rolePermissions = ObjectMapper.Map<RolePermissionDTO, RolePermissions>(insertRolePermissionsDto);
+            await RolePermissionsrepository.InsertAsync(rolePermissions);
+            return new APIResult1<RolePermissionDTO>()
+            {
+                Code = CodeEnum.success,
+                Message = "添加成功",
+            };
+        }
+
+        /// <summary>
+        /// 用户角色添加
+        /// </summary>
+        /// <param name="insertUserRoleDto"></param>
+        /// <returns></returns>
+        [HttpPost("/api/v1/auth/InsertUserRole")]
+        public async Task<APIResult1<UserRoleDto>> InsertUserRole(UserRoleDto insertUserRoleDto)
+        {
+            var userRole = ObjectMapper.Map<UserRoleDto, UserRole>(insertUserRoleDto);
+            await UserRolerepository.InsertAsync(userRole);
+            return new APIResult1<UserRoleDto>()
+            {
+                Code = CodeEnum.success,
+                Message = "添加成功",
+            };
+        }
+
+
+
     }
 }

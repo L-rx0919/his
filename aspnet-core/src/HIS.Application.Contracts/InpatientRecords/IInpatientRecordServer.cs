@@ -9,6 +9,6 @@ namespace HIS.InpatientRecords
 {
     public interface IInpatientRecordServer : IApplicationService
     {
-        Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient);
+        Task<APIResult1<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient);
     }
 }
