@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HIS.Chargingmodules;
 using HIS.InpatientRecords;
 using HIS.Patients;
 using HIS.RBAC;
