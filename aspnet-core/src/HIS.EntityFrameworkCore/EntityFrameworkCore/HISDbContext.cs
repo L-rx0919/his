@@ -97,10 +97,47 @@ namespace HIS.EntityFrameworkCore
         /// 发票配置表
         /// </summary>
         public DbSet<InvoiceConfiguration> InvoiceConfigurations { get; set; }
+
+        /// <summary>
+        /// 权限表
+        /// </summary>
+        public DbSet<Permissions> Permissionss { get; set; }
+        /// <summary>
+        /// 角色表
+        /// </summary>
+        public DbSet<Role> Roles { get; set; }
+        /// <summary>
+        /// 角色权限表
+        /// </summary>
+        public DbSet<RolePermissions> RolePermissionss { get; set; }
+        /// <summary>
+        /// 用户表
+        /// </summary>
+        public DbSet<User> Users { get; set; }
+        /// <summary>
+        /// 用户角色表
+        /// </summary>
+        public DbSet<UserRole> UserRole { get; set; }
         /// <summary>
         /// 病人一卡通信息表
         /// </summary>
         public DbSet<Patient_Card_Info> Patient_Card_Infos { get; set; }
+        /// <summary>
+        /// 挂号表表
+        /// </summary>
+        public DbSet<Registration> Registrations { get; set; }
+        /// <summary>
+        /// 门诊类型与医生排班表
+        /// </summary>
+        public DbSet<Clinic_type_schedule> Clinic_type_schedules { get; set; }
+        /// <summary>
+        /// 门诊类型与科室关联表
+        /// </summary>
+        public DbSet<Clinic_type_department> Clinic_type_departments { get; set; }
+        /// <summary>
+        /// 门诊类型表
+        /// </summary>
+        public DbSet<Clinic_type> Clinic_types { get; set; }
 
         public HISDbContext(DbContextOptions<HISDbContext> options)
             : base(options)

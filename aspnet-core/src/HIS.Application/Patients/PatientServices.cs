@@ -8,7 +8,7 @@ using Volo.Abp.Domain.Repositories;
 namespace HIS.Patients
 {
     [ApiExplorerSettings(GroupName = "v1")]
-    public class PatientServer :ApplicationService, IPatientServer
+    public class PatientServices :ApplicationService, IPatientServices
     {
         /// <summary>
         ///  patients仓储
@@ -23,7 +23,7 @@ namespace HIS.Patients
         /// </summary>
         /// <param name="patientRepository"></param>
         /// <param name="mapper"></param>
-        public PatientServer(IRepository<Patient> patientRepository, IMapper mapper = null)
+        public PatientServices(IRepository<Patient> patientRepository, IMapper mapper = null)
         {
             _patientRepository = patientRepository;
             _mapper = mapper;
@@ -33,7 +33,7 @@ namespace HIS.Patients
         /// </summary>
         /// <param name="patient"> 患者信息 </param>
         /// <returns> APIResult </returns>
-        [HttpPost("api/InsertPatients")]
+        [HttpPost("api/InsertPatient")]
         public async Task<APIResult<PatientDto>> CreatePatient(PatientDto patient)
         {
            Patient entity = ObjectMapper.Map<PatientDto, Patient>(patient);
@@ -63,7 +63,6 @@ namespace HIS.Patients
             
         }
 
-        
     }
 
 }
