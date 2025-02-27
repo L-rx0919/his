@@ -11,7 +11,7 @@ namespace HIS.System_Administration
     /// <summary>
     /// 病人性质
     /// </summary>
-    public class NatureofPatient:FullAuditedEntity<Guid>
+    public class NatureofPatient: FullAuditedAggregateRoot<Guid>
     {
       
         /// <summary>

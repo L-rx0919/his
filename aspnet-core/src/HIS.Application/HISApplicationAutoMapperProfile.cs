@@ -12,6 +12,9 @@ namespace HIS;
 
 public class HISApplicationAutoMapperProfile : Profile
 {
+    /// <summary>
+    /// 映射配置
+    /// </summary>
     public HISApplicationAutoMapperProfile()
     {
         CreateMap<PatientDto, Patient>().ReverseMap();
@@ -20,5 +23,6 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<NaturePatientsDTO, NatureofPatient>().ReverseMap();
         CreateMap<InpatientRecordDto, InpatientRecord>().ReverseMap();
 
+        CreateMap<NewchargingmoduleDTO, Chargingmodule>().ReverseMap();
     }
 }

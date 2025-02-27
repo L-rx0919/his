@@ -21,7 +21,10 @@ namespace HIS.SystemConfigurations
     /// </summary>
     public class NatureServices : ApplicationService, IServicesNaturePatients
     {
-      private readonly IRepository<NatureofPatient> NatureofPatientRepository;
+        /// <summary>
+        /// 病人性质仓储
+        /// </summary>
+        private readonly IRepository<NatureofPatient> NatureofPatientRepository;
         /// <summary>
         /// 映射器
         /// </summary>
@@ -68,9 +71,33 @@ namespace HIS.SystemConfigurations
                 };
             }
 
-
-
-
         }
+
+
+        /// <summary>
+        /// 查询所有病人性质
+        /// </summary>
+        /// <returns></returns>
+ 
+
+        //[HttpGet("api/GetNatures")]
+        //public async Task<APIResult<List<NaturePatientsDTO>>> GetNatures(string natureofPatientName)
+        //{
+        //    //var list = (from a in  await NatureofPatientRepository.GetQueryableAsync()
+            
+        //    //if(!string.IsNullOrEmpty(natureofPatientName))
+        //    //{
+        //    //    list = list.Where(x => x.NatureofPatientName.Contains(natureofPatientName)).ToList();
+        //    //}
+
+        //    return new APIResult<List<NaturePatientsDTO>>()
+        //    {
+        //        Code = 0,
+        //        Message = "查询成功",
+        //        Data = result
+        //    };
+        //}
+
+
     }
 }

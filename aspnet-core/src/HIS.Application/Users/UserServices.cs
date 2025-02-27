@@ -61,7 +61,7 @@ namespace HIS.Users
         public async Task<APIResult<UserDTO>> AddUser(UserDTO user)
         {
             var users = await Userrepository.AllAsync(c => c.UserName == user.UserName);
-            if (users == true)
+            if (users == false)
             {
                 var list = ObjectMapper.Map<UserDTO, HIS.RBAC.User>(user);
                 await Userrepository.InsertAsync(list);

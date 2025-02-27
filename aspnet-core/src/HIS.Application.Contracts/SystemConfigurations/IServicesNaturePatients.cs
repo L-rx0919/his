@@ -20,6 +20,13 @@ namespace HIS.SystemConfiguration
         /// <param name="Nature"></param>
         /// <returns></returns>
         Task<APIResult<NaturePatientsDTO>> AddNature(NaturePatientsDTO nature);
+        /// <summary>
+        /// 异步查询病人性质
+        /// </summary>
+        /// <param name="natureofPatientName"></param>
+        /// <returns></returns>
+      //  Task<APIResult<List<NaturePatientsDTO>>> GetNatures(string natureofPatientName);
+
 
     }
 }
