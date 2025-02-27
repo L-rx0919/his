@@ -971,8 +971,8 @@ namespace HIS.Migrations
                     b.Property<bool>("is_in_insurance")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int>("patient_id")
-                        .HasColumnType("int");
+                    b.Property<Guid>("patient_id")
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("room_type")
                         .HasColumnType("longtext");
