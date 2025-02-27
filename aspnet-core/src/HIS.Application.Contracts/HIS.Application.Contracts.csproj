@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HIS.Domain.Shared\HIS.Domain.Shared.csproj" />
+    <ProjectReference Include="..\HIS.Domain\HIS.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

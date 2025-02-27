@@ -17,6 +17,6 @@ namespace HIS.Chargingmodules
         /// </summary>
         /// <param name="charging"></param>
         /// <returns></returns>
-        Task<APIResult<NewchargingmoduleDTO>> AddCharging(NewchargingmoduleDTO charging);
+        Task<APIResult1<NewchargingmoduleDTO>> AddCharging(NewchargingmoduleDTO charging);
     }
 }
