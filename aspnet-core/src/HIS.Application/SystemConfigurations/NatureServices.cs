@@ -42,7 +42,7 @@ namespace HIS.SystemConfigurations
         /// <exception cref="NotImplementedException"></exception>
         /// 
         [HttpPost("api/AddNatures")]
-        public async Task<APIResult> AddNature(NaturePatientsDTO nature)
+        public async Task<APIResDto> AddNature(NaturePatientsDTO nature)
         {
             
 
@@ -57,12 +57,12 @@ namespace HIS.SystemConfigurations
                 await NatureofPatientRepository.InsertAsync(entity);
 
                 // Return the inserted entity as a success response
-                return APIResult.OK(data: entity);
+                return APIResDto.OK(data: entity);
             }
             else
             {
                 // Return failure response if the entity already exists
-                return APIResult.Fail("已存在该病人性质");
+                return APIResDto.Fail("已存在该病人性质");
             }
 
 
@@ -74,10 +74,10 @@ namespace HIS.SystemConfigurations
         /// </summary>
         /// <returns></returns>
         [HttpGet("api/GetNatures")]
-        public async Task<APIResult> GetNaturePatient()
+        public async Task<APIResDto> GetNaturePatient()
         {
             var list = await NatureofPatientRepository.GetListAsync();
-            return APIResult.OK(data: list);
+            return APIResDto.OK(data: list);
         }
 
 
@@ -88,17 +88,17 @@ namespace HIS.SystemConfigurations
 
         [HttpDelete("api/DelNaturePatient")]
 
-       public async Task<APIResult> DelNaturePatient(Guid id)
+       public async Task<APIResDto> DelNaturePatient(Guid id)
         {
             var list = await NatureofPatientRepository.FirstOrDefaultAsync(x => x.Id == id);
             if (list != null)
             {
                 await NatureofPatientRepository.DeleteAsync(list);
-                return APIResult.OK();
+                return APIResDto.OK();
             }
             else
             {
-                return APIResult.Fail("删除失败");
+                return APIResDto.Fail("删除失败");
             }
         }
         ///<summary>
@@ -107,18 +107,18 @@ namespace HIS.SystemConfigurations
         
 
         [HttpPut("api/UpdateNaturePatient")]
-        public async Task<APIResult> UpdateNaturePatient(NaturePatientsDTO nature)
+        public async Task<APIResDto> UpdateNaturePatient(NaturePatientsDTO nature)
         {
             var list = await NatureofPatientRepository.FirstOrDefaultAsync(x => x.NatureofPatientName == nature.NatureofPatientName);
             if (list != null)
             {
                 list.NatureofPatientName = nature.NatureofPatientName;
                 await NatureofPatientRepository.UpdateAsync(list);
-                return APIResult.OK();
+                return APIResDto.OK();
             }
             else
             {
-                return APIResult.Fail("修改失败");
+                return APIResDto.Fail("修改失败");
             }
         }
     }

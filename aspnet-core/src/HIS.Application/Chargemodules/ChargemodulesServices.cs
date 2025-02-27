@@ -38,7 +38,7 @@ namespace HIS.Chargemodules
         /// 添加收费模块
         ///</summary>
         [HttpPost("api/AddChargemodules")]
-        public async Task<APIResult> AddChargemodules(ChargemodulesDTO chargemodules)
+        public async Task<APIResDto> AddChargemodules(ChargemodulesDTO chargemodules)
         {
             var existingModule = await chargemodulesRepository.FirstOrDefaultAsync(x => x.TemplateName == chargemodules.TemplateName);
 
@@ -52,12 +52,12 @@ namespace HIS.Chargemodules
                 await chargemodulesRepository.InsertAsync(entity);
 
                 // 返回成功
-                return APIResult.OK(data: entity);
+                return APIResDto.OK(data: entity);
             }
             else
             {
                 // 如果模板名称已存在，返回失败结果
-                return APIResult.Fail("模板名称已存在");
+                return APIResDto.Fail("模板名称已存在");
             }
             
         }
@@ -69,10 +69,10 @@ namespace HIS.Chargemodules
         /// </summary>
         /// <returns></returns>
         [HttpGet("api/GetChargemodules")]
-        public async Task<APIResult> GetChargemodules()
+        public async Task<APIResDto> GetChargemodules()
         {
             var list = await chargemodulesRepository.GetListAsync();
-            return APIResult.OK(data: list);
+            return APIResDto.OK(data: list);
         }
 
         ///<summary>
@@ -82,17 +82,17 @@ namespace HIS.Chargemodules
 
         [HttpDelete("api/DelChargemodules")]
 
-        public async Task<APIResult> DelChargemodules(Guid id)
+        public async Task<APIResDto> DelChargemodules(Guid id)
         {
             var list = await chargemodulesRepository.FirstOrDefaultAsync(x => x.Id == id);
             if (list != null)
             {
                 await chargemodulesRepository.DeleteAsync(list);
-                return APIResult.OK();
+                return APIResDto.OK();
             }
             else
             {
-                return APIResult.Fail("删除失败");
+                return APIResDto.Fail("删除失败");
             }
         }
     }

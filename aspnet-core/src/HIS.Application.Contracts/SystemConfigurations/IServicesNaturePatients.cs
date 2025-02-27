@@ -21,24 +21,24 @@ namespace HIS.SystemConfiguration
         /// </summary>
         /// <param name="Nature"></param>
         /// <returns></returns>
-        Task<APIResult> AddNature(NaturePatientsDTO nature);
+        Task<APIResDto> AddNature(NaturePatientsDTO nature);
         /// <summary>
         /// 异步获取病人性质
         /// </summary>
         /// <returns></returns>
-        Task<APIResult> GetNaturePatient();
+        Task<APIResDto> GetNaturePatient();
         /// <summary>
         /// 异步删除病人性质
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<APIResult> DelNaturePatient(Guid id);
+        Task<APIResDto> DelNaturePatient(Guid id);
         /// <summary>
         /// 修改病人性质
         /// </summary>
         /// <param name="nature"></param>
         /// <returns></returns>
-        Task<APIResult> UpdateNaturePatient(NaturePatientsDTO nature);
+        Task<APIResDto> UpdateNaturePatient(NaturePatientsDTO nature);
 
     }
 }

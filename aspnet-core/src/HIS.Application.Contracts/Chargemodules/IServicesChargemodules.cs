@@ -15,11 +15,11 @@ namespace HIS.Chargemodules
         /// </summary>
         /// <param name="chargemodules"></param>
         /// <returns></returns>
-        Task<APIResult> AddChargemodules(ChargemodulesDTO chargemodules);
+        Task<APIResDto> AddChargemodules(ChargemodulesDTO chargemodules);
         /// <summary>
         /// 获取收费模块
         /// </summary>
         /// <returns></returns>
-        Task<APIResult> GetChargemodules();
+        Task<APIResDto> GetChargemodules();
     }
 }
