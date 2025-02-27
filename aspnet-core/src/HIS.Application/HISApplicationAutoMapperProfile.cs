@@ -15,9 +15,8 @@ public class HISApplicationAutoMapperProfile : Profile
     {
         CreateMap<PatientDto, Patient>().ReverseMap();
         CreateMap<UserDTO, User>().ReverseMap();
-<<<<<<< HEAD
-=======
+
         CreateMap<NaturePatientsDTO, NatureofPatient>().ReverseMap();
->>>>>>> a387a5aa91b40dba94b0b175c83c62cf5f17b954
+
     }
 }
