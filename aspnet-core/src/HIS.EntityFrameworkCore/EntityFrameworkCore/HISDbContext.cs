@@ -1,4 +1,5 @@
 using HIS.RBAC;
+
 using HIS.SettlementSystem;
 using HIS.System_Administration;
 using Microsoft.EntityFrameworkCore;
@@ -106,7 +107,13 @@ namespace HIS.EntityFrameworkCore
             : base(options)
         {
 
+
         }
+
+
+
+        
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -115,5 +122,9 @@ namespace HIS.EntityFrameworkCore
             builder.ConfigureBackgroundJobs();
             builder.ConfigureAuditLogging();
         }
+
     }
 }
+
+
+
