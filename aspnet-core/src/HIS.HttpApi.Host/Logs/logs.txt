@@ -94,7 +94,7 @@
 2025-02-26 10:29:57.895 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 10:29:57.941 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 10:29:57.942 +08:00 [INF] Hosting environment: Development
-2025-02-26 10:29:57.942 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 10:29:57.942 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 10:29:59.346 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 10:29:59.366 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 10:29:59.385 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -207,7 +207,7 @@
 2025-02-26 14:25:18.263 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:25:18.333 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:25:18.333 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:25:18.333 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:25:18.333 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:25:19.909 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:25:19.931 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:25:19.950 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -320,7 +320,7 @@
 2025-02-26 14:28:44.769 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:28:44.812 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:28:44.813 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:28:44.813 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:28:44.813 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:28:46.272 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:28:46.292 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:28:46.310 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -433,7 +433,7 @@
 2025-02-26 14:31:08.770 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:31:08.812 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:31:08.812 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:31:08.812 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:31:08.812 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:31:10.130 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:31:10.148 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:31:10.164 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -546,7 +546,7 @@
 2025-02-26 14:32:55.589 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:32:55.640 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:32:55.644 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:32:55.644 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:32:55.644 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:32:56.805 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:32:56.822 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:32:56.839 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -663,7 +663,7 @@
 2025-02-26 14:34:20.377 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:34:20.418 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:34:20.418 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:34:20.418 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:34:20.418 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:34:21.796 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:34:21.814 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:34:21.832 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -776,7 +776,7 @@
 2025-02-26 14:39:33.758 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:39:33.802 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:39:33.806 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:39:33.806 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:39:33.806 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:39:35.099 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:39:35.118 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:39:35.134 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -899,7 +899,7 @@
 2025-02-26 14:41:35.357 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:41:35.399 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:41:35.400 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:41:35.400 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:41:35.400 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:41:36.723 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:41:36.742 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:41:36.759 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1026,7 +1026,7 @@
 2025-02-26 14:48:33.879 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 14:48:33.916 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 14:48:33.916 +08:00 [INF] Hosting environment: Development
-2025-02-26 14:48:33.916 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 14:48:33.916 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 14:48:35.167 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 14:48:35.185 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 14:48:35.201 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1154,7 +1154,7 @@
 2025-02-26 18:13:32.163 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 18:13:32.204 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 18:13:32.204 +08:00 [INF] Hosting environment: Development
-2025-02-26 18:13:32.204 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 18:13:32.204 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 18:13:34.653 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 18:13:34.672 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 18:13:34.688 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1267,7 +1267,7 @@
 2025-02-26 19:09:00.537 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 19:09:00.613 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 19:09:00.613 +08:00 [INF] Hosting environment: Development
-2025-02-26 19:09:00.613 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 19:09:00.613 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 19:09:02.109 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 19:09:02.129 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 19:09:02.147 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1395,7 +1395,7 @@
 2025-02-26 19:13:49.003 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 19:13:49.073 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 19:13:49.073 +08:00 [INF] Hosting environment: Development
-2025-02-26 19:13:49.073 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 19:13:49.073 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 19:13:50.440 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 19:13:50.460 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 19:13:50.477 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1523,7 +1523,7 @@
 2025-02-26 19:14:37.775 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 19:14:37.825 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 19:14:37.830 +08:00 [INF] Hosting environment: Development
-2025-02-26 19:14:37.830 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 19:14:37.830 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 19:14:39.272 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 19:14:39.291 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 19:14:39.308 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1651,7 +1651,7 @@
 2025-02-26 19:30:22.209 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 19:30:22.282 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 19:30:22.282 +08:00 [INF] Hosting environment: Development
-2025-02-26 19:30:22.282 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 19:30:22.282 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 19:30:23.599 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 19:30:23.618 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 19:30:23.635 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1764,7 +1764,7 @@
 2025-02-26 19:51:35.651 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 19:51:35.764 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 19:51:35.769 +08:00 [INF] Hosting environment: Development
-2025-02-26 19:51:35.769 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 19:51:35.769 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 19:51:37.116 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 19:51:37.135 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 19:51:37.153 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -1911,7 +1911,7 @@
 2025-02-26 20:25:19.187 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 20:25:19.219 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 20:25:19.220 +08:00 [INF] Hosting environment: Development
-2025-02-26 20:25:19.220 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 20:25:19.220 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 20:25:20.152 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 20:25:20.164 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 20:25:20.181 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -2024,7 +2024,7 @@
 2025-02-26 20:25:40.649 +08:00 [INF] Now listening on: https://localhost:44323
 2025-02-26 20:25:40.729 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 20:25:40.729 +08:00 [INF] Hosting environment: Development
-2025-02-26 20:25:40.729 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 20:25:40.729 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 20:25:41.979 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 20:25:42.487 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 20:25:42.507 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
@@ -2148,13 +2148,13 @@
 2025-02-26 20:32:52.049 +08:00 [INF] Now listening on: https://localhost:44323
 2025-02-26 20:32:52.125 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 20:32:52.125 +08:00 [INF] Hosting environment: Development
-2025-02-26 20:32:52.126 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 20:32:52.126 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 20:32:53.789 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 20:32:56.122 +08:00 [ERR] An unhandled exception has occurred while executing the request.
-Autofac.Core.DependencyResolutionException: An exception was thrown while activating λ:Swashbuckle.AspNetCore.Swagger.ISwaggerProvider -> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator -> λ:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions -> Microsoft.Extensions.Options.UnnamedOptionsManager`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> Microsoft.Extensions.Options.OptionsFactory`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> λ:Microsoft.Extensions.Options.IConfigureOptions`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]][] -> Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating ��:Swashbuckle.AspNetCore.Swagger.ISwaggerProvider -> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator -> ��:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions -> Microsoft.Extensions.Options.UnnamedOptionsManager`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> Microsoft.Extensions.Options.OptionsFactory`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> ��:Microsoft.Extensions.Options.IConfigureOptions`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]][] -> Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.
  ---> Autofac.Core.DependencyResolutionException: An exception was thrown while invoking the constructor 'Void .ctor(Microsoft.Extensions.Options.IOptions`1[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions], System.IServiceProvider, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)' on type 'ConfigureSwaggerGeneratorOptions'.
- ---> System.IO.FileNotFoundException: Could not find file 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.xml'.
-File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.xml'
+ ---> System.IO.FileNotFoundException: Could not find file 'D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.xml'.
+File name: 'D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.xml'
    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
    at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
    at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
@@ -2168,7 +2168,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
    at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.<>c__DisplayClass46_0.<IncludeXmlComments>b__0()
    at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.IncludeXmlComments(SwaggerGenOptions swaggerGenOptions, Func`1 xmlDocFactory, Boolean includeControllerXmlComments)
    at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.IncludeXmlComments(SwaggerGenOptions swaggerGenOptions, String filePath, Boolean includeControllerXmlComments)
-   at HIS.HISHttpApiHostModule.<>c.<ConfigureSwaggerServices>b__7_0(SwaggerGenOptions options) in D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host\HISHttpApiHostModule.cs:line 248
+   at HIS.HISHttpApiHostModule.<>c.<ConfigureSwaggerServices>b__7_0(SwaggerGenOptions options) in D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host\HISHttpApiHostModule.cs:line 248
    at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
    at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
    at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
@@ -2331,7 +2331,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
 2025-02-26 20:34:43.578 +08:00 [INF] Now listening on: https://localhost:44323
 2025-02-26 20:34:43.684 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 20:34:43.684 +08:00 [INF] Hosting environment: Development
-2025-02-26 20:34:43.684 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 20:34:43.684 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 20:34:45.093 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 20:34:45.607 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 20:34:45.626 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
@@ -2445,13 +2445,13 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
 2025-02-26 20:35:09.020 +08:00 [INF] Now listening on: https://localhost:44323
 2025-02-26 20:35:09.065 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 20:35:09.066 +08:00 [INF] Hosting environment: Development
-2025-02-26 20:35:09.066 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 20:35:09.066 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 20:35:10.502 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 20:35:13.001 +08:00 [ERR] An unhandled exception has occurred while executing the request.
-Autofac.Core.DependencyResolutionException: An exception was thrown while activating λ:Swashbuckle.AspNetCore.Swagger.ISwaggerProvider -> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator -> λ:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions -> Microsoft.Extensions.Options.UnnamedOptionsManager`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> Microsoft.Extensions.Options.OptionsFactory`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> λ:Microsoft.Extensions.Options.IConfigureOptions`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]][] -> Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating ��:Swashbuckle.AspNetCore.Swagger.ISwaggerProvider -> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator -> ��:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions -> Microsoft.Extensions.Options.UnnamedOptionsManager`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> Microsoft.Extensions.Options.OptionsFactory`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]] -> ��:Microsoft.Extensions.Options.IConfigureOptions`1[[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorOptions, Swashbuckle.AspNetCore.SwaggerGen, Version=6.8.1.0, Culture=neutral, PublicKeyToken=d84d99fb0135530a]][] -> Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.
  ---> Autofac.Core.DependencyResolutionException: An exception was thrown while invoking the constructor 'Void .ctor(Microsoft.Extensions.Options.IOptions`1[Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions], System.IServiceProvider, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)' on type 'ConfigureSwaggerGeneratorOptions'.
- ---> System.IO.FileNotFoundException: Could not find file 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.Application.xml'.
-File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.Application.xml'
+ ---> System.IO.FileNotFoundException: Could not find file 'D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.Application.xml'.
+File name: 'D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host\bin\Debug\net9.0\HIS.Application.xml'
    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
    at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
    at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
@@ -2465,7 +2465,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
    at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.<>c__DisplayClass46_0.<IncludeXmlComments>b__0()
    at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.IncludeXmlComments(SwaggerGenOptions swaggerGenOptions, Func`1 xmlDocFactory, Boolean includeControllerXmlComments)
    at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.IncludeXmlComments(SwaggerGenOptions swaggerGenOptions, String filePath, Boolean includeControllerXmlComments)
-   at HIS.HISHttpApiHostModule.<>c.<ConfigureSwaggerServices>b__7_0(SwaggerGenOptions options) in D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host\HISHttpApiHostModule.cs:line 248
+   at HIS.HISHttpApiHostModule.<>c.<ConfigureSwaggerServices>b__7_0(SwaggerGenOptions options) in D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host\HISHttpApiHostModule.cs:line 248
    at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
    at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
    at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
@@ -2626,7 +2626,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
 2025-02-26 20:35:54.432 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
 2025-02-26 20:35:54.504 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 20:35:54.543 +08:00 [INF] Hosting environment: Development
-2025-02-26 20:35:54.543 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 20:35:54.543 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 20:35:55.952 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 20:35:55.971 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 20:35:55.993 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -2748,7 +2748,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
 2025-02-26 20:49:01.058 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 20:49:01.096 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 20:49:01.129 +08:00 [INF] Hosting environment: Development
-2025-02-26 20:49:01.129 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 20:49:01.129 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 20:49:02.402 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 20:49:02.419 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 20:49:02.435 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -2861,7 +2861,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
 2025-02-26 21:15:39.394 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-26 21:15:39.442 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-26 21:15:39.479 +08:00 [INF] Hosting environment: Development
-2025-02-26 21:15:39.479 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-26 21:15:39.479 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-26 21:15:40.830 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-26 21:15:40.849 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-26 21:15:40.866 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -2974,7 +2974,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
 2025-02-27 08:00:23.414 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-27 08:00:23.512 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-27 08:00:23.517 +08:00 [INF] Hosting environment: Development
-2025-02-27 08:00:23.517 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-27 08:00:23.517 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-27 08:00:24.988 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-27 08:00:25.010 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-27 08:00:25.028 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -3003,7 +3003,7 @@ File name: 'D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Hos
 2025-02-27 08:00:33.270 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
 {
   "code": null,
-  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "message": "�Բ����ڴ������������ڼ������һ���������ڲ����󣡣�",
   "details": null,
   "data": null,
   "validationErrors": null
@@ -3160,7 +3160,7 @@ ActivatorChain = Castle.Proxies.UserServicesProxy
 2025-02-27 08:34:35.522 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-27 08:34:35.596 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-27 08:34:35.600 +08:00 [INF] Hosting environment: Development
-2025-02-27 08:34:35.635 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-27 08:34:35.635 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-27 08:34:37.075 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-27 08:34:37.094 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-27 08:34:37.112 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -3273,7 +3273,7 @@ ActivatorChain = Castle.Proxies.UserServicesProxy
 2025-02-27 09:17:15.685 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-27 09:17:15.731 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-27 09:17:15.736 +08:00 [INF] Hosting environment: Development
-2025-02-27 09:17:15.736 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-27 09:17:15.736 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-27 09:17:16.983 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-27 09:17:17.001 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-27 09:17:17.017 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -3304,7 +3304,7 @@ ActivatorChain = Castle.Proxies.UserServicesProxy
 2025-02-27 09:17:25.760 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
 {
   "code": null,
-  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "message": "�Բ����ڴ������������ڼ������һ���������ڲ����󣡣�",
   "details": null,
   "data": null,
   "validationErrors": null
@@ -3324,7 +3324,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
    at Volo.Abp.AutoMapper.AutoMapperAutoObjectMappingProvider.Map[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.AutoMap[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.Map[TSource,TDestination](TSource source)
-   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
+   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
    at lambda_method1640(Closure, Object, Object[])
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -3434,7 +3434,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
 2025-02-27 09:24:57.807 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-27 09:24:57.876 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-27 09:24:57.905 +08:00 [INF] Hosting environment: Development
-2025-02-27 09:24:57.905 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-27 09:24:57.905 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-27 09:24:59.215 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-27 09:24:59.234 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-27 09:24:59.251 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -3465,7 +3465,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
 2025-02-27 09:25:04.700 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
 {
   "code": null,
-  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "message": "�Բ����ڴ������������ڼ������һ���������ڲ����󣡣�",
   "details": null,
   "data": null,
   "validationErrors": null
@@ -3485,7 +3485,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
    at Volo.Abp.AutoMapper.AutoMapperAutoObjectMappingProvider.Map[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.AutoMap[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.Map[TSource,TDestination](TSource source)
-   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
+   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
    at lambda_method1637(Closure, Object)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -3507,7 +3507,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
 2025-02-27 09:25:14.304 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
 {
   "code": null,
-  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "message": "�Բ����ڴ������������ڼ������һ���������ڲ����󣡣�",
   "details": null,
   "data": null,
   "validationErrors": null
@@ -3527,7 +3527,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
    at Volo.Abp.AutoMapper.AutoMapperAutoObjectMappingProvider.Map[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.AutoMap[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.Map[TSource,TDestination](TSource source)
-   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
+   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
    at lambda_method1637(Closure, Object)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -3549,7 +3549,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
 2025-02-27 09:26:22.097 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
 {
   "code": null,
-  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "message": "�Բ����ڴ������������ڼ������һ���������ڲ����󣡣�",
   "details": null,
   "data": null,
   "validationErrors": null
@@ -3569,7 +3569,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
    at Volo.Abp.AutoMapper.AutoMapperAutoObjectMappingProvider.Map[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.AutoMap[TSource,TDestination](Object source)
    at Volo.Abp.ObjectMapping.DefaultObjectMapper.Map[TSource,TDestination](TSource source)
-   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
+   at HIS.Chargingmodules.ChargingmodulesServer.AddCharging(NewchargingmoduleDTO charging) in D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.Application\Chargingmodules\ChargingmodulesServer.cs:line 38
    at lambda_method1637(Closure, Object)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -3679,7 +3679,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
 2025-02-27 09:27:40.211 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-27 09:27:40.274 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-27 09:27:40.277 +08:00 [INF] Hosting environment: Development
-2025-02-27 09:27:40.277 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-27 09:27:40.277 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-27 09:27:41.658 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-27 09:27:41.675 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-27 09:27:41.691 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
@@ -3807,7 +3807,7 @@ HIS.Chargingmodules.NewchargingmoduleDTO -> HIS.System_Administration.Chargingmo
 2025-02-27 10:14:40.288 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
 2025-02-27 10:14:40.327 +08:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-02-27 10:14:40.330 +08:00 [INF] Hosting environment: Development
-2025-02-27 10:14:40.330 +08:00 [INF] Content root path: D:\实训一\实训一项目\his\his\aspnet-core\src\HIS.HttpApi.Host
+2025-02-27 10:14:40.330 +08:00 [INF] Content root path: D:\ʵѵһ\ʵѵһ��Ŀ\his\his\aspnet-core\src\HIS.HttpApi.Host
 2025-02-27 10:14:41.892 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
 2025-02-27 10:14:41.909 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
 2025-02-27 10:14:41.926 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
