@@ -64,7 +64,7 @@ namespace HIS.Patients
             
         }
 
-        public Task<APIResult> GetNaturePatient()
+        public Task<APIResDto> GetNaturePatient()
         {
             throw new System.NotImplementedException();
         }
