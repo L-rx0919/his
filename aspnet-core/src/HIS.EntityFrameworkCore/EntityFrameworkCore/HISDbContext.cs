@@ -151,7 +151,6 @@ namespace HIS.EntityFrameworkCore
             builder.ConfigureBackgroundJobs();
             builder.ConfigureAuditLogging();
         }
-
-
     }
 }
+
