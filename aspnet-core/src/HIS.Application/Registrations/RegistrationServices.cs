@@ -35,6 +35,7 @@ namespace HIS.Registrations
         /// </summary>
         /// <param name="registration"></param>
         /// <returns></returns>
+        [HttpPost("api/InsertRegistration")]
         public async Task<APIResult<RegistrationDto>> CreateRegistration(RegistrationDto registration)
         {
             Registration entity = ObjectMapper.Map<RegistrationDto, Registration>(registration);
@@ -51,6 +52,7 @@ namespace HIS.Registrations
         /// </summary>
         /// <param name="date"></param>
         /// <returns></returns>
+        [HttpPost("api/ShowRegistration")]
         public async Task<APIResult<RegistrationDto>> GetRegistrationByDate(DateTime date)
         {
             date = DateTime.Now;
