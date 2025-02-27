@@ -22,7 +22,10 @@ export const constantRoutes: RouteRecordRaw[] = [
     component: () => import("@/views/login/index.vue"),
     meta: { hidden: true },
   },
-
+  {
+    path: "/Menu",
+    component: () => import("@/views/HISSystem/MenuView.vue"),
+  },
   {
     path: "/",
     name: "/",

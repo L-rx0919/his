@@ -9,6 +9,7 @@ import router from "@/router";
 const service = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_API,
   timeout: 50000,
+  withCredentials: true,
   headers: { "Content-Type": "application/json;charset=utf-8" },
   paramsSerializer: (params) => qs.stringify(params),
 });

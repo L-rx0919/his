@@ -5,6 +5,7 @@ const AUTH_BASE_URL = "/api/v1/auth";
 const AuthAPI = {
   /** 登录接口*/
   login(data: LoginFormData) {
+    // debugger;
     const formData = new FormData();
     formData.append("username", data.username);
     formData.append("password", data.password);

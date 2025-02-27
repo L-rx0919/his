@@ -3,13 +3,7 @@
     <!-- 登录页头部 -->
     <div class="login-header">
       <div class="flex-y-center">
-        <el-switch
-          v-model="isDark"
-          inline-prompt
-          active-icon="Moon"
-          inactive-icon="Sunny"
-          @change="toggleTheme"
-        />
+        <el-switch v-model="isDark" inline-prompt active-icon="Moon" inactive-icon="Sunny" @change="toggleTheme" />
         <lang-select class="ml-2 cursor-pointer" />
       </div>
     </div>
@@ -50,14 +44,8 @@
             <el-icon class="mx-2">
               <User />
             </el-icon>
-            <el-input
-              ref="username"
-              v-model="loginFormData.username"
-              :placeholder="$t('login.username')"
-              name="username"
-              size="large"
-              class="h-[48px]"
-            />
+            <el-input ref="username" v-model="loginFormData.username" :placeholder="$t('login.username')"
+              name="username" size="large" class="h-[48px]" />
           </div>
         </el-form-item>
 
@@ -68,17 +56,9 @@
               <el-icon class="mx-2">
                 <Lock />
               </el-icon>
-              <el-input
-                v-model="loginFormData.password"
-                :placeholder="$t('login.password')"
-                type="password"
-                name="password"
-                size="large"
-                class="h-[48px] pr-2"
-                show-password
-                @keyup="checkCapslock"
-                @keyup.enter="handleLoginSubmit"
-              />
+              <el-input v-model="loginFormData.password" :placeholder="$t('login.password')" type="password"
+                name="password" size="large" class="h-[48px] pr-2" show-password @keyup="checkCapslock"
+                @keyup.enter="handleLoginSubmit" />
             </div>
           </el-form-item>
         </el-tooltip>
@@ -88,14 +68,8 @@
           <div class="input-wrapper">
             <div class="i-svg:captcha mx-2" />
 
-            <el-input
-              v-model="loginFormData.captchaCode"
-              auto-complete="off"
-              size="large"
-              class="flex-1"
-              :placeholder="$t('login.captchaCode')"
-              @keyup.enter="handleLoginSubmit"
-            />
+            <el-input v-model="loginFormData.captchaCode" auto-complete="off" size="large" class="flex-1"
+              :placeholder="$t('login.captchaCode')" @keyup.enter="handleLoginSubmit" />
 
             <el-image :src="captchaBase64" class="captcha-img" @click="getCaptcha" />
           </div>
@@ -112,13 +86,7 @@
         </div>
 
         <!-- 登录按钮 -->
-        <el-button
-          :loading="loading"
-          type="primary"
-          size="large"
-          class="w-full"
-          @click.prevent="handleLoginSubmit"
-        >
+        <el-button :loading="loading" type="primary" size="large" class="w-full" @click.prevent="handleLoginSubmit">
           {{ $t("login.login") }}
         </el-button>
 
@@ -230,8 +198,8 @@ async function handleLoginSubmit() {
           // 需要在路由跳转前加载字典数据，否则会出现字典数据未加载完成导致页面渲染异常
           await dictStore.loadDictionaries();
           // 跳转到登录前的页面
-          const { path, queryParams } = parseRedirect();
-          router.push({ path: path, query: queryParams });
+          // const { path, queryParams } = parseRedirect();
+          router.push("/Menu");
         })
         .catch(() => {
           getCaptcha();
@@ -334,7 +302,7 @@ onMounted(() => {
     border-radius: 5px;
     box-shadow: var(--el-box-shadow-light);
 
-    @media (width <= 460px) {
+    @media (width <=460px) {
       width: 100%;
       padding: 20px;
     }

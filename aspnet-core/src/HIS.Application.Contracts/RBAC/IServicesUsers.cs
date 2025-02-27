@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 
 namespace HIS.RBAC
@@ -21,8 +22,18 @@ namespace HIS.RBAC
         /// <param name="UserName"></param>
         /// <param name="UserPwd"></param>
         /// <returns></returns>
-        Task<APIResult<UserDTO>> Login(string UserName, string UserPwd);
-
+        APIResult<LoginResult> LoginAsync(LoginDto loginDto);
+        /// <summary>
+        /// 异步获取验证码
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         APIResult<CaptchaDto> Captcha(string id);
+        /// <summary>
+        /// 异步获取用户信息
+        /// </summary>
+        /// <returns></returns>
+
+        Task<APIResult<List<LoginDataDto>>> GetUserAsync();
     }
 }
