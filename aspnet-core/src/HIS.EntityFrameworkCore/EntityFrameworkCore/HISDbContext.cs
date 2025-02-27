@@ -1,5 +1,4 @@
 using HIS.RBAC;
-
 using HIS.SettlementSystem;
 using HIS.System_Administration;
 using Microsoft.EntityFrameworkCore;
@@ -106,14 +105,7 @@ namespace HIS.EntityFrameworkCore
         public HISDbContext(DbContextOptions<HISDbContext> options)
             : base(options)
         {
-
-
         }
-
-
-
-        
-
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -123,8 +115,6 @@ namespace HIS.EntityFrameworkCore
             builder.ConfigureAuditLogging();
         }
 
+
     }
 }
-
-
-
