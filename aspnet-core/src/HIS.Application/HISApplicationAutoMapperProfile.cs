@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using HIS.Clinic_type_departments;
 using HIS.Clinic_types;
+using HIS.Departments;
 using HIS.Patients;
 using HIS.RBAC;
 using HIS.RegistrationServices;
@@ -19,5 +21,7 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<NaturePatientsDTO, NatureofPatient>().ReverseMap();
         CreateMap<RegistrationDto,Registration>().ReverseMap();
         CreateMap<Clinic_typeDto,Clinic_type>().ReverseMap();
+        CreateMap<Clinic_type_departmentDto, Clinic_type_department>().ReverseMap();
+        CreateMap<DepartmentDto, Department>().ReverseMap();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HIS.Clinic_types;
 using HIS.SettlementSystem;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -6,10 +7,10 @@ using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 
-namespace HIS.Clinic_types
+namespace HIS.Clinictypes
 {
     [ApiExplorerSettings(GroupName = "v1")]
-    public class Clinic_typeServices: ApplicationService, IClinic_typeServices
+    public class ClinictypeServices: ApplicationService, IClinic_typeServices
     {
         /// <summary>
         /// 门诊类型仓储
@@ -24,7 +25,7 @@ namespace HIS.Clinic_types
         /// </summary>
         /// <param name="clinicTypeRepository"></param>
         /// <param name="mapper"></param>
-        public Clinic_typeServices(IRepository<Clinic_type> clinicTypeRepository, IMapper mapper)
+        public ClinictypeServices(IRepository<Clinic_type> clinicTypeRepository, IMapper mapper)
         {
             _clinicTypeRepository = clinicTypeRepository;
             _mapper = mapper;
