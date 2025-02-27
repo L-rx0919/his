@@ -22,7 +22,11 @@ namespace HIS.RBAC
         /// <param name="UserPwd"></param>
         /// <returns></returns>
         Task<APIResult<UserDTO>> Login(string UserName, string UserPwd);
-
+        /// <summary>
+        /// 异步获取验证码
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         APIResult<CaptchaDto> Captcha(string id);
     }
 }
