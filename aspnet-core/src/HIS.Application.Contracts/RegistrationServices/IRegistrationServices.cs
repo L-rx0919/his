@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 
@@ -9,7 +6,17 @@ namespace HIS.RegistrationServices
 {
    public interface IRegistrationServices:IApplicationService
     {
-        // 添加挂号
+        /// <summary>
+        /// 添加挂号
+        /// </summary>
+        /// <param name="registration"></param>
+        /// <returns></returns>
         Task<APIResult<RegistrationDto>> CreateRegistration(RegistrationDto registration);
+        /// <summary>
+        /// 查询当日挂号信息
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        Task<APIResult<RegistrationDto>> GetRegistrationByDate(DateTime date);
     }
 }

@@ -2,6 +2,7 @@
 using HIS.RegistrationServices;
 using HIS.SettlementSystem;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -29,10 +30,45 @@ namespace HIS.Registrations
             _registrationRepository = registrationRepository;
             _mapper = mapper;
         }
-
-        public Task<APIResult<RegistrationDto>> CreateRegistration(RegistrationDto registration)
+        /// <summary>
+        /// 添加挂号
+        /// </summary>
+        /// <param name="registration"></param>
+        /// <returns></returns>
+        public async Task<APIResult<RegistrationDto>> CreateRegistration(RegistrationDto registration)
         {
-            throw new System.NotImplementedException();
+            Registration entity = ObjectMapper.Map<RegistrationDto, Registration>(registration);
+            await _registrationRepository.InsertAsync(entity);
+            return new APIResult<RegistrationDto>()
+            {
+                Code = 0,
+                Message = "添加挂号成功",
+                Data = ObjectMapper.Map<Registration, RegistrationDto>(entity)
+            };
+        }
+        /// <summary>
+        /// 查寻当日挂号信息
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public async Task<APIResult<RegistrationDto>> GetRegistrationByDate(DateTime date)
+        {
+            date = DateTime.Now;
+            var registration = await _registrationRepository.FirstOrDefaultAsync(x => x.RegistrationTime.Date == date.Date);
+            if (registration == null)
+            {
+                return new APIResult<RegistrationDto>()
+                {
+                    Code = CodeEnum.notfound,
+                    Message = "未找到当日挂号信息"
+                };
+            }
+            return new APIResult<RegistrationDto>()
+            {
+                Code = 0,
+                Message = "查询成功",
+                Data = ObjectMapper.Map<Registration, RegistrationDto>(registration)
+            };
         }
     }
 }
