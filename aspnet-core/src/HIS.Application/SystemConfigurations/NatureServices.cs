@@ -102,9 +102,9 @@ namespace HIS.SystemConfigurations
             }
         }
         ///<summary>
-        ///修改病人性质
+        ///修改病人性质zzzzzzz
         /// </summary>
-        /// 
+        
 
         [HttpPut("api/UpdateNaturePatient")]
         public async Task<APIResult> UpdateNaturePatient(NaturePatientsDTO nature)

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using HIS.Chargemodules;
+using HIS.Chargingmodules;
 using HIS.Patients;
 using HIS.RBAC;
 using HIS.SettlementSystem;
@@ -11,7 +11,10 @@ using HIS.SystemConfigurations;
 namespace HIS;
 
 public class HISApplicationAutoMapperProfile : Profile
-{   
+{
+    /// <summary>
+    /// 映射配置
+    /// </summary>
     public HISApplicationAutoMapperProfile()
     {
         CreateMap<PatientDto, Patient>().ReverseMap();
@@ -27,5 +30,6 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<UserRoleDto,UserRole>().ReverseMap();
 
 
+        CreateMap<NewchargingmoduleDTO, Chargingmodule>().ReverseMap();
     }
 }

@@ -21,30 +21,12 @@ namespace HIS.RBAC
         /// <param name="UserName"></param>
         /// <param name="UserPwd"></param>
         /// <returns></returns>
-        Task<APIResult1<UserDTO>> Login(string UserName, string UserPwd);
+        Task<APIResult<UserDTO>> Login(string UserName, string UserPwd);
         /// <summary>
-        /// 获取验证码
+        /// 异步获取验证码
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        APIResult1<CaptchaDto> Captcha(string id);
-        /// <summary>
-        ///  角色添加
-        /// </summary>
-        /// <param name="insertRoleDto"></param>
-        /// <returns></returns>
-        Task<APIResult1<InsertRoleDto>> InsertRole(InsertRoleDto insertRoleDto);
-        /// <summary>
-        /// 添加角色权限
-        /// </summary>
-        /// <param name="insertRolePermissionsDto"></param>
-        /// <returns></returns>
-        Task<APIResult1<RolePermissionDTO>> InsertRolePermissions(RolePermissionDTO insertRolePermissionsDto);
-        /// <summary>
-        /// 添加用户角色
-        /// </summary>
-        /// <param name="insertUserRoleDto"></param>
-        /// <returns></returns>
-        Task<APIResult1<UserRoleDto>> InsertUserRole(UserRoleDto insertUserRoleDto);
+        APIResult<CaptchaDto> Captcha(string id);
     }
 }
