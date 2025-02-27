@@ -13,12 +13,24 @@ namespace HIS.Users
     [ApiExplorerSettings(GroupName = "v1")]
     public class UserServices : ApplicationService, IServicesUsers
     {
+        /// <summary>
+        /// 用户仓储
+        /// </summary>
         private readonly IRepository<User> Userrepository;
         private readonly ICaptcha captcha;
 
         private readonly IRepository<Role> Rolerepository;
+        /// <summary>
+        /// 角色权限仓储
+        /// </summary>
         private readonly IRepository<RolePermissions> RolePermissionsrepository;
+        /// <summary>
+        /// 用户角色仓储
+        /// </summary>
         private readonly IRepository<UserRole> UserRolerepository;
+        /// <summary>
+        /// 权限仓储
+        /// </summary>
         private readonly IRepository<Permissions> Permissionsrepository;
 
         public UserServices(IRepository<HIS.RBAC.User> userrepository, IRepository<Role> rolerepository, IRepository<RolePermissions> rolePermissionsrepository, IRepository<UserRole> userRolerepository, IRepository<Permissions> permissionsrepository, ICaptcha captcha = null)
@@ -152,7 +164,8 @@ namespace HIS.Users
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("/api/v1/auth/captcha")]
+        [HttpGet("/api/captcha")]
+        ///v1/auth
         public APIResult<CaptchaDto> Captcha(string id)
         {
             var captchaCode = captcha.Generate(id);
