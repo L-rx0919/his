@@ -97,6 +97,27 @@ namespace HIS.EntityFrameworkCore
         /// 发票配置表
         /// </summary>
         public DbSet<InvoiceConfiguration> InvoiceConfigurations { get; set; }
+
+        /// <summary>
+        /// 权限表
+        /// </summary>
+        public DbSet<Permissions> Permissionss { get; set; }
+        /// <summary>
+        /// 角色表
+        /// </summary>
+        public DbSet<Role> Roles { get; set; }
+        /// <summary>
+        /// 角色权限表
+        /// </summary>
+        public DbSet<RolePermissions> RolePermissionss { get; set; }
+        /// <summary>
+        /// 用户表
+        /// </summary>
+        public DbSet<User> Users { get; set; }
+        /// <summary>
+        /// 用户角色表
+        /// </summary>
+        public DbSet<UserRole> UserRole { get; set; }
         /// <summary>
         /// 病人一卡通信息表
         /// </summary>
