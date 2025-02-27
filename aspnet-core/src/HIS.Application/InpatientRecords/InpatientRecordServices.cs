@@ -53,7 +53,6 @@ namespace HIS.InpatientRecords
                     Message = "添加住院记录成功",
                 };
             }
-
         }
         /// <summary>
         /// 获取住院记录
@@ -74,11 +73,9 @@ namespace HIS.InpatientRecords
                     Code = CodeEnum.success,
                     Message = "获取住院记录失败",
                 };
-            }
-          
+            }       
             else
-            {
-                
+            {  
                 return new APIResult<InpatientRecordDto>()
                 {
                     Data = list,

@@ -11,5 +11,6 @@ namespace HIS.InpatientRecords
     {
         Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient);
         Task<APIResult<InpatientRecordDto>> GetInpatientRecord(Guid patient_id);
+
     }
 }
