@@ -7,8 +7,9 @@ using Volo.Abp.Application.Services;
 
 namespace HIS.InpatientRecords
 {
-    public interface IInpatientRecordServer : IApplicationService
+    public interface IInpatientRecordAppServices : IApplicationService
     {
         Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient);
+        Task<APIResult<InpatientRecordDto>> GetInpatientRecord(Guid patient_id);
     }
 }

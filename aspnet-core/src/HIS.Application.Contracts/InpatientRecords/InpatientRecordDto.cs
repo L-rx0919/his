@@ -15,7 +15,7 @@ namespace HIS.InpatientRecords
         /// <summary>
         /// 病人ID
         /// </summary>
-        public int patient_id { get; set; }
+        public Guid patient_id { get; set; }
         /// <summary>
         /// 入院时间
         /// </summary>
