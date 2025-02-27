@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HIS.Doctors;
 using HIS.InpatientRecords;
 using HIS.Patients;
 using HIS.RBAC;
@@ -19,6 +20,7 @@ public class HISApplicationAutoMapperProfile : Profile
 
         CreateMap<NaturePatientsDTO, NatureofPatient>().ReverseMap();
         CreateMap<InpatientRecordDto, InpatientRecord>().ReverseMap();
+        CreateMap<DoctorDto, Doctor>().ReverseMap();
 
     }
 }

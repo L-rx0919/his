@@ -8,6 +8,9 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace HIS.SettlementSystem
 {
+    /// <summary>
+    /// 支付方式
+    /// </summary>
     public class Payment_Method:FullAuditedAggregateRoot<Guid>
     {
      
