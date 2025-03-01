@@ -1,5 +1,7 @@
 ﻿using HIS.RBAC;
+using HIS.System_Administration;
 using HIS.SystemConfigurations;
+using RabbitManage.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,14 +21,24 @@ namespace HIS.SystemConfiguration
         /// </summary>
         /// <param name="Nature"></param>
         /// <returns></returns>
-        Task<APIResult<NaturePatientsDTO>> AddNature(NaturePatientsDTO nature);
+        Task<APIResDto> AddNature(NaturePatientsDTO nature);
         /// <summary>
-        /// 异步查询病人性质
+        /// 异步获取病人性质
         /// </summary>
-        /// <param name="natureofPatientName"></param>
         /// <returns></returns>
-      //  Task<APIResult<List<NaturePatientsDTO>>> GetNatures(string natureofPatientName);
-
+        Task<APIResDto> GetNaturePatient();
+        /// <summary>
+        /// 异步删除病人性质
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Task<APIResDto> DelNaturePatient(Guid id);
+        /// <summary>
+        /// 修改病人性质
+        /// </summary>
+        /// <param name="nature"></param>
+        /// <returns></returns>
+        Task<APIResDto> UpdateNaturePatient(NaturePatientsDTO nature);
 
     }
 }

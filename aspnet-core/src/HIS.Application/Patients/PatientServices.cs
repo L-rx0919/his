@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HIS.SettlementSystem;
 using Microsoft.AspNetCore.Mvc;
+using RabbitManage.EntityFrameworkCore;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -34,7 +35,7 @@ namespace HIS.Patients
         /// <param name="patient"> 患者信息 </param>
         /// <returns> APIResult </returns>
         [HttpPost("api/InsertPatient")]
-        public async Task<APIResult<PatientDto>> CreatePatient(PatientDto patient)
+        public async Task<APIResult1<PatientDto>> CreatePatient(PatientDto patient)
         {
            Patient entity = ObjectMapper.Map<PatientDto, Patient>(patient);
            
@@ -44,7 +45,7 @@ namespace HIS.Patients
             var patientName = await _patientRepository.AllAsync(x => x.patient_name == patient.patient_name);
             if (patientName == false)
             {
-                return new APIResult<PatientDto>()
+                return new APIResult1<PatientDto>()
                 {
                     Code = CodeEnum.error,
                     Message = "患者名称重复"
@@ -53,7 +54,7 @@ namespace HIS.Patients
             else
             {
                 await _patientRepository.InsertAsync(entity);
-                return new APIResult<PatientDto>()
+                return new APIResult1<PatientDto>()
                 {
                     Code = 0,
                     Message = "添加患者成功",
@@ -63,6 +64,10 @@ namespace HIS.Patients
             
         }
 
+        public Task<APIResDto> GetNaturePatient()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 
 }

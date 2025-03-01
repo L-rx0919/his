@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using HIS.Doctors;
+using HIS.Chargemodules;
 using HIS.Chargingmodules;
 using HIS.InpatientRecords;
 using HIS.Patients;
@@ -21,11 +21,10 @@ public class HISApplicationAutoMapperProfile : Profile
     public HISApplicationAutoMapperProfile()
     {
         CreateMap<PatientDto, Patient>().ReverseMap();
+
         CreateMap<UserDTO, User>().ReverseMap();
 
         CreateMap<NaturePatientsDTO, NatureofPatient>().ReverseMap();
-        CreateMap<InpatientRecordDto, InpatientRecord>().ReverseMap();
-        CreateMap<DoctorDto, Doctor>().ReverseMap();
 
         CreateMap<NewchargingmoduleDTO, Chargingmodule>().ReverseMap();
     }

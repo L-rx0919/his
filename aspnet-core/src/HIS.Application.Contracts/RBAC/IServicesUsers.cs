@@ -14,7 +14,7 @@ namespace HIS.RBAC
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        Task<APIResult<UserDTO>> AddUser(UserDTO user);
+        Task<APIResult1<UserDTO>> AddUser(UserDTO user);
 
         /// <summary>
         /// 异步用户登录

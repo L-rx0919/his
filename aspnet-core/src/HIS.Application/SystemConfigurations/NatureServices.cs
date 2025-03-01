@@ -4,6 +4,7 @@ using HIS.SettlementSystem;
 using HIS.System_Administration;
 using HIS.SystemConfiguration;
 using Microsoft.AspNetCore.Mvc;
+using RabbitManage.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +16,12 @@ using Volo.Abp.ObjectMapping;
 
 namespace HIS.SystemConfigurations
 {
-    [ApiExplorerSettings(GroupName ="v1")]
+    [ApiExplorerSettings(GroupName = "v1")]
     /// <summary>
     /// 病人性质
     /// </summary>
     public class NatureServices : ApplicationService, IServicesNaturePatients
     {
-        /// <summary>
-        /// 病人性质仓储
-        /// </summary>
         private readonly IRepository<NatureofPatient> NatureofPatientRepository;
         /// <summary>
         /// 映射器
@@ -44,60 +42,84 @@ namespace HIS.SystemConfigurations
         /// <exception cref="NotImplementedException"></exception>
         /// 
         [HttpPost("api/AddNatures")]
-        public async Task<APIResult<NaturePatientsDTO>> AddNature(NaturePatientsDTO nature)
+        public async Task<APIResDto> AddNature(NaturePatientsDTO nature)
         {
+            
 
+            var list = await NatureofPatientRepository.FirstOrDefaultAsync(x => x.NatureofPatientName == nature.NatureofPatientName);
 
-
-            NatureofPatient entity = ObjectMapper.Map<NaturePatientsDTO, NatureofPatient>(nature);
-
-            var NatureName = await NatureofPatientRepository.AllAsync(x => x.NatureofPatientName == nature.NatureofPatientName);
-            if (NatureName == false)
+            if (list == null)
             {
-                return new APIResult<NaturePatientsDTO>()
-                {
-                    Code = CodeEnum.error,
-                    Message = "病人性质名称重复"
-                };
+                // Map the 'nature' object to 'NatureofPatient' entity
+                var entity = mapper.Map<NatureofPatient>(nature);
+
+                // Insert the newly mapped 'entity' instead of 'list'
+                await NatureofPatientRepository.InsertAsync(entity);
+
+                // Return the inserted entity as a success response
+                return APIResDto.OK(data: entity);
             }
             else
             {
-                await NatureofPatientRepository.InsertAsync(entity);
-                return new APIResult<NaturePatientsDTO>()
-                {
-                    Code = 0,
-                    Message = "添加病人性质成功",
-                   
-                };
+                // Return failure response if the entity already exists
+                return APIResDto.Fail("已存在该病人性质");
             }
+
+
 
         }
 
-
         /// <summary>
-        /// 查询所有病人性质
+        /// 获取病人性质
         /// </summary>
         /// <returns></returns>
- 
-
-        //[HttpGet("api/GetNatures")]
-        //public async Task<APIResult<List<NaturePatientsDTO>>> GetNatures(string natureofPatientName)
-        //{
-        //    //var list = (from a in  await NatureofPatientRepository.GetQueryableAsync()
-            
-        //    //if(!string.IsNullOrEmpty(natureofPatientName))
-        //    //{
-        //    //    list = list.Where(x => x.NatureofPatientName.Contains(natureofPatientName)).ToList();
-        //    //}
-
-        //    return new APIResult<List<NaturePatientsDTO>>()
-        //    {
-        //        Code = 0,
-        //        Message = "查询成功",
-        //        Data = result
-        //    };
-        //}
+        [HttpGet("api/GetNatures")]
+        public async Task<APIResDto> GetNaturePatient()
+        {
+            var list = await NatureofPatientRepository.GetListAsync();
+            return APIResDto.OK(data: list);
+        }
 
 
+        ///<summary>
+        ///删除病人性质
+        /// </summary>
+        /// 
+
+        [HttpDelete("api/DelNaturePatient")]
+
+       public async Task<APIResDto> DelNaturePatient(Guid id)
+        {
+            var list = await NatureofPatientRepository.FirstOrDefaultAsync(x => x.Id == id);
+            if (list != null)
+            {
+                await NatureofPatientRepository.DeleteAsync(list);
+                return APIResDto.OK();
+            }
+            else
+            {
+                return APIResDto.Fail("删除失败");
+            }
+        }
+        ///<summary>
+        ///修改病人性质zzzzzzz
+        /// </summary>
+        
+
+        [HttpPut("api/UpdateNaturePatient")]
+        public async Task<APIResDto> UpdateNaturePatient(NaturePatientsDTO nature)
+        {
+            var list = await NatureofPatientRepository.FirstOrDefaultAsync(x => x.NatureofPatientName == nature.NatureofPatientName);
+            if (list != null)
+            {
+                list.NatureofPatientName = nature.NatureofPatientName;
+                await NatureofPatientRepository.UpdateAsync(list);
+                return APIResDto.OK();
+            }
+            else
+            {
+                return APIResDto.Fail("修改失败");
+            }
+        }
     }
 }

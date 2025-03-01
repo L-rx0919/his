@@ -21,7 +21,7 @@ namespace HIS
 
     }
 
-    public class APIResult<T> : APIResult
+    public class APIResult1<T> : APIResult
     {
         /// <summary>
         /// 返回数据
