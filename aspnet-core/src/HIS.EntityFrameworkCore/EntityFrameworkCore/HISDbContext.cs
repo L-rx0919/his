@@ -128,8 +128,13 @@ namespace HIS.EntityFrameworkCore
         /// 门诊类型表
         /// </summary>
         public DbSet<Clinic_type> Clinic_types { get; set; }
-       
+       /// <summary>
+       /// 通知表
+       /// </summary>
         public DbSet<SysNotice> SysNotices { get; set; }
+        /// <summary>
+        /// 用户通知表
+        /// </summary>
         public DbSet<SysUserNotice> SysUserNotices { get; set; }
 
         public HISDbContext(DbContextOptions<HISDbContext> options)
