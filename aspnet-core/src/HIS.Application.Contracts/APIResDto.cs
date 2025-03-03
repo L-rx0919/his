@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RabbitManage.EntityFrameworkCore
+namespace HIS
 {
     /// <summary>
     /// API结果
@@ -22,7 +22,7 @@ namespace RabbitManage.EntityFrameworkCore
         /// <summary>
         /// 数据
         /// </summary>
-        public object? Data { get; set; }
+        public object Data { get; set; }
         /// <summary>
         /// 结果代码
         /// </summary>
@@ -34,7 +34,7 @@ namespace RabbitManage.EntityFrameworkCore
         /// <param name="msg">消息</param>
         /// <param name="data">数据</param>
         /// <param name="code"> 结果代码</param>
-        public APIResDto(bool isSuc, string msg, object? data, ResultCode code)
+        public APIResDto(bool isSuc, string msg, object data, ResultCode code)
         {
             IsSuc = isSuc;
             Msg = msg;
@@ -47,7 +47,7 @@ namespace RabbitManage.EntityFrameworkCore
         /// <param name="data"></param>
         /// <param name="msg"></param>
         /// <returns></returns>
-        public static APIResDto OK(object? data = null, string msg = "操作成功")
+        public static APIResDto OK(object data = null, string msg = "操作成功")
         {
             return new APIResDto(true, msg, data, ResultCode.Success);
         }

@@ -1,33 +1,19 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.EMMA;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HIS
-{/// <summary>
-/// API返回结果
-/// </summary>
-    public class APIResult
+{
+    public class APIResult<TData>
     {
-        /// <summary>
-        /// 返回信息
-        /// </summary>
-        public string Message { get; set; }
-        /// <summary>
-        /// 返回状态码
-        /// </summary>
         public CodeEnum Code { get; set; }
-
+        public TData Data { get; set; }
+        public string Msg { get; set; }
     }
 
-    public class APIResult1<T> : APIResult
-    {
-        /// <summary>
-        /// 返回数据
-        /// </summary>
-        public T Data { get; set; }
-    }
     /// <summary>
     /// 返回状态码
     /// </summary>

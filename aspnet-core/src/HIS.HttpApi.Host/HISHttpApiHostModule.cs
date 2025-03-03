@@ -1,4 +1,6 @@
 ﻿using HIS.EntityFrameworkCore;
+using Lazy.Captcha.Core;
+using Lazy.Captcha.Core.Generator;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -26,9 +28,6 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
-using Lazy.Captcha.Core;
-using SkiaSharp;
-using Lazy.Captcha.Core.Generator;
 namespace HIS;
 
 [DependsOn(
@@ -352,38 +351,4 @@ public class HISHttpApiHostModule : AbpModule
         app.UseAbpSerilogEnrichers();
         app.UseConfiguredEndpoints();
     }
-
-//    /// <summary>
-//    /// 配置应用服务  
-//    /// </summary>
-//    /// <param name="context"></param>
-//    public override void OnPreApplicationInitialization(ApplicationInitializationContext context)
-//{
-//    var app = context.GetApplicationBuilder();
-//    var env = context.GetEnvironment();
-    
-//    if (env.IsDevelopment())
-//    {
-//        app.UseDeveloperExceptionPage();
-//    }
-
-//    // 启用Swagger
-//    app.UseSwagger();
-//    app.UseSwaggerUI(options =>
-//    {
-//        options.SwaggerEndpoint("/swagger/v1/swagger.json", "HIS API");
-//    });
-
-//    // 加载XML注释文件
-//    var assembly = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(a => a.FullName.StartsWith("YourProjectName"));
-//    var xmlFile = Path.Combine(AppContext.BaseDirectory, "YourProjectName.xml");
-    
-//    if (File.Exists(xmlFile))
-//    {
-//        services.AddSwaggerGen(c =>
-//        {
-//            c.IncludeXmlComments(xmlFile); // 加载XML注释文件
-//        });
-//    }
-//}
 }
