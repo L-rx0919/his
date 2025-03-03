@@ -108,6 +108,36 @@ namespace HIS.EntityFrameworkCore
         /// </summary>
         public DbSet<InvoiceConfiguration> InvoiceConfigurations { get; set; }
 
+
+
+
+        /// <summary>
+        /// 系统动态表
+        /// </summary>
+        public DbSet<SystemDynamics> SystemDynamics { get; set; }
+        /// <summary>
+        /// 收费项目组合表
+        /// </summary>
+        public DbSet<Itemscharged> Itemschargeds { get; set; }
+        /// <summary>
+        /// 财务发票表
+        /// </summary>
+        public DbSet<FinancialInvoices> financialInvoices { get; set; }
+        /// <summary>
+        /// 角色表
+        /// </summary>
+        public DbSet<Rolemanagements> Rolemanagements { get; set; }
+        /// <summary>
+        /// 系统菜单表
+        /// </summary>
+        public DbSet<SystemMenu> SystemMenus { get; set; }
+        /// <summary>
+        /// 科室医生表
+        /// </summary>
+        public DbSet<DepartmentDocto> DepartmentDoctos { get; set; }
+
+
+
         /// <summary>
         /// 病人一卡通信息表
         /// </summary>

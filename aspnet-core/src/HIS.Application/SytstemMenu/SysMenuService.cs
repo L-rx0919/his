@@ -206,6 +206,8 @@ namespace HIS.SytstemMenu
                                     }
                                 }
                             },
+
+
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
@@ -318,20 +320,155 @@ namespace HIS.SytstemMenu
                                     Title = "统计报表"
                                 }
                             },
-                            new SysMenuDto
+                             new SysMenuDto
                             {
-                                Component = "system/user/settlementSystem",
-                                Name = "HospitalManagement",
-                                Path = "HospitalManagement",
+                               Component = "his/confi/index",
+                                Name = "Systemconfi",
+                                Path = "Systemconfi",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
                                     Hidden = false,
                                     KeepAlive = true,
                                     Icon = "el-icon-User",
-                                    Title = "院长查询"
+                                    Title = "系统配置"
+                                },
+                                Children = new List<SysMenuDto> {
+                                    new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "NatureofPatient",
+                                        Path = "NatureofPatient",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "病人性质"
+                                        }
+                                    },
+                                    new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "Chargingmodule",
+                                        Path = "Chargingmodule",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "收费模板维护"
+                                        }
+                                    },
+                                     new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "Chargingprojects",
+                                        Path = "Chargingprojects",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "财务收据配置"
+                                        }
+                                    },
+                                    new SysMenuDto
+                                    {
+                                      Component = "system/user/settlementSystem",
+                                      Name = "PatientDetail",
+                                      Path = "PatientDetail",
+                                      Meta = new Meta
+                                      {
+                                         AlwaysShow = false,
+                                         Hidden = false,
+                                         KeepAlive = true,
+                                         Title = "系统动态参数配置"
+                                      }
+                                   },
+                                     new SysMenuDto
+                                    {
+                                       Component = "system/user/settlementSystem",
+                                       Name = "PatientDetail",
+                                       Path = "PatientDetail",
+                                       Meta = new Meta
+                                       {
+                                         AlwaysShow = false,
+                                         Hidden = false,
+                                         KeepAlive = true,
+                                         Title = "收费项目组合配置"
+                                       }
+                                     },
+                                     new SysMenuDto
+                                     {
+                                       Component = "system/user/settlementSystem",
+                                       Name = "PatientDetail",
+                                       Path = "PatientDetail",
+                                       Meta = new Meta
+                                       {
+                                        AlwaysShow = false,
+                                       Hidden = false,
+                                       KeepAlive = true,
+                                       Title = "系统用户"
+                                       }
+                                     },
+                                        new SysMenuDto
+                                        {
+                                          Component = "system/user/settlementSystem",
+                                          Name = "InvoiceConfiguration",
+                                          Path = "InvoiceConfiguration",
+                                          Meta = new Meta
+                                          {
+                                                     AlwaysShow = false,
+                                             Hidden = false,
+                                             KeepAlive = true,
+                                             Title = "财务发票配置"
+                                          }
+                                        }, 
+                                      new SysMenuDto
+                                      {
+                                          Component = "system/user/settlementSystem",
+                                          Name = "PatientDetail",
+                                          Path = "PatientDetail",
+                                          Meta = new Meta
+                                          {
+                                           AlwaysShow = false,
+                                           Hidden = false,
+                                           KeepAlive = true,
+                                           Title = "角色管理"
+                                          }
+                                      },
+
+                                       new SysMenuDto
+                                      {
+                                          Component = "system/user/settlementSystem",
+                                          Name = "PatientDetail",
+                                          Path = "PatientDetail",
+                                          Meta = new Meta
+                                          {
+                                           AlwaysShow = false,
+                                           Hidden = false,
+                                           KeepAlive = true,
+                                           Title = "系统菜单"
+                                          }
+                                      },
+
+                                       new SysMenuDto
+                                     {
+                                         Component = "system/user/settlementSystem",
+                                         Name = "PatientDetail",
+                                         Path = "PatientDetail",
+                                         Meta = new Meta
+                                         {
+                                          AlwaysShow = false,
+                                          Hidden = false,
+                                          KeepAlive = true,
+                                          Title = "科室医生信息绑定"
+                                         }
+                                     },
+
                                 }
-                            }
+                            },
                         }
                     }
                 },
