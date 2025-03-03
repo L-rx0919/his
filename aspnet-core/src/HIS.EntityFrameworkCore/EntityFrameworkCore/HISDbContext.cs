@@ -1,4 +1,5 @@
 using DocumentFormat.OpenXml.Wordprocessing;
+using HIS.Notice;
 using HIS.SettlementSystem;
 using HIS.System_Administration;
 using Microsoft.EntityFrameworkCore;
@@ -157,6 +158,9 @@ namespace HIS.EntityFrameworkCore
         /// 门诊类型表
         /// </summary>
         public DbSet<Clinic_type> Clinic_types { get; set; }
+       
+        public DbSet<SysNotice> SysNotices { get; set; }
+        public DbSet<SysUserNotice> SysUserNotices { get; set; }
 
         public HISDbContext(DbContextOptions<HISDbContext> options)
             : base(options)

@@ -12,8 +12,8 @@ namespace HIS.Fee_Categories
     public class Fee_CategoryServices : ApplicationService, IFee_Category
     {
         private readonly IRepository<Fee_Category> fee_CategoryRepository;
-        // <summary>
-        /// 映射器
+        /// <summary>
+        ///  
         /// </summary>
         private readonly IMapper _mapper;
         public Fee_CategoryServices(IRepository<Fee_Category> fee_CategoryRepository, IMapper _mapper)

@@ -30,6 +30,7 @@ namespace HIS.SytstemMenu
         [HttpGet("/api/v1/menus/routes")]
         public async Task<APIResult<List<SysMenuDto>>> Routes()
         {
+            await Task.CompletedTask; // TODO: 实现获取路由逻辑
             return new APIResult<List<SysMenuDto>>
             {
                 Code = CodeEnum.success,
@@ -112,7 +113,7 @@ namespace HIS.SytstemMenu
                     {
                         Component = "Layout",
                         Name = "/system/user",
-                        Path = "/system/user",
+                        Path = "/his",
                         Redirect = "/system/user/settlementSystem",
                         Meta = new Meta
                         {
@@ -225,7 +226,7 @@ namespace HIS.SytstemMenu
                             {
                                 Component = "system/user/settlementSystem",
                                 Name = "PatientInformation",
-                                Path = "PatientInformation",
+                                Path = "patientInformation",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -237,9 +238,9 @@ namespace HIS.SytstemMenu
                                 Children = new List<SysMenuDto> {
                                     new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
+                                        Component = "his/patient/index",
                                         Name = "PatientList",
-                                        Path = "PatientList",
+                                        Path = "patientList",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,
@@ -279,9 +280,9 @@ namespace HIS.SytstemMenu
                             },
                             new SysMenuDto
                             {
-                                Component = "system/user/settlementSystem",
+                                Component = "his/inpatientRecords/inpatientRecordsList",
                                 Name = "Inpatientmanagement",
-                                Path = "Inpatientmanagement",
+                                Path = "inpatientmanagement",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
