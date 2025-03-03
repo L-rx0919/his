@@ -19482,3 +19482,637 @@ MySqlConnector.MySqlException (0x80004005): Table 'hissystem.patients' doesn't e
 2025-03-03 08:32:41.774 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 727.8701ms
 2025-03-03 08:32:41.774 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
 2025-03-03 08:32:41.908 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 878.5365ms
+2025-03-03 09:21:49.035 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 09:21:51.143 +08:00 [INF] Loaded ABP modules:
+2025-03-03 09:21:51.144 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 09:21:51.144 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 09:21:51.144 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 09:21:51.144 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 09:21:51.144 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 09:21:51.144 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 09:21:51.144 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 09:21:51.144 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 09:21:51.144 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 09:21:51.144 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 09:21:51.144 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 09:21:51.144 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 09:21:51.144 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 09:21:51.144 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 09:21:51.144 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 09:21:51.144 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 09:21:51.144 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 09:21:51.170 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 09:21:51.669 +08:00 [INF] User profile is available. Using 'C:\Users\29832\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 09:21:51.745 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 09:21:51.950 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 09:21:52.000 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 09:21:52.039 +08:00 [INF] Hosting environment: Development
+2025-03-03 09:21:52.039 +08:00 [INF] Content root path: D:\实训一\实训一项目\HISSytem\hissystem\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 09:21:53.387 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:21:53.406 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 09:21:53.423 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 09:21:53.426 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 17.7215ms
+2025-03-03 09:21:53.427 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:21:53.553 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:21:53.556 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 null null 1611.0547ms
+2025-03-03 09:21:53.603 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 49.8044ms
+2025-03-03 09:21:53.635 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:21:53.635 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:21:53.635 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:21:53.638 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 2.4913ms
+2025-03-03 09:21:53.638 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.0134ms
+2025-03-03 09:21:53.669 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.8371ms
+2025-03-03 09:21:53.712 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:21:53.923 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 210.938ms
+2025-03-03 09:22:25.816 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-03 09:22:25.869 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:25.878 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:25.879 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:22:25.883 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-03 09:22:25.944 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:22:25.955 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 72.2749ms
+2025-03-03 09:22:25.955 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:22:25.955 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 139.5785ms
+2025-03-03 09:22:29.872 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - null null
+2025-03-03 09:22:29.873 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:22:29.873 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-03 09:22:29.976 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:29.976 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:30.009 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:30.009 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:30.009 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:30.009 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:30.011 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - 404 null null 138.9019ms
+2025-03-03 09:22:30.011 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 138.4533ms
+2025-03-03 09:22:30.011 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 404 null null 138.0273ms
+2025-03-03 09:22:30.012 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-stats, Response status code: 404
+2025-03-03 09:22:30.012 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-trend, Response status code: 404
+2025-03-03 09:22:30.012 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:22:30.510 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-03 09:22:30.529 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:30.529 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:30.529 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:22:30.530 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-03 09:22:30.531 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:22:30.532 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.9138ms
+2025-03-03 09:22:30.532 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:22:30.532 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 21.6114ms
+2025-03-03 09:22:31.876 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-03 09:22:31.893 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:31.893 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:31.894 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:22:31.894 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-03 09:22:31.895 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:22:31.895 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.4452ms
+2025-03-03 09:22:31.895 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:22:31.896 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 19.7871ms
+2025-03-03 09:22:32.241 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - null null
+2025-03-03 09:22:32.242 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:22:32.289 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:32.289 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:32.289 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:32.289 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:32.289 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-03 09:22:32.332 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:32.332 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:32.333 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 90.9021ms
+2025-03-03 09:22:32.333 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - 404 null null 91.4512ms
+2025-03-03 09:22:32.333 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:22:32.333 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-trend, Response status code: 404
+2025-03-03 09:22:32.333 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 404 null null 44.0823ms
+2025-03-03 09:22:32.333 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-stats, Response status code: 404
+2025-03-03 09:22:32.670 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - null null
+2025-03-03 09:22:32.689 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:32.689 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:32.690 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-03 09:22:32.712 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:32.712 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:32.712 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - 404 null null 41.8812ms
+2025-03-03 09:22:32.712 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-trend, Response status code: 404
+2025-03-03 09:22:32.713 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 404 null null 23.4065ms
+2025-03-03 09:22:32.713 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-stats, Response status code: 404
+2025-03-03 09:22:36.447 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:22:36.470 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:36.470 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:36.471 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 24.1863ms
+2025-03-03 09:22:36.472 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:22:36.479 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:22:36.497 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:36.497 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:36.498 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 19.4974ms
+2025-03-03 09:22:36.498 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:22:45.098 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/dept/options - null null
+2025-03-03 09:22:45.098 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/users/page?pageNum=1&pageSize=10 - null null
+2025-03-03 09:22:45.122 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:45.122 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-03 09:22:45.122 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:45.122 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-03 09:22:45.123 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/users/page?pageNum=1&pageSize=10 - 404 null null 24.7769ms
+2025-03-03 09:22:45.123 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/dept/options - 404 null null 25.0233ms
+2025-03-03 09:22:45.123 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/users/page, Response status code: 404
+2025-03-03 09:22:45.123 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/dept/options, Response status code: 404
+2025-03-03 09:22:55.881 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:22:55.883 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 2.5451ms
+2025-03-03 09:22:55.883 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:22:55.912 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:22:55.914 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 1.6768ms
+2025-03-03 09:22:55.914 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:22:59.012 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-03-03 09:22:59.013 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-03 09:22:59.014 +08:00 [INF] Route matched with {action = "Captcha", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.SystemServices.CaptchaDto] Captcha() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-03 09:22:59.353 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.CaptchaDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 09:22:59.355 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.Captcha (HIS.Application) in 340.0095ms
+2025-03-03 09:22:59.355 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-03 09:22:59.355 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 200 null application/json; charset=utf-8 343.4055ms
+2025-03-03 09:23:17.764 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - multipart/form-data; boundary=----WebKitFormBoundaryIOjkuIMwSiMIEwcj 488
+2025-03-03 09:23:17.767 +08:00 [INF] CORS policy execution failed.
+2025-03-03 09:23:17.767 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-03 09:23:17.768 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-03 09:23:17.776 +08:00 [INF] Route matched with {action = "Login", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.LoginResultDto]] LoginAsync(HIS.SystemServices.LoginDto) on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-03 09:23:18.248 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.LoginResultDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 09:23:18.253 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application) in 476.7ms
+2025-03-03 09:23:18.253 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-03 09:23:18.476 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - 200 null application/json; charset=utf-8 711.9627ms
+2025-03-03 09:23:18.483 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/users/me - null null
+2025-03-03 09:23:18.516 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-03 09:23:18.517 +08:00 [INF] Route matched with {action = "Info", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.PermissionDto]] InfoAsync() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-03 09:23:18.543 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.PermissionDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 09:23:18.547 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application) in 29.9372ms
+2025-03-03 09:23:18.547 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-03 09:23:18.548 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/users/me - 200 null application/json; charset=utf-8 64.7255ms
+2025-03-03 09:23:18.856 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - null null
+2025-03-03 09:23:18.858 +08:00 [INF] Executing endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-03 09:23:18.860 +08:00 [INF] Route matched with {action = "GetAll", controller = "SystemDic", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SystemDicServices.SysDictDto]]] GetAllAsync() on controller HIS.SystemDicServices.SystemDicService (HIS.Application).
+2025-03-03 09:23:19.054 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SystemDicServices.SysDictDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:23:19.056 +08:00 [INF] Executed action HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application) in 196.1392ms
+2025-03-03 09:23:19.056 +08:00 [INF] Executed endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-03 09:23:19.057 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - 200 null application/json; charset=utf-8 200.8508ms
+2025-03-03 09:23:19.110 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-03 09:23:19.111 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:23:19.111 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-03 09:23:19.112 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:23:19.113 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.3097ms
+2025-03-03 09:23:19.113 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:23:19.113 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 2.8013ms
+2025-03-03 09:23:19.626 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/dept/options - null null
+2025-03-03 09:23:19.627 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:23:19.627 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/users/page?pageNum=1&pageSize=10 - null null
+2025-03-03 09:23:19.628 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 1.4576ms
+2025-03-03 09:23:19.628 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/dept/options - 404 null null 1.616ms
+2025-03-03 09:23:19.628 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/dept/options, Response status code: 404
+2025-03-03 09:23:19.628 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:23:19.628 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/users/page?pageNum=1&pageSize=10 - 404 null null 0.9621ms
+2025-03-03 09:23:19.628 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/users/page, Response status code: 404
+2025-03-03 09:26:24.241 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 09:26:25.979 +08:00 [INF] Loaded ABP modules:
+2025-03-03 09:26:25.980 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 09:26:25.980 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 09:26:25.980 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 09:26:25.980 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 09:26:25.980 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 09:26:25.980 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 09:26:25.980 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 09:26:25.980 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 09:26:25.980 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 09:26:25.980 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 09:26:25.980 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 09:26:25.980 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 09:26:25.980 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 09:26:25.980 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 09:26:25.980 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 09:26:25.980 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 09:26:25.980 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 09:26:26.005 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 09:26:26.453 +08:00 [INF] User profile is available. Using 'C:\Users\29832\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 09:26:26.527 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 09:26:26.673 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 09:26:26.732 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 09:26:26.735 +08:00 [INF] Hosting environment: Development
+2025-03-03 09:26:26.735 +08:00 [INF] Content root path: D:\实训一\实训一项目\HISSytem\hissystem\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 09:26:27.985 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:26:28.007 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 09:26:28.027 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 09:26:28.031 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 21.8871ms
+2025-03-03 09:26:28.031 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:26:28.138 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:26:28.142 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 null null 1472.5742ms
+2025-03-03 09:26:28.189 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 50.1974ms
+2025-03-03 09:26:28.192 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:26:28.192 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:26:28.196 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 2.9078ms
+2025-03-03 09:26:28.196 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.4659ms
+2025-03-03 09:26:28.201 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:26:28.229 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.3651ms
+2025-03-03 09:26:28.272 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:26:28.461 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 189.085ms
+2025-03-03 09:26:45.952 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - application/json null
+2025-03-03 09:26:45.956 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 09:26:45.958 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-03 09:26:45.967 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 9.276ms
+2025-03-03 09:26:45.967 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 09:26:45.968 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 15.2946ms
+2025-03-03 09:26:46.021 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/v1/dict - application/json 131
+2025-03-03 09:26:46.025 +08:00 [INF] CORS policy execution failed.
+2025-03-03 09:26:46.025 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-03 09:26:46.026 +08:00 [INF] Executing endpoint 'HIS.SystemDicServices.SystemDicService.CreateAsync (HIS.Application)'
+2025-03-03 09:26:46.033 +08:00 [INF] Route matched with {action = "Create", controller = "SystemDic", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemDicServices.SysDictListDto]] CreateAsync(HIS.SystemDicServices.SysDictListDto) on controller HIS.SystemDicServices.SystemDicService (HIS.Application).
+2025-03-03 09:26:46.734 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemDicServices.SysDictListDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 09:26:46.740 +08:00 [INF] Executed action HIS.SystemDicServices.SystemDicService.CreateAsync (HIS.Application) in 706.2988ms
+2025-03-03 09:26:46.740 +08:00 [INF] Executed endpoint 'HIS.SystemDicServices.SystemDicService.CreateAsync (HIS.Application)'
+2025-03-03 09:26:46.909 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/v1/dict - 200 null application/json; charset=utf-8 888.2569ms
+2025-03-03 09:26:55.086 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:26:55.089 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 3.6186ms
+2025-03-03 09:26:55.099 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:26:55.099 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:26:55.099 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:26:55.099 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 0.593ms
+2025-03-03 09:26:55.101 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 1.7524ms
+2025-03-03 09:26:55.112 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.7727ms
+2025-03-03 09:26:55.141 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:26:55.241 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.8188ms
+2025-03-03 09:27:13.402 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:27:13.405 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 3.3292ms
+2025-03-03 09:27:13.415 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:27:13.415 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:27:13.415 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:27:13.415 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 0.5317ms
+2025-03-03 09:27:13.417 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 1.7173ms
+2025-03-03 09:27:13.426 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.5164ms
+2025-03-03 09:27:13.474 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:27:13.532 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.9063ms
+2025-03-03 09:30:14.275 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:30:14.330 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 55.698ms
+2025-03-03 09:30:14.331 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:30:48.047 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/dept/options - null null
+2025-03-03 09:30:48.049 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/dept/options - 404 null null 2.1289ms
+2025-03-03 09:30:48.049 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/dept/options, Response status code: 404
+2025-03-03 09:30:48.236 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/users/page?pageNum=1&pageSize=10 - null null
+2025-03-03 09:30:48.237 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/users/page?pageNum=1&pageSize=10 - 404 null null 1.6539ms
+2025-03-03 09:30:48.237 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/users/page, Response status code: 404
+2025-03-03 09:30:50.519 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/roles/options - null null
+2025-03-03 09:30:50.521 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/roles/options - 404 null null 1.977ms
+2025-03-03 09:30:50.521 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/roles/options, Response status code: 404
+2025-03-03 09:30:55.898 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus - null null
+2025-03-03 09:30:55.899 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus - 404 null null 1.4319ms
+2025-03-03 09:30:55.899 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/menus, Response status code: 404
+2025-03-03 09:31:38.850 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-03 09:31:38.851 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:31:38.853 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-03 09:31:38.908 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:31:38.917 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 63.9215ms
+2025-03-03 09:31:38.917 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-03 09:31:38.917 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 67.4291ms
+2025-03-03 09:31:39.187 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - null null
+2025-03-03 09:31:39.188 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-03 09:31:39.219 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-25&endDate=2025-03-03 - 404 null null 31.5956ms
+2025-03-03 09:31:39.219 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-trend, Response status code: 404
+2025-03-03 09:31:39.219 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 404 null null 31.3997ms
+2025-03-03 09:31:39.220 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-03 09:31:39.243 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/logs/visit-stats, Response status code: 404
+2025-03-03 09:31:39.247 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 404 null null 27.3832ms
+2025-03-03 09:31:39.247 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44323/api/v1/notices/my-page, Response status code: 404
+2025-03-03 09:49:52.582 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 09:49:54.314 +08:00 [INF] Loaded ABP modules:
+2025-03-03 09:49:54.315 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 09:49:54.315 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 09:49:54.315 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 09:49:54.315 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 09:49:54.315 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 09:49:54.315 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 09:49:54.315 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 09:49:54.315 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 09:49:54.315 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 09:49:54.315 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 09:49:54.315 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 09:49:54.315 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 09:49:54.315 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 09:49:54.315 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 09:49:54.315 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 09:49:54.315 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 09:49:54.315 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 09:49:54.343 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 09:49:54.754 +08:00 [INF] User profile is available. Using 'C:\Users\29832\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 09:49:54.848 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 09:49:55.045 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 09:49:55.093 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 09:49:55.096 +08:00 [INF] Hosting environment: Development
+2025-03-03 09:49:55.096 +08:00 [INF] Content root path: D:\实训一\实训一项目\HISSytem\hissystem\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 09:49:56.407 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:49:56.427 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 09:49:56.445 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 09:49:56.449 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 19.9437ms
+2025-03-03 09:49:56.449 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:49:56.461 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:49:56.561 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 null null 1519.8278ms
+2025-03-03 09:49:56.602 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 141.0645ms
+2025-03-03 09:49:56.607 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:49:56.608 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:49:56.611 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 3.4782ms
+2025-03-03 09:49:56.612 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.6582ms
+2025-03-03 09:49:56.618 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:49:56.647 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.5247ms
+2025-03-03 09:49:56.692 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:49:56.874 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 181.7472ms

@@ -317,6 +317,20 @@ namespace HIS.SytstemMenu
                                     Title = "统计报表"
                                 }
                             },
+                             new SysMenuDto
+                            {
+                                Component = "system/user/settlementSystem",
+                                Name = "StatisticsReport",
+                                Path = "StatisticsReport",
+                                Meta = new Meta
+                                {
+                                    AlwaysShow = false,
+                                    Hidden = false,
+                                    KeepAlive = true,
+                                    Icon = "el-icon-User",
+                                    Title = "系统配置"
+                                }
+                            },
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
