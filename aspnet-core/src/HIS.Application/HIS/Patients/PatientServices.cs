@@ -2,6 +2,7 @@
 using HIS.SettlementSystem;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -62,6 +63,23 @@ namespace HIS.HIS.Patients
                 };
             }
             
+        }
+
+        /// <summary>
+        /// 查询所有患者
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("api/GetPatients")]
+        public async Task<APIResult<List<PatientDto>>> GetPatients()
+        {
+            var list = await _patientRepository.GetListAsync();
+            var result = ObjectMapper.Map<List<Patient>, List<PatientDto>>(list);
+            return new APIResult<List<PatientDto>>()
+            {
+                Code = 0,
+                Message = "查询成功",
+                Data =result
+            };
         }
     }
 }
