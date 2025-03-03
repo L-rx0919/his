@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 
 namespace HIS.HIS.Patients
@@ -11,5 +12,10 @@ namespace HIS.HIS.Patients
         /// <param name="patient"></param>
         /// <returns></returns>
         Task<APIResult<PatientDto>> CreatePatient(PatientDto patient);
+        /// <summary>
+        /// 获取所有患者
+        /// </summary>
+        /// <returns></returns>
+        Task<APIResult<List<PatientDto>>> GetPatients();
     }
 }

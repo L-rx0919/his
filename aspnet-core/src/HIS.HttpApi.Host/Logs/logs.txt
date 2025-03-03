@@ -19482,3 +19482,1090 @@ MySqlConnector.MySqlException (0x80004005): Table 'hissystem.patients' doesn't e
 2025-03-03 08:32:41.774 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 727.8701ms
 2025-03-03 08:32:41.774 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
 2025-03-03 08:32:41.908 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 878.5365ms
+2025-03-03 09:02:12.801 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 09:02:26.039 +08:00 [INF] Loaded ABP modules:
+2025-03-03 09:02:26.039 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 09:02:26.039 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 09:02:26.039 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 09:02:26.039 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 09:02:26.039 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 09:02:26.039 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 09:02:26.039 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 09:02:26.039 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 09:02:26.039 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 09:02:26.039 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 09:02:26.039 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 09:02:26.039 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 09:02:26.039 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 09:02:26.039 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 09:02:26.039 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 09:02:26.039 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 09:02:26.039 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 09:02:26.039 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 09:02:26.039 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 09:02:26.040 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 09:02:26.040 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 09:02:26.040 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 09:02:26.040 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 09:02:26.040 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 09:02:26.040 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 09:02:26.040 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 09:02:26.040 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 09:02:26.040 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 09:02:26.040 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 09:02:26.040 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 09:02:26.040 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 09:02:26.040 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 09:02:26.040 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 09:02:26.040 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 09:02:26.062 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 09:02:28.325 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 09:02:28.461 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 09:02:28.744 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 09:02:28.816 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 09:02:28.816 +08:00 [INF] Hosting environment: Development
+2025-03-03 09:02:28.816 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 09:02:29.224 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 09:02:31.464 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:02:31.480 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 09:02:31.495 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 09:02:31.498 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 14.9044ms
+2025-03-03 09:02:31.498 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:02:31.503 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 2283.7527ms
+2025-03-03 09:02:31.509 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:02:31.543 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 34.2067ms
+2025-03-03 09:02:31.548 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:02:31.548 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:02:31.552 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.2657ms
+2025-03-03 09:02:31.554 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:02:31.558 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 9.2395ms
+2025-03-03 09:02:31.622 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.8806ms
+2025-03-03 09:02:31.644 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:02:31.845 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 201.178ms
+2025-03-03 09:03:10.808 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v2/swagger.json - null null
+2025-03-03 09:03:10.811 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 3.0557ms
+2025-03-03 09:03:11.991 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:03:12.070 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.6946ms
+2025-03-03 09:25:40.622 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 09:25:42.046 +08:00 [INF] Loaded ABP modules:
+2025-03-03 09:25:42.046 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 09:25:42.046 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 09:25:42.046 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 09:25:42.046 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 09:25:42.046 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 09:25:42.046 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 09:25:42.046 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 09:25:42.046 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 09:25:42.046 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 09:25:42.046 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 09:25:42.046 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 09:25:42.046 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 09:25:42.046 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 09:25:42.046 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 09:25:42.046 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 09:25:42.047 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 09:25:42.047 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 09:25:42.047 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 09:25:42.047 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 09:25:42.047 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 09:25:42.047 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 09:25:42.047 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 09:25:42.047 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 09:25:42.047 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 09:25:42.047 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 09:25:42.047 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 09:25:42.047 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 09:25:42.047 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 09:25:42.047 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 09:25:42.047 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 09:25:42.047 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 09:25:42.047 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 09:25:42.047 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 09:25:42.081 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 09:25:42.548 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 09:25:42.655 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 09:25:42.764 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 09:25:42.798 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 09:25:42.798 +08:00 [INF] Hosting environment: Development
+2025-03-03 09:25:42.798 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 09:25:43.448 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 09:25:44.091 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:25:44.104 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 09:25:44.118 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 09:25:44.120 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 13.6144ms
+2025-03-03 09:25:44.120 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:25:44.125 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 681.0582ms
+2025-03-03 09:25:44.130 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:25:44.159 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 28.5064ms
+2025-03-03 09:25:44.164 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:25:44.164 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:25:44.167 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.577ms
+2025-03-03 09:25:44.169 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:25:44.171 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 8.1258ms
+2025-03-03 09:25:44.190 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.543ms
+2025-03-03 09:25:44.216 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:25:44.350 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 134.5875ms
+2025-03-03 09:52:40.960 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 09:52:43.276 +08:00 [INF] Loaded ABP modules:
+2025-03-03 09:52:43.277 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 09:52:43.277 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 09:52:43.277 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 09:52:43.277 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 09:52:43.277 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 09:52:43.277 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 09:52:43.277 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 09:52:43.277 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 09:52:43.277 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 09:52:43.277 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 09:52:43.277 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 09:52:43.277 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 09:52:43.277 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 09:52:43.277 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 09:52:43.277 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 09:52:43.277 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 09:52:43.277 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 09:52:43.296 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 09:52:43.793 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 09:52:43.889 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 09:52:44.048 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 09:52:44.079 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 09:52:44.080 +08:00 [INF] Hosting environment: Development
+2025-03-03 09:52:44.080 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 09:52:44.398 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 09:52:45.484 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:52:45.497 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 09:52:45.512 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 09:52:45.515 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 15.4926ms
+2025-03-03 09:52:45.515 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:52:45.519 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1124.32ms
+2025-03-03 09:52:45.525 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:52:45.553 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 27.445ms
+2025-03-03 09:52:45.555 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:52:45.556 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:52:45.559 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.7904ms
+2025-03-03 09:52:45.562 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 6.8061ms
+2025-03-03 09:52:45.564 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:52:45.592 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.5459ms
+2025-03-03 09:52:45.616 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:52:45.745 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.619ms
+2025-03-03 09:52:54.747 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-03 09:52:54.751 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 09:52:54.753 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-03 09:52:54.765 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 11.6662ms
+2025-03-03 09:52:54.765 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 09:52:54.765 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 18.8197ms
+2025-03-03 09:52:54.804 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 09:52:54.806 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 09:52:54.811 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 09:52:55.301 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:52:55.311 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 499.9845ms
+2025-03-03 09:52:55.311 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 09:52:55.311 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 507.405ms
+2025-03-03 09:53:44.877 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 09:53:46.821 +08:00 [INF] Loaded ABP modules:
+2025-03-03 09:53:46.822 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 09:53:46.822 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 09:53:46.822 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 09:53:46.822 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 09:53:46.822 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 09:53:46.822 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 09:53:46.822 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 09:53:46.822 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 09:53:46.822 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 09:53:46.822 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 09:53:46.822 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 09:53:46.822 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 09:53:46.822 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 09:53:46.822 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 09:53:46.822 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 09:53:46.822 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 09:53:46.822 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 09:53:46.842 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 09:53:47.397 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 09:53:47.532 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 09:53:47.729 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 09:53:47.759 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 09:53:47.759 +08:00 [INF] Hosting environment: Development
+2025-03-03 09:53:47.759 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 09:53:48.359 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 09:53:48.971 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:53:48.986 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 09:53:49.001 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 09:53:49.003 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 14.6201ms
+2025-03-03 09:53:49.003 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 09:53:49.008 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 651.8563ms
+2025-03-03 09:53:49.013 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 09:53:49.043 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 29.6637ms
+2025-03-03 09:53:49.049 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 09:53:49.050 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 09:53:49.052 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.8556ms
+2025-03-03 09:53:49.055 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 09:53:49.056 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 6.8889ms
+2025-03-03 09:53:49.074 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.3932ms
+2025-03-03 09:53:49.110 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 09:53:49.229 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.965ms
+2025-03-03 09:53:55.447 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-03 09:53:55.452 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 09:53:55.454 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-03 09:53:55.464 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 9.7746ms
+2025-03-03 09:53:55.464 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 09:53:55.464 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 17.0886ms
+2025-03-03 09:53:55.494 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 09:53:55.497 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 09:53:55.501 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 09:53:55.966 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 09:53:55.977 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 475.4215ms
+2025-03-03 09:53:55.977 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 09:53:55.978 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 484.3971ms
+2025-03-03 10:00:15.737 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 10:00:17.958 +08:00 [INF] Loaded ABP modules:
+2025-03-03 10:00:17.958 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 10:00:17.958 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 10:00:17.958 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 10:00:17.958 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 10:00:17.958 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 10:00:17.958 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 10:00:17.958 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 10:00:17.958 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 10:00:17.958 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 10:00:17.958 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 10:00:17.958 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 10:00:17.958 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 10:00:17.958 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 10:00:17.958 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 10:00:17.958 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 10:00:17.958 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 10:00:17.958 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 10:00:17.981 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 10:00:18.556 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 10:00:18.695 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 10:00:18.849 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 10:00:18.943 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 10:00:18.943 +08:00 [INF] Hosting environment: Development
+2025-03-03 10:00:18.943 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 10:00:19.143 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 10:00:20.280 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:00:20.294 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 10:00:20.309 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 10:00:20.311 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 14.782ms
+2025-03-03 10:00:20.311 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:00:20.316 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1176.6469ms
+2025-03-03 10:00:20.321 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 10:00:20.353 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 31.7012ms
+2025-03-03 10:00:20.358 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 10:00:20.359 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 10:00:20.362 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.9206ms
+2025-03-03 10:00:20.366 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 10:00:20.367 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 9.3783ms
+2025-03-03 10:00:20.412 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.1132ms
+2025-03-03 10:00:20.437 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 10:00:20.550 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.1692ms
+2025-03-03 10:00:41.981 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-03 10:00:41.984 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:00:41.987 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-03 10:00:41.997 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 10.3585ms
+2025-03-03 10:00:41.997 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:00:41.998 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 17.036ms
+2025-03-03 10:00:42.055 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:00:42.058 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:00:42.062 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SettlementSystem.Patient]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:02:06.837 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 10:02:08.826 +08:00 [INF] Loaded ABP modules:
+2025-03-03 10:02:08.826 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 10:02:08.826 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 10:02:08.826 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 10:02:08.826 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 10:02:08.826 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 10:02:08.826 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 10:02:08.826 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 10:02:08.826 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 10:02:08.826 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 10:02:08.826 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 10:02:08.826 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 10:02:08.826 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 10:02:08.826 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 10:02:08.826 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 10:02:08.826 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 10:02:08.826 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 10:02:08.826 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 10:02:08.846 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 10:02:09.185 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 10:02:09.266 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 10:02:09.490 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 10:02:09.523 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 10:02:09.524 +08:00 [INF] Hosting environment: Development
+2025-03-03 10:02:09.524 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 10:02:10.300 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 10:02:10.814 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:02:10.827 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 10:02:10.841 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 10:02:10.843 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 13.823ms
+2025-03-03 10:02:10.843 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:02:10.848 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 565.8269ms
+2025-03-03 10:02:10.855 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 10:02:10.885 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 29.7077ms
+2025-03-03 10:02:10.888 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 10:02:10.888 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 10:02:10.891 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.755ms
+2025-03-03 10:02:10.896 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 7.4954ms
+2025-03-03 10:02:10.896 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 10:02:10.918 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.075ms
+2025-03-03 10:02:10.942 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 10:02:11.062 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.594ms
+2025-03-03 10:02:25.863 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-03 10:02:25.867 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:02:25.869 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-03 10:02:25.878 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 9.4781ms
+2025-03-03 10:02:25.878 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:02:25.879 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 15.4087ms
+2025-03-03 10:02:25.917 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/GetFee_Category - null 0
+2025-03-03 10:02:25.922 +08:00 [INF] CORS policy execution failed.
+2025-03-03 10:02:25.922 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-03 10:02:25.924 +08:00 [INF] Executing endpoint 'HIS.Fee_Categories.Fee_CategoryServices.GetFee_Category (HIS.Application)'
+2025-03-03 10:02:25.928 +08:00 [INF] Route matched with {action = "GetFee_Category", controller = "Fee_CategoryServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Fee_Categories.Fee_CategoryDto]]] GetFee_Category() on controller HIS.Fee_Categories.Fee_CategoryServices (HIS.Application).
+2025-03-03 10:02:26.449 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Fee_Categories.Fee_CategoryDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:02:26.455 +08:00 [INF] Executed action HIS.Fee_Categories.Fee_CategoryServices.GetFee_Category (HIS.Application) in 526.6029ms
+2025-03-03 10:02:26.455 +08:00 [INF] Executed endpoint 'HIS.Fee_Categories.Fee_CategoryServices.GetFee_Category (HIS.Application)'
+2025-03-03 10:02:26.699 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/GetFee_Category - 200 null application/json; charset=utf-8 782.6655ms
+2025-03-03 10:02:32.858 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/AddFee_Category - application/json 31
+2025-03-03 10:02:32.862 +08:00 [INF] CORS policy execution failed.
+2025-03-03 10:02:32.862 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-03 10:02:32.863 +08:00 [INF] Executing endpoint 'HIS.Fee_Categories.Fee_CategoryServices.AddFee_Category (HIS.Application)'
+2025-03-03 10:02:32.873 +08:00 [INF] Route matched with {action = "AddFee_Category", controller = "Fee_CategoryServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Fee_Categories.Fee_CategoryDto]] AddFee_Category(HIS.Fee_Categories.Fee_CategoryDto) on controller HIS.Fee_Categories.Fee_CategoryServices (HIS.Application).
+2025-03-03 10:02:32.983 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Fee_Categories.Fee_CategoryDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 10:02:32.984 +08:00 [INF] Executed action HIS.Fee_Categories.Fee_CategoryServices.AddFee_Category (HIS.Application) in 110.6621ms
+2025-03-03 10:02:32.984 +08:00 [INF] Executed endpoint 'HIS.Fee_Categories.Fee_CategoryServices.AddFee_Category (HIS.Application)'
+2025-03-03 10:02:33.006 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/AddFee_Category - 200 null application/json; charset=utf-8 148.9236ms
+2025-03-03 10:02:37.695 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/GetFee_Category - null 0
+2025-03-03 10:02:37.695 +08:00 [INF] CORS policy execution failed.
+2025-03-03 10:02:37.695 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-03 10:02:37.696 +08:00 [INF] Executing endpoint 'HIS.Fee_Categories.Fee_CategoryServices.GetFee_Category (HIS.Application)'
+2025-03-03 10:02:37.696 +08:00 [INF] Route matched with {action = "GetFee_Category", controller = "Fee_CategoryServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Fee_Categories.Fee_CategoryDto]]] GetFee_Category() on controller HIS.Fee_Categories.Fee_CategoryServices (HIS.Application).
+2025-03-03 10:02:37.709 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Fee_Categories.Fee_CategoryDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:02:37.709 +08:00 [INF] Executed action HIS.Fee_Categories.Fee_CategoryServices.GetFee_Category (HIS.Application) in 13.3762ms
+2025-03-03 10:02:37.709 +08:00 [INF] Executed endpoint 'HIS.Fee_Categories.Fee_CategoryServices.GetFee_Category (HIS.Application)'
+2025-03-03 10:02:37.727 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/GetFee_Category - 200 null application/json; charset=utf-8 32.3666ms
+2025-03-03 10:05:06.995 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 10:05:09.085 +08:00 [INF] Loaded ABP modules:
+2025-03-03 10:05:09.085 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 10:05:09.085 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 10:05:09.085 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 10:05:09.085 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 10:05:09.085 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 10:05:09.085 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 10:05:09.085 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 10:05:09.085 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 10:05:09.085 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 10:05:09.085 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 10:05:09.085 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 10:05:09.085 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 10:05:09.085 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 10:05:09.085 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 10:05:09.085 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 10:05:09.085 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 10:05:09.085 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 10:05:09.104 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 10:05:09.764 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 10:05:09.870 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 10:05:10.074 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 10:05:10.111 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 10:05:10.111 +08:00 [INF] Hosting environment: Development
+2025-03-03 10:05:10.111 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 10:05:10.395 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 10:05:11.561 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:05:11.574 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 10:05:11.588 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 10:05:11.590 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 13.5794ms
+2025-03-03 10:05:11.590 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:05:11.596 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1203.4374ms
+2025-03-03 10:05:11.601 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 10:05:11.630 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 28.5409ms
+2025-03-03 10:05:11.634 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 10:05:11.635 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 10:05:11.637 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.3709ms
+2025-03-03 10:05:11.640 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 10:05:11.643 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 8.604ms
+2025-03-03 10:05:11.663 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.0328ms
+2025-03-03 10:05:11.686 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 10:05:11.804 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.9046ms
+2025-03-03 10:05:21.336 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-03 10:05:21.339 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:05:21.340 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-03 10:05:21.348 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 8.1013ms
+2025-03-03 10:05:21.348 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:05:21.349 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 12.9253ms
+2025-03-03 10:05:21.401 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:21.403 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:21.407 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:21.853 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:21.865 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 458.4007ms
+2025-03-03 10:05:21.866 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:21.866 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 465.3337ms
+2025-03-03 10:05:25.911 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:25.918 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:25.919 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:25.929 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:25.929 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 10.7606ms
+2025-03-03 10:05:25.930 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:25.930 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 18.4268ms
+2025-03-03 10:05:33.315 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:33.316 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:33.317 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:33.329 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:33.329 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 12.132ms
+2025-03-03 10:05:33.329 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:33.329 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 13.9454ms
+2025-03-03 10:05:35.669 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:35.671 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:35.671 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:35.681 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:35.681 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 10.3451ms
+2025-03-03 10:05:35.681 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:35.681 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 12.4684ms
+2025-03-03 10:05:35.827 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:35.828 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:35.829 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:35.837 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:35.837 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 8.312ms
+2025-03-03 10:05:35.837 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:35.837 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 10.4105ms
+2025-03-03 10:05:35.993 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:35.995 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:35.995 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:36.003 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:36.004 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 8.5783ms
+2025-03-03 10:05:36.004 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:36.004 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 10.5087ms
+2025-03-03 10:05:37.515 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:37.517 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:37.517 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:37.526 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:37.527 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 9.4446ms
+2025-03-03 10:05:37.527 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:37.527 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 11.4471ms
+2025-03-03 10:05:37.701 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:37.703 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:37.703 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:37.713 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:37.713 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 10.021ms
+2025-03-03 10:05:37.713 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:37.713 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 11.8187ms
+2025-03-03 10:05:37.897 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:37.899 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:37.899 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:37.909 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:37.909 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 10.0892ms
+2025-03-03 10:05:37.909 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:37.909 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 11.7275ms
+2025-03-03 10:05:38.108 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:05:38.109 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:38.109 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:05:38.120 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:05:38.120 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 10.3872ms
+2025-03-03 10:05:38.120 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:05:38.120 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 12.0791ms
+2025-03-03 10:06:03.327 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-03 10:06:05.324 +08:00 [INF] Loaded ABP modules:
+2025-03-03 10:06:05.325 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-03 10:06:05.325 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-03 10:06:05.325 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-03 10:06:05.325 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-03 10:06:05.325 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-03 10:06:05.325 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-03 10:06:05.325 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-03 10:06:05.325 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-03 10:06:05.325 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-03 10:06:05.325 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-03 10:06:05.325 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-03 10:06:05.325 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-03 10:06:05.325 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-03 10:06:05.325 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-03 10:06:05.325 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-03 10:06:05.325 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-03 10:06:05.325 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-03 10:06:05.345 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-03 10:06:05.914 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 10:06:06.043 +08:00 [INF] Initialized all ABP modules.
+2025-03-03 10:06:06.174 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-03 10:06:06.213 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 10:06:06.213 +08:00 [INF] Hosting environment: Development
+2025-03-03 10:06:06.213 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-03 10:06:06.659 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-03 10:06:07.577 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:06:07.590 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-03 10:06:07.605 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-03 10:06:07.607 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 14.5918ms
+2025-03-03 10:06:07.607 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-03 10:06:07.611 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 954.9092ms
+2025-03-03 10:06:07.618 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-03 10:06:07.645 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 27.9503ms
+2025-03-03 10:06:07.649 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 10:06:07.650 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-03 10:06:07.652 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.1221ms
+2025-03-03 10:06:07.656 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-03 10:06:07.656 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 7.5844ms
+2025-03-03 10:06:07.675 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.4459ms
+2025-03-03 10:06:07.700 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-03 10:06:07.817 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 116.7342ms
+2025-03-03 10:06:18.077 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-03 10:06:18.080 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:06:18.081 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-03 10:06:18.091 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 9.6193ms
+2025-03-03 10:06:18.091 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-03 10:06:18.091 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 14.6135ms
+2025-03-03 10:06:18.130 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:06:18.132 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:06:18.137 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:06:18.573 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:06:18.583 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 446.139ms
+2025-03-03 10:06:18.584 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:06:18.585 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 454.8427ms
+2025-03-03 10:06:28.555 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:06:28.561 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:06:28.562 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:06:36.055 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:06:36.055 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 7493.3363ms
+2025-03-03 10:06:36.055 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:06:36.056 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 7500.3514ms
+2025-03-03 10:07:12.062 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetPatients - null null
+2025-03-03 10:07:12.064 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:07:12.064 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-03 10:07:16.324 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 10:07:16.329 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 4265.3343ms
+2025-03-03 10:07:16.330 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-03 10:07:16.330 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetPatients - 200 null application/json; charset=utf-8 4268.7571ms
