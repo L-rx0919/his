@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\HIS.Utility\HIS.Utility.csproj" />
     <ProjectReference Include="..\HIS.Domain\HIS.Domain.csproj" />
     <ProjectReference Include="..\HIS.Application.Contracts\HIS.Application.Contracts.csproj" />
