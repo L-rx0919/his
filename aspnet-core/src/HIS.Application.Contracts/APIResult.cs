@@ -20,8 +20,8 @@ namespace HIS
     public enum CodeEnum
     {
         success = 0, // 成功
-        error = 1, // 失败
-        unauthorized = 2, // 未授权
-        notfound = 3, // 未找到
+        error = 500, // 失败
+        unauthorized = 401, // 未授权
+        notfound = 403, // 未找到
     }
 }

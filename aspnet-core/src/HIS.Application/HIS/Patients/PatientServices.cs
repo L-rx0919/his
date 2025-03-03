@@ -44,7 +44,7 @@ namespace HIS.HIS.Patients
           
             //判断名称 是否重复
             var patientName = await _patientRepository.AllAsync(x => x.patient_name == patient.patient_name);
-            if (patientName == false)
+            if (patientName == true)
             {
                 return new APIResult<PatientDto>()
                 {
@@ -69,14 +69,22 @@ namespace HIS.HIS.Patients
         /// 查询所有患者
         /// </summary>
         /// <returns></returns>
-        [HttpGet("api/GetPatients")]
-        public async Task<APIResult<List<PatientDto>>> GetPatients()
+        [HttpGet("/api/v1/his/patient/page")]
+        public async Task<APIResult<List<PatientDto>>> GetPatients(string name, string phone)
         {
             var list = await _patientRepository.GetListAsync();
             var result = ObjectMapper.Map<List<Patient>, List<PatientDto>>(list);
+            if (!string.IsNullOrEmpty(name)) 
+            {
+                result = result.Where(x => x.patient_name.Contains(name)).ToList();
+            }
+            if (!string.IsNullOrEmpty(phone)) 
+            {
+                result = result.Where(x => x.patient_contact== phone).ToList();
+            }
             return new APIResult<List<PatientDto>>()
             {
-                Code = 0,
+                Code = CodeEnum.success,
                 Message = "查询成功",
                 Data =result
             };
