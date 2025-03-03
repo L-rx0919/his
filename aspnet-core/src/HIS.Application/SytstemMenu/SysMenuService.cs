@@ -54,6 +54,7 @@ namespace HIS.SytstemMenu
                                 Name = "User",
                                 Path = "user",
                                 Meta = new Meta
+                                Meta = new Meta
                                 {
                                     AlwaysShow = false,
                                     Hidden = false,
