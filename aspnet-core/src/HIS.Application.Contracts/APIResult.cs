@@ -11,7 +11,7 @@ namespace HIS
     {
         public CodeEnum Code { get; set; }
         public TData Data { get; set; }
-        public string Msg { get; set; }
+        public string Message { get; set; }
     }
 
     /// <summary>

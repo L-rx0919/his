@@ -73,7 +73,7 @@ namespace HIS.SystemDicServices
         /// 获取字典服务
         /// </summary>
         /// <returns></returns>
-        [HttpPost("/api/v1/dict/list")]
+        [HttpGet("/api/v1/dict/list")]
         public async Task<APIResult<List<SysDictDto>>> GetAllAsync()
         {
             // Try to get cached data first
@@ -150,7 +150,7 @@ namespace HIS.SystemDicServices
                 return new APIResult<SysDictListDto>
                 {
                     Code = CodeEnum.error,
-                    Msg = "已存在该字典编码"
+                    Message = "已存在该字典编码"
                 };
             }
 
@@ -163,7 +163,7 @@ namespace HIS.SystemDicServices
             {
                 Code = CodeEnum.success,
                 Data = sysDictListDto,
-                Msg = "Success"
+                Message = "Success"
             };
         }
 
@@ -197,7 +197,7 @@ namespace HIS.SystemDicServices
                 return new APIResult<SysDictListDto>
                 {
                     Code = CodeEnum.error,
-                    Msg = "已存在该字典编码"
+                    Message = "已存在该字典编码"
                 };
             }
 
@@ -244,7 +244,7 @@ namespace HIS.SystemDicServices
                 {
                     Code = CodeEnum.success,
                     Data = false,
-                    Msg = e.Message
+                    Message = e.Message
                 };
             }
         }
@@ -285,7 +285,7 @@ namespace HIS.SystemDicServices
                 return new APIResult<SysDictDataListDto>
                 {
                     Code = CodeEnum.error,
-                    Msg = "已存在该字典值"
+                    Message = "已存在该字典值"
                 };
             }
 
@@ -298,7 +298,7 @@ namespace HIS.SystemDicServices
             {
                 Code = CodeEnum.success,
                 Data = sysDictDataListDto,
-                Msg = "Success"
+                Message = "Success"
             };
         }
 
@@ -332,7 +332,7 @@ namespace HIS.SystemDicServices
                 return new APIResult<SysDictDataListDto>
                 {
                     Code = CodeEnum.error,
-                    Msg = "已存在该字典数据"
+                    Message = "已存在该字典数据"
                 };
             }
 
@@ -379,7 +379,7 @@ namespace HIS.SystemDicServices
                 {
                     Code = CodeEnum.success,
                     Data = false,
-                    Msg = e.Message
+                    Message = e.Message
                 };
             }
         }

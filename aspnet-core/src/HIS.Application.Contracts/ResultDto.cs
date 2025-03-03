@@ -9,7 +9,7 @@ namespace HIS
     /// <summary>
     /// API结果
     /// </summary>
-    public class APIResDto
+    public class ResultDto
     {
         /// <summary>
         /// 是否成功
@@ -34,7 +34,7 @@ namespace HIS
         /// <param name="msg">消息</param>
         /// <param name="data">数据</param>
         /// <param name="code"> 结果代码</param>
-        public APIResDto(bool isSuc, string msg, object data, ResultCode code)
+        public ResultDto(bool isSuc, string msg, object data, ResultCode code)
         {
             IsSuc = isSuc;
             Msg = msg;
@@ -47,24 +47,24 @@ namespace HIS
         /// <param name="data"></param>
         /// <param name="msg"></param>
         /// <returns></returns>
-        public static APIResDto OK(object data = null, string msg = "操作成功")
+        public static ResultDto OK(object data = null, string msg = "操作成功")
         {
-            return new APIResDto(true, msg, data, ResultCode.Success);
+            return new ResultDto(true, msg, data, ResultCode.Success);
         }
         /// <summary>
         /// 失败
         /// </summary>
         /// <param name="msg"></param>
         /// <returns></returns>
-        public static APIResDto Fail(string msg = "操作失败")
+        public static ResultDto Fail(string msg = "操作失败")
         {
-            return new APIResDto(false, msg, null, ResultCode.Fail);
+            return new ResultDto(false, msg, null, ResultCode.Fail);
         }
     }
     /// <summary>
     /// 枚举
     /// </summary>
-    public enum Resultaaaa
+    public enum ResultCode
     {
         Success = 200,
         Fail = 500,

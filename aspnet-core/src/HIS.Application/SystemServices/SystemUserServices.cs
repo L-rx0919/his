@@ -85,7 +85,7 @@ namespace HIS.SystemServices
                 return new APIResult<int>
                 {
                     Code = CodeEnum.success,
-                    Msg = "初始化数据成功",
+                    Message = "初始化数据成功",
                 };
             }
             catch (Exception)
@@ -113,7 +113,7 @@ namespace HIS.SystemServices
             return new APIResult<CaptchaDto>
             {
                 Code = CodeEnum.success,
-                Msg = string.Empty,
+                Message = string.Empty,
                 Data = new CaptchaDto
                 {
                     captchaBase64 = $"data:image/gif;base64,{Convert.ToBase64String(stream.ToArray())}",
@@ -136,18 +136,18 @@ namespace HIS.SystemServices
                 var Port = new Uri(httpContextAccessor.HttpContext.Request.Headers["Referer"]).Port;
                 if (!captcha.Validate(httpContextAccessor.HttpContext.Request.Cookies["ValidateCode"], loginDto.CaptchaCode) && Port == 3000)
                 {
-                    return new APIResult<LoginResultDto> { Code = CodeEnum.error, Msg = "验证码不正确" };
+                    return new APIResult<LoginResultDto> { Code = CodeEnum.error, Message = "验证码不正确" };
                 }
                 var admin = await repositoryUser.FindAsync(m => m.Username == loginDto.Username);
                 if (admin == null)
                 {
-                    return new APIResult<LoginResultDto> { Code = CodeEnum.error, Msg = "用户未找到" };
+                    return new APIResult<LoginResultDto> { Code = CodeEnum.error, Message = "用户未找到" };
                 }
                 else
                 {
                     if (admin.Password != loginDto.Password.ComputeSha256Hash())
                     {
-                        return new APIResult<LoginResultDto> { Code = CodeEnum.error, Msg = "密码不正确" };
+                        return new APIResult<LoginResultDto> { Code = CodeEnum.error, Message = "密码不正确" };
                     }
                     else
                     {
@@ -164,7 +164,7 @@ namespace HIS.SystemServices
                 return new APIResult<LoginResultDto>
                 {
                     Code = CodeEnum.error,
-                    Msg = e.Message
+                    Message = e.Message
                 };
             }
         }

@@ -334,7 +334,7 @@ namespace HIS.SytstemMenu
                         }
                     }
                 },
-                Msg = string.Empty
+                Message = string.Empty
             };
         }
     }
