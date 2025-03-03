@@ -16,6 +16,6 @@ namespace HIS.HIS.Patients
         /// 获取所有患者
         /// </summary>
         /// <returns></returns>
-        Task<APIResult<List<PatientDto>>> GetPatients();
+        Task<APIResult<List<PatientDto>>> GetPatients(string name, string phone);
     }
 }

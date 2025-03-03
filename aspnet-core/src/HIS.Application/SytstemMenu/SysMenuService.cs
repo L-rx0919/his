@@ -112,7 +112,7 @@ namespace HIS.SytstemMenu
                     {
                         Component = "Layout",
                         Name = "/system/user",
-                        Path = "/system/user",
+                        Path = "/his",
                         Redirect = "/system/user/settlementSystem",
                         Meta = new Meta
                         {
@@ -223,7 +223,7 @@ namespace HIS.SytstemMenu
                             {
                                 Component = "system/user/settlementSystem",
                                 Name = "PatientInformation",
-                                Path = "PatientInformation",
+                                Path = "patientInformation",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -235,9 +235,9 @@ namespace HIS.SytstemMenu
                                 Children = new List<SysMenuDto> {
                                     new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
+                                        Component = "his/patient/index",
                                         Name = "PatientList",
-                                        Path = "PatientList",
+                                        Path = "patientList",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,
@@ -261,11 +261,12 @@ namespace HIS.SytstemMenu
                                     }
                                 }
                             },
+                            
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
                                 Name = "Outpatientmanagement",
-                                Path = "Outpatientmanagement",
+                                Path = "outpatientmanagement",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -273,8 +274,24 @@ namespace HIS.SytstemMenu
                                     KeepAlive = true,
                                     Icon = "el-icon-User",
                                     Title = "门诊管理"
+                                },
+                                Children = new List<SysMenuDto>{
+                                 new SysMenuDto
+                                    {
+                                        Component = "his/Outpatient/index",
+                                        Name = "Outpatientregistration",
+                                        Path = "outpatientregistration",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "门诊挂号"
+                                        }
+                                    },
                                 }
                             },
+
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
