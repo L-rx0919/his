@@ -59,5 +59,18 @@ namespace HIS.HIS.Patients
         /// 婚姻状况
         /// </summary>
         public string marital_status { get; set; }
+
+        ///// <summary>
+        ///// 病人ID
+        ///// </summary>
+        //public string Patient_id { get; set; }
+        ///// <summary>
+        ///// 卡状态
+        ///// </summary>
+        //public string Card_status { get; set; }
+        ///// <summary>
+        ///// 卡类型
+        ///// </summary>
+        //public string Card_type { get; set; }
     }
 }

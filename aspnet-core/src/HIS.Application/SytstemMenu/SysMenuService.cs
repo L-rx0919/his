@@ -30,6 +30,7 @@ namespace HIS.SytstemMenu
         [HttpGet("/api/v1/menus/routes")]
         public async Task<APIResult<List<SysMenuDto>>> Routes()
         {
+            await Task.CompletedTask; // TODO: 实现获取路由逻辑
             return new APIResult<List<SysMenuDto>>
             {
                 Code = CodeEnum.success,
