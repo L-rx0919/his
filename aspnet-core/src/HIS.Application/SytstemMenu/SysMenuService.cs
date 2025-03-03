@@ -278,9 +278,9 @@ namespace HIS.SytstemMenu
                             },
                             new SysMenuDto
                             {
-                                Component = "system/user/settlementSystem",
+                                Component = "his/inpatientRecords/inpatientRecordsList",
                                 Name = "Inpatientmanagement",
-                                Path = "Inpatientmanagement",
+                                Path = "inpatientmanagement",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
