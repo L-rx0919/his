@@ -18,27 +18,22 @@ namespace HIS.HIS.Patients
         private readonly IRepository<Patient> _patientRepository;
         private readonly IRepository<Department> _departmentRepository;
         private readonly IRepository<Doctor> _doctorRepository;
+
         /// <summary>
         /// 一卡通信息仓储
         /// </summary>
         private readonly IRepository<Patient_Card_Info> _Patient_Card_InfoRepository;
-        /// <summary>
-        /// 映射器
-        /// </summary>
         private readonly IMapper _mapper;
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        /// <param name="patientRepository"></param>
-        /// <param name="mapper"></param>
-        public PatientServices(IRepository<Patient> patientRepository, IMapper mapper = null, IRepository<Patient_Card_Info> patient_Card_InfoRepository = null, IRepository<Department> departmentRepository = null, IRepository<Doctor> doctorRepository = null)
+        public PatientServices(IRepository<Patient> patientRepository, IRepository<Department> departmentRepository, IRepository<Doctor> doctorRepository, IRepository<Patient_Card_Info> patient_Card_InfoRepository = null, IMapper mapper = null)
         {
             _patientRepository = patientRepository;
-            _mapper = mapper;
-            _Patient_Card_InfoRepository = patient_Card_InfoRepository;
             _departmentRepository = departmentRepository;
             _doctorRepository = doctorRepository;
+            _Patient_Card_InfoRepository = patient_Card_InfoRepository;
+            _mapper = mapper;
         }
+
+
         /// <summary>
         /// 添加患者
         /// </summary>
