@@ -128,39 +128,39 @@ namespace HIS.HIS.Patients
                 Data = result
             };
         }
-        /// <summary>
-        /// 查询患者一卡通信息
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet("/api/v1/his/patient/getPatientCardInfos")]
-        public async Task<APIResult<List<PatientCardDto>>> GetPatientCardInfos()
-        {
-            var patientslst = await _patientRepository.GetListAsync();
-            var patient_Card_Infolist = await _Patient_Card_InfoRepository.GetListAsync(a => a.Card_status == "启用");
-            var list = from a in patientslst
-                       join b in patient_Card_Infolist on a.Id.ToString() equals b.Patient_id
-                       select new PatientCardDto
-                       {
-                           patient_name = a.patient_name,
-                           patient_contact = a.patient_contact,
-                           emergency_contact = a.emergency_contact,
-                           marital_status = a.marital_status,
-                           CreationTime = a.CreationTime,
-                           patient_age = a.patient_age,
-                           patient_gender = a.patient_gender,
-                           patient_address = a.patient_address,
-                           patient_blood_type = a.patient_blood_type,
-                           Card_status = b.Card_status,
-                           Card_type = b.Card_type,
-                       };
-            var result = list.ToList();
-            return new APIResult<List<PatientCardDto>>()
-            {
-                Code = CodeEnum.success,
-                Message = "查询成功",
-                Data = result
-            };
-        }
+        ///// <summary>
+        ///// 查询患者一卡通信息
+        ///// </summary>
+        ///// <returns></returns>
+        //[HttpGet("/api/v1/his/patient/getPatientCardInfos")]
+        //public async Task<APIResult<List<PatientCardDto>>> GetPatientCardInfos()
+        //{
+        //    var patientslst = await _patientRepository.GetListAsync();
+        //    var patient_Card_Infolist = await _Patient_Card_InfoRepository.GetListAsync(a => a.Card_status == "启用");
+        //    var list = from a in patientslst
+        //               join b in patient_Card_Infolist on a.Id.ToString() equals b.Patient_id
+        //               select new PatientCardDto
+        //               {
+        //                   patient_name = a.patient_name,
+        //                   patient_contact = a.patient_contact,
+        //                   emergency_contact = a.emergency_contact,
+        //                   marital_status = a.marital_status,
+        //                   CreationTime = a.CreationTime,
+        //                   patient_age = a.patient_age,
+        //                   patient_gender = a.patient_gender,
+        //                   patient_address = a.patient_address,
+        //                   patient_blood_type = a.patient_blood_type,
+        //                   Card_status = b.Card_status,
+        //                   Card_type = b.Card_type,
+        //               };
+        //    var result = list.ToList();
+        //    return new APIResult<List<PatientCardDto>>()
+        //    {
+        //        Code = CodeEnum.success,
+        //        Message = "查询成功",
+        //        Data = result
+        //    };
+        //}
 
         /// <summary>
         /// 查询科室
