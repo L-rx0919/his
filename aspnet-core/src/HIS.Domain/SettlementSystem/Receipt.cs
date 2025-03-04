@@ -12,7 +12,7 @@ namespace HIS.SettlementSystem
         /// <summary>
         /// 结算ID
         /// </summary>
-        public string settlement_id { get; set; }
+        public Guid settlement_id { get; set; }
         /// <summary>
         /// 票据编号
         /// </summary>

@@ -280,7 +280,7 @@ namespace HIS.SytstemMenu
                             },
                             new SysMenuDto
                             {
-                                Component = "his/inpatientRecords/inpatientRecordsList",
+                                Component = "his/inpatientRecord/index",
                                 Name = "Inpatientmanagement",
                                 Path = "inpatientmanagement",
                                 Meta = new Meta

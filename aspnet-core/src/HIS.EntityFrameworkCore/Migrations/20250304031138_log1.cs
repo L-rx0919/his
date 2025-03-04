@@ -10,6 +10,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HIS.Migrations
 {
     /// <inheritdoc />
+<<<<<<<< HEAD:aspnet-core/src/HIS.EntityFrameworkCore/Migrations/20250304031138_log1.cs
+    public partial class log1 : Migration
+========
     public partial class init1 : Migration
 >>>>>>>> 8098273d7798d5d48023ca5101e6f17e5d6d6532:aspnet-core/src/HIS.EntityFrameworkCore/Migrations/20250303112944_init1.cs
     {
@@ -802,7 +805,6 @@ namespace HIS.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    Patientid = table.Column<int>(type: "int", nullable: false),
                     patient_name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     patient_gender = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
@@ -1186,6 +1188,42 @@ namespace HIS.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+<<<<<<<< HEAD:aspnet-core/src/HIS.EntityFrameworkCore/Migrations/20250304031138_log1.cs
+                name: "SysNotices",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    Title = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Content = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    TargetType = table.Column<int>(type: "int", nullable: false),
+                    TargetUserIds = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    NoticeType = table.Column<int>(type: "int", nullable: false),
+                    CreationTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    CreatorId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
+                    LastModificationTime = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    LastModifierId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
+                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false, defaultValue: false),
+                    DeleterId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
+                    DeletionTime = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    CreatorName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    LastModifierName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DeleterName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SysNotices", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+========
+>>>>>>>> 8098273d7798d5d48023ca5101e6f17e5d6d6532:aspnet-core/src/HIS.EntityFrameworkCore/Migrations/20250303112944_init1.cs
                 name: "systemdept",
                 columns: table => new
                 {
@@ -1314,34 +1352,6 @@ namespace HIS.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_systemuser", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "SysUserNotices",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    NoticeId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    UserId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    IsRead = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    CreatorId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
-                    LastModificationTime = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    LastModifierId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
-                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false, defaultValue: false),
-                    DeleterId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
-                    DeletionTime = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    CreatorName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    LastModifierName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    DeleterName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SysUserNotices", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -1609,6 +1619,10 @@ namespace HIS.Migrations
                 name: "sysmenu");
 
             migrationBuilder.DropTable(
+<<<<<<<< HEAD:aspnet-core/src/HIS.EntityFrameworkCore/Migrations/20250304031138_log1.cs
+                name: "SysNotices");
+
+            migrationBuilder.DropTable(
                 name: "systemdept");
 ========
                 name: "systemdept");
@@ -1622,9 +1636,6 @@ namespace HIS.Migrations
 
             migrationBuilder.DropTable(
                 name: "systemuser");
-
-            migrationBuilder.DropTable(
-                name: "SysUserNotices");
 
             migrationBuilder.DropTable(
                 name: "AbpEntityChanges");
