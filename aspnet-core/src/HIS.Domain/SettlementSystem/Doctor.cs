@@ -20,7 +20,7 @@ namespace HIS.SettlementSystem
         /// <summary>
         /// 科室ID
         /// </summary>
-        public int department_id { get; set; }
+        public Guid department_id { get; set; }
         /// <summary>
         /// 联系电话
         /// </summary>

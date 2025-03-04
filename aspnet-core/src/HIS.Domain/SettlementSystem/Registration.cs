@@ -11,15 +11,15 @@ namespace HIS.SettlementSystem
         /// <summary>
         /// 患者ID
         /// </summary>
-        public int Patientid { get; set; }
+        public Guid Patientid { get; set; }
         /// <summary>
         /// 医生ID
         /// </summary>
-        public int DoctorId { get; set; }
+        public Guid DoctorId { get; set; }
         /// <summary>
         /// 科室ID
         /// </summary>
-        public int DepartmentId { get; set; }
+        public Guid DepartmentId { get; set; }
         /// <summary>
         /// 挂号时间
         /// </summary>

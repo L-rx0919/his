@@ -16,7 +16,7 @@ namespace HIS.System_Administration
         /// 收费项目ID
         /// </summary>
         [Key]
-        public int ChargingprojectsID { get; set; }
+        public Guid ChargingprojectsID { get; set; }
         /// <summary>
         /// 组织机构
         /// </summary>

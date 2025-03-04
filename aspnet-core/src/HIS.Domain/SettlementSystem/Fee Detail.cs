@@ -16,7 +16,7 @@ namespace HIS.SettlementSystem
         /// <summary>
         ///         费用项目ID
         /// </summary>
-            public int item_id { get; set; }
+            public Guid item_id { get; set; }
         /// <summary>
         ///         数量
         /// </summary>
