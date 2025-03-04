@@ -71,7 +71,7 @@ namespace HIS.HIS.Naturepatients
         /// 查询病人性质
         /// </summary>
         /// <returns>病人性质列表</returns>
-        [HttpGet("GetNatyrePatiient")]
+        [HttpGet("/api/v1/his/systemconfig/NatureofPatientList")]
    
         public async Task<APIResult<List<NaturepatientDTO>>> GetNatyrePatiient()
         {
