@@ -243,9 +243,9 @@ namespace HIS.SytstemMenu
                                     },
                                      new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
-                                        Name = "Outpatientcharges",
-                                        Path = "Outpatientcharges",
+                                        Component = "his/patientCenter/index",
+                                        Name = "patientCenter",
+                                        Path = "patientCenter",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,
@@ -259,7 +259,7 @@ namespace HIS.SytstemMenu
 
                             new SysMenuDto
                             {
-                                Component = "his/inpatientRecords/inpatientRecordsList",
+                                Component = "his/inpatientRecord/index",
                                 Name = "Inpatientmanagement",
                                 Path = "inpatientmanagement",
                                 Meta = new Meta
@@ -301,9 +301,9 @@ namespace HIS.SytstemMenu
                             },
                             new SysMenuDto
                             {
-                               Component = "his/confi/index",
-                                Name = "Systemconfi",
-                                Path = "Systemconfi",
+                               Component = "his/systemconfig/index",
+                                Name = "systemconfig",
+                                Path = "systemconfig",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -315,7 +315,7 @@ namespace HIS.SytstemMenu
                                 Children = new List<SysMenuDto> {
                                     new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
+                                        Component = "his/systemconfig/idnex",
                                         Name = "NatureofPatient",
                                         Path = "NatureofPatient",
                                         Meta = new Meta
@@ -328,7 +328,7 @@ namespace HIS.SytstemMenu
                                     },
                                     new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
+                                        Component = "his/systemconfig/index",
                                         Name = "Chargingmodule",
                                         Path = "Chargingmodule",
                                         Meta = new Meta
@@ -341,7 +341,7 @@ namespace HIS.SytstemMenu
                                     },
                                      new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
+                                        Component = "his/systemconfig/index",
                                         Name = "Chargingprojects",
                                         Path = "Chargingprojects",
                                         Meta = new Meta
@@ -354,9 +354,9 @@ namespace HIS.SytstemMenu
                                     },
                                     new SysMenuDto
                                     {
-                                      Component = "system/user/settlementSystem",
-                                      Name = "PatientDetail",
-                                      Path = "PatientDetail",
+                                      Component = "his/systemconfig/index",
+                                      Name = "SystemDynamics",
+                                      Path = "SystemDynamics",
                                       Meta = new Meta
                                       {
                                          AlwaysShow = false,
@@ -367,7 +367,7 @@ namespace HIS.SytstemMenu
                                    },
                                      new SysMenuDto
                                     {
-                                       Component = "system/user/settlementSystem",
+                                       Component = "his/systemconfig/index",
                                        Name = "PatientDetail",
                                        Path = "PatientDetail",
                                        Meta = new Meta
@@ -380,7 +380,7 @@ namespace HIS.SytstemMenu
                                      },
                                      new SysMenuDto
                                      {
-                                       Component = "system/user/settlementSystem",
+                                       Component = "his/systemconfig/index",
                                        Name = "PatientDetail",
                                        Path = "PatientDetail",
                                        Meta = new Meta
@@ -393,7 +393,7 @@ namespace HIS.SytstemMenu
                                      },
                                         new SysMenuDto
                                         {
-                                          Component = "system/user/settlementSystem",
+                                          Component = "his/systemconfig/index",
                                           Name = "InvoiceConfiguration",
                                           Path = "InvoiceConfiguration",
                                           Meta = new Meta
@@ -406,9 +406,9 @@ namespace HIS.SytstemMenu
                                         }, 
                                       new SysMenuDto
                                       {
-                                          Component = "system/user/settlementSystem",
-                                          Name = "PatientDetail",
-                                          Path = "PatientDetail",
+                                          Component = "his/systemconfig/index",
+                                          Name = "Rolemanagements",
+                                          Path = "Rolemanagements",
                                           Meta = new Meta
                                           {
                                            AlwaysShow = false,
@@ -420,9 +420,9 @@ namespace HIS.SytstemMenu
 
                                        new SysMenuDto
                                       {
-                                          Component = "system/user/settlementSystem",
-                                          Name = "PatientDetail",
-                                          Path = "PatientDetail",
+                                          Component = "his/systemconfig/index",
+                                          Name = "SystemMenu",
+                                          Path = "SystemMenu",
                                           Meta = new Meta
                                           {
                                            AlwaysShow = false,
@@ -434,9 +434,9 @@ namespace HIS.SytstemMenu
 
                                        new SysMenuDto
                                      {
-                                         Component = "system/user/settlementSystem",
-                                         Name = "PatientDetail",
-                                         Path = "PatientDetail",
+                                         Component = "his/systemconfig/index",
+                                         Name = "DepartmentDocto",
+                                         Path = "DepartmentDocto",
                                          Meta = new Meta
                                          {
                                           AlwaysShow = false,

@@ -76,7 +76,7 @@ namespace HIS.HIS.Departments
         [HttpGet("api/ShowDepartment")]
         public async Task<APIResult<DepartmentDto>> GetDepartmentByIdAsync(Guid id)
         {
-            var clinicTypeDepartment = await ClinicTypeDepartmentRepository.FirstOrDefaultAsync(x => x.clinic_type_id == id.ToString());
+            var clinicTypeDepartment = await ClinicTypeDepartmentRepository.FirstOrDefaultAsync(x => x.clinic_type_id == id);
             if (clinicTypeDepartment == null)
             {
                 return new APIResult<DepartmentDto>()
@@ -86,7 +86,7 @@ namespace HIS.HIS.Departments
                 };
             }
 
-            var department = await DepartmentRepository.FirstOrDefaultAsync(x => x.Id == Guid.Parse(clinicTypeDepartment.department_id));
+            var department = await DepartmentRepository.FirstOrDefaultAsync(x => x.Id == clinicTypeDepartment.department_id);
             if (department == null)
             {
                 return new APIResult<DepartmentDto>()

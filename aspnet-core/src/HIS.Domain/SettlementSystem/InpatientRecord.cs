@@ -30,11 +30,11 @@ namespace HIS.SettlementSystem
         /// <summary>
         /// 科室ID
         /// </summary>
-        public int department_id { get; set; }
+        public Guid department_id { get; set; }
         /// <summary>
         /// 主治医生ID
         /// </summary>
-        public int doctor_id { get; set; }
+        public Guid doctor_id { get; set; }
         /// <summary>
         /// 病房类型
         /// </summary>

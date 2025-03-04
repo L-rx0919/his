@@ -9,8 +9,10 @@ namespace HIS.SettlementSystem
     /// </summary>
     public class Patient:FullAuditedAggregateRoot<Guid>
     {
-      
-
+        /// <summary>
+        /// 患者编号
+        /// </summary>
+        public int Patientid { get; set; }
         /// <summary>
         /// 患者姓名
         /// </summary>

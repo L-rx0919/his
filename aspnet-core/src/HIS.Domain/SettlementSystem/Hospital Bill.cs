@@ -17,7 +17,7 @@ namespace HIS.SettlementSystem
         /// <summary>
         ///     住院记录ID
         /// </summary>
-        public int record_id { get; set; }
+        public Guid record_id { get; set; }
           /// <summary>
         ///     总金额
         /// </summary>
