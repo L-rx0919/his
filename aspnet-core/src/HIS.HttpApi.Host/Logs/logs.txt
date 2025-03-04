@@ -23069,3 +23069,888 @@ LIMIT @__p_2
 2025-03-04 15:00:02.844 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 76.9688ms
 2025-03-04 15:00:02.844 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
 2025-03-04 15:00:02.845 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 82.4205ms
+2025-03-04 15:02:56.324 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-04 15:02:59.476 +08:00 [INF] Loaded ABP modules:
+2025-03-04 15:02:59.477 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-04 15:02:59.477 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-04 15:02:59.477 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-04 15:02:59.477 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-04 15:02:59.477 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-04 15:02:59.477 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-04 15:02:59.477 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-04 15:02:59.477 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-04 15:02:59.477 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-04 15:02:59.477 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-04 15:02:59.477 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-04 15:02:59.477 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-04 15:02:59.477 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-04 15:02:59.477 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-04 15:02:59.477 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-04 15:02:59.477 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-04 15:02:59.477 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-04 15:02:59.521 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-04 15:03:00.143 +08:00 [INF] User profile is available. Using 'C:\Users\86198\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-04 15:03:00.287 +08:00 [INF] Initialized all ABP modules.
+2025-03-04 15:03:00.491 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-04 15:03:00.563 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 15:03:00.563 +08:00 [INF] Hosting environment: Development
+2025-03-04 15:03:00.563 +08:00 [INF] Content root path: C:\Users\86198\Desktop\医疗项目\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-04 15:03:00.998 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-04 15:03:03.679 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-04 15:03:03.758 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-04 15:03:03.823 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-04 15:03:03.832 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 64.749ms
+2025-03-04 15:03:03.832 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-04 15:03:03.849 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 2862.9496ms
+2025-03-04 15:03:03.873 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-04 15:03:04.003 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 130.7155ms
+2025-03-04 15:03:04.047 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-04 15:03:04.053 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 15:03:04.060 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 13.2503ms
+2025-03-04 15:03:04.074 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-04 15:03:04.075 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 21.3631ms
+2025-03-04 15:03:04.152 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.3928ms
+2025-03-04 15:03:04.348 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-04 15:03:05.256 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 908.615ms
+2025-03-04 15:03:39.040 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 15:03:39.200 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 15:03:39.211 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 15:03:39.423 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 15:03:39.456 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 244.2401ms
+2025-03-04 15:03:39.456 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 15:03:39.457 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 417.7507ms
+2025-03-04 15:03:40.109 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - null null
+2025-03-04 15:03:40.109 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 15:03:40.110 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-04 15:03:40.171 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 15:03:40.171 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 15:03:40.171 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 15:03:40.173 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 15:03:40.175 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 15:03:40.179 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 15:03:40.182 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 15:03:40.196 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 20.1901ms
+2025-03-04 15:03:40.198 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 25.0616ms
+2025-03-04 15:03:40.198 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 15:03:40.196 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 15:03:40.199 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - 200 null application/json; charset=utf-8 89.7741ms
+2025-03-04 15:03:40.200 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 15:03:40.201 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 91.0188ms
+2025-03-04 15:03:42.491 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 15:03:42.511 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 2310.1941ms
+2025-03-04 15:03:42.511 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 15:03:42.514 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 2405.0699ms
+2025-03-04 15:05:22.372 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 15:05:22.375 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 15:05:22.376 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 15:05:22.379 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 15:05:22.379 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 3.6359ms
+2025-03-04 15:05:22.380 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 15:05:22.380 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 8.193ms
+2025-03-04 15:05:22.661 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 15:05:22.663 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 15:05:22.663 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 15:05:22.761 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 15:05:22.763 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 99.4233ms
+2025-03-04 15:05:22.763 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 15:05:22.764 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 103.7434ms
+2025-03-04 15:12:12.593 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 15:12:12.601 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 15:12:12.601 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 15:12:12.603 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 15:12:12.603 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.5229ms
+2025-03-04 15:12:12.604 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 15:12:12.604 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 10.6923ms
+2025-03-04 15:12:13.131 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 15:12:13.135 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 15:12:13.135 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 15:12:13.210 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 15:12:13.211 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 75.6768ms
+2025-03-04 15:12:13.211 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 15:12:13.212 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 80.5879ms
+2025-03-04 16:31:18.109 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:31:18.118 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:18.119 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:31:18.123 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:18.124 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 5.4013ms
+2025-03-04 16:31:18.125 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:18.125 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 16.1804ms
+2025-03-04 16:31:18.358 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 16:31:18.361 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:18.361 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 16:31:18.405 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 16:31:18.405 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 44.0071ms
+2025-03-04 16:31:18.405 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:18.406 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 48.0089ms
+2025-03-04 16:31:22.666 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:31:22.670 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:22.670 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:31:22.672 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:22.672 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.1864ms
+2025-03-04 16:31:22.672 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:22.672 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 6.6024ms
+2025-03-04 16:31:22.849 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 16:31:22.851 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:22.851 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 16:31:22.886 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 16:31:22.886 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 34.7363ms
+2025-03-04 16:31:22.886 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:22.887 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 37.8349ms
+2025-03-04 16:31:27.055 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:31:27.058 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:27.058 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:31:27.059 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:27.059 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.6682ms
+2025-03-04 16:31:27.060 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:27.060 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.3968ms
+2025-03-04 16:31:28.052 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:31:28.054 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:28.054 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:31:28.055 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:28.055 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.1ms
+2025-03-04 16:31:28.056 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:28.056 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.4975ms
+2025-03-04 16:31:28.307 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:31:28.309 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:28.309 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:31:28.309 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:28.310 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.0805ms
+2025-03-04 16:31:28.310 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:28.310 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.523ms
+2025-03-04 16:31:28.481 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 16:31:28.486 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:28.486 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 16:31:28.524 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 16:31:28.524 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 37.6832ms
+2025-03-04 16:31:28.524 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:28.524 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 43.7272ms
+2025-03-04 16:31:34.397 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:31:34.399 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:34.399 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:31:34.400 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:34.401 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.7131ms
+2025-03-04 16:31:34.401 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:31:34.401 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.2062ms
+2025-03-04 16:31:34.722 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - null null
+2025-03-04 16:31:34.722 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 16:31:34.722 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-04 16:31:34.733 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:34.733 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 16:31:34.733 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 16:31:34.733 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 16:31:34.733 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 16:31:34.733 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 16:31:34.734 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:34.734 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:31:34.734 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 1.0029ms
+2025-03-04 16:31:34.734 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 0.999ms
+2025-03-04 16:31:34.734 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 16:31:34.734 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 16:31:34.734 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - 200 null application/json; charset=utf-8 12.3573ms
+2025-03-04 16:31:34.734 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 12.5542ms
+2025-03-04 16:31:34.760 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 16:31:34.761 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 27.9195ms
+2025-03-04 16:31:34.761 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:31:34.762 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 39.767ms
+2025-03-04 16:43:54.240 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:43:54.245 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:43:54.245 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:43:54.282 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:43:54.284 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 38.912ms
+2025-03-04 16:43:54.284 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:43:54.299 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 58.6859ms
+2025-03-04 16:43:54.975 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 16:43:54.977 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:43:54.978 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 16:43:55.281 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 16:43:55.284 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 306.2666ms
+2025-03-04 16:43:55.284 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:43:55.286 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 310.7595ms
+2025-03-04 16:43:59.398 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:43:59.402 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:43:59.403 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:43:59.408 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:43:59.409 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 5.7699ms
+2025-03-04 16:43:59.409 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:43:59.409 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 10.9955ms
+2025-03-04 16:44:00.305 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 16:44:00.310 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:44:00.310 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 16:44:00.330 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - null null
+2025-03-04 16:44:00.339 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 16:44:00.339 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 16:44:00.343 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:44:00.344 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 4.8828ms
+2025-03-04 16:44:00.344 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 16:44:00.347 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - 200 null application/json; charset=utf-8 16.2883ms
+2025-03-04 16:44:00.379 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-04 16:44:00.385 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 16:44:00.385 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 16:44:00.387 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:44:00.388 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 2.7659ms
+2025-03-04 16:44:00.388 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 16:44:00.388 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 8.7382ms
+2025-03-04 16:44:00.530 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 16:44:00.531 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 220.6275ms
+2025-03-04 16:44:00.531 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:44:00.531 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 226.8296ms
+2025-03-04 16:44:32.695 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:44:32.700 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:44:32.700 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:44:32.704 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:44:32.705 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 4.2755ms
+2025-03-04 16:44:32.705 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:44:32.705 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 10.4509ms
+2025-03-04 16:44:37.968 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 16:44:37.971 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:44:37.971 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 16:44:37.973 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:44:37.974 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.9566ms
+2025-03-04 16:44:37.974 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 16:44:37.974 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 6.2252ms
+2025-03-04 16:44:38.696 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-04 16:44:38.696 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 16:44:38.696 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - null null
+2025-03-04 16:44:38.824 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:44:38.824 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 16:44:38.825 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 16:44:38.825 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 16:44:38.825 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 16:44:38.825 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 16:44:38.826 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:44:38.827 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 1.8343ms
+2025-03-04 16:44:38.827 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 16:44:38.827 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - 200 null application/json; charset=utf-8 131.1595ms
+2025-03-04 16:44:38.828 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 16:44:38.828 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 3.4579ms
+2025-03-04 16:44:38.828 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 16:44:38.829 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 133.1167ms
+2025-03-04 16:44:38.884 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 16:44:38.885 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 60.2406ms
+2025-03-04 16:44:38.885 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 16:44:38.885 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 189.7848ms
+2025-03-04 18:21:11.625 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 18:21:11.636 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 18:21:11.636 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 18:21:11.640 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 18:21:11.642 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 4.9771ms
+2025-03-04 18:21:11.642 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 18:21:11.642 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 16.5537ms
+2025-03-04 18:21:12.170 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 18:21:12.172 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-04 18:21:12.233 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 18:21:12.233 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 18:21:12.233 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 18:21:12.233 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - null null
+2025-03-04 18:21:12.233 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 18:21:12.236 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 18:21:12.236 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 18:21:12.238 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 18:21:12.238 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 4.7778ms
+2025-03-04 18:21:12.238 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 18:21:12.238 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 66.6153ms
+2025-03-04 18:21:12.238 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 18:21:12.239 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 2.4172ms
+2025-03-04 18:21:12.239 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 18:21:12.239 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - 200 null application/json; charset=utf-8 5.9685ms
+2025-03-04 18:21:12.293 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 18:21:12.294 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 60.4746ms
+2025-03-04 18:21:12.294 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 18:21:12.294 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 123.69ms
+2025-03-04 18:30:18.807 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-04 18:30:30.341 +08:00 [INF] Loaded ABP modules:
+2025-03-04 18:30:30.342 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-04 18:30:30.342 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-04 18:30:30.342 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-04 18:30:30.342 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-04 18:30:30.342 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-04 18:30:30.342 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-04 18:30:30.342 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-04 18:30:30.342 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-04 18:30:30.342 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-04 18:30:30.342 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-04 18:30:30.342 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-04 18:30:30.342 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-04 18:30:30.342 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-04 18:30:30.342 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-04 18:30:30.342 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-04 18:30:30.342 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-04 18:30:30.342 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-04 18:30:30.342 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-04 18:30:30.342 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-04 18:30:30.342 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-04 18:30:30.342 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-04 18:30:30.343 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-04 18:30:30.343 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-04 18:30:30.343 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-04 18:30:30.343 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-04 18:30:30.343 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-04 18:30:30.343 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-04 18:30:30.343 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-04 18:30:30.343 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-04 18:30:30.343 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-04 18:30:30.343 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-04 18:30:30.343 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-04 18:30:30.343 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-04 18:30:30.343 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-04 18:30:30.343 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-04 18:30:30.343 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-04 18:30:30.343 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-04 18:30:30.343 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-04 18:30:30.343 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-04 18:30:30.343 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-04 18:30:30.343 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-04 18:30:30.343 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-04 18:30:30.343 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-04 18:30:30.343 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-04 18:30:30.343 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-04 18:30:30.343 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-04 18:30:30.343 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-04 18:30:30.343 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-04 18:30:30.343 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-04 18:30:30.343 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-04 18:30:30.343 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-04 18:30:30.393 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-04 18:30:31.643 +08:00 [INF] User profile is available. Using 'C:\Users\86198\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-04 18:30:31.884 +08:00 [INF] Initialized all ABP modules.
+2025-03-04 18:30:32.337 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-04 18:30:32.426 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 18:30:32.426 +08:00 [INF] Hosting environment: Development
+2025-03-04 18:30:32.426 +08:00 [INF] Content root path: C:\Users\86198\Desktop\医疗项目\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-04 18:30:32.621 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-04 18:30:35.325 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-04 18:30:35.359 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-04 18:30:35.389 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-04 18:30:35.393 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 31.0007ms
+2025-03-04 18:30:35.393 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-04 18:30:35.404 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 2791.0399ms
+2025-03-04 18:30:35.421 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-04 18:30:35.633 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 211.4081ms
+2025-03-04 18:30:35.678 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-04 18:30:35.678 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 18:30:35.700 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 20.9472ms
+2025-03-04 18:30:35.707 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 29.8371ms
+2025-03-04 18:30:35.719 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-04 18:30:35.769 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.9264ms
+2025-03-04 18:30:35.883 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-04 18:30:36.231 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 347.7761ms
+2025-03-04 18:30:44.715 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-04 18:30:44.720 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-04 18:30:44.723 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-04 18:30:44.737 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 13.7722ms
+2025-03-04 18:30:44.737 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-04 18:30:44.737 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 21.9134ms
+2025-03-04 18:30:44.827 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/v1/his/patient/page - null null
+2025-03-04 18:30:44.834 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-04 18:30:44.847 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientDto]]] GetPatients(System.String, System.String) on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-04 18:30:45.972 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 18:30:45.996 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application) in 1149.669ms
+2025-03-04 18:30:45.997 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatients (HIS.Application)'
+2025-03-04 18:30:45.999 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/v1/his/patient/page - 200 null application/json; charset=utf-8 1172.3134ms
+2025-03-04 19:01:36.251 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:01:36.350 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:01:36.354 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:01:36.457 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:01:36.475 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 121.7327ms
+2025-03-04 19:01:36.476 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:01:36.476 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 225.641ms
+2025-03-04 19:01:37.063 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - null null
+2025-03-04 19:01:37.064 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-04 19:01:37.064 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:01:37.067 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 19:01:37.068 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 19:01:37.070 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:01:37.072 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:01:37.074 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 19:01:37.075 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-04 19:01:37.078 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:01:37.079 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 11.3111ms
+2025-03-04 19:01:37.079 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-04 19:01:37.079 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 15.6546ms
+2025-03-04 19:01:37.080 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:01:37.156 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 52.0327ms
+2025-03-04 19:01:37.156 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-04 19:01:37.156 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-26&endDate=2025-03-04 - 200 null application/json; charset=utf-8 92.7083ms
+2025-03-04 19:01:37.934 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:01:37.943 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 864.8712ms
+2025-03-04 19:01:37.943 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:01:37.944 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 879.7065ms
+2025-03-04 19:20:08.881 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:20:08.884 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:20:08.884 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:20:08.891 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:20:08.892 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 7.6596ms
+2025-03-04 19:20:08.892 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:20:08.892 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 11.7805ms
+2025-03-04 19:20:09.201 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:20:09.204 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:20:09.204 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:20:09.258 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:20:09.258 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 53.9827ms
+2025-03-04 19:20:09.258 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:20:09.259 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 57.8361ms
+2025-03-04 19:21:37.554 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:21:37.557 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:21:37.557 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:21:37.560 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:21:37.560 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.9122ms
+2025-03-04 19:21:37.561 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:21:37.561 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 6.7125ms
+2025-03-04 19:21:37.883 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:21:37.886 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:21:37.886 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:21:37.930 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:21:37.930 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 44.0321ms
+2025-03-04 19:21:37.930 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:21:37.931 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 47.6467ms
+2025-03-04 19:27:53.262 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:27:53.265 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:27:53.265 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:27:53.267 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:27:53.267 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.713ms
+2025-03-04 19:27:53.267 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:27:53.267 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.2506ms
+2025-03-04 19:27:53.483 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:27:53.486 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:27:53.486 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:27:53.513 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:27:53.514 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 27.6593ms
+2025-03-04 19:27:53.514 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:27:53.515 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 31.459ms
+2025-03-04 19:28:04.313 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:28:04.315 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:28:04.316 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:28:04.317 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:28:04.317 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.4785ms
+2025-03-04 19:28:04.317 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:28:04.317 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.1144ms
+2025-03-04 19:28:04.629 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:28:04.632 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:28:04.633 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:28:04.672 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:28:04.672 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 39.7832ms
+2025-03-04 19:28:04.673 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:28:04.673 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 43.9803ms
+2025-03-04 19:36:22.297 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:36:22.300 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:36:22.300 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:36:22.302 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:36:22.302 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.9497ms
+2025-03-04 19:36:22.302 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:36:22.303 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.8308ms
+2025-03-04 19:36:22.579 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:36:22.583 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:36:22.583 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:36:22.631 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:36:22.631 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 48.3673ms
+2025-03-04 19:36:22.631 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:36:22.632 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 53.3255ms
+2025-03-04 19:39:03.997 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:39:04.001 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:39:04.001 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:39:04.002 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:39:04.002 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.5455ms
+2025-03-04 19:39:04.002 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:39:04.003 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.7228ms
+2025-03-04 19:39:04.373 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:39:04.377 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:39:04.377 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:39:04.456 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:39:04.457 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 79.6777ms
+2025-03-04 19:39:04.457 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:39:04.457 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 84.0036ms
+2025-03-04 19:39:26.474 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:39:26.476 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:39:26.476 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:39:26.477 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:39:26.477 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.182ms
+2025-03-04 19:39:26.478 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:39:26.478 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.6159ms
+2025-03-04 19:39:26.790 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:39:26.792 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:39:26.792 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:39:26.825 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:39:26.825 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 32.8426ms
+2025-03-04 19:39:26.825 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:39:26.826 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 35.8131ms
+2025-03-04 19:40:03.207 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:40:03.212 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:40:03.212 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:40:03.214 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:40:03.214 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.0588ms
+2025-03-04 19:40:03.214 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:40:03.214 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 7.3574ms
+2025-03-04 19:40:03.791 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:40:03.797 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:40:03.797 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:40:03.906 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:40:03.907 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 109.6746ms
+2025-03-04 19:40:03.907 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:40:03.908 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 116.1831ms
+2025-03-04 19:40:31.486 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:40:31.489 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:40:31.489 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:40:31.491 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:40:31.491 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.3417ms
+2025-03-04 19:40:31.491 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:40:31.492 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.3269ms
+2025-03-04 19:40:31.769 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:40:31.771 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:40:31.771 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:40:31.809 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:40:31.809 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 38.1256ms
+2025-03-04 19:40:31.809 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:40:31.810 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 40.8145ms
+2025-03-04 19:50:49.840 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:50:49.843 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:50:49.843 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:50:49.844 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:50:49.844 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.4523ms
+2025-03-04 19:50:49.844 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:50:49.844 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.0903ms
+2025-03-04 19:50:50.185 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:50:50.188 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:50:50.188 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:50:50.228 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:50:50.229 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 40.6239ms
+2025-03-04 19:50:50.229 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:50:50.230 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 44.1888ms
+2025-03-04 19:51:30.708 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:51:30.710 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:51:30.710 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:51:30.712 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:51:30.712 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.0417ms
+2025-03-04 19:51:30.712 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:51:30.712 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.9167ms
+2025-03-04 19:51:31.074 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:51:31.081 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:51:31.081 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:51:31.136 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:51:31.136 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 54.4006ms
+2025-03-04 19:51:31.136 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:51:31.136 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 62.3519ms
+2025-03-04 19:51:37.978 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:51:37.981 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:51:37.981 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:51:37.983 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:51:37.983 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.7295ms
+2025-03-04 19:51:37.983 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:51:37.983 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.0924ms
+2025-03-04 19:51:38.230 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:51:38.233 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:51:38.234 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:51:38.272 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:51:38.273 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 39.0521ms
+2025-03-04 19:51:38.273 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:51:38.273 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 42.934ms
+2025-03-04 19:53:11.450 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:53:11.456 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:53:11.456 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:53:11.459 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:53:11.460 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 3.3758ms
+2025-03-04 19:53:11.460 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:53:11.460 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 10.2737ms
+2025-03-04 19:53:12.128 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:53:12.130 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:53:12.130 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:53:12.220 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:53:12.221 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 90.2482ms
+2025-03-04 19:53:12.221 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:53:12.221 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 93.5397ms
+2025-03-04 19:54:26.572 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:54:26.574 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:26.575 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:54:26.576 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:54:26.576 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.6807ms
+2025-03-04 19:54:26.576 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:26.577 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.8708ms
+2025-03-04 19:54:27.147 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:54:27.152 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:54:27.152 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:54:27.216 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:54:27.217 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 64.7043ms
+2025-03-04 19:54:27.217 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:54:27.217 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 70.0013ms
+2025-03-04 19:54:39.448 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:54:39.452 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:39.452 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:54:39.454 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:54:39.454 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.8961ms
+2025-03-04 19:54:39.454 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:39.455 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 6.9444ms
+2025-03-04 19:54:39.960 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:54:39.962 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:54:39.962 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:54:40.006 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:54:40.006 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 44.3845ms
+2025-03-04 19:54:40.006 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:54:40.007 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 159.1713ms
+2025-03-04 19:54:55.059 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:54:55.061 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:55.061 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:54:55.062 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:54:55.063 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.1827ms
+2025-03-04 19:54:55.063 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:55.063 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.501ms
+2025-03-04 19:54:55.428 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:54:55.432 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:55.432 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:54:55.434 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:54:55.434 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.1029ms
+2025-03-04 19:54:55.434 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:54:55.434 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 6.0975ms
+2025-03-04 19:54:55.756 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:54:55.758 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:54:55.758 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:54:55.805 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:54:55.805 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 46.9259ms
+2025-03-04 19:54:55.806 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:54:55.810 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 50.3961ms
+2025-03-04 19:56:04.099 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:56:04.102 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:56:04.102 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:56:04.104 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:56:04.105 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.7052ms
+2025-03-04 19:56:04.105 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:56:04.105 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.575ms
+2025-03-04 19:56:04.576 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:56:04.580 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:56:04.580 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:56:04.637 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:56:04.638 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 57.7718ms
+2025-03-04 19:56:04.638 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:56:04.638 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 61.8755ms
+2025-03-04 19:56:23.273 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:56:23.276 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:56:23.276 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:56:23.278 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:56:23.279 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.5756ms
+2025-03-04 19:56:23.279 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:56:23.279 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.7322ms
+2025-03-04 19:56:23.624 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:56:23.627 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:56:23.627 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:56:23.720 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:56:23.721 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 94.2242ms
+2025-03-04 19:56:23.721 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:56:23.722 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 98.3015ms
+2025-03-04 19:58:44.868 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 19:58:44.871 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:58:44.872 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 19:58:44.874 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 19:58:44.874 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.4591ms
+2025-03-04 19:58:44.874 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 19:58:44.874 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 6.331ms
+2025-03-04 19:58:45.429 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 19:58:45.431 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:58:45.431 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 19:58:45.508 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 19:58:45.509 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 77.21ms
+2025-03-04 19:58:45.509 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 19:58:45.509 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 80.1708ms
+2025-03-04 20:00:24.569 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:00:24.570 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:00:24.571 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:00:24.572 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:00:24.572 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.547ms
+2025-03-04 20:00:24.572 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:00:24.572 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.8535ms
+2025-03-04 20:00:24.889 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 20:00:24.891 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:00:24.891 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 20:00:24.981 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 20:00:24.981 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 89.4611ms
+2025-03-04 20:00:24.981 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:00:24.981 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 92.8175ms
+2025-03-04 20:08:37.922 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:08:37.925 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:08:37.925 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:08:37.926 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:08:37.926 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.4322ms
+2025-03-04 20:08:37.927 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:08:37.927 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.3026ms
+2025-03-04 20:08:38.283 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 20:08:38.285 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:08:38.286 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 20:08:38.325 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 20:08:38.325 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 39.4789ms
+2025-03-04 20:08:38.325 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:08:38.325 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 42.7191ms
+2025-03-04 20:09:51.255 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:09:51.257 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:09:51.258 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:09:51.260 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:09:51.261 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 3.1483ms
+2025-03-04 20:09:51.261 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:09:51.263 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 7.935ms
+2025-03-04 20:09:51.608 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 20:09:51.613 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:09:51.614 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 20:09:51.681 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 20:09:51.682 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 68.8412ms
+2025-03-04 20:09:51.682 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:09:51.683 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 74.7454ms
+2025-03-04 20:11:32.914 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:11:32.917 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:11:32.917 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:11:32.919 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:11:32.919 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.317ms
+2025-03-04 20:11:32.919 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:11:32.919 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 5.6001ms
+2025-03-04 20:11:33.419 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 20:11:33.421 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:11:33.421 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 20:11:33.500 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 20:11:33.500 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 78.7076ms
+2025-03-04 20:11:33.500 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:11:33.501 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 81.8421ms
+2025-03-04 20:20:11.566 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:20:11.569 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:20:11.569 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:20:11.570 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:20:11.571 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.4898ms
+2025-03-04 20:20:11.571 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:20:11.571 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.54ms
+2025-03-04 20:20:12.013 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 20:20:12.015 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:20:12.016 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 20:20:12.117 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 20:20:12.118 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 101.7456ms
+2025-03-04 20:20:12.118 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:20:12.132 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 118.8783ms
+2025-03-04 20:20:59.259 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:20:59.261 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:20:59.261 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:20:59.263 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:20:59.263 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.8421ms
+2025-03-04 20:20:59.263 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:20:59.264 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.4731ms
+2025-03-04 20:21:21.597 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:21:21.600 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:21:21.600 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:21:21.603 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:21:21.604 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 3.9143ms
+2025-03-04 20:21:21.605 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:21:21.614 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 16.9492ms
+2025-03-04 20:21:24.630 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-04 20:21:24.633 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:21:24.633 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-04 20:21:24.636 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-04 20:21:24.636 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 3.1185ms
+2025-03-04 20:21:24.636 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-04 20:21:24.637 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 8.3698ms
+2025-03-04 20:21:25.401 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-04 20:21:25.408 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:21:25.409 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.Notice.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-04 20:21:25.530 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.Notice.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-04 20:21:25.530 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 121.4634ms
+2025-03-04 20:21:25.530 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-04 20:21:25.531 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 130.1405ms
