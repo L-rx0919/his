@@ -264,11 +264,12 @@ namespace HIS.SytstemMenu
                                     }
                                 }
                             },
+                            
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
                                 Name = "Outpatientmanagement",
-                                Path = "Outpatientmanagement",
+                                Path = "outpatientmanagement",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -276,8 +277,24 @@ namespace HIS.SytstemMenu
                                     KeepAlive = true,
                                     Icon = "el-icon-User",
                                     Title = "门诊管理"
+                                },
+                                Children = new List<SysMenuDto>{
+                                 new SysMenuDto
+                                    {
+                                        Component = "his/Outpatient/index",
+                                        Name = "Outpatientregistration",
+                                        Path = "outpatientregistration",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "门诊挂号"
+                                        }
+                                    },
                                 }
                             },
+
                             new SysMenuDto
                             {
                                 Component = "his/inpatientRecords/inpatientRecordsList",
@@ -469,98 +486,7 @@ namespace HIS.SytstemMenu
 
                                 }
                             },
-<<<<<<< HEAD
-                            
-                            new SysMenuDto
-                            {
-                                Component = "system/user/settlementSystem",
-                                Name = "Outpatientmanagement",
-                                Path = "outpatientmanagement",
-                                Meta = new Meta
-                                {
-                                    AlwaysShow = false,
-                                    Hidden = false,
-                                    KeepAlive = true,
-                                    Icon = "el-icon-User",
-                                    Title = "门诊管理"
-                                },
-                                Children = new List<SysMenuDto>{
-                                 new SysMenuDto
-                                    {
-                                        Component = "his/Outpatient/index",
-                                        Name = "Outpatientregistration",
-                                        Path = "outpatientregistration",
-                                        Meta = new Meta
-                                        {
-                                            AlwaysShow = false,
-                                            Hidden = false,
-                                            KeepAlive = true,
-                                            Title = "门诊挂号"
-                                        }
-                                    },
-                                }
-                            },
-
-                            new SysMenuDto
-                            {
-                                Component = "system/user/settlementSystem",
-                                Name = "Inpatientmanagement",
-                                Path = "Inpatientmanagement",
-                                Meta = new Meta
-                                {
-                                    AlwaysShow = false,
-                                    Hidden = false,
-                                    KeepAlive = true,
-                                    Icon = "el-icon-User",
-                                    Title = "住院管理"
-                                }
-                            },
-                            new SysMenuDto
-                            {
-                                Component = "system/user/settlementSystem",
-                                Name = "Hospitalinformation",
-                                Path = "Hospitalinformation",
-                                Meta = new Meta
-                                {
-                                    AlwaysShow = false,
-                                    Hidden = false,
-                                    KeepAlive = true,
-                                    Icon = "el-icon-User",
-                                    Title = "号源管理"
-                                }
-                            },
-                            new SysMenuDto
-                            {
-                                Component = "system/user/settlementSystem",
-                                Name = "StatisticsReport",
-                                Path = "StatisticsReport",
-                                Meta = new Meta
-                                {
-                                    AlwaysShow = false,
-                                    Hidden = false,
-                                    KeepAlive = true,
-                                    Icon = "el-icon-User",
-                                    Title = "统计报表"
-                                }
-                            },
-                            new SysMenuDto
-                            {
-                                Component = "system/user/settlementSystem",
-                                Name = "HospitalManagement",
-                                Path = "HospitalManagement",
-                                Meta = new Meta
-                                {
-                                    AlwaysShow = false,
-                                    Hidden = false,
-                                    KeepAlive = true,
-                                    Icon = "el-icon-User",
-                                    Title = "院长查询"
-                                }
-                            }
                         }
-=======
-                        }
->>>>>>> 8098273d7798d5d48023ca5101e6f17e5d6d6532
                     }
                 },
                 Message = string.Empty
