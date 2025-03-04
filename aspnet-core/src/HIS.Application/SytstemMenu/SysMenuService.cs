@@ -376,8 +376,8 @@ namespace HIS.SytstemMenu
                                     new SysMenuDto
                                     {
                                       Component = "his/systemconfig/index",
-                                      Name = "PatientDetail",
-                                      Path = "PatientDetail",
+                                      Name = "SystemDynamics",
+                                      Path = "SystemDynamics",
                                       Meta = new Meta
                                       {
                                          AlwaysShow = false,
@@ -428,8 +428,8 @@ namespace HIS.SytstemMenu
                                       new SysMenuDto
                                       {
                                           Component = "his/systemconfig/index",
-                                          Name = "PatientDetail",
-                                          Path = "PatientDetail",
+                                          Name = "Rolemanagements",
+                                          Path = "Rolemanagements",
                                           Meta = new Meta
                                           {
                                            AlwaysShow = false,
@@ -442,8 +442,8 @@ namespace HIS.SytstemMenu
                                        new SysMenuDto
                                       {
                                           Component = "his/systemconfig/index",
-                                          Name = "PatientDetail",
-                                          Path = "PatientDetail",
+                                          Name = "SystemMenu",
+                                          Path = "SystemMenu",
                                           Meta = new Meta
                                           {
                                            AlwaysShow = false,
@@ -456,8 +456,8 @@ namespace HIS.SytstemMenu
                                        new SysMenuDto
                                      {
                                          Component = "his/systemconfig/index",
-                                         Name = "PatientDetail",
-                                         Path = "PatientDetail",
+                                         Name = "DepartmentDocto",
+                                         Path = "DepartmentDocto",
                                          Meta = new Meta
                                          {
                                           AlwaysShow = false,

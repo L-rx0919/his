@@ -37,7 +37,7 @@ namespace HIS.HIS.Naturepatients
         /// <param name="nature"></param>
         /// <returns></returns>
 
-        [HttpPost("api/CreateNaturepatient")]
+        [HttpPost("/api/v1/his/systemconfig/NatureofPatient")]
         public async Task<APIResult<NaturepatientDTO>> CreateNaturepatient(NaturepatientDTO nature)
         {  // 映射DTO到实体
             NatureofPatient entity = ObjectMapper.Map<NaturepatientDTO, NatureofPatient>(nature);
