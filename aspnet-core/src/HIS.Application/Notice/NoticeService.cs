@@ -11,7 +11,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace HIS.Notice
 {
-   
+
     [ApiExplorerSettings(GroupName = "v1")]
     public class NoticeService : ApplicationService
     {
@@ -28,14 +28,14 @@ namespace HIS.Notice
             this.repositorySysUserNotice = repositorySysUserNotice;
         }
 
-       /// <summary>
-       /// 获取通知列表
-       /// </summary>
-       /// <param name="pageParamsDto"></param>
-       /// <param name="IsRead"></param>
-       /// <returns></returns>
+        /// <summary>
+        /// 获取通知列表
+        /// </summary>
+        /// <param name="pageParamsDto"></param>
+        /// <param name="IsRead"></param>
+        /// <returns></returns>
         [HttpGet("/api/v1/notices/my-page")]
-        public async Task<APIResult<NoticeData>> QueryNoticeAsync([FromQuery]PageParamsDto pageParamsDto, int? IsRead)
+        public async Task<APIResult<NoticeData>> QueryNoticeAsync([FromQuery] PageParamsDto pageParamsDto, int? IsRead)
         {
             var userId = httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == ClaimTypes.NameIdentifier).Value;
 
@@ -54,128 +54,344 @@ namespace HIS.Notice
                             Type = a.NoticeType,
                             CreatorId = a.CreatorId,
                             UserId = b.UserId
-                        }).Where(m=>m.UserId == Guid.Parse(userId));
+                        }).Where(m => m.UserId == Guid.Parse(userId));
 
-            if (IsRead != null) 
+            if (IsRead != null)
             {
-                list = list.Where(m=>m.IsRead == Convert.ToBoolean(IsRead));
+                list = list.Where(m => m.IsRead == Convert.ToBoolean(IsRead));
             }
 
             var data = list.OrderByDescending(m => m.PublishTime).Take(10).ToList();
 
-            data.ForEach(x => { 
+            data.ForEach(x =>
+            {
                 x.PublishName = userList.FirstOrDefault(m => m.Id == x.UserId).Username;
             });
 
-            return new APIResult<NoticeData> 
+            return new APIResult<NoticeData>
             {
                 Code = CodeEnum.success,
-                Data = new NoticeData { 
+                Data = new NoticeData
+                {
                     List = list.OrderByDescending(m => m.PublishTime).Take(10).ToList()
                 },
             };
         }
 
 
-        /// <summary>
-        /// 初始化通知数据
-        /// </summary>
-        /// <returns></returns>
+        //初始化数据
         public async Task<APIResult<bool>> InitData()
         {
             try
             {
                 await repositorySysNotice.InsertManyAsync(new List<SysNotice>()
-                {
-                    new SysNotice
-                    {
-                        Title = "物联网学院2202B班项目进入开发阶段",
-                        NoticeType = NoticeType.News,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = true,
-                    },
-                    new SysNotice
-                    {
-                        Title = "v2.16.1 版本修复了 WebSocket 重复连接导致的后台线程阻塞问题",
-                        NoticeType = NoticeType.Upgrade,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = true,
-                    },
-                    new SysNotice
-                    {
-                        Title = "公司将在 10 月 15 日举办新产品发布会，敬请期待。",
-                        NoticeType = NoticeType.News,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = true,
-                    },
-                    new SysNotice
-                    {
-                        Title = "国庆假期从 10 月 1 日至 10 月 7 日放假，共 7 天。",
-                        NoticeType = NoticeType.Notice,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = true,
-                    },
-                    new SysNotice
-                    {
-                        Title = "最近发现一些钓鱼邮件，请大家提高警惕，不要点击陌生链接。",
-                        NoticeType = NoticeType.Warning,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = false,
-                    },
-                    new SysNotice
-                    {
-                        Title = "系统将于本周六凌晨 2 点进行维护，预计维护时间为 2 小时。",
-                        NoticeType = NoticeType.Maintain,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = false,
-                    },
-                    new SysNotice
-                    {
-                        Title = "v2.16.0 通知公告、字典翻译组件。",
-                        NoticeType = NoticeType.Upgrade,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = false,
-                    },
-                    new SysNotice
-                    {
-                        Title = "v2.15.0 登录页面改造。",
-                        NoticeType = NoticeType.Upgrade,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = false,
-                    },
-                    new SysNotice
-                    {
-                        Title = "v2.14.0 新增个人中心。",
-                        NoticeType = NoticeType.Upgrade,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = false,
-                    },
-                    new SysNotice
-                    {
-                        Title = "v2.13.0 新增菜单搜索。",
-                        NoticeType = NoticeType.Upgrade,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = false,
-                    },
-                    new SysNotice
-                    {
-                        Title = "v2.12.0 新增系统日志，访问趋势统计功能。",
-                        NoticeType = NoticeType.Upgrade,
-                        TargetType = TargetType.All,
-                        Content = "这是内容",
-                        IsDeleted = false,
-                    }
-                }, true);
+                            {
+                                new SysNotice
+                                {
+                                    Title = "物联网学院2202B班项目进入开发阶段",
+                                    NoticeType = NoticeType.News,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = true,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "v2.16.1 版本修复了 WebSocket 重复连接导致的后台线程阻塞问题",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = true,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "公司将在 10 月 15 日举办新产品发布会，敬请期待。",
+                                    NoticeType = NoticeType.News,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = true,
+                                },
+                                new SysNotice
+                                {
+                                    NoticeType = NoticeType.Notice,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = true,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "最近发现一些钓鱼邮件，请大家提高警惕，不要点击陌生链接。",
+                                    NoticeType = NoticeType.Warning,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "系统将于本周六凌晨 2 点进行维护，预计维护时间为 2 小时。",
+                                    NoticeType = NoticeType.Maintain,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "v2.16.0 通知公告、字典翻译组件。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "v2.15.0 登录页面改造。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "v2.14.0 新增个人中心。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "v2.13.0 新增菜单搜索。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+
+                                    IsDeleted = false,
+                                },
+                                new SysNotice
+                                {
+                                    Title = "v2.12.0 新增系统日志，访问趋势统计功能。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.11.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.10.0 新增多租户支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.9.0 新增多语言支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.8.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.7.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.6.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.5.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.4.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.3.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.2.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.1.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v2.0.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.9.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.8.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.7.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.6.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.5.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.4.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.3.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.2.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.1.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v1.0.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.9.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+        TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.8.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.7.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.6.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.5.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.4.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.3.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.2.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                                new SysNotice {
+                                    Title = "v0.1.0 新增多数据源支持。",
+                                    NoticeType = NoticeType.Upgrade,
+                                    TargetType = TargetType.All,
+                                    Content = "这是内容",
+                                    IsDeleted = false,
+                                },
+                            }, true);
 
                 foreach (var item in await repositorySysNotice.GetListAsync())
                 {
@@ -201,6 +417,7 @@ namespace HIS.Notice
                     Message = e.Message
                 };
             }
+
         }
     }
 }

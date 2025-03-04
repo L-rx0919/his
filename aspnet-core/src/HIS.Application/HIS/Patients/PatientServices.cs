@@ -17,6 +17,10 @@ namespace HIS.HIS.Patients
         /// </summary>
         private readonly IRepository<Patient> _patientRepository;
         /// <summary>
+        /// 一卡通信息仓储
+        /// </summary>
+        private readonly IRepository<Patient_Card_Info> _Patient_Card_InfoRepository;
+        /// <summary>
         /// 映射器
         /// </summary>
         private readonly IMapper _mapper;
@@ -25,10 +29,11 @@ namespace HIS.HIS.Patients
         /// </summary>
         /// <param name="patientRepository"></param>
         /// <param name="mapper"></param>
-        public PatientServices(IRepository<Patient> patientRepository, IMapper mapper = null)
+        public PatientServices(IRepository<Patient> patientRepository, IMapper mapper = null, IRepository<Patient_Card_Info> patient_Card_InfoRepository = null)
         {
             _patientRepository = patientRepository;
             _mapper = mapper;
+            _Patient_Card_InfoRepository = patient_Card_InfoRepository;
         }
         /// <summary>
         /// 添加患者
@@ -36,17 +41,17 @@ namespace HIS.HIS.Patients
         /// <param name="patient"> 患者信息 </param>
         /// <returns> APIResult </returns>
         [HttpPost("api/InsertPatient")]
-        public async Task<APIResult<PatientDto>> CreatePatient(PatientDto patient)
+        public async Task<APIResult<PatientInsertDto>> CreatePatient(PatientInsertDto patient)
         {
-           Patient entity = ObjectMapper.Map<PatientDto, Patient>(patient);
+           Patient entity = ObjectMapper.Map<PatientInsertDto, Patient>(patient);
            
 
           
             //判断名称 是否重复
             var patientName = await _patientRepository.AllAsync(x => x.patient_name == patient.patient_name);
-            if (patientName == true)
+            if (patientName == false)
             {
-                return new APIResult<PatientDto>()
+                return new APIResult<PatientInsertDto>()
                 {
                     Code = CodeEnum.error,
                     Message = "患者名称重复"
@@ -55,7 +60,7 @@ namespace HIS.HIS.Patients
             else
             {
                 await _patientRepository.InsertAsync(entity);
-                return new APIResult<PatientDto>()
+                return new APIResult<PatientInsertDto>()
                 {
                     Code = 0,
                     Message = "添加患者成功",
@@ -72,8 +77,9 @@ namespace HIS.HIS.Patients
         [HttpGet("/api/v1/his/patient/page")]
         public async Task<APIResult<List<PatientDto>>> GetPatients(string name, string phone)
         {
-            var list = await _patientRepository.GetListAsync();
-            var result = ObjectMapper.Map<List<Patient>, List<PatientDto>>(list);
+            var patientslst = await _patientRepository.GetListAsync();
+           var   list = _mapper.Map<List<Patient>, List<PatientDto>>(patientslst);
+            var result = list.ToList();
             if (!string.IsNullOrEmpty(name)) 
             {
                 result = result.Where(x => x.patient_name.Contains(name)).ToList();
@@ -87,6 +93,73 @@ namespace HIS.HIS.Patients
                 Code = CodeEnum.success,
                 Message = "查询成功",
                 Data =result
+            };
+        }
+
+        /// <summary>
+        /// 一卡通 信息 新增
+        /// </summary>
+        /// <param name="patient_Card_Info"></param>
+        /// <returns></returns>
+        [HttpPost("/api/v1/his/patient/insertPatientCardInfo")]
+        public async Task<APIResult<Patient_Card_InfoDto>> CreatePatientCardInfo(Patient_Card_InfoDto patient_Card_Info)
+        {       
+            Patient_Card_Info entity = ObjectMapper.Map<Patient_Card_InfoDto, Patient_Card_Info>(patient_Card_Info);
+            await _Patient_Card_InfoRepository.InsertAsync(entity);
+            return new APIResult<Patient_Card_InfoDto>()
+            {
+                Code = 0,
+                Message = "添加患者一卡通信息成功",
+            };
+        }
+
+        /// <summary>
+        /// 查询所有病人名称和Id
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("/api/v1/his/patient/getPatientNameAndId")]
+        public async Task<APIResult<List<PatientNameAndId>>> GetPatientNameAndId()
+        {
+            var patientslst = await _patientRepository.GetListAsync();
+            var result = patientslst.Select(x => new PatientNameAndId { patient_name = x.patient_name, id = x.Id.ToString() }).ToList();
+            return new APIResult<List<PatientNameAndId>>()
+            {
+                Code = CodeEnum.success,
+                Message = "查询成功",
+                Data = result
+            };
+        }
+        /// <summary>
+        /// 查询患者一卡通信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("/api/v1/his/patient/getPatientCardInfos")]
+        public async Task<APIResult<List<PatientCardDto>>> GetPatientCardInfos()
+        {
+            var patientslst = await _patientRepository.GetListAsync();
+            var patient_Card_Infolist = await _Patient_Card_InfoRepository.GetListAsync(a => a.Card_status == "启用");
+            var list = from a in patientslst
+                       join b in patient_Card_Infolist on a.Id.ToString() equals b.Patient_id
+                       select new PatientCardDto
+                       {
+                           patient_name = a.patient_name,
+                           patient_contact = a.patient_contact,
+                           emergency_contact = a.emergency_contact,
+                           marital_status = a.marital_status,
+                           CreationTime = a.CreationTime,
+                           patient_age = a.patient_age,
+                           patient_gender = a.patient_gender,
+                           patient_address = a.patient_address,
+                           patient_blood_type = a.patient_blood_type,
+                           Card_status = b.Card_status,
+                           Card_type = b.Card_type,
+                       };
+            var result = list.ToList();
+            return new APIResult<List<PatientCardDto>>()
+            {
+                Code = CodeEnum.success,
+                Message = "查询成功",
+                Data = result
             };
         }
     }
