@@ -259,7 +259,6 @@ namespace HIS.SytstemMenu
                                             AlwaysShow = false,
                                             Hidden = false,
                                             KeepAlive = true,
-<<<<<<< HEAD
                                             Title = "住院患者中心"
                                         }
                                     }
@@ -278,26 +277,6 @@ namespace HIS.SytstemMenu
                                     KeepAlive = true,
                                     Icon = "el-icon-User",
                                     Title = "门诊管理"
-=======
-                                            Title = "住院患者中心"
-                                        }
-                                    }
-                                }
-                            },
-                            
-                            new SysMenuDto
-                            {
-                                Component = "system/user/settlementSystem",
-                                Name = "Outpatientmanagement",
-                                Path = "outpatientmanagement",
-                                Meta = new Meta
-                                {
-                                    AlwaysShow = false,
-                                    Hidden = false,
-                                    KeepAlive = true,
-                                    Icon = "el-icon-User",
-                                    Title = "门诊管理"
->>>>>>> 3e9a236eb2e2d960d21146e468867acc18347184
                                 },
                                 Children = new List<SysMenuDto>{
                                  new SysMenuDto
@@ -316,13 +295,8 @@ namespace HIS.SytstemMenu
                                 }
                             },
 
-<<<<<<< HEAD
                             new SysMenuDto
                             {
-=======
-                            new SysMenuDto
-                            {
->>>>>>> 3e9a236eb2e2d960d21146e468867acc18347184
                                 Component = "his/inpatientRecords/inpatientRecordsList",
                                 Name = "Inpatientmanagement",
                                 Path = "inpatientmanagement",
