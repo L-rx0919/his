@@ -83,27 +83,8 @@ namespace HIS.HIS.InpatientRecords
         public async Task<APIResult<InpatientRecordDto>> GetInpatientRecord(Guid patient_id)
         {
             //根据患者id四表联查
-            //根据患者Id 查询住院记录
             var entity = await inpatientRecordRepository.FirstOrDefaultAsync(x => x.patient_id == patient_id);
-            var patient = await patientRepository.FirstOrDefaultAsync(x => x.Id == entity.patient_id);
-            var doctor = await doctorRepository.FirstOrDefaultAsync(x => x.Id == entity.doctor_id);
-            var department = await departmentRepository.FirstOrDefaultAsync(x => x.Id == entity.department_id);
-            var list = new InpatientRecordDto()
-            {
-                patient_id = entity.patient_id,
-                patient_name = patient.patient_name,
-                department_id = entity.department_id,
-                department_name = department.name,
-                doctor_id = entity.doctor_id,
-                doctor_name = doctor.name,
-                admission_date = entity.admission_date,
-                discharge_date = entity.discharge_date,
-                room_type = entity.room_type,
-                admission_reason = entity.admission_reason, 
-                is_in_insurance = entity.is_in_insurance
-            };
-
-            //var list = ObjectMapper.Map<InpatientRecord, InpatientRecordDto>(entity);
+            var list = ObjectMapper.Map<InpatientRecord, InpatientRecordDto>(entity);
             if (entity == null)
             {
                 return new APIResult<InpatientRecordDto>()
