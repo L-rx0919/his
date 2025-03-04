@@ -17,7 +17,7 @@ namespace HIS.System_Administration
         /// <summary>
         /// 权限科室ID
         /// </summary>
-        public int DepartmentID { get; set; }
+        public Guid DepartmentID { get; set; }
         /// <summary>
         /// 模版名称
         /// </summary>

@@ -12,13 +12,19 @@ namespace HIS.HIS.InpatientRecords
     public class InpatientRecordServices : ApplicationService, IInpatientRecordAppServices
     {
         private readonly IRepository<InpatientRecord> inpatientRecordRepository;
+        private readonly IRepository<Patient> patientRepository;
+        private readonly IRepository<Doctor> doctorRepository;
+        private readonly IRepository<Department> departmentRepository;
         /// <summary>
         /// 映射器
         /// </summary>
         private readonly IMapper _mapper;
-        public InpatientRecordServices(IRepository<InpatientRecord> inpatientRecordRepository, IMapper _mapper)
+        public InpatientRecordServices(IRepository<InpatientRecord> inpatientRecordRepository, IMapper _mapper, IRepository<Patient> patientRepository, IRepository<Doctor> doctorRepository, IRepository<Department> departmentRepository)
         {
             this.inpatientRecordRepository = inpatientRecordRepository;
+            this.patientRepository = patientRepository;
+            this.doctorRepository = doctorRepository;
+            this.departmentRepository = departmentRepository;
             this._mapper = _mapper;
         }
         /// <summary>
@@ -55,22 +61,10 @@ namespace HIS.HIS.InpatientRecords
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
         [HttpDelete("api/DelInpatientRecord")]
-        public async Task<APIResult<InpatientRecordDto>> DelInpatientRecord(string Id)
+        public async Task<APIResult<InpatientRecordDto>> DelInpatientRecord(Guid Id)
         {
-            //根据Id批量删除住院记录
-            //var entity = await inpatientRecordRepository.FirstOrDefaultAsync(x => x.Id == Id);
-            //return new APIResult<InpatientRecordDto>()
-            //{
-            //    Code = 0,
-            //    Message = "删除住院记录成功",
-            //};
-            //根据Id批量删除住院记录
-            foreach (var id in Id.Split(","))
-            {
-                //await inpatientRecordRepository.DeleteAsync(Guid.Parse(id));
-                var entity = await inpatientRecordRepository.FirstOrDefaultAsync(x => x.Id == Guid.Parse(Id));
-
-            }
+            //根据Id删除住院记录
+            var entity = await inpatientRecordRepository.FirstOrDefaultAsync(x => x.Id == Id);
             return new APIResult<InpatientRecordDto>()
             {
                 Code = 0,
@@ -85,10 +79,10 @@ namespace HIS.HIS.InpatientRecords
         /// </summary>
         /// <param name="patient_id"></param>
         /// <returns></returns>
-        [HttpPost("/api/v1/auth/GetInpatientRecords")]
+        [HttpGet("/api/v1/his/inpatientRecord/page")]
         public async Task<APIResult<InpatientRecordDto>> GetInpatientRecord(Guid patient_id)
         {
-            //根据患者Id 查询住院记录
+            //根据患者id四表联查
             var entity = await inpatientRecordRepository.FirstOrDefaultAsync(x => x.patient_id == patient_id);
             var list = ObjectMapper.Map<InpatientRecord, InpatientRecordDto>(entity);
             if (entity == null)
@@ -105,10 +99,12 @@ namespace HIS.HIS.InpatientRecords
                 return new APIResult<InpatientRecordDto>()
                 {
                     Data = list,
-                    Code = 0,
+                    Code = CodeEnum.success,
                     Message = "获取住院记录成功",
                 };
             }
+
+
         }
 
 

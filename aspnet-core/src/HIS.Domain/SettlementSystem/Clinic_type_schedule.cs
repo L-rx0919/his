@@ -11,11 +11,11 @@ namespace HIS.SettlementSystem
         /// <summary>
         /// 门诊类型ID
         /// </summary>
-        public string clinic_type_id { get; set; }
+        public Guid clinic_type_id { get; set; }
         /// <summary>
         /// 医生ID
         /// </summary>
-        public string doctor_id { get; set; }
+        public Guid doctor_id { get; set; }
         /// <summary>
         /// 排班日期
         /// </summary>

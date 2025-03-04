@@ -17,7 +17,7 @@ namespace HIS.SettlementSystem
         /// <summary>
         /// 结算ID
         /// </summary>
-        public int settlement_id { get; set; }
+        public Guid settlement_id { get; set; }
         /// <summary>
         /// 退款金额
         /// </summary>

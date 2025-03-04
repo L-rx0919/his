@@ -10,6 +10,11 @@ namespace HIS.HIS.Patients
 {
     public class PatientInsertDto:FullAuditedAggregateRoot<Guid>
     {
+
+        /// <summary>
+        /// 患者编号
+        /// </summary>
+        public int Patientid { get; set; }
         /// <summary>
         /// 患者姓名
         /// </summary>

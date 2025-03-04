@@ -13,7 +13,7 @@ namespace HIS.SettlementSystem
         /// <summary>
         /// 病人ID
         /// </summary>
-        public string Patient_id { get; set; }
+        public Guid Patient_id { get; set; }
         /// <summary>
         /// 卡状态
         /// </summary>
