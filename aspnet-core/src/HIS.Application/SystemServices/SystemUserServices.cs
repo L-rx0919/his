@@ -16,6 +16,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using DocumentFormat.OpenXml.EMMA;
 using Polly.Caching;
+using System.IO;
 namespace HIS.SystemServices
 {
     [ApiExplorerSettings(GroupName = "v1")]
@@ -70,7 +71,7 @@ namespace HIS.SystemServices
 
                 SystemUser sysUser = new SystemUser
                 {
-                    Avatar = "https://img1.baidu.com/it/u=1090452517,2487311686&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=501",
+                    Avatar = "https://c-ssl.duitang.com/uploads/blog/202207/18/20220718021545_9db54.jpeg",
                     DeptId = sysDept.Id,
                     Mobile = "13693288263",
                     Nickname = "Feeling",
@@ -215,6 +216,44 @@ namespace HIS.SystemServices
             };
         }
 
+        ////上传头像
+        //[HttpPost("/api/v1/users/avatar")]
+        //public async Task<APIResult<string>> UploadAvatarAsync([FromForm] IFormFile file)
+        //{
+        //    try
+        //    {
+        //        var UserName = httpContextAccessor.HttpContext.User.Identity.Name;
+        //        var User = await repositoryUser.FindAsync(m => m.Username == UserName);
+        //        if (User == null)
+        //        {
+        //            return new APIResult<string> { Code = CodeEnum.error, Message = "用户未找到" };
+        //        }
+        //        else
+        //        {
+        //            var fileExt = file.FileName.Split('.')[1];
+        //            var fileName = Guid.NewGuid().ToString() + "." + fileExt;
+        //            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "upload", fileName);
+        //            using (var stream = new FileStream(filePath, FileMode.Create))
+        //            {
+        //                await file.CopyToAsync(stream);
+        //            }
+        //            User.Avatar = "/upload/" + fileName;
+        //            await repositoryUser.UpdateAsync(User);
+        //            return new APIResult<string>
+        //            {
+        //                Code = CodeEnum.success,
+        //                Data = User.Avatar
+        //            };
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+
+        //}
+
         private LoginResultDto GenerateToken(SystemUser admin)
         {
             IList<Claim> claims = new List<Claim> {
@@ -254,5 +293,7 @@ namespace HIS.SystemServices
                 TokenType = JwtBearerDefaults.AuthenticationScheme
             };
         }
+
+       
     }
 }

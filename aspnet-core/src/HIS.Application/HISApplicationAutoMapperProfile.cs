@@ -51,5 +51,8 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<DepartmentDto, Department>().ReverseMap();
         //费用类别
         CreateMap<Fee_CategoryDto, Fee_Category>().ReverseMap();
+        //一卡通添加
+        CreateMap<Patient_Card_InfoDto, Patient_Card_Info>().ReverseMap();
+        CreateMap<PatientInsertDto, Patient>().ReverseMap();
     }
 }
