@@ -991,6 +991,9 @@ namespace HIS.Migrations
                         .HasColumnType("char(36)")
                         .HasColumnName("LastModifierId");
 
+                    b.Property<int>("Patientid")
+                        .HasColumnType("int");
+
                     b.Property<string>("emergency_contact")
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");

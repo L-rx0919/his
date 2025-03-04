@@ -13,8 +13,8 @@ using Volo.Abp.EntityFrameworkCore;
 namespace HIS.Migrations
 {
     [DbContext(typeof(HISDbContext))]
-    [Migration("20250303063615_init4")]
-    partial class init4
+    [Migration("20250304010441_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -993,6 +993,9 @@ namespace HIS.Migrations
                     b.Property<Guid?>("LastModifierId")
                         .HasColumnType("char(36)")
                         .HasColumnName("LastModifierId");
+
+                    b.Property<int>("Patientid")
+                        .HasColumnType("int");
 
                     b.Property<string>("emergency_contact")
                         .HasMaxLength(50)
@@ -2018,6 +2021,119 @@ namespace HIS.Migrations
                     b.ToTable("Chargingprojects");
                 });
 
+            modelBuilder.Entity("HIS.System_Administration.DepartmentDocto", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<string>("Department")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("DepartmentDoctoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Doctor")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DepartmentDoctos");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.FinancialInvoices", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<string>("Currentinvoicenumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<string>("Endinvoicenumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("FinancialInvoicesID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FinancialInvoicesinitial")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("FinancialTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("FinancialType")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Initialinvoicenumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<string>("recipient")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("financialInvoices");
+                });
+
             modelBuilder.Entity("HIS.System_Administration.InvoiceConfiguration", b =>
                 {
                     b.Property<Guid>("Id")
@@ -2074,6 +2190,64 @@ namespace HIS.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("InvoiceConfigurations");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.Itemscharged", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Codingpackages")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<string>("Detailsorting")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Diagnosisprojectname")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("HealingPackageName")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<int>("ItemschargedID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ItemschargedOrganization")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Itemschargeds");
                 });
 
             modelBuilder.Entity("HIS.System_Administration.NatureofPatient", b =>
@@ -2150,6 +2324,183 @@ namespace HIS.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NatureofPatients");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.Rolemanagements", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<string>("DisplayOrder")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Encoding")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("RoleType")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("RolemanagementsID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RolemanagementsName")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Theorganization")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Rolemanagements");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.SystemDynamics", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<string>("SystemDynamicsEncoding")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("SystemDynamicsID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SystemDynamicsName")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("SystemDynamicsNotes")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("SystemDynamicsType")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("SystemDynamicsValue")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("SystemDynamicssort")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SystemDynamics");
+                });
+
+            modelBuilder.Entity("HIS.System_Administration.SystemMenu", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<string>("EnglishMenu")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ExternalApplications")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<int>("Superior")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SystemMenuID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SystemMenuName")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SystemMenus");
                 });
 
             modelBuilder.Entity("Volo.Abp.AuditLogging.AuditLog", b =>

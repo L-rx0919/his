@@ -251,9 +251,9 @@ namespace HIS.SytstemMenu
                                     },
                                     new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
-                                        Name = "PatientDetail",
-                                        Path = "PatientDetail",
+                                        Component = "his/patientCenter/index",
+                                        Name = "patientCenter",
+                                        Path = "patientCenter",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,

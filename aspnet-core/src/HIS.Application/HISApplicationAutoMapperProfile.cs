@@ -54,5 +54,6 @@ public class HISApplicationAutoMapperProfile : Profile
         //一卡通添加
         CreateMap<Patient_Card_InfoDto, Patient_Card_Info>().ReverseMap();
         CreateMap<PatientInsertDto, Patient>().ReverseMap();
+        CreateMap<DepartmentPatientDto, Department>().ReverseMap();
     }
 }
