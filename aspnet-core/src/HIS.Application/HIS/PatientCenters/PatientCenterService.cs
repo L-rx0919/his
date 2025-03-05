@@ -35,7 +35,7 @@ namespace HIS.HIS.PatientCenters
         /// </summary>
         /// <param name="patientName"></param>
         /// <returns></returns>
-        [HttpGet("/api/v2/PatientCenter/GetPatients")]
+        [HttpGet("/api/v2/his/patientChenter/GetPatients")]
         public async Task<APIResult<List<PatientCenterDto>>> GetPatients(string patientName)
         {
             var patients = await patientrepository.GetListAsync(p => p.patient_name == patientName);

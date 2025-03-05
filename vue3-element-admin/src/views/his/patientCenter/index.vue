@@ -5,7 +5,7 @@
         <el-col :span="5">
           <el-card style="border-color: aqua">
             <el-col :span="100" style="text-align: right">
-              <!-- <el-button type="default" @click="switchPatient">患者切换</el-button> -->
+              <el-button type="default" @click="switchPatient">患者切换</el-button>
             </el-col>
             <div>
               <h1>{{ patientCinfo?.patient_name }}</h1>
@@ -43,13 +43,20 @@
   </el-container>
 </template>
 <script setup lang="ts">
-import patientChenterApi, { patientChenterInfo } from "@/api/his/patientCenter/index";
+import patientChenterApi, { patientChenterInfo, queryDto } from "@/api/his/patientCenter/index";
+const formInline = ref<queryDto>({
+  patientName: "",
+});
 
 var patientCinfo = ref<patientChenterInfo>();
 var patientChenterlist = () => {
-  patientChenterApi.GetpatientChenterInfo().then((res: any) => {
+  patientChenterApi.GetpatientChenterInfo(formInline.value).then((res: any) => {
     patientCinfo.value = res;
   });
+};
+const switchPatient = () => {
+  formInline.value.patientName = "彭雅彬";
+  patientChenterlist();
 };
 onMounted(() => {
   patientChenterlist();
