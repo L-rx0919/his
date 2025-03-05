@@ -3017,3 +3017,4 @@ ActivatorChain = Volo.Abp.BackgroundJobs.EntityFrameworkCore.BackgroundJobsDbCon
 2025-03-05 18:40:50.736 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.0263ms
 2025-03-05 18:40:50.736 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
 2025-03-05 18:40:50.736 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 2.0337ms
+2025-03-05 18:59:14.887 +08:00 [INF] Starting HIS.HttpApi.Host.

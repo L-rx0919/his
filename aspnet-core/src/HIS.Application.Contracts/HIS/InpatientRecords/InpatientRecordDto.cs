@@ -60,5 +60,79 @@ namespace HIS.HIS.InpatientRecords
         /// </summary>
 
         public bool is_in_insurance { get; set; }
+
+
+        /// <summary>
+        /// 科室名称
+        /// </summary>
+        public string name { get; set; }
+
+        /// <summary>
+        /// 科室位置
+        /// </summary>
+        public string location { get; set; }
+        /// <summary>
+        /// 联系电话
+        /// </summary>
+        public string phone { get; set; }
+        /// <summary>
+        /// 科室类型（如内科、外科、急诊等）
+        /// </summary>
+
+        public string department_type { get; set; }
+
+
+
+
+        /// <summary>
+        /// 患者性别
+        /// </summary>
+
+        public string patient_gender { get; set; }
+
+        /// <summary>
+        /// 患者年龄
+        /// </summary>
+
+        public int patient_age { get; set; }
+
+        /// <summary>
+        /// 患者联系方式
+        /// </summary>
+
+        public string patient_contact { get; set; }
+
+        /// <summary>
+        /// 患者住址
+        /// </summary>
+
+        public string patient_address { get; set; }
+
+        /// <summary>
+        /// 患者血型
+        /// </summary>
+
+        public string patient_blood_type { get; set; }
+        /// <summary>
+        /// 紧急联系人
+        /// </summary>
+
+        public string emergency_contact { get; set; }
+        /// <summary>
+        /// 婚姻状况
+        /// </summary>
+        public string marital_status { get; set; }
+
+
+
+
+        /// <summary>
+        /// 职称
+        /// </summary>
+        public string title { get; set; }
+        /// <summary>
+        /// 专科
+        /// </summary>
+        public string specialty { get; set; }
     }
 }
