@@ -9,12 +9,37 @@ const InpatientRecordAPI = {
    * @param queryParams 查询参数
    * @returns 字典分页结果
    */
+  */
+  //添加住院信息
+  addList(data: InpatientRecordInfor) {
+    return request({
+      url: `${inpatientRecord_BASE_URL}/insertInpatientRecordinfo`,
+      method: "post",
+      params: data,
+    });
+  },
+  //获取科室
+  //  GetDepartment() {
+  //   return request<any, GetDepartmentDto[]>({
+  //     url: `${inpatientRecord_BASE_URL}/getDepartment`,
+  //     method: "get",
+  //     params: {},
+  //   });
+  // },
+   */
   //获取住院信息
   getList(queryParams: inpatientRecordAPIQuery) {
     return request<any, InpatientRecordDto[]>({
       url: `${InpatientRecord_BASE_URL}/patient_id`,
       method: "get",
       params: queryParams,
+    });
+  },
+  addList(data: InpatientRecordInfor) {
+    return request({
+      url: `${InpatientRecord_BASE_URL}/insertPatientCardInfo`,
+      method: "post",
+      data: data, // 传递 PatientCardInfo 对象
     });
   },
   //删除住院信息

@@ -12,6 +12,9 @@ using HIS.HIS.RegistrationServices;
 using HIS.SettlementSystem;
 using HIS.System_Administration;
 using HIS.SystemDicServices;
+using static Volo.Abp.Identity.Settings.IdentitySettingNames;
+
+
 namespace HIS;
 
 public class HISApplicationAutoMapperProfile : Profile
@@ -27,7 +30,7 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<SysDictDataListDto, SysDictData>().ReverseMap();
         //患者
         CreateMap<PatientDto, Patient>().ReverseMap();
-      
+
         //住院记录
         CreateMap<InpatientRecordDto, InpatientRecord>().ReverseMap();
         //医生

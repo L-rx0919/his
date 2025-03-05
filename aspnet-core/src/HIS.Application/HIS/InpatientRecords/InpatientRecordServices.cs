@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HIS.HIS.Departments;
 using HIS.SettlementSystem;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -34,7 +35,7 @@ namespace HIS.HIS.InpatientRecords
         /// </summary>
         /// <param name="patient"></param>
         /// <returns></returns>
-        [HttpPost("/api/v1/his/inpatientRecord/insertInpatientRecord")]
+        [HttpPost("/api/v1/his/inpatientRecord/insertInpatientRecordinfo")]
         public async Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient)
         {
             InpatientRecord entity = ObjectMapper.Map<InpatientRecordDto, InpatientRecord>(patient);
@@ -81,6 +82,24 @@ namespace HIS.HIS.InpatientRecords
             }
 
         }
+        /// <summary>
+        /// 获取科室
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public Task<APIResult<List<DepartmentDto>>> GetDepartment()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// 获取医生
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public Task<APIResult<List<InpatientRecordDto>>> GetDoctor()
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// 获取住院记录
@@ -123,8 +142,14 @@ namespace HIS.HIS.InpatientRecords
                 Message = "获取住院记录成功"
             };
         }
-        
-
-
+        /// <summary>
+        /// 获取患者
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public Task<APIResult<List<InpatientRecordDto>>> GetPatient()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
