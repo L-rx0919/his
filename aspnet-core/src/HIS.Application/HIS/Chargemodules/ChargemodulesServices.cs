@@ -2,6 +2,7 @@
 using HIS.System_Administration;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -42,33 +43,6 @@ namespace HIS.HIS.Chargemodules
             }
         }
 
-        /// <summary>
-        /// 获取收费
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet("api/GetChargemodules")]
-        public async Task<ResultDto> GetChargemodules()
-        {
-            var list = await chargemodulesRepository.GetListAsync();
-            return ResultDto.OK(data: list);
-        }
-
-        ///<summary>
-        ///删除收费
-        /// </summary>
-        [HttpDelete("api/DelChargemodules")]
-        public async Task<ResultDto> DelChargemodules(Guid id)
-        {
-            var list = await chargemodulesRepository.FirstOrDefaultAsync(x => x.Id == id);
-            if (list != null)
-            {
-                await chargemodulesRepository.DeleteAsync(list);
-                return ResultDto.OK();
-            }
-            else
-            {
-                return ResultDto.Fail("删除失败");
-            }
-        }
+     
     }
 }

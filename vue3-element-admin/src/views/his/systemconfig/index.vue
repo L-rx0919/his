@@ -1,6 +1,12 @@
 <template>
   <el-button type="danger" @click="dialogVisible = true">新增病人性质</el-button>
-  <el-table :data="GetNatureofList" border style="width: 100%">
+  <el-button type="primary" @click="loadData">修改</el-button>
+
+  <el-input v-model="searchValue" placeholder="请输入搜索内容" clearable style="width: 300px" @change="search" />
+  <el-button type="primary" @click="loadData">搜索</el-button>
+
+  <el-table :data="GetNatureofList" border style="width: 100%" @selection-change="handleSelectionChange">
+    <el-table-column type="selection" width="55" />
     <el-table-column prop="natureofPatientName" label="患者性质" width="180" />
     <el-table-column prop="naturecode" label="编码" width="180" />
     <el-table-column prop="hospitallogo" label="门诊住院标志" width="180" />
@@ -12,11 +18,9 @@
         <span>{{ row.creationTime.slice(0, 10) }}</span>
       </template>
     </el-table-column>
-
     <el-table-column label="操作" width="180">
       <template #default="{ row }">
-        <el-button type="primary" size="mini">编辑</el-button>
-        <el-button type="danger" size="mini">删除</el-button>
+        <el-button type="danger" @click="deleteRow(row.id)">删除</el-button>
       </template>
     </el-table-column>
   </el-table>
@@ -71,10 +75,21 @@
     </template>
   </el-dialog>
 </template>
+
 <script lang="ts" setup>
+import axios from "axios";
+
+// 假设你有一个用于删除配置的 API 接口
+const deleteConfig = (id: string) => {
+  return axios.delete(`/api/systemconfig/${id}`);
+};
+
+// 将 deleteConfig 添加到你的 API 导出中
+
 import SystemconfigAPI, {
   NatureofPatientListDto,
   AdDSystemconfig,
+  deleteConfig,
 } from "@/api/his/systemconfig/index";
 const GetNatureofList = ref<NatureofPatientListDto[]>([]); //患者性质列表
 
@@ -98,5 +113,17 @@ const insert = () => {
     dialogVisible.value = false;
     loadData();
   });
+};
+
+// 删除
+const deleteRow = (id: string) => {
+  SystemconfigAPI.deleteConfig(id)
+    .then(() => {
+      // 删除成功后重新加载数据
+      loadData();
+    })
+    .catch((error) => {
+      console.error("删除失败:", error);
+    });
 };
 </script>

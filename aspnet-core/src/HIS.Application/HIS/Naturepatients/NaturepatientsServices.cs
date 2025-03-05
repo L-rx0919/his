@@ -86,25 +86,25 @@ namespace HIS.HIS.Naturepatients
         }
 
 
-        /// <summary>
-        /// 删除病人性质
-        /// </summary>
-        [HttpDelete("DelNaturepatient")]
-        public async Task<ResultDto> DelNaturepatient(Guid id)
-        {
-            var natureOfPatient = await natureofPatientRepository.FirstOrDefaultAsync(x => x.Id == id);
-            if (natureOfPatient != null) 
+            /// <summary>
+            /// 删除病人性质
+            /// </summary>
+            [HttpDelete("/api/v1/his/systemconfig/NatureofPatientDel/{id}")]
+            public async Task<ResultDto> DelNaturepatient(Guid id, int IsDeleted)
             {
-              await natureofPatientRepository.DeleteAsync(natureOfPatient);
-                return ResultDto.OK();
-
+                // 查找病人性质记录
+                var natureofPatient = await natureofPatientRepository.FindAsync(x=>x.Id==id);
+                if (natureofPatient == null)
+                {
+                    return ResultDto.Fail("未找到病人性质记录");
+                }     
+                // 设置删除标志
+                natureofPatient.IsDeleted = IsDeleted == 1;
+                // 更新记录
+                await natureofPatientRepository.UpdateAsync(natureofPatient);
+                return ResultDto.OK(null, "删除病人性质记录成功");
             }
-            else
-            {
-                return ResultDto.Fail("删除病人性质失败");
-            }
 
-
-        }
+        
     }
 }

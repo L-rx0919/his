@@ -15,16 +15,8 @@ namespace HIS.HIS.Chargemodules
         /// <param name="chargemodules"></param>
         /// <returns></returns>
         Task<ResultDto> AddChargemodules(ChargemodulesDTO chargemodules);
-        /// <summary>
-        /// 获取收费模块
-        /// </summary>
-        /// <returns></returns>
-        Task<ResultDto> GetChargemodules();
-        /// <summary>
-        ///删除收费模块
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        Task<ResultDto> DelChargemodules(Guid id);
+
+
+      
     }
 }
