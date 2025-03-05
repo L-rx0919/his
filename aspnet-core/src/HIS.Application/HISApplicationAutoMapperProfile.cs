@@ -12,9 +12,6 @@ using HIS.HIS.RegistrationServices;
 using HIS.SettlementSystem;
 using HIS.System_Administration;
 using HIS.SystemDicServices;
-using static Volo.Abp.Identity.Settings.IdentitySettingNames;
-
-
 namespace HIS;
 
 public class HISApplicationAutoMapperProfile : Profile

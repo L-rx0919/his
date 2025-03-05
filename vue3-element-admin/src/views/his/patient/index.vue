@@ -39,12 +39,7 @@
     <el-form :model="patientCardInfo">
       <el-form-item label="姓名">
         <el-select v-model="patientCardInfo.patient_id">
-          <el-option
-            v-for="item in PatientNameAndIdDto"
-            :key="item.id"
-            :label="item.patient_name"
-            :value="item.id"
-          />
+          <el-option v-for="item in PatientNameAndIdDto" :key="item.id" :label="item.patient_name" :value="item.id" />
         </el-select>
       </el-form-item>
       <el-form-item label="联系电话">
@@ -82,11 +77,11 @@
 </template>
 <script lang="ts" setup>
 import PatientAPI, {
-  patientQuery,
-  PatientCardInfo,
-  GetPatientNameAndIdDto,
-  GetDepartmentDto,
-  PatientCardInfoList,
+  type patientQuery,
+  type PatientCardInfo,
+  type GetPatientNameAndIdDto,
+  type GetDepartmentDto,
+  type PatientCardInfoList,
 } from "@/api/his/patient/index";
 
 const tableData = ref<PatientCardInfoList[]>([]);

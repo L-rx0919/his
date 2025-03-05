@@ -5,33 +5,33 @@
         <el-col :span="5">
           <el-card style="border-color: aqua">
             <el-col :span="100" style="text-align: right">
-              <el-button type="default" @click="switchPatient">患者切换</el-button>
+              <!-- <el-button type="default" @click="switchPatient">患者切换</el-button> -->
             </el-col>
             <div>
-              <h1>张三</h1>
+              <h1>{{ patientCinfo?.patient_name }}</h1>
             </div>
             <div>
-              <span class="label age">31岁</span>
+              <span class="label age">{{ patientCinfo?.patient_name }}</span>
               <span class="label gender">男</span>
               <span class="label status">自费</span>
               <span class="label transfer">转区中</span>
             </div>
-            <div>科室：</div>
-            <div>病区：</div>
-            <div>床位：</div>
-            <div>入院时间：</div>
-            <div>住院天数：</div>
-            <div>住院次序：</div>
-            <div>入院诊断：</div>
-            <div>出院主诊断：</div>
+            <div>科室：{{ patientCinfo?.patient_name }}</div>
+            <div>病区：{{ patientCinfo?.patient_name }}</div>
+            <div>床位：{{ patientCinfo?.patient_name }}</div>
+            <div>入院时间：{{ patientCinfo?.patient_name }}</div>
+            <div>住院天数：{{ patientCinfo?.patient_name }}</div>
+            <div>住院次序：{{ patientCinfo?.patient_name }}</div>
+            <div>入院诊断：{{ patientCinfo?.patient_name }}</div>
+            <div>出院主诊断：{{ patientCinfo?.patient_name }}</div>
           </el-card>
         </el-col>
         <el-col :span="16">
           <el-card>
             <h3>费用账单</h3>
             <el-table style="width: 100%">
-              <el-table-column prop="category" label="费用类别"></el-table-column>
-              <el-table-column prop="amount" label="金额"></el-table-column>
+              <el-table-column prop="category" label="费用类别">11111</el-table-column>
+              <el-table-column prop="amount" label="金额">22222</el-table-column>
             </el-table>
             <div style="text-align: right; margin-top: 20px">
               <h2>总金额：¥ 元</h2>
@@ -42,6 +42,19 @@
     </el-main>
   </el-container>
 </template>
+<script setup lang="ts">
+import patientChenterApi, { patientChenterInfo } from "@/api/his/patientCenter/index";
+
+var patientCinfo = ref<patientChenterInfo>();
+var patientChenterlist = () => {
+  patientChenterApi.GetpatientChenterInfo().then((res: any) => {
+    patientCinfo.value = res;
+  });
+};
+onMounted(() => {
+  patientChenterlist();
+});
+</script>
 <style>
 .label {
   display: inline-block;
