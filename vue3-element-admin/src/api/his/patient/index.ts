@@ -31,7 +31,7 @@ const PatientAPI = {
     });
   },
   getPatientCardInfos() {
-    return request<any, PatientCardInfo[]>({
+    return request<any, PatientCardInfoList[]>({
       url: `${PATIENT_BASE_URL}/getPatientCardInfos`,
       method: "get",
       params: {},
@@ -48,6 +48,13 @@ const PatientAPI = {
       url: `${PATIENT_BASE_URL}/insertPatientCardInfo`,
       method: "post",
       data: data, // 传递 PatientCardInfo 对象
+    });
+  },
+  GetDepartment() {
+    return request<any, GetDepartmentDto[]>({
+      url: `${PATIENT_BASE_URL}/getDepartment`,
+      method: "get",
+      params: {},
     });
   },
 };
@@ -107,4 +114,29 @@ export interface GetPatientNameAndIdDto {
 export interface PageResult<T> {
   list: T[];
   total: number;
+}
+export interface PatientCardInfoList {
+  concurrencyStamp: string;
+  creationTime: string; // ISO 8601 格式的时间字符串
+  creatorId: string;
+  lastModificationTime: string; // ISO 8601 格式的时间字符串
+  lastModifierId: string;
+  isDeleted: boolean;
+  deleterId: string;
+  deletionTime: string; // ISO 8601 格式的时间字符串
+  patient_id: string;
+  card_status: string;
+  card_type: string;
+  balance: number;
+  create_date: string; // ISO 8601 格式的时间字符串
+  expiry_date: string; // ISO 8601 格式的时间字符串
+  last_transaction_date: string; // ISO 8601 格式的时间字符串
+  card_owner_name: string;
+  associated_dept: string;
+  contact_phone: string;
+  remarks: string;
+}
+export interface GetDepartmentDto {
+  id: string; // 科室ID
+  name: string; // 科室名称
 }

@@ -279,3 +279,1123 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
 2025-03-04 13:15:13.294 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.InitData (HIS.Application)'
 2025-03-04 13:15:13.447 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/app/notice/init-data - 500 null application/json; charset=utf-8 1309.1975ms
 2025-03-04 13:16:55.962 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-05 09:02:11.919 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-05 09:02:22.547 +08:00 [INF] Loaded ABP modules:
+2025-03-05 09:02:22.547 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-05 09:02:22.547 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-05 09:02:22.547 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-05 09:02:22.547 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-05 09:02:22.547 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-05 09:02:22.547 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-05 09:02:22.547 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-05 09:02:22.547 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-05 09:02:22.547 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-05 09:02:22.547 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-05 09:02:22.547 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-05 09:02:22.547 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-05 09:02:22.547 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-05 09:02:22.547 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-05 09:02:22.547 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-05 09:02:22.547 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-05 09:02:22.547 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-05 09:02:22.547 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-05 09:02:22.547 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-05 09:02:22.547 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-05 09:02:22.547 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-05 09:02:22.547 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-05 09:02:22.548 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-05 09:02:22.548 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-05 09:02:22.548 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-05 09:02:22.548 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-05 09:02:22.548 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-05 09:02:22.548 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-05 09:02:22.548 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-05 09:02:22.548 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-05 09:02:22.548 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-05 09:02:22.548 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-05 09:02:22.548 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-05 09:02:22.548 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-05 09:02:22.548 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-05 09:02:22.548 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-05 09:02:22.548 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-05 09:02:22.570 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-05 09:02:24.705 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-05 09:02:24.832 +08:00 [INF] Initialized all ABP modules.
+2025-03-05 09:02:25.279 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-05 09:02:25.328 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-05 09:02:25.328 +08:00 [INF] Hosting environment: Development
+2025-03-05 09:02:25.328 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-05 09:02:25.795 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-05 09:02:27.592 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:02:27.611 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-05 09:02:27.625 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-05 09:02:27.627 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 13.9624ms
+2025-03-05 09:02:27.627 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:02:27.632 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1842.9904ms
+2025-03-05 09:02:27.638 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-05 09:02:27.794 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 155.8489ms
+2025-03-05 09:02:27.800 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-05 09:02:27.800 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-05 09:02:27.804 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 3.2831ms
+2025-03-05 09:02:27.808 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-05 09:02:27.810 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 10.6018ms
+2025-03-05 09:02:27.860 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.5711ms
+2025-03-05 09:02:27.887 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-05 09:02:28.076 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 189.4684ms
+2025-03-05 09:02:45.062 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-03-05 09:02:45.065 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:02:45.066 +08:00 [INF] Route matched with {action = "Captcha", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.SystemServices.CaptchaDto] Captcha() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:02:45.718 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.CaptchaDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:02:45.726 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.Captcha (HIS.Application) in 658.9856ms
+2025-03-05 09:02:45.726 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:02:45.726 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 200 null application/json; charset=utf-8 664.2396ms
+2025-03-05 09:03:01.737 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - multipart/form-data; boundary=----WebKitFormBoundaryVerJWxt1d4lihnjt 488
+2025-03-05 09:03:01.744 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:03:01.744 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:03:01.746 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:03:01.759 +08:00 [INF] Route matched with {action = "Login", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.LoginResultDto]] LoginAsync(HIS.SystemServices.LoginDto) on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:03:02.607 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.LoginResultDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:03:02.612 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application) in 852.6022ms
+2025-03-05 09:03:02.612 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:03:02.804 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - 200 null application/json; charset=utf-8 1067.0584ms
+2025-03-05 09:03:02.811 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/users/me - null null
+2025-03-05 09:03:02.858 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-05 09:03:02.860 +08:00 [INF] Route matched with {action = "Info", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.PermissionDto]] InfoAsync() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:03:02.889 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.PermissionDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:03:02.893 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application) in 32.8663ms
+2025-03-05 09:03:02.893 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-05 09:03:02.894 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/users/me - 200 null application/json; charset=utf-8 82.6337ms
+2025-03-05 09:03:03.206 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - null null
+2025-03-05 09:03:03.207 +08:00 [INF] Executing endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-05 09:03:03.209 +08:00 [INF] Route matched with {action = "GetAll", controller = "SystemDic", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SystemDicServices.SysDictDto]]] GetAllAsync() on controller HIS.SystemDicServices.SystemDicService (HIS.Application).
+2025-03-05 09:03:03.501 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SystemDicServices.SysDictDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:03:03.503 +08:00 [INF] Executed action HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application) in 294.2014ms
+2025-03-05 09:03:03.503 +08:00 [INF] Executed endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-05 09:03:03.504 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - 200 null application/json; charset=utf-8 297.8226ms
+2025-03-05 09:03:03.511 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:03:03.512 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:03:03.514 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:03:03.625 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:03:03.633 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 119.4126ms
+2025-03-05 09:03:03.633 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:03:03.633 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 122.3336ms
+2025-03-05 09:03:06.146 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - null null
+2025-03-05 09:03:06.146 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-05 09:03:06.147 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:03:06.148 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:03:06.148 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:03:06.151 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:03:06.156 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 7.7946ms
+2025-03-05 09:03:06.156 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:03:06.157 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 10.3904ms
+2025-03-05 09:03:06.158 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:03:06.158 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:03:06.159 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:03:06.160 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:03:06.161 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:03:06.247 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 88.4654ms
+2025-03-05 09:03:06.247 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:03:06.248 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - 200 null application/json; charset=utf-8 101.8795ms
+2025-03-05 09:03:06.503 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:03:06.509 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 349.1039ms
+2025-03-05 09:03:06.509 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:03:06.510 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 362.3638ms
+2025-03-05 09:03:14.291 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:03:14.292 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:03:14.294 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:03:14.469 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:03:14.479 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:03:14.486 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:03:14.662 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:03:14.663 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 369.1489ms
+2025-03-05 09:03:14.663 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:03:14.664 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 372.8669ms
+2025-03-05 09:03:14.696 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:03:14.703 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 216.9137ms
+2025-03-05 09:03:14.703 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:03:14.704 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 235.1247ms
+2025-03-05 09:03:23.873 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:03:23.875 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:03:23.875 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:03:23.876 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:03:23.876 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.0674ms
+2025-03-05 09:03:23.876 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:03:23.876 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.5848ms
+2025-03-05 09:03:24.113 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:03:24.115 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:03:24.115 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:03:24.137 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:03:24.137 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 22.3977ms
+2025-03-05 09:03:24.137 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:03:24.138 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 24.3569ms
+2025-03-05 09:19:58.987 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-05 09:20:01.514 +08:00 [INF] Loaded ABP modules:
+2025-03-05 09:20:01.515 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-05 09:20:01.515 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-05 09:20:01.515 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-05 09:20:01.515 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-05 09:20:01.515 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-05 09:20:01.515 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-05 09:20:01.515 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-05 09:20:01.515 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-05 09:20:01.515 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-05 09:20:01.515 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-05 09:20:01.515 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-05 09:20:01.515 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-05 09:20:01.515 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-05 09:20:01.515 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-05 09:20:01.515 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-05 09:20:01.515 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-05 09:20:01.515 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-05 09:20:01.538 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-05 09:20:01.899 +08:00 [INF] User profile is available. Using 'C:\Users\x1317\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-05 09:20:02.002 +08:00 [INF] Initialized all ABP modules.
+2025-03-05 09:20:02.152 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-05 09:20:02.190 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-05 09:20:02.190 +08:00 [INF] Hosting environment: Development
+2025-03-05 09:20:02.190 +08:00 [INF] Content root path: E:\HIS\aspnet-core\src\HIS.HttpApi.Host
+2025-03-05 09:20:02.667 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-05 09:20:03.452 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:20:03.468 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-05 09:20:03.483 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-05 09:20:03.486 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 15.8816ms
+2025-03-05 09:20:03.486 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:20:03.491 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 826.7781ms
+2025-03-05 09:20:03.499 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-05 09:20:03.528 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 29.4884ms
+2025-03-05 09:20:03.553 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-05 09:20:03.554 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-05 09:20:03.555 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.1147ms
+2025-03-05 09:20:03.558 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-05 09:20:03.559 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 5.4258ms
+2025-03-05 09:20:03.578 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.0626ms
+2025-03-05 09:20:03.680 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-05 09:20:03.850 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 169.8238ms
+2025-03-05 09:20:15.120 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-03-05 09:20:15.123 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:20:15.124 +08:00 [INF] Route matched with {action = "Captcha", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.SystemServices.CaptchaDto] Captcha() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:20:15.539 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.CaptchaDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:20:15.549 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.Captcha (HIS.Application) in 424.9329ms
+2025-03-05 09:20:15.549 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:20:15.550 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 200 null application/json; charset=utf-8 429.9815ms
+2025-03-05 09:20:23.248 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - multipart/form-data; boundary=----WebKitFormBoundaryMHDIuYMd0deYDrRo 488
+2025-03-05 09:20:23.255 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:20:23.255 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:20:23.256 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:20:23.268 +08:00 [INF] Route matched with {action = "Login", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.LoginResultDto]] LoginAsync(HIS.SystemServices.LoginDto) on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:20:23.812 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.LoginResultDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:20:23.817 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application) in 548.8212ms
+2025-03-05 09:20:23.817 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:20:24.062 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - 200 null application/json; charset=utf-8 814.3871ms
+2025-03-05 09:20:24.069 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/users/me - null null
+2025-03-05 09:20:24.106 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-05 09:20:24.107 +08:00 [INF] Route matched with {action = "Info", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.PermissionDto]] InfoAsync() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:20:24.126 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.PermissionDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:20:24.130 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application) in 22.7914ms
+2025-03-05 09:20:24.130 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-05 09:20:24.130 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/users/me - 200 null application/json; charset=utf-8 61.6024ms
+2025-03-05 09:20:24.444 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - null null
+2025-03-05 09:20:24.446 +08:00 [INF] Executing endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-05 09:20:24.447 +08:00 [INF] Route matched with {action = "GetAll", controller = "SystemDic", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SystemDicServices.SysDictDto]]] GetAllAsync() on controller HIS.SystemDicServices.SystemDicService (HIS.Application).
+2025-03-05 09:20:24.746 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SystemDicServices.SysDictDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:24.748 +08:00 [INF] Executed action HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application) in 300.4439ms
+2025-03-05 09:20:24.748 +08:00 [INF] Executed endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-05 09:20:24.749 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - 200 null application/json; charset=utf-8 304.1744ms
+2025-03-05 09:20:24.756 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:20:24.758 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:20:24.760 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:20:24.872 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:24.878 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 117.7421ms
+2025-03-05 09:20:24.878 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:20:24.878 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 121.9094ms
+2025-03-05 09:20:25.404 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:20:25.404 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - null null
+2025-03-05 09:20:25.409 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:20:25.409 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:20:25.409 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:20:25.411 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:20:25.413 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:25.464 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-05 09:20:25.474 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:20:25.505 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:20:25.533 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 123.702ms
+2025-03-05 09:20:25.533 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:20:25.534 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - 200 null application/json; charset=utf-8 129.8515ms
+2025-03-05 09:20:25.543 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:25.595 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 89.4864ms
+2025-03-05 09:20:25.595 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:20:25.598 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 136.5001ms
+2025-03-05 09:20:25.838 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:20:25.845 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 433.7395ms
+2025-03-05 09:20:25.845 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:20:25.846 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 442.0312ms
+2025-03-05 09:20:29.163 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:20:29.164 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:20:29.217 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:20:29.217 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:20:29.217 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:20:29.219 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:20:29.219 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:20:29.219 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:20:29.225 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:20:29.749 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:29.751 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 532.4872ms
+2025-03-05 09:20:29.751 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:20:29.752 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 588.8294ms
+2025-03-05 09:20:29.757 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:29.758 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 539.1479ms
+2025-03-05 09:20:29.758 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:20:29.759 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 594.918ms
+2025-03-05 09:20:29.814 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:29.825 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 599.9045ms
+2025-03-05 09:20:29.825 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:20:29.826 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 608.3849ms
+2025-03-05 09:20:39.825 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:20:39.826 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:20:39.827 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:20:39.828 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:39.828 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.8386ms
+2025-03-05 09:20:39.828 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:20:39.829 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 4.0295ms
+2025-03-05 09:20:39.946 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:20:39.947 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:20:39.947 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:20:39.948 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:20:39.948 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:20:39.948 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:20:39.948 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:20:39.948 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:20:39.948 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:20:39.948 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:20:39.949 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:20:39.949 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:20:39.957 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:39.958 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 9.6512ms
+2025-03-05 09:20:39.958 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:20:39.958 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 11.2211ms
+2025-03-05 09:20:39.962 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:39.962 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 12.6363ms
+2025-03-05 09:20:39.962 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:20:39.962 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 13.9955ms
+2025-03-05 09:20:39.967 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:20:39.967 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 19.0459ms
+2025-03-05 09:20:39.967 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:20:39.967 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 21.2029ms
+2025-03-05 09:20:39.973 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:20:39.974 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 25.2387ms
+2025-03-05 09:20:39.974 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:20:39.974 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 26.5996ms
+2025-03-05 09:22:13.575 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:22:13.577 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:13.577 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:13.588 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:13.588 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 10.6884ms
+2025-03-05 09:22:13.588 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:13.588 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 12.7632ms
+2025-03-05 09:22:13.742 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:22:13.743 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:13.744 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:13.751 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:13.751 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 7.8195ms
+2025-03-05 09:22:13.751 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:13.752 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 9.4787ms
+2025-03-05 09:22:13.816 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:22:13.817 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:13.818 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:13.826 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:13.826 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 8.1977ms
+2025-03-05 09:22:13.826 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:13.826 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 9.686ms
+2025-03-05 09:22:22.180 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:22:22.181 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:22:22.181 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:22:22.182 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:22.183 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.2999ms
+2025-03-05 09:22:22.183 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:22:22.183 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 2.6542ms
+2025-03-05 09:22:27.184 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:22:27.185 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:22:27.185 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:22:27.185 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:27.185 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.6084ms
+2025-03-05 09:22:27.185 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:22:27.186 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 1.7381ms
+2025-03-05 09:22:28.170 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:22:28.170 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:22:28.170 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:22:28.171 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:28.171 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.5177ms
+2025-03-05 09:22:28.171 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:22:28.171 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 1.5345ms
+2025-03-05 09:22:28.536 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:22:28.536 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:22:28.536 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:22:28.536 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:22:28.594 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:28.594 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:22:28.594 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:28.594 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:28.594 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:28.594 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:22:28.594 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:28.594 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:28.660 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:28.660 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:28.660 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 66.4491ms
+2025-03-05 09:22:28.660 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 66.4549ms
+2025-03-05 09:22:28.660 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:28.660 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:28.660 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 124.7004ms
+2025-03-05 09:22:28.660 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 124.6996ms
+2025-03-05 09:22:28.664 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:22:28.664 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 70.4235ms
+2025-03-05 09:22:28.664 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:22:28.664 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 128.7052ms
+2025-03-05 09:22:28.669 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:28.669 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 75.3294ms
+2025-03-05 09:22:28.669 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:28.669 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 133.3534ms
+2025-03-05 09:22:39.062 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:22:39.064 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:39.064 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:39.073 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:39.073 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 8.8559ms
+2025-03-05 09:22:39.073 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:39.073 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 10.6918ms
+2025-03-05 09:22:39.268 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:22:39.270 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:39.270 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:39.279 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:39.279 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 9.1709ms
+2025-03-05 09:22:39.279 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:39.279 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 10.9497ms
+2025-03-05 09:22:39.317 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:22:39.319 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:39.319 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:39.329 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:39.329 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 10.2777ms
+2025-03-05 09:22:39.329 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:39.330 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 12.3007ms
+2025-03-05 09:22:39.802 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:22:39.803 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:22:39.804 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:22:39.804 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:39.804 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:39.804 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:39.804 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:39.804 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:39.804 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:22:39.812 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:39.812 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:39.812 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 8.3443ms
+2025-03-05 09:22:39.812 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:22:39.813 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 8.1642ms
+2025-03-05 09:22:39.813 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:22:39.813 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 10.2768ms
+2025-03-05 09:22:39.813 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 9.0414ms
+2025-03-05 09:22:39.813 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:22:39.813 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 9.144ms
+2025-03-05 09:22:39.813 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:22:39.814 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 11.3157ms
+2025-03-05 09:23:17.416 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:23:17.417 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:23:17.418 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:23:17.428 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:23:17.428 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 10.3974ms
+2025-03-05 09:23:17.428 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:23:17.428 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 12.398ms
+2025-03-05 09:23:17.569 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:23:17.571 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:23:17.571 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:23:17.578 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:23:17.578 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 7.0118ms
+2025-03-05 09:23:17.578 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:23:17.578 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 8.8108ms
+2025-03-05 09:23:17.641 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:23:17.642 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:23:17.642 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:23:17.652 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:23:17.653 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 10.5588ms
+2025-03-05 09:23:17.653 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:23:17.653 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 12.243ms
+2025-03-05 09:23:19.564 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:23:19.565 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:23:19.566 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:23:19.566 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:23:19.566 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:23:19.566 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:23:19.566 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:23:19.566 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:23:19.566 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:23:19.609 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:23:19.609 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 42.4973ms
+2025-03-05 09:23:19.609 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:23:19.609 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 43.4568ms
+2025-03-05 09:23:19.610 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:23:19.610 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:23:19.610 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 43.3988ms
+2025-03-05 09:23:19.610 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:23:19.610 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 44.3459ms
+2025-03-05 09:23:19.610 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:23:19.610 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 44.078ms
+2025-03-05 09:23:19.610 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 45.7233ms
+2025-03-05 09:24:01.707 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:24:01.709 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:01.709 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:01.716 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:01.716 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 7.383ms
+2025-03-05 09:24:01.716 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:01.716 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 9.3918ms
+2025-03-05 09:24:01.848 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:24:01.849 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:01.849 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:01.859 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:01.859 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 9.7469ms
+2025-03-05 09:24:01.859 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:01.860 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 11.3909ms
+2025-03-05 09:24:01.941 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:24:01.941 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:01.941 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:01.949 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:01.949 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 7.2781ms
+2025-03-05 09:24:01.949 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:01.949 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 8.2626ms
+2025-03-05 09:24:06.307 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:24:06.307 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:24:06.307 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:24:06.308 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:06.308 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:06.308 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:06.308 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:06.308 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:06.308 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:06.318 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:06.318 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 9.5219ms
+2025-03-05 09:24:06.318 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:06.318 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 11.0427ms
+2025-03-05 09:24:06.348 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:06.350 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 42.4349ms
+2025-03-05 09:24:06.350 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:06.351 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 43.782ms
+2025-03-05 09:24:06.351 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:06.351 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 42.9362ms
+2025-03-05 09:24:06.351 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:06.351 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 44.6959ms
+2025-03-05 09:24:19.592 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:24:19.593 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:19.593 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:19.602 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:19.602 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 8.9528ms
+2025-03-05 09:24:19.602 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:19.602 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 10.7458ms
+2025-03-05 09:24:19.740 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:24:19.741 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:19.741 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:19.748 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:19.748 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 7.0251ms
+2025-03-05 09:24:19.748 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:19.748 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 8.1328ms
+2025-03-05 09:24:19.807 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:24:19.809 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:19.809 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:19.818 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:19.818 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 9.5599ms
+2025-03-05 09:24:19.818 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:19.819 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 11.3008ms
+2025-03-05 09:24:20.464 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:24:20.464 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:24:20.464 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:24:20.465 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:20.465 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:20.465 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:20.465 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:20.465 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:20.465 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:20.472 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:20.472 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 7.2593ms
+2025-03-05 09:24:20.472 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:20.472 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 7.9363ms
+2025-03-05 09:24:20.473 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:20.473 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 7.8632ms
+2025-03-05 09:24:20.473 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:20.473 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 8.965ms
+2025-03-05 09:24:20.473 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:20.473 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 8.4898ms
+2025-03-05 09:24:20.473 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:20.474 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 9.9007ms
+2025-03-05 09:24:22.451 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:24:22.452 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:22.452 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:22.462 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:22.462 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 9.5966ms
+2025-03-05 09:24:22.462 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:22.462 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 11.3232ms
+2025-03-05 09:24:22.618 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:24:22.619 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:22.619 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:22.627 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:22.628 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 8.7143ms
+2025-03-05 09:24:22.628 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:22.628 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 10.2842ms
+2025-03-05 09:24:22.711 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:24:22.711 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:22.711 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:22.719 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:22.719 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 7.942ms
+2025-03-05 09:24:22.719 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:22.720 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 8.9849ms
+2025-03-05 09:24:47.510 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:24:47.510 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:24:47.510 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:24:47.515 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:47.515 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:47.515 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:47.515 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:47.515 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:47.515 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:47.523 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:47.523 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 7.6891ms
+2025-03-05 09:24:47.523 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:47.523 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 13.2066ms
+2025-03-05 09:24:47.524 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:47.524 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:47.524 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 8.5907ms
+2025-03-05 09:24:47.524 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:47.524 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 8.8033ms
+2025-03-05 09:24:47.524 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:47.585 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 46.0897ms
+2025-03-05 09:24:47.585 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 75.225ms
+2025-03-05 09:24:48.668 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:24:48.669 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:48.669 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:48.677 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:48.677 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 8.0953ms
+2025-03-05 09:24:48.677 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:24:48.677 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 9.2478ms
+2025-03-05 09:24:48.868 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:24:48.868 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:48.869 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:48.876 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:48.876 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 7.8614ms
+2025-03-05 09:24:48.876 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:24:48.877 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 8.8923ms
+2025-03-05 09:24:48.936 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:24:48.937 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:48.937 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:24:48.945 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:24:48.945 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 7.7017ms
+2025-03-05 09:24:48.945 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:24:48.945 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 8.822ms
+2025-03-05 09:26:39.606 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:26:39.607 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:26:39.608 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:26:39.608 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:26:39.608 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.6683ms
+2025-03-05 09:26:39.608 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:26:39.608 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 1.9228ms
+2025-03-05 09:26:39.781 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:26:39.818 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:26:39.818 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:26:39.818 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:26:39.819 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:26:39.819 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:26:39.823 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:26:39.823 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:26:39.823 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:26:39.823 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:26:39.823 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:26:39.824 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:26:39.860 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:26:39.860 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 41.092ms
+2025-03-05 09:26:39.860 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:26:39.860 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 79.7752ms
+2025-03-05 09:26:39.860 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:26:39.860 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 36.4657ms
+2025-03-05 09:26:39.860 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:26:39.861 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 42.9112ms
+2025-03-05 09:26:39.868 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:26:39.869 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 45.0988ms
+2025-03-05 09:26:39.869 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:26:39.869 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 50.7079ms
+2025-03-05 09:26:39.869 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:26:39.869 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 45.5444ms
+2025-03-05 09:26:39.869 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:26:39.869 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 51.6266ms
+2025-03-05 09:28:52.163 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:28:52.164 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:28:52.164 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:28:52.165 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:52.165 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.5187ms
+2025-03-05 09:28:52.165 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:28:52.165 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 1.6174ms
+2025-03-05 09:28:53.161 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:28:53.161 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:28:53.161 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:28:53.162 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:53.162 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.392ms
+2025-03-05 09:28:53.162 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:28:53.162 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 1.2529ms
+2025-03-05 09:28:53.541 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:28:53.541 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:28:53.542 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:28:53.542 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:28:53.542 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:28:53.542 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:28:53.543 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:28:53.545 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:28:53.577 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:28:53.577 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:28:53.578 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:28:53.578 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:28:53.607 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:53.608 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 65.5714ms
+2025-03-05 09:28:53.608 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:28:53.608 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 66.7309ms
+2025-03-05 09:28:53.609 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:53.609 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 66.6844ms
+2025-03-05 09:28:53.609 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:28:53.609 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 67.8064ms
+2025-03-05 09:28:53.612 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:53.613 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 34.7054ms
+2025-03-05 09:28:53.613 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:28:53.613 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:28:53.613 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 35.1498ms
+2025-03-05 09:28:53.613 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:28:53.613 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 70.5379ms
+2025-03-05 09:28:53.613 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 67.9461ms
+2025-03-05 09:28:57.175 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:28:57.176 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:28:57.176 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:28:57.177 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:57.177 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.7649ms
+2025-03-05 09:28:57.177 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:28:57.177 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 2.0786ms
+2025-03-05 09:28:57.407 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:28:57.407 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - null null
+2025-03-05 09:28:57.408 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:28:57.408 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:28:57.408 +08:00 [INF] Route matched with {action = "GetDepartment", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.DepartmentPatientDto]]] GetDepartment() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:28:57.408 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:28:57.408 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - null null
+2025-03-05 09:28:57.408 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - null null
+2025-03-05 09:28:57.408 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:28:57.408 +08:00 [INF] Route matched with {action = "GetPatientNameAndId", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientNameAndId]]] GetPatientNameAndId() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:28:57.409 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:28:57.409 +08:00 [INF] Route matched with {action = "GetPatientCardInfos", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Patients.PatientCardDto]]] GetPatientCardInfos() on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:28:57.417 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.DepartmentPatientDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:57.417 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application) in 9.0377ms
+2025-03-05 09:28:57.417 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetDepartment (HIS.Application)'
+2025-03-05 09:28:57.446 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getDepartment - 200 null application/json; charset=utf-8 37.8634ms
+2025-03-05 09:28:57.448 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientNameAndId, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:57.448 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application) in 39.3948ms
+2025-03-05 09:28:57.448 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientNameAndId (HIS.Application)'
+2025-03-05 09:28:57.448 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientNameAndId - 200 null application/json; charset=utf-8 40.3572ms
+2025-03-05 09:28:57.448 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Patients.PatientCardDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:28:57.448 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application) in 39.4421ms
+2025-03-05 09:28:57.448 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.GetPatientCardInfos (HIS.Application)'
+2025-03-05 09:28:57.449 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/patient/getPatientCardInfos - 200 null application/json; charset=utf-8 40.4395ms
+2025-03-05 09:28:57.451 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:28:57.451 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 42.9962ms
+2025-03-05 09:28:57.451 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:28:57.451 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 44.1363ms
+2025-03-05 09:29:36.647 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:29:36.648 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:29:36.648 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:29:36.648 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:29:36.649 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.452ms
+2025-03-05 09:29:36.649 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:29:36.649 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 1.37ms
+2025-03-05 09:29:36.764 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/systemconfig/NatureofPatientList - null null
+2025-03-05 09:29:36.765 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:29:36.766 +08:00 [INF] Executing endpoint 'HIS.HIS.Naturepatients.NaturepatientsServices.GetNatyrePatiient (HIS.Application)'
+2025-03-05 09:29:36.772 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:29:36.772 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:29:36.775 +08:00 [INF] Route matched with {action = "GetNatyrePatiient", controller = "NaturepatientsServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.NaturepatientServices.NaturepatientDTO]]] GetNatyrePatiient() on controller HIS.HIS.Naturepatients.NaturepatientsServices (HIS.Application).
+2025-03-05 09:29:36.799 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:29:36.799 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 26.5043ms
+2025-03-05 09:29:36.799 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:29:36.800 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 33.7437ms
+2025-03-05 09:29:36.942 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.NaturepatientServices.NaturepatientDTO, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:29:36.948 +08:00 [INF] Executed action HIS.HIS.Naturepatients.NaturepatientsServices.GetNatyrePatiient (HIS.Application) in 172.5663ms
+2025-03-05 09:29:36.948 +08:00 [INF] Executed endpoint 'HIS.HIS.Naturepatients.NaturepatientsServices.GetNatyrePatiient (HIS.Application)'
+2025-03-05 09:29:36.948 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/systemconfig/NatureofPatientList - 200 null application/json; charset=utf-8 183.7944ms
+2025-03-05 09:29:52.622 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - null null
+2025-03-05 09:29:52.623 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:29:52.627 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] GetInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:29:52.738 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:29:52.739 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 112.4407ms
+2025-03-05 09:29:52.739 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:29:52.740 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - 200 null application/json; charset=utf-8 117.325ms
+2025-03-05 09:30:01.045 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - null null
+2025-03-05 09:30:01.046 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:01.046 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] GetInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:30:01.053 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:30:01.054 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 7.0716ms
+2025-03-05 09:30:01.054 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:01.054 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - 200 null application/json; charset=utf-8 8.2522ms
+2025-03-05 09:30:23.644 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - null null
+2025-03-05 09:30:23.645 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:23.645 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] GetInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:30:23.655 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:30:23.655 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 9.781ms
+2025-03-05 09:30:23.655 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:23.655 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - 200 null application/json; charset=utf-8 10.8587ms
+2025-03-05 09:30:32.463 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - null null
+2025-03-05 09:30:32.463 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:32.463 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] GetInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:30:32.469 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:30:32.469 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 5.9467ms
+2025-03-05 09:30:32.469 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:32.469 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - 200 null application/json; charset=utf-8 6.7634ms
+2025-03-05 09:30:44.931 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:30:44.932 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:30:44.932 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:30:44.932 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:30:44.932 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 0.3927ms
+2025-03-05 09:30:44.932 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:30:44.932 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 1.1502ms
+2025-03-05 09:30:45.165 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:30:45.165 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - null null
+2025-03-05 09:30:45.166 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:30:45.166 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:30:45.166 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:45.166 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] GetInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:30:45.176 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:30:45.176 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:30:45.176 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 10.683ms
+2025-03-05 09:30:45.176 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:30:45.177 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 11.5613ms
+2025-03-05 09:30:45.177 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 10.796ms
+2025-03-05 09:30:45.177 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:45.178 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - 200 null application/json; charset=utf-8 12.0885ms
+2025-03-05 09:30:52.047 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:30:52.048 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:30:52.048 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:30:52.049 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:30:52.049 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.144ms
+2025-03-05 09:30:52.049 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:30:52.049 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 2.3958ms
+2025-03-05 09:30:52.255 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:30:52.255 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - null null
+2025-03-05 09:30:52.256 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:30:52.256 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:30:52.256 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:52.256 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] GetInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:30:52.268 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:30:52.268 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 11.8206ms
+2025-03-05 09:30:52.268 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:30:52.268 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - 200 null application/json; charset=utf-8 12.8393ms
+2025-03-05 09:30:52.270 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:30:52.270 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 14.4058ms
+2025-03-05 09:30:52.270 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:30:52.271 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 15.9643ms
+2025-03-05 09:42:24.432 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - null null
+2025-03-05 09:42:24.469 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-05 09:42:24.470 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-05 09:42:24.488 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 17.5513ms
+2025-03-05 09:42:24.488 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-05 09:42:24.488 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 56.314ms
+2025-03-05 09:42:24.511 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetChargemodules - null null
+2025-03-05 09:42:24.512 +08:00 [INF] Executing endpoint 'HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules (HIS.Application)'
+2025-03-05 09:42:24.514 +08:00 [INF] Route matched with {action = "GetChargemodules", controller = "ChargemodulesServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.ResultDto] GetChargemodules() on controller HIS.HIS.Chargemodules.ChargemodulesServices (HIS.Application).
+2025-03-05 09:42:24.705 +08:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HIS.EntityFrameworkCore.HISDbContext'.
+System.FormatException: Could not parse CHAR(36) value as Guid: 1
+   at MySqlConnector.ColumnReaders.GuidChar36ColumnReader.ReadValue(ReadOnlySpan`1 data, ColumnDefinitionPayload columnDefinition) in /_/src/MySqlConnector/ColumnReaders/GuidChar36ColumnReader.cs:line 13
+   at MySqlConnector.Core.Row.GetValue(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 94
+   at MySqlConnector.Core.Row.GetGuid(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 197
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadGuid(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.FormatException: Could not parse CHAR(36) value as Guid: 1
+   at MySqlConnector.ColumnReaders.GuidChar36ColumnReader.ReadValue(ReadOnlySpan`1 data, ColumnDefinitionPayload columnDefinition) in /_/src/MySqlConnector/ColumnReaders/GuidChar36ColumnReader.cs:line 13
+   at MySqlConnector.Core.Row.GetValue(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 94
+   at MySqlConnector.Core.Row.GetGuid(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 197
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadGuid(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-03-05 09:42:35.256 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-03-05 09:42:35.256 +08:00 [ERR] Could not parse CHAR(36) value as Guid: 1
+System.FormatException: Could not parse CHAR(36) value as Guid: 1
+   at MySqlConnector.ColumnReaders.GuidChar36ColumnReader.ReadValue(ReadOnlySpan`1 data, ColumnDefinitionPayload columnDefinition) in /_/src/MySqlConnector/ColumnReaders/GuidChar36ColumnReader.cs:line 13
+   at MySqlConnector.Core.Row.GetValue(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 94
+   at MySqlConnector.Core.Row.GetGuid(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 197
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadGuid(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Volo.Abp.Domain.Repositories.EntityFrameworkCore.EfCoreRepository`2.GetListAsync(Boolean includeDetails, CancellationToken cancellationToken)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous[TResult](IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapterWithReturnValue`1.ProceedAsync()
+   at Volo.Abp.Uow.UnitOfWorkInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync[TResult](IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules() in E:\HIS\aspnet-core\src\HIS.Application\HIS\Chargemodules\ChargemodulesServices.cs:line 52
+   at lambda_method3992(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-03-05 09:42:35.261 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-03-05 09:42:35.262 +08:00 [INF] Executed action HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules (HIS.Application) in 10747.7868ms
+2025-03-05 09:42:35.262 +08:00 [INF] Executed endpoint 'HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules (HIS.Application)'
+2025-03-05 09:42:35.276 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetChargemodules - 500 null application/json; charset=utf-8 10765.2114ms
+2025-03-05 09:43:08.190 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetChargemodules - null null
+2025-03-05 09:43:08.191 +08:00 [INF] Executing endpoint 'HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules (HIS.Application)'
+2025-03-05 09:43:08.192 +08:00 [INF] Route matched with {action = "GetChargemodules", controller = "ChargemodulesServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.ResultDto] GetChargemodules() on controller HIS.HIS.Chargemodules.ChargemodulesServices (HIS.Application).
+2025-03-05 09:43:08.245 +08:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HIS.EntityFrameworkCore.HISDbContext'.
+System.FormatException: Could not parse CHAR(36) value as Guid: 1
+   at MySqlConnector.ColumnReaders.GuidChar36ColumnReader.ReadValue(ReadOnlySpan`1 data, ColumnDefinitionPayload columnDefinition) in /_/src/MySqlConnector/ColumnReaders/GuidChar36ColumnReader.cs:line 13
+   at MySqlConnector.Core.Row.GetValue(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 94
+   at MySqlConnector.Core.Row.GetGuid(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 197
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadGuid(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.FormatException: Could not parse CHAR(36) value as Guid: 1
+   at MySqlConnector.ColumnReaders.GuidChar36ColumnReader.ReadValue(ReadOnlySpan`1 data, ColumnDefinitionPayload columnDefinition) in /_/src/MySqlConnector/ColumnReaders/GuidChar36ColumnReader.cs:line 13
+   at MySqlConnector.Core.Row.GetValue(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 94
+   at MySqlConnector.Core.Row.GetGuid(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 197
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadGuid(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-03-05 09:44:38.672 +08:00 [ERR] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "对不起，在处理您的请求期间产生了一个服务器内部错误！！",
+  "details": null,
+  "data": null,
+  "validationErrors": null
+}
+
+2025-03-05 09:44:38.692 +08:00 [ERR] Could not parse CHAR(36) value as Guid: 1
+System.FormatException: Could not parse CHAR(36) value as Guid: 1
+   at MySqlConnector.ColumnReaders.GuidChar36ColumnReader.ReadValue(ReadOnlySpan`1 data, ColumnDefinitionPayload columnDefinition) in /_/src/MySqlConnector/ColumnReaders/GuidChar36ColumnReader.cs:line 13
+   at MySqlConnector.Core.Row.GetValue(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 94
+   at MySqlConnector.Core.Row.GetGuid(Int32 ordinal) in /_/src/MySqlConnector/Core/Row.cs:line 197
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadGuid(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SplitQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Volo.Abp.Domain.Repositories.EntityFrameworkCore.EfCoreRepository`2.GetListAsync(Boolean includeDetails, CancellationToken cancellationToken)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous[TResult](IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapterWithReturnValue`1.ProceedAsync()
+   at Volo.Abp.Uow.UnitOfWorkInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync[TResult](IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules() in E:\HIS\aspnet-core\src\HIS.Application\HIS\Chargemodules\ChargemodulesServices.cs:line 52
+   at lambda_method3992(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-03-05 09:44:38.693 +08:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2025-03-05 09:44:38.693 +08:00 [INF] Executed action HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules (HIS.Application) in 90503.5863ms
+2025-03-05 09:44:38.693 +08:00 [INF] Executed endpoint 'HIS.HIS.Chargemodules.ChargemodulesServices.GetChargemodules (HIS.Application)'
+2025-03-05 09:44:38.796 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetChargemodules - 500 null application/json; charset=utf-8 90607.2481ms
+2025-03-05 09:44:50.588 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v2/swagger.json - null null
+2025-03-05 09:44:50.594 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 6.454ms
+2025-03-05 09:45:10.300 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/PatientCenter/GetPatients?patientName=%E5%BD%AD%E9%9B%85%E5%BD%AC - null null
+2025-03-05 09:45:10.303 +08:00 [INF] Executing endpoint 'HIS.HIS.PatientCenters.PatientCenterService.GetPatients (HIS.Application)'
+2025-03-05 09:45:10.304 +08:00 [INF] Route matched with {action = "GetPatients", controller = "PatientCenter", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.PatientCenters.PatientCenterDto]]] GetPatients(System.String) on controller HIS.HIS.PatientCenters.PatientCenterService (HIS.Application).
+2025-03-05 09:45:10.389 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.PatientCenters.PatientCenterDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:45:10.395 +08:00 [INF] Executed action HIS.HIS.PatientCenters.PatientCenterService.GetPatients (HIS.Application) in 91.1848ms
+2025-03-05 09:45:10.395 +08:00 [INF] Executed endpoint 'HIS.HIS.PatientCenters.PatientCenterService.GetPatients (HIS.Application)'
+2025-03-05 09:45:10.396 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/PatientCenter/GetPatients?patientName=%E5%BD%AD%E9%9B%85%E5%BD%AC - 200 null application/json; charset=utf-8 95.7577ms
+2025-03-05 09:55:50.941 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:55:50.942 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:55:50.942 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:55:50.944 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:55:50.944 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.4882ms
+2025-03-05 09:55:50.944 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:55:50.944 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.7693ms
+2025-03-05 09:55:51.153 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:55:51.154 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - null null
+2025-03-05 09:55:51.154 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:55:51.154 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:55:51.155 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:55:51.155 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] GetInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:55:51.168 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:55:51.169 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 14.3256ms
+2025-03-05 09:55:51.169 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:55:51.169 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 15.8206ms
+2025-03-05 09:55:51.178 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:55:51.178 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 23.352ms
+2025-03-05 09:55:51.178 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:55:51.178 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/page - 200 null application/json; charset=utf-8 24.3874ms
