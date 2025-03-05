@@ -40,7 +40,7 @@ namespace HIS.HIS.Doctors
                 await doctorRepository.InsertAsync(entity);
                 return new APIResult<DoctorDto>()
                 {
-                    Code = 0,
+                    Code = CodeEnum.success,
                     Message = "添加医生成功",
                 };
 

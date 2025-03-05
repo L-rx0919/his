@@ -14,7 +14,7 @@ namespace HIS.System_Administration
     public class InvoiceConfiguration:FullAuditedEntity<Guid>
     {
        
-        public int InvoiceConfigurationID { get; set; }
+        public Guid InvoiceConfigurationID { get; set; }
         /// <summary>
         /// 首字母
         /// </summary>

@@ -17,6 +17,10 @@ namespace HIS.HIS.InpatientRecords
         /// </summary>
         public Guid patient_id { get; set; }
         /// <summary>
+        /// 病人姓名
+        /// </summary>
+        public string patient_name { get; set; }
+        /// <summary>
         /// 入院时间
         /// </summary>
         public DateTime admission_date { get; set; }
@@ -28,11 +32,19 @@ namespace HIS.HIS.InpatientRecords
         /// <summary>
         /// 科室ID
         /// </summary>
-        public int department_id { get; set; }
+        public Guid department_id { get; set; }
+        /// <summary>
+        /// 科室名称
+        /// </summary>
+        public string department_name { get; set; }
         /// <summary>
         /// 主治医生ID
         /// </summary>
-        public int doctor_id { get; set; }
+        public Guid doctor_id { get; set; }
+        /// <summary>
+        /// 主治医生姓名
+        /// </summary>
+        public string doctor_name { get; set; }
         /// <summary>
         /// 病房类型
         /// </summary>

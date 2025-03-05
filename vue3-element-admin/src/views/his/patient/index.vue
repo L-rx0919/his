@@ -92,7 +92,7 @@ const onSubmit = () => {
  * 加载数据
  */
 const loadData = () => {
-  PatientAPI.getPatientCardInfos().then((res: PatientCardInfo[]) => {
+  PatientAPI.getPatientCardInfos().then((res: PatientDto[]) => {
     tableData.value = res;
   });
 };
@@ -104,7 +104,27 @@ if (!dialogVisible.value) {
     PatientNameAndIdDto.value = res;
   });
 }
-const patientCardInfo = ref<PatientCardInfo>({});
+const patientCardInfo = ref<PatientCardInfo>({
+  concurrencyStamp: "",
+  creationTime: "",
+  creatorId: "",
+  lastModificationTime: "",
+  lastModifierId: "",
+  isDeleted: false,
+  deleterId: "",
+  deletionTime: "",
+  patient_id: "",
+  card_status: "",
+  card_type: "",
+  balance: 0,
+  create_date: "",
+  expiry_date: "",
+  last_transaction_date: "",
+  card_owner_name: "",
+  associated_dept: "",
+  contact_phone: "",
+  remarks: "",
+});
 const insert = () => {
   PatientAPI.insertPatientCardInfo(patientCardInfo.value).then(() => {
     dialogVisible.value = false;

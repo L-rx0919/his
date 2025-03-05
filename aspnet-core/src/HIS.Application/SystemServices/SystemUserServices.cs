@@ -71,7 +71,7 @@ namespace HIS.SystemServices
 
                 SystemUser sysUser = new SystemUser
                 {
-                    Avatar = "https://c-ssl.duitang.com/uploads/blog/202207/18/20220718021545_9db54.jpeg",
+                    Avatar = "https://www.keaitupian.cn/cjpic/frombd/0/253/2105886811/957679892.jpg",
                     DeptId = sysDept.Id,
                     Mobile = "13693288263",
                     Nickname = "Feeling",

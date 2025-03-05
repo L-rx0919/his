@@ -11,9 +11,7 @@ namespace HIS.HIS.Patients
 {
     public class Patient_Card_InfoDto:FullAuditedAggregateRoot<Guid>
     {
-        /// <summary>
-        /// 病人ID
-        /// </summary>
+        
         public string Patient_id { get; set; }
         /// <summary>
         /// 卡状态

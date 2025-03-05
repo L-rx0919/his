@@ -9,6 +9,8 @@ namespace HIS.HIS.Patients
 {
     public class PatientCardDto:FullAuditedAggregateRoot<Guid>
     {
+
+     
         /// <summary>
         /// 患者姓名
         /// </summary>

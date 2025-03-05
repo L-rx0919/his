@@ -17,10 +17,10 @@ namespace HIS.HIS.Patients
         /// </summary>
         /// <returns></returns>
         Task<APIResult<List<PatientDto>>> GetPatients(string name, string phone);
-        /// <summary>
-        /// 查询患者一卡通信息
-        /// </summary>
-        /// <returns></returns>
-        Task<APIResult<List<PatientCardDto>>> GetPatientCardInfos();
+        ///// <summary>
+        ///// 查询患者一卡通信息
+        ///// </summary>
+        ///// <returns></returns>
+        //Task<APIResult<List<PatientCardDto>>> GetPatientCardInfos();
     }
 }

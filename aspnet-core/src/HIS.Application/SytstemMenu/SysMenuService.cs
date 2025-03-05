@@ -106,7 +106,6 @@ namespace HIS.SytstemMenu
                                 }
                             }
                         }
-
                     }
                     ,
                     new SysMenuDto
@@ -251,9 +250,9 @@ namespace HIS.SytstemMenu
                                     },
                                     new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
-                                        Name = "PatientDetail",
-                                        Path = "PatientDetail",
+                                        Component = "his/patientCenter/index",
+                                        Name = "patientCenter",
+                                        Path = "patientCenter",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,
@@ -280,7 +279,7 @@ namespace HIS.SytstemMenu
                             },
                             new SysMenuDto
                             {
-                                Component = "his/inpatientRecords/inpatientRecordsList",
+                                Component = "his/inpatientRecord/index",
                                 Name = "Inpatientmanagement",
                                 Path = "inpatientmanagement",
                                 Meta = new Meta
