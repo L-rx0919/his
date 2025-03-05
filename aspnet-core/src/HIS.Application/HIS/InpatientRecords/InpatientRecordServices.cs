@@ -34,7 +34,7 @@ namespace HIS.HIS.InpatientRecords
         /// </summary>
         /// <param name="patient"></param>
         /// <returns></returns>
-        [HttpPost("api/AddInpatientRecords")]
+        [HttpPost("/api/v1/his/inpatientRecord/insertInpatientRecord")]
         public async Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient)
         {
             InpatientRecord entity = ObjectMapper.Map<InpatientRecordDto, InpatientRecord>(patient);
@@ -79,8 +79,7 @@ namespace HIS.HIS.InpatientRecords
 
                 throw;
             }
-            //根据Id删除住院记录
-          
+
         }
 
         /// <summary>
@@ -104,6 +103,7 @@ namespace HIS.HIS.InpatientRecords
 
                          select new InpatientRecordDto
                          {
+                             Id = a.Id,
                              patient_id = a.patient_id,
                              patient_name = b.patient_name,
                              admission_date = a.admission_date,
@@ -122,10 +122,8 @@ namespace HIS.HIS.InpatientRecords
                 Code = CodeEnum.success,
                 Message = "获取住院记录成功"
             };
-
-
-
         }
+        
 
 
     }
