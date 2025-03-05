@@ -80,19 +80,58 @@
 </template>
 
 <script lang="ts" setup>
+import inpatientRecordAPI, {InpatientRecordDto,  inpatientRecordAPIQuery, InpatientRecordInfor } from "@/api/his/inpatientRecord/index";
+//对话框
+const dialogVisible = ref(false);
+// const deptlist = ref<GetDepartmentDto[]>([]);
+// const GetDepartment = () => {
+//   InpatientRecordAPI.GetDepartment().then((res: GetDepartmentDto[]) => {
+//     deptlist.value = res;
+//   });
+// };
+const inserttInpatientRecordInfor = ref<InpatientRecordInfor>({
+  id: "",
+  concurrencyStamp: "",
+  creationTime: "",
+  creatorId: "" ,
+  lastModificationTime: "",
+  lastModifierId: "",
+  isDeleted: false,
+  deleterId:"",
+  deletionTime: "",
+  patient_id: "",
+  patient_name: "",
+  admission_date: "",
+  discharge_date: "",
+  department_id: "",
+  department_name: "",
+  doctor_id: "",
+  doctor_name: "",
+  room_type: "",
+  admission_reason: "",
+  is_in_insurance: false
+})
+//添加住院信息
+const insert = () => {
+  inpatientRecordAPI.addList(inserttInpatientRecordInfor.value).then(() => {
+    dialogVisible.value = false;
+    loadlist();
+  });
+};
+//获取
 import InpatientRecordAPI, {
   inpatientRecordAPIQuery,
   InpatientRecordDto,
 } from "@/api/his/inpatientRecord/index";
 
 const tableData = ref<InpatientRecordDto[]>([]);
-
-const formInline = reactive<inpatientRecordAPIQuery>({});
-
+const formInline = ref<inpatientRecordAPIQuery>({});
 const loadlist = () => {
+   inpatientRecordAPI.getList(formInline.value).then((res) => {
   InpatientRecordAPI.getList(formInline).then((res: InpatientRecordDto[]) => {
     tableData.value = res;
   });
+}
 };
 
 /** 页面加载完成后加载数据 */
@@ -101,6 +140,24 @@ onMounted(() => {
 });
 //删除弹出框
 const delshow = (id: string) => {
+  ElMessageBox.confirm(
+    '确定要删除吗?',
+    '警告',
+    {
+      confirmButtonText: 'OK',
+      cancelButtonText: '取消',
+      type: 'warning',
+    }
+  )
+    .then(() => {
+      inpatientRecordAPI.delList(id).then(() => {   
+        debugger
+        ElMessage({
+          type: 'success',
+          message: '删除成功!',
+        })
+        loadlist();
+      })
   ElMessageBox.confirm("确定要删除吗?", "警告", {
     confirmButtonText: "OK",
     cancelButtonText: "取消",
@@ -125,6 +182,15 @@ const delshow = (id: string) => {
     })
     .catch(() => {
       ElMessage({
+        type: 'info',
+        message: '已取消删除',
+      })
+    })
+}
+/** 页面加载完成后加载数据 */
+onMounted(() => {
+ loadlist();
+});
         type: "info",
         message: "已取消删除",
       });
