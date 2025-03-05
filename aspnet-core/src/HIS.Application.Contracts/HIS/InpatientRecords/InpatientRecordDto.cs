@@ -12,6 +12,7 @@ namespace HIS.HIS.InpatientRecords
     /// </summary>
     public class InpatientRecordDto : FullAuditedAggregateRoot<Guid>
     {
+        public Guid Id { get; set; }
         /// <summary>
         /// 病人ID
         /// </summary>
