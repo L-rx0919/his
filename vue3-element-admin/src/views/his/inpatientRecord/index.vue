@@ -88,55 +88,16 @@
 </template>
 
 <script lang="ts" setup>
-import InpatientRecordAPI, { inpatientRecordAPIQuery, InpatientRecordDto,InpatientRecordInfor } from "@/api/his/inpatientRecord/index";
-
-
-const tableData = ref<InpatientRecordDto[]>([]);
-
-const formInline = reactive<inpatientRecordAPIQuery>({});
-
-const loadlist = () => {
-   InpatientRecordAPI.getList(formInline).then((res:InpatientRecordDto[]) => {
-    tableData.value = res;
-  });
-}
-
-/** 页面加载完成后加载数据 */
-onMounted(() => {
- loadlist();
-});
-//删除弹出框
-const delshow = (id: string) => {
-  ElMessageBox.confirm(
-    '确定要删除吗?',
-    '警告',
-    {
-      confirmButtonText: 'OK',
-      cancelButtonText: '取消',
-      type: 'warning',
-    }
-  )
-    .then(() => {
-      InpatientRecordAPI.delList(id).then(() => {   
-        debugger
-        ElMessage({
-          type: 'success',
-          message: '删除成功!',
-        })
-        loadlist();
-      })
-    })
-    .catch(() => {
-      ElMessage({
-        type: 'info',
-        message: '已取消删除',
-      })
-    })
-}
-
+import inpatientRecordAPI, {InpatientRecordDto,  inpatientRecordAPIQuery, InpatientRecordInfor } from "@/api/his/inpatientRecord/index";
 //对话框
 const dialogVisible = ref(false);
-const InpatientRecordInfor = ref<InpatientRecordInfor>({
+// const deptlist = ref<GetDepartmentDto[]>([]);
+// const GetDepartment = () => {
+//   InpatientRecordAPI.GetDepartment().then((res: GetDepartmentDto[]) => {
+//     deptlist.value = res;
+//   });
+// };
+const inserttInpatientRecordInfor = ref<InpatientRecordInfor>({
   id: "",
   concurrencyStamp: "",
   creationTime: "",
@@ -160,10 +121,49 @@ const InpatientRecordInfor = ref<InpatientRecordInfor>({
 })
 //添加住院信息
 const insert = () => {
-  InpatientRecordAPI.addList(InpatientRecordInfor.value).then(() => {
+  inpatientRecordAPI.addList(inserttInpatientRecordInfor.value).then(() => {
     dialogVisible.value = false;
     loadlist();
   });
 };
-
+//获取
+const tableData = ref<InpatientRecordDto[]>([]);
+const formInline = ref<inpatientRecordAPIQuery>({});
+const loadlist = () => {
+   inpatientRecordAPI.getList(formInline.value).then((res) => {
+    tableData.value = res;
+  });
+}
+//删除弹出框
+const delshow = (id: string) => {
+  ElMessageBox.confirm(
+    '确定要删除吗?',
+    '警告',
+    {
+      confirmButtonText: 'OK',
+      cancelButtonText: '取消',
+      type: 'warning',
+    }
+  )
+    .then(() => {
+      inpatientRecordAPI.delList(id).then(() => {   
+        debugger
+        ElMessage({
+          type: 'success',
+          message: '删除成功!',
+        })
+        loadlist();
+      })
+    })
+    .catch(() => {
+      ElMessage({
+        type: 'info',
+        message: '已取消删除',
+      })
+    })
+}
+/** 页面加载完成后加载数据 */
+onMounted(() => {
+ loadlist();
+});
 </script>

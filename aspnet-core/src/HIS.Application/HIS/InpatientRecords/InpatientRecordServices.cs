@@ -34,7 +34,7 @@ namespace HIS.HIS.InpatientRecords
         /// </summary>
         /// <param name="patient"></param>
         /// <returns></returns>
-        [HttpPost("/api/v1/his/inpatientRecord/insertInpatientRecord")]
+        [HttpPost("/api/v1/his/inpatientRecord/insertInpatientRecordinfo")]
         public async Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient)
         {
             InpatientRecord entity = ObjectMapper.Map<InpatientRecordDto, InpatientRecord>(patient);
