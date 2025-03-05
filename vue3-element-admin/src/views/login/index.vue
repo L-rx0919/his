@@ -142,7 +142,7 @@ const captchaBase64 = ref(); // 验证码图片Base64字符串
 
 const loginFormData = ref<LoginFormData>({
   username: "admin",
-  password: "123456",
+  password: "admin123",
   captchaKey: "",
   captchaCode: "",
 });
