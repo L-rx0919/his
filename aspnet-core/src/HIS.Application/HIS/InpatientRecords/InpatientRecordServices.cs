@@ -65,13 +65,22 @@ namespace HIS.HIS.InpatientRecords
         [HttpDelete("/api/v1/his/inpatientRecord/id")]
         public async Task<APIResult<InpatientRecordDto>> DelInpatientRecord(Guid id)
         {
-            //根据Id删除住院记录
-            await inpatientRecordRepository.DeleteAsync(x => x.Id == id);
-            return new APIResult<InpatientRecordDto>()
+            try
             {
-                Code = CodeEnum.success,
-                Message = "删除住院记录成功",
-            };
+                await inpatientRecordRepository.DeleteAsync(x => x.Id == id);
+                return new APIResult<InpatientRecordDto>()
+                {
+                    Code = CodeEnum.success,
+                    Message = "删除住院记录成功",
+                };
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            //根据Id删除住院记录
+          
         }
 
         /// <summary>

@@ -1,0 +1,901 @@
+2025-03-05 09:06:28.256 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-05 09:06:31.260 +08:00 [INF] Loaded ABP modules:
+2025-03-05 09:06:31.261 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-05 09:06:31.261 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-05 09:06:31.261 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-05 09:06:31.261 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-05 09:06:31.261 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-05 09:06:31.261 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-05 09:06:31.261 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-05 09:06:31.261 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-05 09:06:31.261 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-05 09:06:31.261 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-05 09:06:31.261 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-05 09:06:31.261 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-05 09:06:31.261 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-05 09:06:31.261 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-05 09:06:31.261 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-05 09:06:31.261 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-05 09:06:31.261 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-05 09:06:31.292 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-05 09:06:31.752 +08:00 [INF] User profile is available. Using 'C:\Users\weiji\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-05 09:06:31.986 +08:00 [INF] Initialized all ABP modules.
+2025-03-05 09:06:32.183 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-05 09:06:32.380 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-05 09:06:32.380 +08:00 [INF] Hosting environment: Development
+2025-03-05 09:06:32.380 +08:00 [INF] Content root path: D:\八维\医疗\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-05 09:06:32.570 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-05 09:06:34.758 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:06:34.785 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-05 09:06:34.811 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-05 09:06:34.815 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 26.4175ms
+2025-03-05 09:06:34.815 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:06:34.825 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 2264.4833ms
+2025-03-05 09:06:34.836 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-05 09:06:34.901 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 64.9775ms
+2025-03-05 09:06:34.911 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-05 09:06:34.912 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-05 09:06:34.917 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 4.7454ms
+2025-03-05 09:06:34.923 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-05 09:06:34.924 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 12.6162ms
+2025-03-05 09:06:34.958 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.0935ms
+2025-03-05 09:06:35.002 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-05 09:06:35.308 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 305.9038ms
+2025-03-05 09:06:43.305 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-03-05 09:06:43.315 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:06:43.317 +08:00 [INF] Route matched with {action = "Captcha", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.SystemServices.CaptchaDto] Captcha() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:06:43.670 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.CaptchaDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:06:43.681 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.Captcha (HIS.Application) in 363.5673ms
+2025-03-05 09:06:43.681 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:06:43.681 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 200 null application/json; charset=utf-8 376.2869ms
+2025-03-05 09:06:49.902 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - multipart/form-data; boundary=----WebKitFormBoundaryYAR9opLmhHggYELe 486
+2025-03-05 09:06:49.909 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:06:49.909 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:06:49.910 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:06:49.920 +08:00 [INF] Route matched with {action = "Login", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.LoginResultDto]] LoginAsync(HIS.SystemServices.LoginDto) on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:06:50.485 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.LoginResultDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:06:50.487 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application) in 567.193ms
+2025-03-05 09:06:50.487 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:06:50.745 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - 200 null application/json; charset=utf-8 843.0469ms
+2025-03-05 09:06:50.753 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - null null
+2025-03-05 09:06:50.754 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:06:50.755 +08:00 [INF] Route matched with {action = "Captcha", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[HIS.SystemServices.CaptchaDto] Captcha() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:06:50.805 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.CaptchaDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:06:50.806 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.Captcha (HIS.Application) in 51.0535ms
+2025-03-05 09:06:50.806 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.Captcha (HIS.Application)'
+2025-03-05 09:06:50.806 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/auth/captcha - 200 null application/json; charset=utf-8 52.7341ms
+2025-03-05 09:07:02.831 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - multipart/form-data; boundary=----WebKitFormBoundarynjp9Xg0zRW2214iO 488
+2025-03-05 09:07:02.832 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:07:02.832 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:07:02.833 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:07:02.833 +08:00 [INF] Route matched with {action = "Login", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.LoginResultDto]] LoginAsync(HIS.SystemServices.LoginDto) on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:07:02.876 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.LoginResultDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:07:02.879 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application) in 46.0813ms
+2025-03-05 09:07:02.879 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.LoginAsync (HIS.Application)'
+2025-03-05 09:07:02.906 +08:00 [INF] Request finished HTTP/1.1 POST https://localhost:44323/api/v1/auth/login - 200 null application/json; charset=utf-8 74.511ms
+2025-03-05 09:07:02.913 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/users/me - null null
+2025-03-05 09:07:02.951 +08:00 [INF] Executing endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-05 09:07:02.953 +08:00 [INF] Route matched with {action = "Info", controller = "SystemUserServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.SystemServices.PermissionDto]] InfoAsync() on controller HIS.SystemServices.SystemUserServices (HIS.Application).
+2025-03-05 09:07:02.979 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.SystemServices.PermissionDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:07:02.984 +08:00 [INF] Executed action HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application) in 30.3303ms
+2025-03-05 09:07:02.984 +08:00 [INF] Executed endpoint 'HIS.SystemServices.SystemUserServices.InfoAsync (HIS.Application)'
+2025-03-05 09:07:02.984 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/users/me - 200 null application/json; charset=utf-8 71.6448ms
+2025-03-05 09:07:03.298 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - null null
+2025-03-05 09:07:03.299 +08:00 [INF] Executing endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-05 09:07:03.302 +08:00 [INF] Route matched with {action = "GetAll", controller = "SystemDic", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SystemDicServices.SysDictDto]]] GetAllAsync() on controller HIS.SystemDicServices.SystemDicService (HIS.Application).
+2025-03-05 09:07:03.604 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SystemDicServices.SysDictDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:07:03.607 +08:00 [INF] Executed action HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application) in 305.0154ms
+2025-03-05 09:07:03.607 +08:00 [INF] Executed endpoint 'HIS.SystemDicServices.SystemDicService.GetAllAsync (HIS.Application)'
+2025-03-05 09:07:03.607 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/dict/list - 200 null application/json; charset=utf-8 309.6145ms
+2025-03-05 09:07:03.615 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:07:03.616 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:07:03.618 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:07:03.705 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:07:03.714 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 95.8203ms
+2025-03-05 09:07:03.714 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:07:03.714 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 98.9883ms
+2025-03-05 09:07:06.978 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - null null
+2025-03-05 09:07:06.979 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:07:06.980 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-05 09:07:06.983 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:07:06.983 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:07:06.984 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:07:06.985 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:07:06.985 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:07:06.985 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:07:06.988 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:07:06.989 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:07:07.065 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 76.8926ms
+2025-03-05 09:07:07.065 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:07:07.099 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 86.0586ms
+2025-03-05 09:07:07.144 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 158.5718ms
+2025-03-05 09:07:07.148 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:07:07.149 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - 200 null application/json; charset=utf-8 170.9058ms
+2025-03-05 09:07:07.700 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:07:07.708 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 720.3564ms
+2025-03-05 09:07:07.709 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:07:07.709 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 730.2857ms
+2025-03-05 09:07:09.266 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:07:09.267 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:07:09.270 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:07:10.071 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:07:10.077 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 807.3108ms
+2025-03-05 09:07:10.077 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:07:10.078 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 812.1969ms
+2025-03-05 09:09:41.939 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:09:41.940 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:09:41.940 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:09:41.941 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:09:41.942 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 1.4101ms
+2025-03-05 09:09:41.942 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:09:41.942 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 3.2398ms
+2025-03-05 09:09:42.125 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:09:42.125 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:09:42.168 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:09:42.168 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:09:42.169 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:09:42.169 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:09:42.188 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:09:42.188 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 20.0407ms
+2025-03-05 09:09:42.188 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:09:42.189 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 63.6404ms
+2025-03-05 09:09:42.194 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:09:42.199 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 29.7022ms
+2025-03-05 09:09:42.199 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:09:42.199 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 74.3279ms
+2025-03-05 09:11:42.899 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - application/json null
+2025-03-05 09:11:42.906 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-05 09:11:42.907 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-05 09:11:42.913 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 6.117ms
+2025-03-05 09:11:42.913 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-05 09:11:42.913 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 14.0199ms
+2025-03-05 09:11:42.981 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertPatient - application/json 640
+2025-03-05 09:11:42.981 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:11:42.981 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:11:42.982 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:11:42.984 +08:00 [INF] Route matched with {action = "CreatePatient", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Patients.PatientInsertDto]] CreatePatient(HIS.HIS.Patients.PatientInsertDto) on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:11:43.168 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Patients.PatientInsertDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:11:43.170 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 185.7715ms
+2025-03-05 09:11:43.170 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:11:43.189 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 207.5248ms
+2025-03-05 09:12:36.374 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertPatient - application/json 640
+2025-03-05 09:12:36.380 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:12:36.380 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:12:36.381 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:12:36.381 +08:00 [INF] Route matched with {action = "CreatePatient", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Patients.PatientInsertDto]] CreatePatient(HIS.HIS.Patients.PatientInsertDto) on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:12:36.403 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Patients.PatientInsertDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:12:36.403 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 22.0804ms
+2025-03-05 09:12:36.403 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:12:36.421 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 47.7759ms
+2025-03-05 09:13:18.806 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertPatient - application/json 639
+2025-03-05 09:13:18.807 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:13:18.807 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:13:18.835 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:13:18.835 +08:00 [INF] Route matched with {action = "CreatePatient", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Patients.PatientInsertDto]] CreatePatient(HIS.HIS.Patients.PatientInsertDto) on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:13:18.847 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Patients.PatientInsertDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:13:18.847 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 11.3708ms
+2025-03-05 09:13:18.847 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:13:18.866 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 60.2143ms
+2025-03-05 09:13:40.087 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertPatient - application/json 640
+2025-03-05 09:13:40.087 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:13:40.087 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:13:40.122 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:13:40.122 +08:00 [INF] Route matched with {action = "CreatePatient", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Patients.PatientInsertDto]] CreatePatient(HIS.HIS.Patients.PatientInsertDto) on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:13:40.133 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Patients.PatientInsertDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:13:40.134 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 11.0218ms
+2025-03-05 09:13:40.134 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:13:40.151 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 64.5408ms
+2025-03-05 09:14:24.334 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-05 09:14:24.343 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 9.436ms
+2025-03-05 09:14:24.355 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-05 09:14:24.357 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 1.5448ms
+2025-03-05 09:14:24.357 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-05 09:14:24.361 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 0.3851ms
+2025-03-05 09:14:24.365 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-05 09:14:24.380 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.3188ms
+2025-03-05 09:14:24.530 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-05 09:14:24.657 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.9265ms
+2025-03-05 09:16:06.237 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - application/json null
+2025-03-05 09:16:06.265 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-05 09:16:06.266 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-03-05 09:16:06.271 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 4.9712ms
+2025-03-05 09:16:06.271 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-03-05 09:16:06.271 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/abp/Swashbuckle/SetCsrfCookie - 204 null null 34.1028ms
+2025-03-05 09:16:06.319 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertPatient - application/json 640
+2025-03-05 09:16:06.319 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:16:06.319 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:16:06.320 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:16:06.322 +08:00 [INF] Route matched with {action = "CreatePatient", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Patients.PatientInsertDto]] CreatePatient(HIS.HIS.Patients.PatientInsertDto) on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:16:06.368 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Patients.PatientInsertDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:16:06.370 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 47.7126ms
+2025-03-05 09:16:06.370 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:16:06.395 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 76.0315ms
+2025-03-05 09:18:21.206 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertPatient - application/json 635
+2025-03-05 09:18:21.214 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:18:21.214 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:18:21.214 +08:00 [INF] Executing endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:18:21.215 +08:00 [INF] Route matched with {action = "CreatePatient", controller = "PatientServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Patients.PatientInsertDto]] CreatePatient(HIS.HIS.Patients.PatientInsertDto) on controller HIS.HIS.Patients.PatientServices (HIS.Application).
+2025-03-05 09:18:21.230 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Patients.PatientInsertDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:18:21.230 +08:00 [INF] Executed action HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application) in 15.6317ms
+2025-03-05 09:18:21.230 +08:00 [INF] Executed endpoint 'HIS.HIS.Patients.PatientServices.CreatePatient (HIS.Application)'
+2025-03-05 09:18:21.278 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertPatient - 200 null application/json; charset=utf-8 71.7893ms
+2025-03-05 09:22:42.287 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/AddDoctors - application/json 162
+2025-03-05 09:22:42.316 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:22:42.316 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:22:42.316 +08:00 [INF] Executing endpoint 'HIS.HIS.Doctors.DoctorServices.AddDoctor (HIS.Application)'
+2025-03-05 09:22:42.319 +08:00 [INF] Route matched with {action = "AddDoctor", controller = "DoctorServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Doctors.DoctorDto]] AddDoctor(HIS.HIS.Doctors.DoctorDto) on controller HIS.HIS.Doctors.DoctorServices (HIS.Application).
+2025-03-05 09:22:42.348 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Doctors.DoctorDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:22:42.349 +08:00 [INF] Executed action HIS.HIS.Doctors.DoctorServices.AddDoctor (HIS.Application) in 29.5691ms
+2025-03-05 09:22:42.349 +08:00 [INF] Executed endpoint 'HIS.HIS.Doctors.DoctorServices.AddDoctor (HIS.Application)'
+2025-03-05 09:22:42.380 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/AddDoctors - 200 null application/json; charset=utf-8 93.02ms
+2025-03-05 09:23:39.329 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/AddDoctors - application/json 168
+2025-03-05 09:23:39.329 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:23:39.329 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:23:39.335 +08:00 [INF] Executing endpoint 'HIS.HIS.Doctors.DoctorServices.AddDoctor (HIS.Application)'
+2025-03-05 09:23:39.335 +08:00 [INF] Route matched with {action = "AddDoctor", controller = "DoctorServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Doctors.DoctorDto]] AddDoctor(HIS.HIS.Doctors.DoctorDto) on controller HIS.HIS.Doctors.DoctorServices (HIS.Application).
+2025-03-05 09:23:39.356 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Doctors.DoctorDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:23:39.357 +08:00 [INF] Executed action HIS.HIS.Doctors.DoctorServices.AddDoctor (HIS.Application) in 21.6239ms
+2025-03-05 09:23:39.357 +08:00 [INF] Executed endpoint 'HIS.HIS.Doctors.DoctorServices.AddDoctor (HIS.Application)'
+2025-03-05 09:23:39.381 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/AddDoctors - 200 null application/json; charset=utf-8 52.5442ms
+2025-03-05 09:23:47.504 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/api/GetDoctor - null null
+2025-03-05 09:23:47.505 +08:00 [INF] Executing endpoint 'HIS.HIS.Doctors.DoctorServices.GetDoctor (HIS.Application)'
+2025-03-05 09:23:47.507 +08:00 [INF] Route matched with {action = "GetDoctor", controller = "DoctorServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.Doctors.DoctorDto]]] GetDoctor() on controller HIS.HIS.Doctors.DoctorServices (HIS.Application).
+2025-03-05 09:23:47.528 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.Doctors.DoctorDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:23:47.530 +08:00 [INF] Executed action HIS.HIS.Doctors.DoctorServices.GetDoctor (HIS.Application) in 22.6442ms
+2025-03-05 09:23:47.530 +08:00 [INF] Executed endpoint 'HIS.HIS.Doctors.DoctorServices.GetDoctor (HIS.Application)'
+2025-03-05 09:23:47.530 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/api/GetDoctor - 200 null application/json; charset=utf-8 26.1427ms
+2025-03-05 09:25:40.718 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertDepartment - application/json 491
+2025-03-05 09:25:40.718 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:25:40.718 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:25:40.719 +08:00 [INF] Executing endpoint 'HIS.HIS.Departments.DepartmentServices.CreateAsync (HIS.Application)'
+2025-03-05 09:25:40.721 +08:00 [INF] Route matched with {action = "Create", controller = "DepartmentServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Departments.DepartmentDto]] CreateAsync(HIS.HIS.Departments.DepartmentDto) on controller HIS.HIS.Departments.DepartmentServices (HIS.Application).
+2025-03-05 09:25:40.961 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Departments.DepartmentDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:25:40.962 +08:00 [INF] Executed action HIS.HIS.Departments.DepartmentServices.CreateAsync (HIS.Application) in 240.36ms
+2025-03-05 09:25:40.962 +08:00 [INF] Executed endpoint 'HIS.HIS.Departments.DepartmentServices.CreateAsync (HIS.Application)'
+2025-03-05 09:25:41.012 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertDepartment - 200 null application/json; charset=utf-8 293.9459ms
+2025-03-05 09:27:34.918 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/InsertDepartment - application/json 488
+2025-03-05 09:27:34.945 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:27:34.946 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:27:34.946 +08:00 [INF] Executing endpoint 'HIS.HIS.Departments.DepartmentServices.CreateAsync (HIS.Application)'
+2025-03-05 09:27:34.947 +08:00 [INF] Route matched with {action = "Create", controller = "DepartmentServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.Departments.DepartmentDto]] CreateAsync(HIS.HIS.Departments.DepartmentDto) on controller HIS.HIS.Departments.DepartmentServices (HIS.Application).
+2025-03-05 09:27:34.971 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.Departments.DepartmentDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:27:34.971 +08:00 [INF] Executed action HIS.HIS.Departments.DepartmentServices.CreateAsync (HIS.Application) in 24.885ms
+2025-03-05 09:27:34.972 +08:00 [INF] Executed endpoint 'HIS.HIS.Departments.DepartmentServices.CreateAsync (HIS.Application)'
+2025-03-05 09:27:34.997 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/InsertDepartment - 200 null application/json; charset=utf-8 79.053ms
+2025-03-05 09:35:05.801 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44323/api/AddInpatientRecords - application/json 832
+2025-03-05 09:35:05.836 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:35:05.836 +08:00 [INF] Request origin https://localhost:44323 does not have permission to access the resource.
+2025-03-05 09:35:05.837 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.AddInpatientRecord (HIS.Application)'
+2025-03-05 09:35:05.839 +08:00 [INF] Route matched with {action = "AddInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] AddInpatientRecord(HIS.HIS.InpatientRecords.InpatientRecordDto) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:35:05.874 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:35:05.876 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.AddInpatientRecord (HIS.Application) in 36.3147ms
+2025-03-05 09:35:05.876 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.AddInpatientRecord (HIS.Application)'
+2025-03-05 09:35:05.906 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44323/api/AddInpatientRecords - 200 null application/json; charset=utf-8 104.9663ms
+2025-03-05 09:35:26.170 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:35:26.172 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:35:26.174 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:35:26.175 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:35:26.179 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 5.0607ms
+2025-03-05 09:35:26.179 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:35:26.180 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 9.9573ms
+2025-03-05 09:35:26.488 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:35:26.488 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:35:26.490 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:35:26.490 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:35:26.492 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:35:26.492 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:35:26.515 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:35:26.516 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:35:26.519 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 26.2651ms
+2025-03-05 09:35:26.519 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:35:26.520 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 32.7054ms
+2025-03-05 09:35:26.521 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 28.2448ms
+2025-03-05 09:35:26.521 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:35:26.524 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 33.3115ms
+2025-03-05 09:36:22.876 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:36:22.879 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:36:22.880 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:36:22.882 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:36:22.883 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 2.8286ms
+2025-03-05 09:36:22.883 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:36:22.883 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 7.1559ms
+2025-03-05 09:36:23.581 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:36:23.584 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:36:23.585 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:36:23.585 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:36:23.588 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:36:23.588 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:36:23.612 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:36:23.613 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 28.0115ms
+2025-03-05 09:36:23.613 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:36:23.613 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 32.2553ms
+2025-03-05 09:36:23.626 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:36:23.627 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 38.5683ms
+2025-03-05 09:36:23.627 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:36:23.628 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 44.0924ms
+2025-03-05 09:37:07.947 +08:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - null 0
+2025-03-05 09:37:07.948 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:37:07.948 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:37:07.949 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:37:07.951 +08:00 [INF] Route matched with {action = "DelInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] DelInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:37:07.979 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:37:07.979 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application) in 28.7954ms
+2025-03-05 09:37:07.979 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:37:08.011 +08:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - 200 null application/json; charset=utf-8 63.2829ms
+2025-03-05 09:37:08.234 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:37:08.235 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:37:08.235 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:37:08.254 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:37:08.255 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 19.1749ms
+2025-03-05 09:37:08.255 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:37:08.255 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 20.6562ms
+2025-03-05 09:38:32.484 +08:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - null 0
+2025-03-05 09:38:32.484 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:38:32.484 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:38:32.485 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:38:32.485 +08:00 [INF] Route matched with {action = "DelInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] DelInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:38:32.503 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:38:32.503 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application) in 17.8717ms
+2025-03-05 09:38:32.503 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:38:32.529 +08:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - 200 null application/json; charset=utf-8 44.5816ms
+2025-03-05 09:38:32.846 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:38:32.847 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:38:32.847 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:38:32.864 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:38:32.864 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 17.4793ms
+2025-03-05 09:38:32.864 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:38:32.865 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 18.9891ms
+2025-03-05 09:39:48.579 +08:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - null 0
+2025-03-05 09:39:48.579 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:39:48.580 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:39:48.580 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:39:48.580 +08:00 [INF] Route matched with {action = "DelInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] DelInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:41:27.120 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-05 09:41:29.836 +08:00 [INF] Loaded ABP modules:
+2025-03-05 09:41:29.836 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-05 09:41:29.836 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-05 09:41:29.836 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-05 09:41:29.836 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-05 09:41:29.836 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-05 09:41:29.836 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-05 09:41:29.836 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-05 09:41:29.836 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-05 09:41:29.836 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-05 09:41:29.836 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-05 09:41:29.836 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-05 09:41:29.836 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-05 09:41:29.836 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-05 09:41:29.836 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-05 09:41:29.836 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-05 09:41:29.836 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-05 09:41:29.836 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-05 09:41:29.836 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-05 09:41:29.836 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-05 09:41:29.836 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-05 09:41:29.836 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-05 09:41:29.836 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-05 09:41:29.836 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-05 09:41:29.837 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-05 09:41:29.837 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-05 09:41:29.837 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-05 09:41:29.837 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-05 09:41:29.837 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-05 09:41:29.837 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-05 09:41:29.837 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-05 09:41:29.837 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-05 09:41:29.837 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-05 09:41:29.837 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-05 09:41:29.837 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-05 09:41:29.837 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-05 09:41:29.837 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-05 09:41:29.837 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-05 09:41:29.837 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-05 09:41:29.837 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-05 09:41:29.837 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-05 09:41:29.837 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-05 09:41:29.837 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-05 09:41:29.837 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-05 09:41:29.837 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-05 09:41:29.837 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-05 09:41:29.837 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-05 09:41:29.865 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-05 09:41:30.561 +08:00 [INF] User profile is available. Using 'C:\Users\weiji\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-05 09:41:30.723 +08:00 [INF] Initialized all ABP modules.
+2025-03-05 09:41:31.011 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-05 09:41:31.095 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-05 09:41:31.095 +08:00 [INF] Hosting environment: Development
+2025-03-05 09:41:31.095 +08:00 [INF] Content root path: D:\八维\医疗\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-05 09:41:31.632 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-05 09:41:33.102 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:41:33.123 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-05 09:41:33.144 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-05 09:41:33.147 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 22.1406ms
+2025-03-05 09:41:33.147 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:41:33.155 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1531.4064ms
+2025-03-05 09:41:33.163 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-05 09:41:33.215 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 52.0177ms
+2025-03-05 09:41:33.224 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-05 09:41:33.225 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-05 09:41:33.228 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 2.736ms
+2025-03-05 09:41:33.232 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 8.3096ms
+2025-03-05 09:41:33.234 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-05 09:41:33.266 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.9101ms
+2025-03-05 09:41:33.407 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-05 09:41:33.793 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 385.9994ms
+2025-03-05 09:41:46.805 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:41:46.871 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:41:46.875 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:41:47.006 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:41:47.024 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 148.6211ms
+2025-03-05 09:41:47.024 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:41:47.024 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 220.2226ms
+2025-03-05 09:41:47.390 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - null null
+2025-03-05 09:41:47.390 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-05 09:41:47.392 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:41:47.398 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:41:47.398 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:41:47.398 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:41:47.399 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:41:47.399 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:41:47.402 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:41:47.404 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:41:47.418 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 19.5027ms
+2025-03-05 09:41:47.418 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:41:47.419 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 28.3705ms
+2025-03-05 09:41:47.419 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:41:47.426 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 27.3495ms
+2025-03-05 09:41:47.426 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:41:47.427 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - 200 null application/json; charset=utf-8 36.5688ms
+2025-03-05 09:41:48.587 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:41:48.605 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 1185.737ms
+2025-03-05 09:41:48.606 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:41:48.608 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 1216.5277ms
+2025-03-05 09:41:50.086 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:41:50.089 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:41:50.093 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:41:50.985 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:41:51.000 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 906.7182ms
+2025-03-05 09:41:51.000 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:41:51.002 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 915.6717ms
+2025-03-05 09:41:53.030 +08:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - null 0
+2025-03-05 09:41:53.034 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:41:53.035 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:41:53.036 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:41:53.039 +08:00 [INF] Route matched with {action = "DelInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] DelInpatientRecord(System.String) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:42:11.345 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:42:13.197 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application) in 20158.1824ms
+2025-03-05 09:42:13.197 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:42:13.488 +08:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - 200 null application/json; charset=utf-8 20457.5362ms
+2025-03-05 09:42:13.496 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:42:13.497 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:42:13.497 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:42:13.517 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:42:13.517 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 19.879ms
+2025-03-05 09:42:13.517 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:42:13.518 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 22.0849ms
+2025-03-05 09:42:31.957 +08:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - null 0
+2025-03-05 09:42:31.958 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:42:31.958 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:42:31.959 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:42:31.960 +08:00 [INF] Route matched with {action = "DelInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] DelInpatientRecord(System.String) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:43:54.024 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-05 09:44:04.010 +08:00 [INF] Loaded ABP modules:
+2025-03-05 09:44:04.011 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-05 09:44:04.011 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-05 09:44:04.011 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-05 09:44:04.011 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-05 09:44:04.011 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-05 09:44:04.011 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-05 09:44:04.011 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-05 09:44:04.011 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-05 09:44:04.011 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-05 09:44:04.011 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-05 09:44:04.011 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-05 09:44:04.011 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-05 09:44:04.011 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-05 09:44:04.011 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-05 09:44:04.011 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-05 09:44:04.011 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-05 09:44:04.011 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-05 09:44:04.043 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-05 09:44:05.557 +08:00 [INF] User profile is available. Using 'C:\Users\weiji\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-05 09:44:05.764 +08:00 [INF] Initialized all ABP modules.
+2025-03-05 09:44:06.065 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-05 09:44:06.183 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-05 09:44:06.184 +08:00 [INF] Hosting environment: Development
+2025-03-05 09:44:06.184 +08:00 [INF] Content root path: D:\八维\医疗\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-05 09:44:06.913 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-05 09:44:09.065 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:44:09.088 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-05 09:44:09.112 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-05 09:44:09.116 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 24.7256ms
+2025-03-05 09:44:09.116 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:44:09.125 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 2216.6368ms
+2025-03-05 09:44:09.134 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-05 09:44:09.316 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 182.1362ms
+2025-03-05 09:44:09.344 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-05 09:44:09.344 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-05 09:44:09.376 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-05 09:44:09.387 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 43.0745ms
+2025-03-05 09:44:09.446 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 102.0906ms
+2025-03-05 09:44:09.469 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.2525ms
+2025-03-05 09:44:09.529 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-05 09:44:09.841 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 312.2014ms
+2025-03-05 09:44:43.742 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:44:43.843 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:44:43.847 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:44:43.975 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:44:43.994 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 146.9157ms
+2025-03-05 09:44:43.994 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:44:43.994 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 252.4039ms
+2025-03-05 09:44:44.407 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:44:44.407 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-05 09:44:44.407 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - null null
+2025-03-05 09:44:44.418 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:44:44.418 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:44:44.418 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:44:44.419 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:44:44.419 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:44:44.423 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:44:44.426 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:44:44.441 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:44:44.461 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 41.8831ms
+2025-03-05 09:44:44.461 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:44:44.462 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 54.5764ms
+2025-03-05 09:44:44.497 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 77.5356ms
+2025-03-05 09:44:44.497 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:44:44.518 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - 200 null application/json; charset=utf-8 111.2541ms
+2025-03-05 09:44:45.608 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:44:45.620 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 1178.7118ms
+2025-03-05 09:44:45.620 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:44:45.622 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 1214.6265ms
+2025-03-05 09:44:46.522 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:44:46.523 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:44:46.526 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:44:47.221 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:44:47.233 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 706.4635ms
+2025-03-05 09:44:47.233 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:44:47.234 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 712.1194ms
+2025-03-05 09:44:49.188 +08:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - null 0
+2025-03-05 09:44:49.193 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:44:49.193 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:44:49.194 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:44:49.197 +08:00 [INF] Route matched with {action = "DelInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] DelInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:54:14.809 +08:00 [INF] Starting HIS.HttpApi.Host.
+2025-03-05 09:54:17.202 +08:00 [INF] Loaded ABP modules:
+2025-03-05 09:54:17.203 +08:00 [INF] - HIS.HISHttpApiHostModule
+2025-03-05 09:54:17.203 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]   - HIS.HISApplicationModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - HIS.HISDomainModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - HIS.HISDomainSharedModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-03-05 09:54:17.203 +08:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-03-05 09:54:17.203 +08:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-03-05 09:54:17.203 +08:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-03-05 09:54:17.203 +08:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-03-05 09:54:17.203 +08:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.Auditing.AbpAuditingModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.Json.AbpJsonModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.Timing.AbpTimingModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.Guids.AbpGuidsModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.Caching.AbpCachingModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - HIS.HISApplicationContractsModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-03-05 09:54:17.203 +08:00 [INF]   - HIS.EntityFrameworkCore.HISEntityFrameworkCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.EntityFrameworkCore.MySQL.AbpEntityFrameworkCoreMySQLModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-03-05 09:54:17.203 +08:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.Http.AbpHttpModule
+2025-03-05 09:54:17.203 +08:00 [INF]                 - Volo.Abp.Minify.AbpMinifyModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-03-05 09:54:17.203 +08:00 [INF]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-03-05 09:54:17.203 +08:00 [INF]               - Volo.Abp.UI.AbpUiModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-03-05 09:54:17.203 +08:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-03-05 09:54:17.203 +08:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-03-05 09:54:17.203 +08:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-03-05 09:54:17.203 +08:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-03-05 09:54:17.203 +08:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-03-05 09:54:17.239 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-03-05 09:54:17.873 +08:00 [INF] User profile is available. Using 'C:\Users\weiji\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-05 09:54:18.024 +08:00 [INF] Initialized all ABP modules.
+2025-03-05 09:54:18.232 +08:00 [INF] Now listening on: https://localhost:44323
+2025-03-05 09:54:18.310 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-05 09:54:18.310 +08:00 [INF] Hosting environment: Development
+2025-03-05 09:54:18.311 +08:00 [INF] Content root path: D:\八维\医疗\his\aspnet-core\src\HIS.HttpApi.Host
+2025-03-05 09:54:19.001 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/ - null null
+2025-03-05 09:54:20.581 +08:00 [INF] Executing endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:54:20.608 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HIS.Controllers.HomeController (HIS.HttpApi.Host).
+2025-03-05 09:54:20.631 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-03-05 09:54:20.634 +08:00 [INF] Executed action HIS.Controllers.HomeController.Index (HIS.HttpApi.Host) in 23.6583ms
+2025-03-05 09:54:20.635 +08:00 [INF] Executed endpoint 'HIS.Controllers.HomeController.Index (HIS.HttpApi.Host)'
+2025-03-05 09:54:20.644 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/ - 302 0 null 1650.4724ms
+2025-03-05 09:54:20.653 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.html - null null
+2025-03-05 09:54:20.711 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.html - 200 null text/html;charset=utf-8 58.2005ms
+2025-03-05 09:54:20.730 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/index.js - null null
+2025-03-05 09:54:20.734 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/index.js - 200 null application/javascript;charset=utf-8 4.0609ms
+2025-03-05 09:54:20.734 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-05 09:54:20.737 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/_vs/browserLink - null null
+2025-03-05 09:54:20.772 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 37.4776ms
+2025-03-05 09:54:20.793 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.8264ms
+2025-03-05 09:54:20.842 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - null null
+2025-03-05 09:54:21.147 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44323/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 305.7028ms
+2025-03-05 09:55:00.577 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - null null
+2025-03-05 09:55:00.634 +08:00 [INF] Executing endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:55:00.637 +08:00 [INF] Route matched with {action = "Routes", controller = "SysMenu", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.SysMenuDto]]] Routes() on controller HIS.SytstemMenu.SysMenuService (HIS.Application).
+2025-03-05 09:55:00.726 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.SysMenuDto, HIS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:55:00.741 +08:00 [INF] Executed action HIS.SytstemMenu.SysMenuService.Routes (HIS.Application) in 103.5492ms
+2025-03-05 09:55:00.741 +08:00 [INF] Executed endpoint 'HIS.SytstemMenu.SysMenuService.Routes (HIS.Application)'
+2025-03-05 09:55:00.742 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/menus/routes - 200 null application/json; charset=utf-8 165.2208ms
+2025-03-05 09:55:01.130 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - null null
+2025-03-05 09:55:01.130 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - null null
+2025-03-05 09:55:01.130 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - null null
+2025-03-05 09:55:01.136 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:55:01.136 +08:00 [INF] Executing endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:55:01.136 +08:00 [INF] Executing endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:55:01.137 +08:00 [INF] Route matched with {action = "VisitStato", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Collections.Generic.List`1[HIS.Dashboard.VisitStatoDto]] VisitStato() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:55:01.137 +08:00 [INF] Route matched with {action = "VisitTrend", controller = "Dashboard", area = "", page = ""}. Executing controller action with signature HIS.APIResult`1[System.Object] VisitTrend() on controller HIS.Dashboard.DashboardService (HIS.Application).
+2025-03-05 09:55:01.139 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.Dashboard.VisitStatoDto, HIS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:55:01.141 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:55:01.155 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitStato (HIS.Application) in 17.8852ms
+2025-03-05 09:55:01.155 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitStato (HIS.Application)'
+2025-03-05 09:55:01.155 +08:00 [INF] Route matched with {action = "QueryNotice", controller = "Notice", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.NoticeData]] QueryNoticeAsync(HIS.PageParamsDto, System.Nullable`1[System.Int32]) on controller HIS.Notice.NoticeService (HIS.Application).
+2025-03-05 09:55:01.155 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-stats - 200 null application/json; charset=utf-8 58.1508ms
+2025-03-05 09:55:01.190 +08:00 [INF] Executed action HIS.Dashboard.DashboardService.VisitTrend (HIS.Application) in 52.9649ms
+2025-03-05 09:55:01.190 +08:00 [INF] Executed endpoint 'HIS.Dashboard.DashboardService.VisitTrend (HIS.Application)'
+2025-03-05 09:55:01.190 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/logs/visit-trend?startDate=2025-02-27&endDate=2025-03-05 - 200 null application/json; charset=utf-8 60.1399ms
+2025-03-05 09:55:02.235 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[HIS.NoticeData, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-05 09:55:02.245 +08:00 [INF] Executed action HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application) in 1089.4847ms
+2025-03-05 09:55:02.245 +08:00 [INF] Executed endpoint 'HIS.Notice.NoticeService.QueryNoticeAsync (HIS.Application)'
+2025-03-05 09:55:02.246 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/notices/my-page?pageNum=1&pageSize=5&isRead=0 - 200 null application/json; charset=utf-8 1149.0416ms
+2025-03-05 09:55:33.457 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - null null
+2025-03-05 09:55:33.458 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:55:33.461 +08:00 [INF] Route matched with {action = "GetInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[System.Collections.Generic.List`1[HIS.HIS.InpatientRecords.InpatientRecordDto]]] GetInpatientRecord(System.Nullable`1[System.Guid]) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
+2025-03-05 09:55:34.087 +08:00 [INF] Executing ObjectResult, writing value of type 'HIS.APIResult`1[[System.Collections.Generic.List`1[[HIS.HIS.InpatientRecords.InpatientRecordDto, HIS.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-05 09:55:34.097 +08:00 [INF] Executed action HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application) in 636.6694ms
+2025-03-05 09:55:34.097 +08:00 [INF] Executed endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.GetInpatientRecord (HIS.Application)'
+2025-03-05 09:55:34.098 +08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44323/api/v1/his/inpatientRecord/patient_id - 200 null application/json; charset=utf-8 641.7113ms
+2025-03-05 09:55:37.058 +08:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:44323/api/v1/his/inpatientRecord/id - null 0
+2025-03-05 09:55:37.063 +08:00 [INF] CORS policy execution failed.
+2025-03-05 09:55:37.063 +08:00 [INF] Request origin http://localhost:3000 does not have permission to access the resource.
+2025-03-05 09:55:37.065 +08:00 [INF] Executing endpoint 'HIS.HIS.InpatientRecords.InpatientRecordServices.DelInpatientRecord (HIS.Application)'
+2025-03-05 09:55:37.067 +08:00 [INF] Route matched with {action = "DelInpatientRecord", controller = "InpatientRecordServices", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HIS.APIResult`1[HIS.HIS.InpatientRecords.InpatientRecordDto]] DelInpatientRecord(System.Guid) on controller HIS.HIS.InpatientRecords.InpatientRecordServices (HIS.Application).
