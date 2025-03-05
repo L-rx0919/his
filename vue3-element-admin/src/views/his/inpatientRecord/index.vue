@@ -1,7 +1,7 @@
 <template>
   <el-form-item>
-      <el-button type="primary" @click="">新增住院</el-button>
-    </el-form-item>
+    <el-button type="primary" @click="">新增住院</el-button>
+  </el-form-item>
 
   <el-table :data="tableData" border style="width: 100%">
     <el-table-column prop="patient_name" label="患者姓名" />
@@ -31,7 +31,7 @@
       </template>
     </el-table-column>
   </el-table>
-  <el-dialog v-model="dialogVisible" title="新增住院" width="500" draggable overflow>
+  <!-- <el-dialog v-model="dialogVisible" title="新增住院" width="500" draggable overflow>
     <span>基本信息</span>
     <el-form :model="InpatientRecordInfor">
       <el-form-item label="患者姓名">
@@ -40,20 +40,12 @@
         </el-select>
       </el-form-item>
       <el-form-item label="入院时间">
-        <el-date-picker
-          v-model="InpatientRecordInfor.admission_date"
-          type="date"
-          placeholder="Pick a date"
-          style="width: 100%"
-        />
+        <el-date-picker v-model="InpatientRecordInfor.admission_date" type="date" placeholder="Pick a date"
+          style="width: 100%" />
       </el-form-item>
       <el-form-item label="出院时间">
-        <el-date-picker
-          v-model="InpatientRecordInfor.discharge_date"
-          type="date"
-          placeholder="Pick a date"
-          style="width: 100%"
-        />
+        <el-date-picker v-model="InpatientRecordInfor.discharge_date" type="date" placeholder="Pick a date"
+          style="width: 100%" />
       </el-form-item>
       <el-form-item label="科室名称">
         <el-select v-model="InpatientRecordInfor.department_id">
@@ -69,13 +61,13 @@
         <el-input v-model="InpatientRecordInfor.room_type" placeholder="请输入病房类型" clearable />
       </el-form-item>
       <el-form-item label="入院信息">
-        <el-input type="textarea" v-model="InpatientRecordInfor.admission_reason" placeholder="请输入院信息" clearable />
+        <el-input v-model="InpatientRecordInfor.admission_reason" type="textarea" placeholder="请输入院信息" clearable />
       </el-form-item>
       <el-form-item label="是否住院">
         <el-radio-group v-model="InpatientRecordInfor.is_in_insurance">
-        <el-radio value="在院">在院</el-radio>
-        <el-radio value="离院">离院</el-radio>
-      </el-radio-group>
+          <el-radio value="在院">在院</el-radio>
+          <el-radio value="离院">离院</el-radio>
+        </el-radio-group>
       </el-form-item>
     </el-form>
     <template #footer>
@@ -84,12 +76,14 @@
         <el-button type="danger" @click="dialogVisible = false">关闭</el-button>
       </div>
     </template>
-  </el-dialog>
+  </el-dialog> -->
 </template>
 
 <script lang="ts" setup>
-import InpatientRecordAPI, { inpatientRecordAPIQuery, InpatientRecordDto } from "@/api/his/inpatientRecord/index";
-import { rowContextKey } from "element-plus";
+import InpatientRecordAPI, {
+  inpatientRecordAPIQuery,
+  InpatientRecordDto,
+} from "@/api/his/inpatientRecord/index";
 
 const tableData = ref<InpatientRecordDto[]>([]);
 
@@ -106,40 +100,34 @@ onMounted(() => {
   loadlist();
 });
 //删除弹出框
-const delshow = (id:string) => {
-  ElMessageBox.confirm(
-    '确定要删除吗?',
-    '警告',
-    {
-      confirmButtonText: 'OK',
-      cancelButtonText: '取消',
-      type: 'warning',
-    }
-  )
+const delshow = (id: string) => {
+  ElMessageBox.confirm("确定要删除吗?", "警告", {
+    confirmButtonText: "OK",
+    cancelButtonText: "取消",
+    type: "warning",
+  })
     .then(() => {
-      InpatientRecordAPI.delList(id).then(() => {   
-        ElMessage({
-          type: 'success',
-          message: '删除成功!',
+      InpatientRecordAPI.delList(id)
+        .then(() => {
+          ElMessage({
+            type: "success",
+            message: "删除成功!",
+          });
+          loadlist();
         })
-        loadlist();
-      }).catch((error: any) => {
-        // 如果删除失败，显示失败消息
-        ElMessage({
-          type: 'error',
-          message: '删除失败，请稍后再试。',
+        .catch((error: any) => {
+          // 如果删除失败，显示失败消息
+          ElMessage({
+            type: "error",
+            message: "删除失败，请稍后再试。",
+          });
         });
-      });
     })
     .catch(() => {
       ElMessage({
-        type: 'info',
-        message: '已取消删除',
-      })
-    })
-}
-
-
-
-
+        type: "info",
+        message: "已取消删除",
+      });
+    });
+};
 </script>
