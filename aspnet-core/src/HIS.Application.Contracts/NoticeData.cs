@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HIS.Notice
+namespace HIS
 {
     /// <summary>
     /// 通知Dto

@@ -100,7 +100,6 @@ namespace HIS.SytstemMenu
                                 }
                             }
                         }
-
                     }
                     ,
                     new SysMenuDto

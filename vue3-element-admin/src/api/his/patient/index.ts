@@ -67,9 +67,6 @@ export interface PatientDto {
   patient_blood_type: string; // 患者血型
   emergency_contact: string | null; // 紧急联系人
   marital_status: string | null; // 婚姻状态
-  // patient_id: string | null; // 患者ID
-  // card_status: string; // 卡状态
-  // card_type: string; // 卡类型
   isDeleted: boolean; // 是否删除
   deleterId: string | null; // 删除者ID
   deletionTime: string | null; // 删除时间
