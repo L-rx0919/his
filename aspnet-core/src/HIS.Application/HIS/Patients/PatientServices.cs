@@ -166,7 +166,7 @@ namespace HIS.HIS.Patients
         /// 查询科室
         /// </summary>
         /// <returns></returns>
-        [HttpGet("/api/v1/his/patientChenter/getDepartment")]
+        [HttpGet("/api/v1/his/patient/getDepartment")]
         public async Task<APIResult<List<DepartmentPatientDto>>> GetDepartment()
         {
             var departmentlst = await _departmentRepository.GetListAsync();
