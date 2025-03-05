@@ -26,6 +26,7 @@ const InpatientRecordAPI = {
   //     params: {},
   //   });
   // },
+   */
   //获取住院信息
   getList(queryParams: inpatientRecordAPIQuery) {
     return request<any, InpatientRecordDto[]>({
@@ -49,7 +50,6 @@ const InpatientRecordAPI = {
       params: id,
     });
   },
-
 };
 
 export default InpatientRecordAPI;
