@@ -8,20 +8,33 @@ const InpatientRecordAPI = {
    *
    * @param queryParams 查询参数
    * @returns 字典分页结果
-   */
+  */
+  //获取住院信息
   getList(queryParams: inpatientRecordAPIQuery) {
-    return request<any, InpatientRecordDto>({
-      url: `${InpatientRecord_BASE_URL}/page`,
+    return request<any, InpatientRecordDto[]>({
+      url: `${InpatientRecord_BASE_URL}/patient_id`,
       method: "get",
       params: queryParams,
     });
   },
+//删除住院信息
+  delList(id: string) {
+    return request({
+      url: `${InpatientRecord_BASE_URL}/id`,
+      method: "delete",
+      params: id,
+    });
+  },
+
 };
 
 export default InpatientRecordAPI;
 
 export interface inpatientRecordAPIQuery {
   patient_id?: string | undefined;
+}
+export interface delinpatientRecordAPIQuery {
+  id?: string | undefined;
 }
 
 export interface InpatientRecordDto {
