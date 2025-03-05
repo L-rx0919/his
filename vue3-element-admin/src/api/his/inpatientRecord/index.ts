@@ -8,7 +8,7 @@ const InpatientRecordAPI = {
    *
    * @param queryParams 查询参数
    * @returns 字典分页结果
-  */
+   **/
   //获取住院信息
   getList(queryParams: inpatientRecordAPIQuery) {
     return request<any, InpatientRecordDto[]>({
@@ -17,7 +17,7 @@ const InpatientRecordAPI = {
       params: queryParams,
     });
   },
-//删除住院信息
+  //删除住院信息
   delList(id: string) {
     return request({
       url: `${InpatientRecord_BASE_URL}/id`,
@@ -25,7 +25,6 @@ const InpatientRecordAPI = {
       params: id,
     });
   },
-
 };
 
 export default InpatientRecordAPI;
