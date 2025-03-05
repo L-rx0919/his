@@ -1,13 +1,14 @@
 import request from "@/utils/request";
 
 /* 基础API URL*/
-const inpatientRecord_BASE_URL = "/api/v1/his/inpatientRecord";
-const inpatientRecordAPI = {
+const InpatientRecord_BASE_URL = "/api/v1/his/inpatientRecord";
+const InpatientRecordAPI = {
   /**
    * 获取患者列表
    *
    * @param queryParams 查询参数
    * @returns 字典分页结果
+   */
   */
   //添加住院信息
   addList(data: InpatientRecordInfor) {
@@ -28,15 +29,22 @@ const inpatientRecordAPI = {
   //获取住院信息
   getList(queryParams: inpatientRecordAPIQuery) {
     return request<any, InpatientRecordDto[]>({
-      url: `${inpatientRecord_BASE_URL}/patient_id`,
+      url: `${InpatientRecord_BASE_URL}/patient_id`,
       method: "get",
       params: queryParams,
+    });
+  },
+  addList(data: InpatientRecordInfor) {
+    return request({
+      url: `${InpatientRecord_BASE_URL}/insertPatientCardInfo`,
+      method: "post",
+      data: data, // 传递 PatientCardInfo 对象
     });
   },
   //删除住院信息
   delList(id: string) {
     return request({
-      url: `${inpatientRecord_BASE_URL}/id`,
+      url: `${InpatientRecord_BASE_URL}/id`,
       method: "delete",
       params: id,
     });
@@ -44,17 +52,11 @@ const inpatientRecordAPI = {
 
 };
 
-export default inpatientRecordAPI;
+export default InpatientRecordAPI;
 
 export interface inpatientRecordAPIQuery {
   patient_id?: string | undefined;
 }
-//科室
-// export interface GetDepartmentDto {
-//   id: string; // 科室ID
-//   name: string; // 科室名称
-// }
-
 
 export interface InpatientRecordInfor {
   id: string;
@@ -93,9 +95,9 @@ export interface InpatientRecordDto {
   patient_name: string;
   admission_date: string;
   discharge_date: string;
-  department_id: string;
+  department_id: number;
   department_name: string;
-  doctor_id: string;
+  doctor_id: number;
   doctor_name: string;
   room_type: string;
   admission_reason: string;

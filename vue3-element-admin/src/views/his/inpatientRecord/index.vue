@@ -88,7 +88,9 @@
 </template>
 
 <script lang="ts" setup>
-import inpatientRecordAPI, {InpatientRecordDto,  inpatientRecordAPIQuery, InpatientRecordInfor } from "@/api/his/inpatientRecord/index";
+import inpatientRecordAPI, { InpatientRecordDto, inpatientRecordAPIQuery, InpatientRecordInfor } from "@/api/his/inpatientRecord/index";
+
+
 //对话框
 const dialogVisible = ref(false);
 // const deptlist = ref<GetDepartmentDto[]>([]);
@@ -126,6 +128,8 @@ const insert = () => {
     loadlist();
   });
 };
+const tableData = ref<InpatientRecordDto[]>([]);
+
 //获取
 const tableData = ref<InpatientRecordDto[]>([]);
 const formInline = ref<inpatientRecordAPIQuery>({});
