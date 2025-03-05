@@ -5,7 +5,7 @@ const PATIENTCENTER_BASE_URL = "/api/v2/his/patientChenter";
 const patientChenterApi = {
   GetpatientChenterInfo() {
     return request<any, patientChenterInfo[]>({
-      url: `${PATIENTCENTER_BASE_URL}/getpatientChenterInfo`,
+      url: `${PATIENTCENTER_BASE_URL}/GetPatients`,
       method: "get",
       params: {},
     });
