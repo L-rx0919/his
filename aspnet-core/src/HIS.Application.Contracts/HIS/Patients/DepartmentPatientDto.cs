@@ -9,7 +9,7 @@ namespace HIS.HIS.Patients
     public class DepartmentPatientDto
 
     {
-        public Guid id { get; set; }
+        public string id { get; set; }
         /// <summary>
         /// 科室名称
         /// </summary>
