@@ -11,11 +11,9 @@ namespace HIS.HIS.InpatientRecords
 {
     public interface IInpatientRecordAppServices : IApplicationService
     {
-        Task<APIResult<InpatientRecordDto>> AddInpatientRecord(InpatientRecordDto patient);
+        Task<APIResult<InsertInpatientRecordsDto>> AddInpatientRecord(InsertInpatientRecordsDto patient);
         Task<APIResult<List<InpatientRecordDto>>> GetInpatientRecord(Guid? patient_id);
         Task<APIResult<InpatientRecordDto>> DelInpatientRecord(Guid id);
-        Task<APIResult<List<InpatientRecordDto>>> GetDoctor();
-        Task<APIResult<List<DepartmentDto>>> GetDepartment();
-        Task<APIResult<List<InpatientRecordDto>>> GetPatient();
+        Task<APIResult<InpatientRecordDto>> UpdInpatientRecord(InpatientRecordDto patient);
     }
 }
