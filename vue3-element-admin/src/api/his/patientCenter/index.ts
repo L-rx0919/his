@@ -10,6 +10,13 @@ const patientChenterApi = {
       params: queryParams,
     });
   },
+  GetChargingModule(queryParams: queryId) {
+    return request<any, queryList[]>({
+      url: `${PATIENTCENTER_BASE_URL}/GetChargingModule`,
+      method: "get",
+      params: queryParams,
+    });
+  },
 };
 
 export default patientChenterApi;
@@ -46,4 +53,11 @@ export interface patientChenterInfo {
 }
 export interface queryDto {
   patientName: string | null;
+}
+
+export interface queryId {
+  id: string;
+}
+export interface queryList {
+  templateName: string;
 }

@@ -7,7 +7,6 @@
             <el-col :span="100" style="text-align: right">
               <el-button type="default" @click="dialogVisible = true">患者切换</el-button>
             </el-col>
-
             <div v-for="item in patientCinfo">
               <h1>{{ item.patient_name }}</h1>
             </div>
@@ -18,25 +17,30 @@
               <span class="label transfer">转区中</span>
               <div>科室：{{ item.key_department_name }}</div>
               <div>病区：{{ item.department_type }}</div>
-              <div>床位：289</div>
-              <div>入院时间：2025-3-1</div>
+              <div>床位:0001</div>
+              <div>入院时间:2025-3-6 14:17</div>
               <div>出院时间：</div>
-              <div>住院天数：2</div>
-              <div>住院次序：</div>
+              <div>住院天数5</div>
+              <div>住院次序：第一次住院</div>
               <div>入院诊断：有病</div>
               <div>出院主诊断：</div>
+              <div>过敏史：</div>
+              <div>住院医生：</div>
+              <div>主治医生：{{ item.name }}</div>
+              <div>主任医生：</div>
             </div>
           </el-card>
         </el-col>
         <el-col :span="16">
           <el-card>
             <h3>费用账单</h3>
-            <el-table style="width: 100%">
-              <el-table-column prop="category" label="费用类别">11111</el-table-column>
-              <el-table-column prop="amount" label="金额">22222</el-table-column>
+
+            <el-table :data="listdto" style="width: 100%">
+              <el-table-column prop="templateName" label="费用类别" />
+              <el-table-column prop="templateName" label="金额" />
             </el-table>
             <div style="text-align: right; margin-top: 20px">
-              <h2>总金额：¥ 元</h2>
+              <h2>总金额：¥ 888 元</h2>
             </div>
           </el-card>
         </el-col>
@@ -55,7 +59,6 @@
         </el-button>
       </el-form-item>
     </el-form>
-
     <el-table :data="patientCinfo" style="width: 100%">
       <el-table-column prop="patient_name" label="名称" />
       <el-table-column prop="patient_gender" label="性别" />
@@ -70,7 +73,12 @@
   </el-dialog>
 </template>
 <script setup lang="ts">
-import patientChenterApi, { patientChenterInfo, queryDto } from "@/api/his/patientCenter/index";
+import patientChenterApi, {
+  patientChenterInfo,
+  queryDto,
+  queryId,
+  queryList,
+} from "@/api/his/patientCenter/index";
 
 //切换患者
 const dialogVisible = ref(false);
@@ -84,12 +92,28 @@ var patientCinfo = ref<patientChenterInfo[]>([]);
 var patientChenterlist = () => {
   patientChenterApi.GetpatientChenterInfo(formInline.value).then((res: any) => {
     patientCinfo.value = res;
+    // 取第一个患者的 department_id 赋值给 id.value
+    if (res.length > 0) {
+      id.value.id = res[0].department_id;
+      getlistdto(); // 获取列表数据
+    }
   });
 };
 
+var id = ref<queryId>({
+  id: "",
+});
+var listdto = ref<queryList[]>([]);
+
+const getlistdto = () => {
+  patientChenterApi.GetChargingModule(id.value).then((res: queryList[]) => {
+    listdto.value = res;
+  });
+};
 //钩子
 onMounted(() => {
   patientChenterlist();
+  getlistdto();
 });
 </script>
 <style>
