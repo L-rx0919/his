@@ -162,52 +162,50 @@ namespace HIS.SytstemMenu
                                             Hidden = false,
                                             KeepAlive = true,
 
-                                //            Title = "医保进销存查询"
-                                //        }
-                                //    },
-                                //    new SysMenuDto
-                                //    {
-                                //        Component = "system/user/settlementSystem",
-                                //        Name = "",
-                                //        Path = "",
-                                //        Meta = new Meta
-                                //        {
-                                //            AlwaysShow = false,
-                                //            Hidden = false,
-                                //            KeepAlive = true,
-                                //            Title = "医保账户信息查询"
-                                //        }
-                                //    },
-                                //    new SysMenuDto
-                                //    {
-                                //        Component = "system/user/settlementSystem",
-                                //        Name = "Medicalinsurancedirectoryinquiry",
-                                //        Path = "Medicalinsurancedirectoryinquiry",
-                                //        Meta = new Meta
-                                //        {
-                                //            AlwaysShow = false,
-                                //            Hidden = false,
-                                //            KeepAlive = true,
-                                //            Title = "医保目录查询"
-                                //        }
-                                //    },
-                                //    new SysMenuDto
-                                //    {
-                                //        Component = "system/user/settlementSystem",
-                                //        Name = "Exceptionhandlingofmedicalinsurancetransactions",
-                                //        Path = "Exceptionhandlingofmedicalinsurancetransactions",
-                                //        Meta = new Meta
-                                //        {
-                                //            AlwaysShow = false,
-                                //            Hidden = false,
-                                //            KeepAlive = true,
-                                //            Title = "医保交易异常处理"
-                                //        }
-                                //    }
-                                //}
+                                            Title = "医保进销存查询"
+                                        }
+                                    },
+                                    new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "",
+                                        Path = "",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "医保账户信息查询"
+                                        }
+                                    },
+                                    new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "Medicalinsurancedirectoryinquiry",
+                                        Path = "Medicalinsurancedirectoryinquiry",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "医保目录查询"
+                                        }
+                                    },
+                                    new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "Exceptionhandlingofmedicalinsurancetransactions",
+                                        Path = "Exceptionhandlingofmedicalinsurancetransactions",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "医保交易异常处理"
+                                        }
+                                    }
+                                }
                             },
-
-
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
