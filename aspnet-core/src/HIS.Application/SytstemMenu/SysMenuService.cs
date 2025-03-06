@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.EMMA;
+using HIS.System_Administration;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Polly.Caching;
@@ -161,49 +162,49 @@ namespace HIS.SytstemMenu
                                             Hidden = false,
                                             KeepAlive = true,
 
-                                            Title = "医保进销存查询"
-                                        }
-                                    },
-                                    new SysMenuDto
-                                    {
-                                        Component = "system/user/settlementSystem",
-                                        Name = "",
-                                        Path = "",
-                                        Meta = new Meta
-                                        {
-                                            AlwaysShow = false,
-                                            Hidden = false,
-                                            KeepAlive = true,
-                                            Title = "医保账户信息查询"
-                                        }
-                                    },
-                                    new SysMenuDto
-                                    {
-                                        Component = "system/user/settlementSystem",
-                                        Name = "Medicalinsurancedirectoryinquiry",
-                                        Path = "Medicalinsurancedirectoryinquiry",
-                                        Meta = new Meta
-                                        {
-                                            AlwaysShow = false,
-                                            Hidden = false,
-                                            KeepAlive = true,
-                                            Title = "医保目录查询"
-                                        }
-                                    },
-                                    new SysMenuDto
-                                    {
-                                        Component = "system/user/settlementSystem",
-                                        Name = "Exceptionhandlingofmedicalinsurancetransactions",
-                                        Path = "Exceptionhandlingofmedicalinsurancetransactions",
-                                        Meta = new Meta
-                                        {
-                                            AlwaysShow = false,
-                                            Hidden = false,
-                                            KeepAlive = true,
-                                            Title = "医保交易异常处理"
-                                        }
-                                    }
-                                }
+                                //            Title = "医保进销存查询"
+                                //        }
+                                //    },
+                                //    new SysMenuDto
+                                //    {
+                                //        Component = "system/user/settlementSystem",
+                                //        Name = "",
+                                //        Path = "",
+                                //        Meta = new Meta
+                                //        {
+                                //            AlwaysShow = false,
+                                //            Hidden = false,
+                                //            KeepAlive = true,
+                                //            Title = "医保账户信息查询"
+                                //        }
+                                //    },
+                                //    new SysMenuDto
+                                //    {
+                                //        Component = "system/user/settlementSystem",
+                                //        Name = "Medicalinsurancedirectoryinquiry",
+                                //        Path = "Medicalinsurancedirectoryinquiry",
+                                //        Meta = new Meta
+                                //        {
+                                //            AlwaysShow = false,
+                                //            Hidden = false,
+                                //            KeepAlive = true,
+                                //            Title = "医保目录查询"
+                                //        }
+                                //    },
+                                //    new SysMenuDto
+                                //    {
+                                //        Component = "system/user/settlementSystem",
+                                //        Name = "Exceptionhandlingofmedicalinsurancetransactions",
+                                //        Path = "Exceptionhandlingofmedicalinsurancetransactions",
+                                //        Meta = new Meta
+                                //        {
+                                //            AlwaysShow = false,
+                                //            Hidden = false,
+                                //            KeepAlive = true,
+                                //            Title = "医保交易异常处理"
+                                //        }
+                                //    }
+                                //}
                             },
 
 
@@ -335,9 +336,9 @@ namespace HIS.SytstemMenu
                                 Children = new List<SysMenuDto> {
                                     new SysMenuDto
                                     {
-                                        Component = "his/systemconfig/idnex",
-                                        Name = "NatureofPatient",
-                                        Path = "NatureofPatient",
+                                        Component = "his/systemconfig/patientCategory/index",
+                                        Name = "PatientCategory",
+                                        Path = "PatientCategory",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,
@@ -348,7 +349,7 @@ namespace HIS.SytstemMenu
                                     },
                                     new SysMenuDto
                                     {
-                                        Component = "his/systemconfig/index",
+                                        Component = "his/systemconfig/chargingmodule/index",
                                         Name = "Chargingmodule",
                                         Path = "Chargingmodule",
                                         Meta = new Meta
