@@ -37,7 +37,7 @@ namespace HIS.HIS.Naturepatients
         /// <param name="nature"></param>
         /// <returns></returns>
 
-        [HttpPost("/api/v1/his/systemconfig/NatureofPatient")]
+        [HttpPost("/api/v1/his/systemconfig/patientCategory/NatureofPatient")]
         public async Task<APIResult<NaturepatientDTO>> CreateNaturepatient(NaturepatientDTO nature)
         {  // 映射DTO到实体
             NatureofPatient entity = ObjectMapper.Map<NaturepatientDTO, NatureofPatient>(nature);
@@ -71,7 +71,7 @@ namespace HIS.HIS.Naturepatients
         /// 查询病人性质
         /// </summary>
         /// <returns>病人性质列表</returns>
-        [HttpGet("/api/v1/his/systemconfig/NatureofPatientList")]
+        [HttpGet("/api/v1/his/systemconfig/patientCategory/NatureofPatientList")]
    
         public async Task<APIResult<List<NaturepatientDTO>>> GetNatyrePatiient()
         {
@@ -89,7 +89,7 @@ namespace HIS.HIS.Naturepatients
             /// <summary>
             /// 删除病人性质
             /// </summary>
-            [HttpDelete("/api/v1/his/systemconfig/NatureofPatientDel/{id}")]
+            [HttpDelete("/api/v1/his/systemconfig/patientCategory/NatureofPatientDel/{id}")]
             public async Task<ResultDto> DelNaturepatient(Guid id, int IsDeleted)
             {
                 // 查找病人性质记录

@@ -14,9 +14,21 @@ namespace HIS.HIS.Chargemodules
         /// </summary>
         /// <param name="chargemodules"></param>
         /// <returns></returns>
-        Task<ResultDto> AddChargemodules(ChargemodulesDTO chargemodules);
+        Task<APIResult<ChargemodulesDTO>> AddChargemodules(ChargemodulesDTO chargemodules);
+        /// <summary>
+        /// 联合查询
+        /// </summary>
+        /// <returns></returns>
+        Task<APIResult<List<GetChargemodulesByDepartmentDto>>> GetChargemodulesByDepartment(string templateName = null);
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Task<APIResult<GetChargemodulesByDepartmentDto>> DeleteChargemodules(Guid id);
 
 
-      
+
+
     }
 }

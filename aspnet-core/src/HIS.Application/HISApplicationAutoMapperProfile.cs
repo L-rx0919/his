@@ -5,6 +5,7 @@ using HIS.HIS.Clinic_type_departments;
 using HIS.HIS.Clinic_types;
 using HIS.HIS.Departments;
 using HIS.HIS.Doctors;
+using HIS.HIS.FinancialInvoicesServices;
 using HIS.HIS.InpatientRecords;
 using HIS.HIS.NaturepatientServices;
 using HIS.HIS.Patients;
@@ -37,6 +38,7 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<DoctorDto, Doctor>().ReverseMap();
         //收费模块
         CreateMap<ChargemodulesDTO, Chargingmodule>().ReverseMap();
+        CreateMap<GetChargemodulesByDepartmentDto, Chargingmodule>().ReverseMap();
         //挂号
         CreateMap<RegistrationDto, Registration>().ReverseMap();
         //门诊类型
@@ -55,5 +57,7 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<Patient_Card_InfoDto, Patient_Card_Info>().ReverseMap();
         CreateMap<PatientInsertDto, Patient>().ReverseMap();
         CreateMap<DepartmentPatientDto, Department>().ReverseMap();
+        CreateMap<FinancialInvoicesDTO, FinancialInvoices>().ReverseMap();
+       
     }
 }

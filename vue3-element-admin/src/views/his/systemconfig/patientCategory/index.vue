@@ -3,6 +3,7 @@
   <el-button type="primary" @click="loadData">修改</el-button>
 
   <el-input v-model="searchValue" placeholder="请输入搜索内容" clearable style="width: 300px" @change="search" />
+
   <el-button type="primary" @click="loadData">搜索</el-button>
 
   <el-table :data="GetNatureofList" border style="width: 100%" @selection-change="handleSelectionChange">
@@ -77,20 +78,17 @@
 </template>
 
 <script lang="ts" setup>
-import axios from "axios";
-
 // 假设你有一个用于删除配置的 API 接口
-const deleteConfig = (id: string) => {
-  return axios.delete(`/api/systemconfig/${id}`);
-};
+// const deleteConfig = (id: string) => {
+//   return axios.delete(`/api/systemconfig/${id}`);
+// };
 
 // 将 deleteConfig 添加到你的 API 导出中
 
 import SystemconfigAPI, {
   NatureofPatientListDto,
   AdDSystemconfig,
-  deleteConfig,
-} from "@/api/his/systemconfig/index";
+} from "@/api/his/systemconfig/patientCategory/index";
 const GetNatureofList = ref<NatureofPatientListDto[]>([]); //患者性质列表
 
 onMounted(() => {
