@@ -66,6 +66,18 @@
           <el-option v-for="item in deptlist" :key="item.id" :label="item.name" :value="item.id" />
         </el-select>
       </el-form-item>
+      <el-form-item label="时间">
+        <el-date-picker v-model="patientCardInfo.create_date"></el-date-picker>
+      </el-form-item>
+      <el-form-item label="有效时间">
+        <el-date-picker v-model="patientCardInfo.expiry_date"></el-date-picker>
+      </el-form-item>
+      <el-form-item label="上次交易时间">
+        <el-date-picker v-model="patientCardInfo.last_transaction_date"></el-date-picker>
+      </el-form-item>
+      <el-form-item label="备注">
+        <el-input v-model="patientCardInfo.remarks"></el-input>
+      </el-form-item>
     </el-form>
     <template #footer>
       <div class="dialog-footer">
@@ -118,14 +130,6 @@ if (!dialogVisible.value) {
   GetDepartment();
 }
 const patientCardInfo = ref<PatientCardInfo>({
-  concurrencyStamp: "",
-  creationTime: "",
-  creatorId: "",
-  lastModificationTime: "",
-  lastModifierId: "",
-  isDeleted: false,
-  deleterId: "",
-  deletionTime: "",
   patient_id: "",
   card_status: "",
   card_type: "",

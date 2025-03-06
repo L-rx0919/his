@@ -3,11 +3,18 @@ import request from "@/utils/request";
 /* 基础API URL*/
 const PATIENTCENTER_BASE_URL = "/api/v2/his/patientChenter";
 const patientChenterApi = {
-  GetpatientChenterInfo() {
+  GetpatientChenterInfo(queryParams: queryDto) {
     return request<any, patientChenterInfo[]>({
       url: `${PATIENTCENTER_BASE_URL}/GetPatients`,
       method: "get",
-      params: {},
+      params: queryParams,
+    });
+  },
+  GetChargingModule(queryParams: queryId) {
+    return request<any, queryList[]>({
+      url: `${PATIENTCENTER_BASE_URL}/GetChargingModule`,
+      method: "get",
+      params: queryParams,
     });
   },
 };
@@ -43,4 +50,14 @@ export interface patientChenterInfo {
   associated_dept: string | null;
   contact_phone: string | null;
   remarks: string | null;
+}
+export interface queryDto {
+  patientName: string | null;
+}
+
+export interface queryId {
+  id: string;
+}
+export interface queryList {
+  templateName: string;
 }

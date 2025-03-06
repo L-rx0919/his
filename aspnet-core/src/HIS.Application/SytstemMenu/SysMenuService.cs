@@ -124,9 +124,10 @@ namespace HIS.SytstemMenu
                         Children = new List<SysMenuDto> {
                             new SysMenuDto
                             {
-                                Component = "system/user/settlementSystem",
+                                Component = "Layout",
                                 Name = "Medicaredatamanagement",
                                 Path = "Medicaredatamanagement",
+                               
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -146,7 +147,6 @@ namespace HIS.SytstemMenu
                                             AlwaysShow = false,
                                             Hidden = false,
                                             KeepAlive = true,
-
                                             Title = "基金结算清单上传"
                                         }
                                     },
@@ -423,7 +423,7 @@ namespace HIS.SytstemMenu
                                              KeepAlive = true,
                                              Title = "财务发票配置"
                                           }
-                                        }, 
+                                        },
                                       new SysMenuDto
                                       {
                                           Component = "his/systemconfig/index",
@@ -451,7 +451,6 @@ namespace HIS.SytstemMenu
                                            Title = "系统菜单"
                                           }
                                       },
-
                                        new SysMenuDto
                                      {
                                          Component = "his/systemconfig/index",
