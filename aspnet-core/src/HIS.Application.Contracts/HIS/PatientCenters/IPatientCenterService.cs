@@ -10,5 +10,6 @@ namespace HIS.HIS.PatientCenters
     public interface IPatientCenterService : IApplicationService
     {
         Task<APIResult<List<PatientCenterDto>>> GetPatients(string patientName);
+        Task<APIResult<List<ChargingModuleDto>>> GetChargingModule(string id);
     }
 }

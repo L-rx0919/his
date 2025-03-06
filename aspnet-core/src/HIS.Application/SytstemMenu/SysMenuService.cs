@@ -125,9 +125,10 @@ namespace HIS.SytstemMenu
                         Children = new List<SysMenuDto> {
                             new SysMenuDto
                             {
-                                Component = "system/user/settlementSystem",
+                                Component = "Layout",
                                 Name = "Medicaredatamanagement",
                                 Path = "Medicaredatamanagement",
+                               
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -136,31 +137,30 @@ namespace HIS.SytstemMenu
                                     Icon = "el-icon-User",
                                     Title = "医保数据管理"
                                 },
-                                //Children = new List<SysMenuDto> {
-                                //    new SysMenuDto
-                                //    {
-                                //        Component = "system/user/settlementSystem",
-                                //        Name = "Fundsettlementlistuploaded",
-                                //        Path = "Fundsettlementlistuploaded",
-                                //        Meta = new Meta
-                                //        {
-                                //            AlwaysShow = false,
-                                //            Hidden = false,
-                                //            KeepAlive = true,
-
-                                //            Title = "基金结算清单上传"
-                                //        }
-                                //    },
-                                //    new SysMenuDto
-                                //    {
-                                //        Component = "system/user/settlementSystem",
-                                //        Name = "Fundsettlementlistquery",
-                                //        Path = "Fundsettlementlistquery",
-                                //        Meta = new Meta
-                                //        {
-                                //            AlwaysShow = false,
-                                //            Hidden = false,
-                                //            KeepAlive = true,
+                                Children = new List<SysMenuDto> {
+                                    new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "Fundsettlementlistuploaded",
+                                        Path = "Fundsettlementlistuploaded",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
+                                            Title = "基金结算清单上传"
+                                        }
+                                    },
+                                    new SysMenuDto
+                                    {
+                                        Component = "system/user/settlementSystem",
+                                        Name = "Fundsettlementlistquery",
+                                        Path = "Fundsettlementlistquery",
+                                        Meta = new Meta
+                                        {
+                                            AlwaysShow = false,
+                                            Hidden = false,
+                                            KeepAlive = true,
 
                                 //            Title = "医保进销存查询"
                                 //        }
@@ -424,7 +424,7 @@ namespace HIS.SytstemMenu
                                              KeepAlive = true,
                                              Title = "财务发票配置"
                                           }
-                                        }, 
+                                        },
                                       new SysMenuDto
                                       {
                                           Component = "his/systemconfig/index",
@@ -452,7 +452,6 @@ namespace HIS.SytstemMenu
                                            Title = "系统菜单"
                                           }
                                       },
-
                                        new SysMenuDto
                                      {
                                          Component = "his/systemconfig/index",

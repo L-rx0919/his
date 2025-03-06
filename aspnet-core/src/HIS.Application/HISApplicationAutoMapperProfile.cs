@@ -31,9 +31,9 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<SysDictDataListDto, SysDictData>().ReverseMap();
         //患者
         CreateMap<PatientDto, Patient>().ReverseMap();
-      
+
         //住院记录
-        CreateMap<InpatientRecordDto, InpatientRecord>().ReverseMap();
+        CreateMap<InsertInpatientRecordsDto, InpatientRecord>().ReverseMap();
         //医生
         CreateMap<DoctorDto, Doctor>().ReverseMap();
         //收费模块
