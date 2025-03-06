@@ -5,25 +5,27 @@
         <el-col :span="5">
           <el-card style="border-color: aqua">
             <el-col :span="100" style="text-align: right">
-              <el-button type="default" @click="switchPatient">患者切换</el-button>
+              <el-button type="default" @click="dialogVisible = true">患者切换</el-button>
             </el-col>
-            <div>
-              <h1>{{ patientCinfo?.patient_name }}</h1>
+
+            <div v-for="item in patientCinfo">
+              <h1>{{ item.patient_name }}</h1>
             </div>
-            <div>
-              <span class="label age">{{ patientCinfo?.patient_name }}</span>
-              <span class="label gender">男</span>
+            <div v-for="item in patientCinfo">
+              <span class="label age">{{ item.patient_age }}</span>
+              <span class="label gender">{{ item.patient_gender }}</span>
               <span class="label status">自费</span>
               <span class="label transfer">转区中</span>
+              <div>科室：{{ item.key_department_name }}</div>
+              <div>病区：{{ item.department_type }}</div>
+              <div>床位：289</div>
+              <div>入院时间：2025-3-1</div>
+              <div>出院时间：</div>
+              <div>住院天数：2</div>
+              <div>住院次序：</div>
+              <div>入院诊断：有病</div>
+              <div>出院主诊断：</div>
             </div>
-            <div>科室：{{ patientCinfo?.patient_name }}</div>
-            <div>病区：{{ patientCinfo?.patient_name }}</div>
-            <div>床位：{{ patientCinfo?.patient_name }}</div>
-            <div>入院时间：{{ patientCinfo?.patient_name }}</div>
-            <div>住院天数：{{ patientCinfo?.patient_name }}</div>
-            <div>住院次序：{{ patientCinfo?.patient_name }}</div>
-            <div>入院诊断：{{ patientCinfo?.patient_name }}</div>
-            <div>出院主诊断：{{ patientCinfo?.patient_name }}</div>
           </el-card>
         </el-col>
         <el-col :span="16">
@@ -41,23 +43,51 @@
       </el-row>
     </el-main>
   </el-container>
+  <!--患者-->
+  <el-dialog v-model="dialogVisible" title="住院患者查询" width="500">
+    <el-form :inline="true" :model="formInline" class="demo-form-inline">
+      <el-form-item label="患者名称">
+        <el-input v-model="formInline.patientName" placeholder="请输入名称" clearable />
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" style="margin-left: 30px" @click="patientChenterlist()">
+          查询
+        </el-button>
+      </el-form-item>
+    </el-form>
+
+    <el-table :data="patientCinfo" style="width: 100%">
+      <el-table-column prop="patient_name" label="名称" />
+      <el-table-column prop="patient_gender" label="性别" />
+      <el-table-column prop="key_department_name" label="医生" />
+    </el-table>
+    <template #footer>
+      <div class="dialog-footer">
+        <el-button @click="dialogVisible = false">取消</el-button>
+        <el-button type="primary" @click="dialogVisible = false">确定</el-button>
+      </div>
+    </template>
+  </el-dialog>
 </template>
 <script setup lang="ts">
 import patientChenterApi, { patientChenterInfo, queryDto } from "@/api/his/patientCenter/index";
+
+//切换患者
+const dialogVisible = ref(false);
+//条件
 const formInline = ref<queryDto>({
-  patientName: "",
+  patientName: "彭雅彬",
 });
 
-var patientCinfo = ref<patientChenterInfo>();
+//加载
+var patientCinfo = ref<patientChenterInfo[]>([]);
 var patientChenterlist = () => {
   patientChenterApi.GetpatientChenterInfo(formInline.value).then((res: any) => {
     patientCinfo.value = res;
   });
 };
-const switchPatient = () => {
-  formInline.value.patientName = "彭雅彬";
-  patientChenterlist();
-};
+
+//钩子
 onMounted(() => {
   patientChenterlist();
 });

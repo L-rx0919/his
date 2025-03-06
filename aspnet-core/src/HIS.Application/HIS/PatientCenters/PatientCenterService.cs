@@ -54,6 +54,7 @@ namespace HIS.HIS.PatientCenters
                            department_type = c.department_type,
                            key_department_name = d.name,
                            Balance = b.Balance,
+                          
                        };
           var result = list.ToList();
             return new APIResult<List<PatientCenterDto>>()

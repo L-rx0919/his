@@ -87,14 +87,6 @@ export interface PatientDto {
 }
 
 export interface PatientCardInfo {
-  concurrencyStamp: string;
-  creationTime: string; // ISO 8601 格式的时间字符串
-  creatorId: string;
-  lastModificationTime: string; // ISO 8601 格式的时间字符串
-  lastModifierId: string;
-  isDeleted: boolean;
-  deleterId: string;
-  deletionTime: string; // ISO 8601 格式的时间字符串
   patient_id: string;
   card_status: string;
   card_type: string;
@@ -103,7 +95,7 @@ export interface PatientCardInfo {
   expiry_date: string; // ISO 8601 格式的时间字符串
   last_transaction_date: string; // ISO 8601 格式的时间字符串
   card_owner_name: string;
-  associated_dept: string;
+  associated_dept: string | undefined;
   contact_phone: string;
   remarks: string;
 }
