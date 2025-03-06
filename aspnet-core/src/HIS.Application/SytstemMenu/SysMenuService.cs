@@ -451,7 +451,6 @@ namespace HIS.SytstemMenu
                                            Title = "系统菜单"
                                           }
                                       },
-
                                        new SysMenuDto
                                      {
                                          Component = "his/systemconfig/index",
