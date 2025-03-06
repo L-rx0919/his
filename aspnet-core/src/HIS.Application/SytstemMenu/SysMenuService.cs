@@ -1,5 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DocumentFormat.OpenXml.EMMA;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Polly.Caching;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -199,6 +205,8 @@ namespace HIS.SytstemMenu
                                     }
                                 }
                             },
+
+
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
@@ -215,32 +223,32 @@ namespace HIS.SytstemMenu
                             },
                             new SysMenuDto
                             {
-                               Component = "his/Outpatient/index",
-                                Name = "Outpatientmanagement",
-                                Path = "Outpatientmanagement",
+                                Component = "system/user/settlementSystem",
+                                Name = "PatientInformation",
+                                Path = "patientInformation",
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
                                     Hidden = false,
                                     KeepAlive = true,
                                     Icon = "el-icon-User",
-                                    Title = "门诊管理"
+                                    Title = "病人信息"
                                 },
                                 Children = new List<SysMenuDto> {
                                     new SysMenuDto
                                     {
-                                        Component = "system/user/settlementSystem",
-                                        Name = "Outpatientregistration",
-                                        Path = "Outpatientregistration",
+                                        Component = "his/patient/index",
+                                        Name = "PatientList",
+                                        Path = "patientList",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,
                                             Hidden = false,
                                             KeepAlive = true,
-                                            Title = "门诊挂号"
+                                            Title = "病人列表"
                                         }
                                     },
-                                     new SysMenuDto
+                                    new SysMenuDto
                                     {
                                         Component = "his/patientCenter/index",
                                         Name = "patientCenter",
@@ -250,12 +258,25 @@ namespace HIS.SytstemMenu
                                             AlwaysShow = false,
                                             Hidden = false,
                                             KeepAlive = true,
-                                            Title = "门诊收费"
+                                            Title = "住院患者中心"
                                         }
-                                    },
+                                    }
                                 }
                             },
-
+                            new SysMenuDto
+                            {
+                                Component = "system/user/settlementSystem",
+                                Name = "Outpatientmanagement",
+                                Path = "Outpatientmanagement",
+                                Meta = new Meta
+                                {
+                                    AlwaysShow = false,
+                                    Hidden = false,
+                                    KeepAlive = true,
+                                    Icon = "el-icon-User",
+                                    Title = "门诊管理"
+                                }
+                            },
                             new SysMenuDto
                             {
                                 Component = "his/inpatientRecord/index",
@@ -298,7 +319,7 @@ namespace HIS.SytstemMenu
                                     Title = "统计报表"
                                 }
                             },
-                            new SysMenuDto
+                             new SysMenuDto
                             {
                                Component = "his/systemconfig/index",
                                 Name = "systemconfig",
@@ -402,7 +423,7 @@ namespace HIS.SytstemMenu
                                              KeepAlive = true,
                                              Title = "财务发票配置"
                                           }
-                                        }, 
+                                        },
                                       new SysMenuDto
                                       {
                                           Component = "his/systemconfig/index",
