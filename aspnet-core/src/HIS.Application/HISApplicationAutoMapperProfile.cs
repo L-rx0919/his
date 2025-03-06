@@ -30,7 +30,7 @@ public class HISApplicationAutoMapperProfile : Profile
         CreateMap<SysDictDataListDto, SysDictData>().ReverseMap();
         //患者
         CreateMap<PatientDto, Patient>().ReverseMap();
-      
+
         //住院记录
         CreateMap<InpatientRecordDto, InpatientRecord>().ReverseMap();
         //医生

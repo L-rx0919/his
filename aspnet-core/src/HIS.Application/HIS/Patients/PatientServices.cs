@@ -48,7 +48,7 @@ namespace HIS.HIS.Patients
 
             //判断名称 是否重复
             var patientName = await _patientRepository.AllAsync(x => x.patient_name == patient.patient_name);
-            if (patientName == false)
+            if (patientName == true)
             {
                 return new APIResult<PatientInsertDto>()
                 {
@@ -166,7 +166,7 @@ namespace HIS.HIS.Patients
         /// 查询科室
         /// </summary>
         /// <returns></returns>
-        [HttpGet("/api/v1/his/patientChenter/getDepartment")]
+        [HttpGet("/api/v1/his/patient/getDepartment")]
         public async Task<APIResult<List<DepartmentPatientDto>>> GetDepartment()
         {
             var departmentlst = await _departmentRepository.GetListAsync();

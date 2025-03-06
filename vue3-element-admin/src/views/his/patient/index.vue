@@ -61,6 +61,11 @@
       <el-form-item label="余额">
         <el-input v-model="patientCardInfo.balance" placeholder="请输入余额" clearable />
       </el-form-item>
+      <el-form-item label="所属科室">
+        <el-select v-model="patientCardInfo.associated_dept">
+          <el-option v-for="item in deptlist" :key="item.id" :label="item.name" :value="item.id" />
+        </el-select>
+      </el-form-item>
     </el-form>
     <template #footer>
       <div class="dialog-footer">
@@ -72,13 +77,14 @@
 </template>
 <script lang="ts" setup>
 import PatientAPI, {
-  patientQuery,
-  PatientDto,
-  PatientCardInfo,
-  GetPatientNameAndIdDto,
+  type patientQuery,
+  type PatientCardInfo,
+  type GetPatientNameAndIdDto,
+  type GetDepartmentDto,
+  type PatientCardInfoList,
 } from "@/api/his/patient/index";
 
-const tableData = ref<PatientDto[]>([]);
+const tableData = ref<PatientCardInfoList[]>([]);
 
 const formInline = reactive<patientQuery>({});
 /**
@@ -92,17 +98,24 @@ const onSubmit = () => {
  * 加载数据
  */
 const loadData = () => {
-  PatientAPI.getPatientCardInfos().then((res: PatientDto[]) => {
+  PatientAPI.getPatientCardInfos().then((res: any) => {
     tableData.value = res;
+  });
+};
+const deptlist = ref<GetDepartmentDto[]>([]);
+const GetDepartment = () => {
+  PatientAPI.GetDepartment().then((res: GetDepartmentDto[]) => {
+    deptlist.value = res;
+  });
+  PatientAPI.GetPatientNameAndId().then((res: GetPatientNameAndIdDto[]) => {
+    PatientNameAndIdDto.value = res;
   });
 };
 //一卡通办理
 const dialogVisible = ref(false);
 const PatientNameAndIdDto = ref<GetPatientNameAndIdDto[]>([]);
 if (!dialogVisible.value) {
-  PatientAPI.GetPatientNameAndId().then((res: GetPatientNameAndIdDto[]) => {
-    PatientNameAndIdDto.value = res;
-  });
+  GetDepartment();
 }
 const patientCardInfo = ref<PatientCardInfo>({
   concurrencyStamp: "",
