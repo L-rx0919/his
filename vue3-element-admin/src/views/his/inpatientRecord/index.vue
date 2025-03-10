@@ -1,6 +1,6 @@
 <template>
   <el-form-item>
-    <el-button type="primary" @click="dialogVisible = true">新增住院</el-button>
+    <el-button type="primary" @click="open(null)">新增住院</el-button>
   </el-form-item>
 
   <el-table :data="tableData" border style="width: 100%">
@@ -28,11 +28,11 @@
     <el-table-column label="操作">
       <template #default="{ row }">
         <el-button type="text" size="small" @click="delshow(row)">删除</el-button>
-        <el-button type="text" size="small" @click="">查看</el-button>
+        <el-button type="text" size="small" @click="open(row)">查看</el-button>
       </template>
     </el-table-column>
   </el-table>
-  <el-dialog v-model="dialogVisible" title="新增住院" width="500" draggable overflow>
+  <el-dialog v-model="logic.dialogVisible" :title="logic.title" width="500" draggable overflow>
     <el-form :model="inserttInpatientRecordInfor">
       <el-form-item label="患者姓名">
         <el-select v-model="inserttInpatientRecordInfor.patient_id">
@@ -98,8 +98,8 @@
     </el-form>
     <template #footer>
       <div class="dialog-footer">
-        <el-button type="primary" @click="insert">确定</el-button>
-        <el-button type="danger" @click="dialogVisible = false">关闭</el-button>
+        <el-button type="primary" @click="insert()">确定</el-button>
+        <el-button type="danger" @click="logic.dialogVisible = false">关闭</el-button>
       </div>
     </template>
   </el-dialog>
@@ -146,7 +146,7 @@ const delshow = (id: string) => {
     });
 };
 //对话框
-const dialogVisible = ref(false);
+//const dialogVisible = ref(false);
 const deptlist = ref<GetDepartmentDto[]>([]);
 const doctorlist = ref<GetDoctorDto[]>([]);
 const patientlist = ref<GetPatientDto[]>([]);
@@ -163,9 +163,7 @@ const GetSel = () => {
     patientlist.value = res;
   });
 };
-if (!dialogVisible.value) {
-  GetSel();
-}
+
 const inserttInpatientRecordInfor = ref<InpatientRecordInfor>({
   patient_id: "",
   admission_date: "",
@@ -177,19 +175,96 @@ const inserttInpatientRecordInfor = ref<InpatientRecordInfor>({
   is_in_insurance: true,
 });
 
+//逻辑对象
+const logic = reactive({
+  dialogVisible: false,
+  title: ""
+})
+
 //添加住院信息
 const insert = () => {
   inpatientRecordAPI.addInpatientRecord(inserttInpatientRecordInfor.value).then(() => {
-    dialogVisible.value = false;
+    logic.dialogVisible = false;
     loadlist();
   });
 };
-const tableData = ref<InpatientRecordDto[]>([]);
 
+// 修改
+const saveInpatientRecord = ref<InpatientRecordDto>({
+  id: "",
+  concurrencyStamp: "",
+  creationTime: "",
+  creatorId: "",
+  lastModificationTime: "",
+  lastModifierId:"",
+  isDeleted: false,
+  deleterId: "",
+  deletionTime: "",
+  patient_id: "",
+  patient_name: "",
+  admission_date: "",
+  discharge_date: "",
+  department_id: "",
+  department_name: "",
+  doctor_id: "",
+  doctor_name:"",
+  room_type: "",
+  admission_reason: "",
+  is_in_insurance: true,
+});
+const open = (row:any) => {
+  logic.dialogVisible = true
+  if (row == null) {
+    logic.title = "新增住院信息"
+    inserttInpatientRecordInfor.value = ({
+  patient_id: "",
+  admission_date: "",
+  discharge_date: "",
+  department_id: "",
+  doctor_id: "",
+  room_type: "",
+  admission_reason: "",
+  is_in_insurance: true,
+  })
+  }
+  else {
+    saveInpatientRecord.value = ({
+    id: row.id,
+  concurrencyStamp: row.concurrencyStamp,
+  creationTime: row.creationTime,
+  creatorId: row.creatorId,
+  lastModificationTime: row.lastModificationTime,
+  lastModifierId:row.lastModifierId,
+  isDeleted: row.isDeleted,
+  deleterId: row.deleterId,
+  deletionTime: row.deletionTime,
+  patient_id: row.patient_id,
+  patient_name: row.patient_name,
+  admission_date: row.admission_date,
+  discharge_date: row.discharge_date,
+  department_id: row.department_id,
+  department_name: row.department_name,
+  doctor_id: row.doctor_id,
+  doctor_name:row.doctor_name,
+  room_type: row.room_type,
+  admission_reason: row.admission_reason,
+  is_in_insurance: row.is_in_insurance,
+  }),
+  logic.dialogVisible = true,
+  logic.title="查看住院信息"
+  }
+  
+}
+
+
+const tableData = ref<InpatientRecordDto[]>([]);
 const formInline = ref<inpatientRecordAPIQuery>({});
+
+
 
 /** 页面加载完成后加载数据 */
 onMounted(() => {
   loadlist();
+  GetSel();
 });
 </script>
