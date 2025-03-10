@@ -1,7 +1,13 @@
 ﻿using AutoMapper;
+using DocumentFormat.OpenXml.Office2010.Excel;
+using DocumentFormat.OpenXml.Office2010.ExcelAc;
+using HIS.SettlementSystem;
 using HIS.System_Administration;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -10,65 +16,114 @@ namespace HIS.HIS.Chargemodules
 {
 
     [ApiExplorerSettings(GroupName = "v1")]
-    public class ChargemodulesServices(IRepository<Chargingmodule> chargemodulesRepository, IMapper mapper) : ApplicationService, IServicesChargemodules
+    public class ChargemodulesServices : ApplicationService, IServicesChargemodules
     {
-        private readonly IRepository<Chargingmodule> chargemodulesRepository = chargemodulesRepository;
-        private readonly IMapper mapper = mapper;
+        private IRepository<Department> departmentRepository;
+        private readonly IRepository<Chargingmodule> chargemodulesRepository;
+        private readonly IMapper mapper;
+
+        public ChargemodulesServices(IRepository<Department> departmentRepository, IRepository<Chargingmodule> chargemodulesRepository, IMapper mapper)
+        {
+            this.departmentRepository = departmentRepository;
+            this.chargemodulesRepository = chargemodulesRepository;
+            this.mapper = mapper;
+        }
+
+
+
 
         /// <summary>
         /// 添加收费模块
         ///</summary>
-        [HttpPost("api/AddChargemodules")]
-        public async Task<ResultDto> AddChargemodules(ChargemodulesDTO chargemodules)
+        [HttpPost("/api/v1/his/systemconfig/chargingmodule/chargingPatient")]
+        public async Task<APIResult<ChargemodulesDTO>> AddChargemodules(ChargemodulesDTO chargemodules)
         {
-            var existingModule = await chargemodulesRepository.FirstOrDefaultAsync(x => x.TemplateName == chargemodules.TemplateName);
-
-            // 如果模板名称不存在，则插入新数据
-            if (existingModule == null)
+            Chargingmodule chargingmodule = ObjectMapper.Map<ChargemodulesDTO, Chargingmodule>(chargemodules);
+            if (chargingmodule == null)
             {
-                // 映射 DTO 到实体
-                var entity = mapper.Map<Chargingmodule>(chargemodules);
+                return new APIResult<ChargemodulesDTO>()
+                {
+                    Code = CodeEnum.error,
+                    Message = "收费模块不能为空"
+                };
 
-                // 插入数据
-                await chargemodulesRepository.InsertAsync(entity);
-
-                // 返回成功
-                return ResultDto.OK(data: entity);
             }
             else
             {
-                // 如果模板名称已存在，返回失败结果
-                return ResultDto.Fail("模板名称已存在");
+                await chargemodulesRepository.InsertAsync(chargingmodule);
+                return new APIResult<ChargemodulesDTO>()
+                {
+                    Code = CodeEnum.success,
+                    Message = "添加收费模块成功",
+                   
+                };
             }
+        }
+
+
+        /// <summary>
+        /// 收费模块表和科室表联查
+        /// </summary>    
+        /// <returns></returns>
+        [HttpGet("/api/v1/his/systemconfig/chargingmodule/chargingList")]
+        public async Task<APIResult<List<GetChargemodulesByDepartmentDto>>> GetChargemodulesByDepartment(string templateName = null)
+        {
+            var chargemodules = await chargemodulesRepository.GetListAsync();
+            var departments = await departmentRepository.GetListAsync();
+            var list = from c in chargemodules
+                       join d in departments on c.DepartmentID equals d.Id
+                       select new GetChargemodulesByDepartmentDto
+                       {
+                           TemplateName = c.TemplateName,
+                           DepartmentName = d.name,
+                           name = d.name,             
+                           location = d.location,
+                           phone = d.phone,
+                           department_type = d.department_type,
+                           Singltreatment = c.Singltreatment,
+                           NumberCutions = c.NumberCutions,
+                           TypeRehabil = c.TypeRehabil,
+                           Parts = c.Parts,
+                           Unittime = c.Unittime,
+                       };
+
+            // 如果提供了模板名称，则添加条件过滤
+            if (!string.IsNullOrEmpty(templateName))
+            {
+                list = list.Where(x => x.TemplateName.Contains(templateName));
+            }
+            var result = list.ToList();
+            return new APIResult<List<GetChargemodulesByDepartmentDto>>()
+            {
+                Data = result,
+                Code = CodeEnum.success,
+                Message = "获取成功"
+            };
         }
 
         /// <summary>
-        /// 获取收费
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet("api/GetChargemodules")]
-        public async Task<ResultDto> GetChargemodules()
+        /// 删除收费模块
+        ///</summary>
+        [HttpDelete("api/DeleteChargemodules/{id}")]
+        public async Task<APIResult<GetChargemodulesByDepartmentDto>> DeleteChargemodules(Guid id)
         {
-            var list = await chargemodulesRepository.GetListAsync();
-            return ResultDto.OK(data: list);
+            try
+            {
+                await chargemodulesRepository.DeleteAsync(x => x.Id == id);
+                return new APIResult<GetChargemodulesByDepartmentDto>()
+                {
+
+                    Code = CodeEnum.success,
+                    Message = "删除收费模块成功"
+                };
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        ///<summary>
-        ///删除收费
-        /// </summary>
-        [HttpDelete("api/DelChargemodules")]
-        public async Task<ResultDto> DelChargemodules(Guid id)
-        {
-            var list = await chargemodulesRepository.FirstOrDefaultAsync(x => x.Id == id);
-            if (list != null)
-            {
-                await chargemodulesRepository.DeleteAsync(list);
-                return ResultDto.OK();
-            }
-            else
-            {
-                return ResultDto.Fail("删除失败");
-            }
-        }
     }
 }

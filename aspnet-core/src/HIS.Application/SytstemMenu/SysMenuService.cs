@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.EMMA;
+using HIS.System_Administration;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Polly.Caching;
@@ -205,8 +206,6 @@ namespace HIS.SytstemMenu
                                     }
                                 }
                             },
-
-
                             new SysMenuDto
                             {
                                 Component = "system/user/settlementSystem",
@@ -335,9 +334,9 @@ namespace HIS.SytstemMenu
                                 Children = new List<SysMenuDto> {
                                     new SysMenuDto
                                     {
-                                        Component = "his/systemconfig/idnex",
-                                        Name = "NatureofPatient",
-                                        Path = "NatureofPatient",
+                                        Component = "his/systemconfig/patientCategory/index",
+                                        Name = "PatientCategory",
+                                        Path = "PatientCategory",
                                         Meta = new Meta
                                         {
                                             AlwaysShow = false,
@@ -348,7 +347,7 @@ namespace HIS.SytstemMenu
                                     },
                                     new SysMenuDto
                                     {
-                                        Component = "his/systemconfig/index",
+                                        Component = "his/systemconfig/chargingmodule/index",
                                         Name = "Chargingmodule",
                                         Path = "Chargingmodule",
                                         Meta = new Meta

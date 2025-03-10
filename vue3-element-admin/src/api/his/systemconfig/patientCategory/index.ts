@@ -1,6 +1,6 @@
 import request from "@/utils/request";
 
-const Systemconfig_BASE_URL = "/api/v1/his/systemconfig";
+const Systemconfig_BASE_URL = "/api/v1/his/systemconfig/patientCategory";
 
 const SystemconfigAPI = {
   /**
@@ -28,10 +28,23 @@ const SystemconfigAPI = {
       params: {},
     });
   },
+
+  /**
+   * 删除病人性质
+   *
+   * @param id 病人性质ID
+   */
+  deleteConfig(id: string) {
+    return request({
+      url: `${Systemconfig_BASE_URL}/NatureofPatientDel/${id}`,
+      method: "delete",
+    });
+  },
 };
 
 export default SystemconfigAPI;
-//添加病人性质
+
+// 添加病人性质
 export interface AdDSystemconfig {
   concurrencyStamp: string;
   creationTime: string;
@@ -50,7 +63,8 @@ export interface AdDSystemconfig {
   medicaltype: string;
   remarks: string;
 }
-//查询显示病人性质
+
+// 查询显示病人性质
 export interface NatureofPatientListDto {
   natureofPatientName: string;
   naturecode: string;

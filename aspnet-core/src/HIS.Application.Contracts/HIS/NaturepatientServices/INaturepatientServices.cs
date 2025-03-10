@@ -27,6 +27,6 @@ namespace HIS.HIS.NaturepatientServices
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<ResultDto> DelNaturepatient(Guid id);
+        Task<ResultDto> DelNaturepatient(Guid id, int IsDeleted);
     }
 }

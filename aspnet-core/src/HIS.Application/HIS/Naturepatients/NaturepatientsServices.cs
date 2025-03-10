@@ -37,7 +37,7 @@ namespace HIS.HIS.Naturepatients
         /// <param name="nature"></param>
         /// <returns></returns>
 
-        [HttpPost("/api/v1/his/systemconfig/NatureofPatient")]
+        [HttpPost("/api/v1/his/systemconfig/patientCategory/NatureofPatient")]
         public async Task<APIResult<NaturepatientDTO>> CreateNaturepatient(NaturepatientDTO nature)
         {  // 映射DTO到实体
             NatureofPatient entity = ObjectMapper.Map<NaturepatientDTO, NatureofPatient>(nature);
@@ -71,7 +71,7 @@ namespace HIS.HIS.Naturepatients
         /// 查询病人性质
         /// </summary>
         /// <returns>病人性质列表</returns>
-        [HttpGet("/api/v1/his/systemconfig/NatureofPatientList")]
+        [HttpGet("/api/v1/his/systemconfig/patientCategory/NatureofPatientList")]
    
         public async Task<APIResult<List<NaturepatientDTO>>> GetNatyrePatiient()
         {
@@ -86,25 +86,25 @@ namespace HIS.HIS.Naturepatients
         }
 
 
-        /// <summary>
-        /// 删除病人性质
-        /// </summary>
-        [HttpDelete("DelNaturepatient")]
-        public async Task<ResultDto> DelNaturepatient(Guid id)
-        {
-            var natureOfPatient = await natureofPatientRepository.FirstOrDefaultAsync(x => x.Id == id);
-            if (natureOfPatient != null) 
+            /// <summary>
+            /// 删除病人性质
+            /// </summary>
+            [HttpDelete("/api/v1/his/systemconfig/patientCategory/NatureofPatientDel/{id}")]
+            public async Task<ResultDto> DelNaturepatient(Guid id, int IsDeleted)
             {
-              await natureofPatientRepository.DeleteAsync(natureOfPatient);
-                return ResultDto.OK();
-
+                // 查找病人性质记录
+                var natureofPatient = await natureofPatientRepository.FindAsync(x=>x.Id==id);
+                if (natureofPatient == null)
+                {
+                    return ResultDto.Fail("未找到病人性质记录");
+                }     
+                // 设置删除标志
+                natureofPatient.IsDeleted = IsDeleted == 1;
+                // 更新记录
+                await natureofPatientRepository.UpdateAsync(natureofPatient);
+                return ResultDto.OK(null, "删除病人性质记录成功");
             }
-            else
-            {
-                return ResultDto.Fail("删除病人性质失败");
-            }
 
-
-        }
+        
     }
 }
