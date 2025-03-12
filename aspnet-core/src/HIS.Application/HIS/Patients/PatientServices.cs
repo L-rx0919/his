@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using CSRedis;
 using HIS.SettlementSystem;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +11,8 @@ using Volo.Abp.Domain.Repositories;
 
 namespace HIS.HIS.Patients
 {
+    
+
     [ApiExplorerSettings(GroupName = "v1")]
     public class PatientServices : ApplicationService, IPatientServices
     {
@@ -18,17 +22,21 @@ namespace HIS.HIS.Patients
         private readonly IRepository<Patient> _patientRepository;
         private readonly IRepository<Department> _departmentRepository;
         private readonly IRepository<Doctor> _doctorRepository;
+        private readonly CSRedisClient _cSRedisClient;
+        //private readonly 
 
         /// <summary>
         /// 一卡通信息仓储
         /// </summary>
         private readonly IRepository<Patient_Card_Info> _Patient_Card_InfoRepository;
         private readonly IMapper _mapper;
-        public PatientServices(IRepository<Patient> patientRepository, IRepository<Department> departmentRepository, IRepository<Doctor> doctorRepository, IRepository<Patient_Card_Info> patient_Card_InfoRepository = null, IMapper mapper = null)
+
+        public PatientServices(IRepository<Patient> patientRepository, IRepository<Department> departmentRepository, IRepository<Doctor> doctorRepository, CSRedisClient cSRedisClient, IRepository<Patient_Card_Info> patient_Card_InfoRepository = null, IMapper mapper = null)
         {
             _patientRepository = patientRepository;
             _departmentRepository = departmentRepository;
             _doctorRepository = doctorRepository;
+            _cSRedisClient = cSRedisClient;
             _Patient_Card_InfoRepository = patient_Card_InfoRepository;
             _mapper = mapper;
         }
@@ -76,23 +84,73 @@ namespace HIS.HIS.Patients
         [HttpGet("/api/v1/his/patient/page")]
         public async Task<APIResult<List<PatientDto>>> GetPatients(string name, string phone)
         {
-            var patientslst = await _patientRepository.GetListAsync();
-            var list = _mapper.Map<List<Patient>, List<PatientDto>>(patientslst);
-            var result = list.ToList();
-            if (!string.IsNullOrEmpty(name))
+           
+            
+            // 生成 Redis 键
+            string redisKey = $"patients:{name}:{phone}".ToLower();
+
+            // 从 Redis 中获取缓存数据
+            var cachedData = await _cSRedisClient.GetAsync(redisKey);
+
+            APIResult<List<PatientDto>> result;  // 定义结果对象
+
+            if (string.IsNullOrEmpty(cachedData))
             {
-                result = result.Where(x => x.patient_name.Contains(name)).ToList();
+                // 如果缓存数据为空，继续从数据库查询
+                var patientsList = await _patientRepository.GetListAsync();
+
+                // 映射数据库结果到 DTO
+                var patientDtos = _mapper.Map<List<Patient>, List<PatientDto>>(patientsList);
+
+                // 根据过滤条件过滤患者列表
+                if (!string.IsNullOrEmpty(name))
+                {
+                    patientDtos = patientDtos.Where(x => x.patient_name.Contains(name)).ToList();
+                }
+                if (!string.IsNullOrEmpty(phone))
+                {
+                    patientDtos = patientDtos.Where(x => x.patient_contact == phone).ToList();
+                }
+
+                // 创建 API 结果对象
+                result = new APIResult<List<PatientDto>>()
+                {
+                    Code = CodeEnum.success,
+                    Message = "查询成功",
+                    Data = patientDtos
+                };
+
+                // 将结果序列化并存储到 Redis
+                var serializedData = JsonConvert.SerializeObject(result);
+                await _cSRedisClient.SetAsync(redisKey, serializedData, 3600); // 存储到缓存，缓存有效期为 3600 秒（1小时）
             }
-            if (!string.IsNullOrEmpty(phone))
+            else
             {
-                result = result.Where(x => x.patient_contact == phone).ToList();
+                // 如果缓存有数据，反序列化并返回
+                result = JsonConvert.DeserializeObject<APIResult<List<PatientDto>>>(cachedData);
             }
-            return new APIResult<List<PatientDto>>()
-            {
-                Code = CodeEnum.success,
-                Message = "查询成功",
-                Data = result
-            };
+
+            // 返回最终的结果
+            return result;
+
+
+            //var patientslst = await _patientRepository.GetListAsync();
+            //var list = _mapper.Map<List<Patient>, List<PatientDto>>(patientslst);
+            //var result = list.ToList();
+            //if (!string.IsNullOrEmpty(name))
+            //{
+            //    result = result.Where(x => x.patient_name.Contains(name)).ToList();
+            //}
+            //if (!string.IsNullOrEmpty(phone))
+            //{
+            //    result = result.Where(x => x.patient_contact == phone).ToList();
+            //}
+            //return new APIResult<List<PatientDto>>()
+            //{
+            //    Code = CodeEnum.success,
+            //    Message = "查询成功",
+            //    Data = result
+            //};
         }
 
         /// <summary>
@@ -195,6 +253,9 @@ namespace HIS.HIS.Patients
                 Data = doctorlst
             };
         }
+
+       
+
     }
 }
 
