@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using HIS.HIS.Departments;
 using HIS.HIS.Doctors;
 using HIS.HIS.Patients;
@@ -57,7 +58,7 @@ namespace HIS.HIS.InpatientRecords
                 {
                     Code = CodeEnum.success,
                     Message = "添加住院记录成功",
-                    Data= patient
+                    Data = patient
                 };
             }
         }
@@ -151,7 +152,7 @@ namespace HIS.HIS.InpatientRecords
                              doctor_name = c.name,
                              room_type = a.room_type,
                              admission_reason = a.admission_reason,
-                             is_in_insurance=a.is_in_insurance,
+                             is_in_insurance = a.is_in_insurance,
                          };
             var list = result.ToList();
             return new APIResult<List<InpatientRecordDto>>()
@@ -184,19 +185,30 @@ namespace HIS.HIS.InpatientRecords
         /// <param name="patient"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        [HttpPost("/api/v1/his/inpatientRecord/UpdInpatientRecord")]
-        public async Task<APIResult<InpatientRecordDto>> UpdInpatientRecord(InpatientRecordDto patient)
+        [HttpPut("/api/v1/his/inpatientRecord/updInpatientRecord")]
+        public async Task<APIResult<InpatientRecordDto>> UpdateInpatientRecord(InpatientRecordDto patient)
         {
-            //修改住院信息
-            InpatientRecord entity = ObjectMapper.Map<InpatientRecordDto, InpatientRecord>(patient);
+            var entity = await inpatientRecordRepository.GetAsync(x => x.Id == patient.Id);
+            if (entity == null)
+            {
+                return new APIResult<InpatientRecordDto>()
+                {
+                    Code = CodeEnum.error,
+                    Message = "住院记录未找到",
+                };
+            }
+
+            ObjectMapper.Map(patient, entity);
             await inpatientRecordRepository.UpdateAsync(entity);
+
             return new APIResult<InpatientRecordDto>()
             {
                 Code = CodeEnum.success,
                 Message = "修改住院记录成功",
+                Data = ObjectMapper.Map<InpatientRecord, InpatientRecordDto>(entity)
             };
         }
-        
+
 
 
     }

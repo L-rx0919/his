@@ -63,6 +63,14 @@ const inpatientRecordAPI = {
       params: id,
     });
   },
+  //修改住院信息
+  updInpatientRecord(id: string, data: InpatientRecordDto) {
+    return request({
+      url: `${inpatientRecord_BASE_URL}/updInpatientRecord`,
+      method: "put",
+      data: data,
+    });
+  },
 };
 export default inpatientRecordAPI;
 export interface inpatientRecordAPIQuery {

@@ -14,6 +14,7 @@ using HIS.SettlementSystem;
 using HIS.System_Administration;
 using HIS.SystemDicServices;
 using static Volo.Abp.Identity.Settings.IdentitySettingNames;
+using DepartmentDto = HIS.HIS.Departments.DepartmentDto;
 
 
 namespace HIS;
@@ -50,7 +51,7 @@ public class HISApplicationAutoMapperProfile : Profile
         //病人性质
         CreateMap<NaturepatientDTO, NatureofPatient>().ReverseMap();
         //科室
-        CreateMap<DepartmentDto, Department>().ReverseMap();
+        //CreateMap<DepartmentDto, Department>().ReverseMap();
         //费用类别
         CreateMap<Fee_CategoryDto, Fee_Category>().ReverseMap();
         //一卡通添加
