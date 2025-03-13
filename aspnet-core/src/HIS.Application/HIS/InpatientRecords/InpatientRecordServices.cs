@@ -127,7 +127,7 @@ namespace HIS.HIS.InpatientRecords
         /// <param name="patient_id"></param>
         /// <returns></returns>
         [HttpGet("/api/v1/his/inpatientRecord/patient_id")]
-        public async Task<APIResult<List<InpatientRecordDto>>> GetInpatientRecord(Guid? patient_id)
+        public async Task<APIResult<PageResultDto<InpatientRecordDto>>> GetInpatientRecord([FromQuery] PageParamsDto paramsDto, Guid? patient_id)
         {
             //根据患者id四表联查
             var inpatientRecords = await inpatientRecordRepository.GetListAsync();
@@ -155,9 +155,14 @@ namespace HIS.HIS.InpatientRecords
                              is_in_insurance = a.is_in_insurance,
                          };
             var list = result.ToList();
-            return new APIResult<List<InpatientRecordDto>>()
+            PageResultDto<InpatientRecordDto> page = new PageResultDto<InpatientRecordDto>()
             {
-                Data = list,
+                Total = list.Count,
+                List = list.Skip((paramsDto.PageNum - 1) * paramsDto.PageSize).Take(paramsDto.PageSize).ToList()
+            };
+            return new APIResult<PageResultDto<InpatientRecordDto>>()
+            {
+                Data = page,
                 Code = CodeEnum.success,
                 Message = "获取住院记录成功"
             };

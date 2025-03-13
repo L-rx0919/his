@@ -12,7 +12,7 @@ namespace HIS.HIS.InpatientRecords
     public interface IInpatientRecordAppServices : IApplicationService
     {
         Task<APIResult<InsertInpatientRecordsDto>> AddInpatientRecord(InsertInpatientRecordsDto patient);
-        Task<APIResult<List<InpatientRecordDto>>> GetInpatientRecord(Guid? patient_id);
+        Task<APIResult<PageResultDto<InpatientRecordDto>>> GetInpatientRecord(PageParamsDto paramsDto, Guid? patient_id);
         Task<APIResult<InpatientRecordDto>> DelInpatientRecord(Guid id);
         Task<APIResult<InpatientRecordDto>> UpdateInpatientRecord(InpatientRecordDto patient);
 

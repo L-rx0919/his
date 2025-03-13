@@ -49,7 +49,7 @@ const inpatientRecordAPI = {
   },
   //获取住院信息
   getList(queryParams: inpatientRecordAPIQuery) {
-    return request<any, InpatientRecordDto[]>({
+    return request<any, PageResult<InpatientRecordDto[]>>({
       url: `${inpatientRecord_BASE_URL}/patient_id`,
       method: "get",
       params: queryParams,
@@ -64,7 +64,7 @@ const inpatientRecordAPI = {
     });
   },
   //修改住院信息
-  updInpatientRecord(id: string, data: InpatientRecordDto) {
+  updInpatientRecord(data: InpatientRecordDto) {
     return request({
       url: `${inpatientRecord_BASE_URL}/updInpatientRecord`,
       method: "put",
@@ -73,7 +73,7 @@ const inpatientRecordAPI = {
   },
 };
 export default inpatientRecordAPI;
-export interface inpatientRecordAPIQuery {
+export interface inpatientRecordAPIQuery extends PageQuery {
   patient_id?: string | undefined;
 }
 //科室
@@ -123,3 +123,20 @@ export interface InpatientRecordDto {
   admission_reason: string;
   is_in_insurance: boolean;
 }
+// /**
+//  * 分页查询参数
+//  */
+// export interface PageQuery {
+//   pageNum: number;
+//   pageSize: number;
+// }
+
+// /**
+//  * 分页响应对象
+//  */
+// export interface PageResult<T> {
+//   /** 数据列表 */
+//   list: T;
+//   /** 总数 */
+//   total: number;
+// }

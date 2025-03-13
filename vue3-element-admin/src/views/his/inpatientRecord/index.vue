@@ -3,7 +3,7 @@
     <el-button type="primary" @click="open(null)">新增住院</el-button>
   </el-form-item>
 
-  <el-table :data="tableData" border style="width: 100%">
+  <el-table :data="tableData" border height="250" style="width: 100%">
     <el-table-column width="55" type="selection" />
     <el-table-column prop="patient_name" label="患者姓名" />
     <el-table-column prop="admission_date" label="入院时间">
@@ -33,7 +33,7 @@
     </el-table-column>
   </el-table>
   <el-dialog v-model="logic.dialogVisible" :title="logic.title" width="500" draggable overflow>
-    <el-form :model="inserttInpatientRecordInfor">
+    <el-form :model="inserttInpatientRecordInfor" :disabled="logic.isdisabled" >
       <el-form-item label="患者姓名">
         <el-select v-model="inserttInpatientRecordInfor.patient_id">
           <el-option
@@ -103,6 +103,13 @@
       </div>
     </template>
   </el-dialog>
+    <pagination
+        v-if="total > 0"
+        v-model:total="total"
+        v-model:page="queryParams.pageNum"
+        v-model:limit="queryParams.pageSize"
+        @pagination="loadlist()"
+      />
 </template>
 
 <script lang="ts" setup>
@@ -112,14 +119,21 @@ import inpatientRecordAPI, {
   type InpatientRecordInfor,
   type GetPatientDto,
   type GetDoctorDto,
-  type GetDepartmentDto
+  type GetDepartmentDto,
 } from "@/api/his/inpatientRecord/index";
 import { ref, onMounted } from "vue";
 import { ElMessage, ElMessageBox } from "element-plus";
+const tableData = ref<InpatientRecordDto[]>()
+const queryParams = reactive<inpatientRecordAPIQuery>({
+  pageNum: 1,
+  pageSize: 2,
+});
+const total = ref(0);
 const loadlist = () => {
-  inpatientRecordAPI.getList(formInline.value).then((res) => {
-    tableData.value = res;
-  });
+  inpatientRecordAPI.getList(queryParams).then((data) => {
+    tableData.value = data.list
+    total.value = data.total
+  })
 };
 
 //删除弹出框
@@ -145,8 +159,6 @@ const delshow = (id: string) => {
       });
     });
 };
-//对话框
-//const dialogVisible = ref(false);
 const deptlist = ref<GetDepartmentDto[]>([]);
 const doctorlist = ref<GetDoctorDto[]>([]);
 const patientlist = ref<GetPatientDto[]>([]);
@@ -164,6 +176,7 @@ const GetSel = () => {
   });
 };
 
+//添加住院记录对象
 const inserttInpatientRecordInfor = ref<InpatientRecordInfor>({
   patient_id: "",
   admission_date: "",
@@ -178,7 +191,8 @@ const inserttInpatientRecordInfor = ref<InpatientRecordInfor>({
 //逻辑对象
 const logic = reactive({
   dialogVisible: false,
-  title: ""
+  title: "",
+  isdisabled:false
 })
 
 //添加住院信息
@@ -188,79 +202,33 @@ const insert = () => {
     loadlist();
   });
 };
-
-// 修改
-const saveInpatientRecord = ref<InpatientRecordDto>({
-  id: "",
-  concurrencyStamp: "",
-  creationTime: "",
-  creatorId: "",
-  lastModificationTime: "",
-  lastModifierId:"",
-  isDeleted: false,
-  deleterId: "",
-  deletionTime: "",
-  patient_id: "",
-  patient_name: "",
-  admission_date: "",
-  discharge_date: "",
-  department_id: "",
-  department_name: "",
-  doctor_id: "",
-  doctor_name:"",
-  room_type: "",
-  admission_reason: "",
-  is_in_insurance: true,
-});
+//反填住院信息
 const open = (row:any) => {
   logic.dialogVisible = true
+  logic.isdisabled
   if (row == null) {
     logic.title = "新增住院信息"
+    logic.isdisabled = false
     inserttInpatientRecordInfor.value = ({
-  patient_id: "",
-  admission_date: "",
-  discharge_date: "",
-  department_id: "",
-  doctor_id: "",
-  room_type: "",
-  admission_reason: "",
-  is_in_insurance: true,
+    patient_id: "",
+    admission_date: "",
+    discharge_date: "",
+    department_id: "",
+    doctor_id: "",
+    room_type: "",
+    admission_reason: "",
+    is_in_insurance: true,
   })
   }
   else {
-    saveInpatientRecord.value = ({
-    id: row.id,
-  concurrencyStamp: row.concurrencyStamp,
-  creationTime: row.creationTime,
-  creatorId: row.creatorId,
-  lastModificationTime: row.lastModificationTime,
-  lastModifierId:row.lastModifierId,
-  isDeleted: row.isDeleted,
-  deleterId: row.deleterId,
-  deletionTime: row.deletionTime,
-  patient_id: row.patient_id,
-  patient_name: row.patient_name,
-  admission_date: row.admission_date,
-  discharge_date: row.discharge_date,
-  department_id: row.department_id,
-  department_name: row.department_name,
-  doctor_id: row.doctor_id,
-  doctor_name:row.doctor_name,
-  room_type: row.room_type,
-  admission_reason: row.admission_reason,
-  is_in_insurance: row.is_in_insurance,
-  }),
-  logic.dialogVisible = true,
-  logic.title="查看住院信息"
+    debugger;
+    logic.isdisabled = true
+    inserttInpatientRecordInfor.value = row
+    logic.dialogVisible = true,
+    logic.title="查看住院信息"
   }
   
 }
-
-
-const tableData = ref<InpatientRecordDto[]>([]);
-const formInline = ref<inpatientRecordAPIQuery>({});
-
-
 
 /** 页面加载完成后加载数据 */
 onMounted(() => {
@@ -268,3 +236,12 @@ onMounted(() => {
   GetSel();
 });
 </script>
+
+<style scoped>
+.demo-pagination-block + .demo-pagination-block {
+  margin-top: 10px;
+}
+.demo-pagination-block .demonstration {
+  margin-bottom: 16px;
+}
+</style>
