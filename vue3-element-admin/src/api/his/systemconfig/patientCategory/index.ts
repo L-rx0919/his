@@ -1,6 +1,6 @@
 import request from "@/utils/request";
 
-const Systemconfig_BASE_URL = "/api/v1/his/systemconfig/patientCategory";
+const Systemconfig_BASE_URL = "/api/v2/his/systemconfig/patientCategory";
 
 const SystemconfigAPI = {
   /**

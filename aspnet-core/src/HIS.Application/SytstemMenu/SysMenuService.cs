@@ -128,7 +128,7 @@ namespace HIS.SytstemMenu
                                 Component = "Layout",
                                 Name = "Medicaredatamanagement",
                                 Path = "Medicaredatamanagement",
-                               
+
                                 Meta = new Meta
                                 {
                                     AlwaysShow = false,
@@ -463,7 +463,20 @@ namespace HIS.SytstemMenu
                                           Title = "科室医生信息绑定"
                                          }
                                      },
-
+                                }
+                            },
+                            new SysMenuDto
+                            {
+                                Component = "his/websocket/index",
+                                Name = "websocket",
+                                Path = "websocket",
+                                Meta = new Meta
+                                {
+                                    AlwaysShow = false,
+                                    Hidden = false, 
+                                    KeepAlive = true,
+                                    Icon = "el-icon-User",
+                                    Title = "医院聊天频道"
                                 }
                             },
                         }

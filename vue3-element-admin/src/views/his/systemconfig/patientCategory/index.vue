@@ -103,7 +103,24 @@ const loadData = () => {
 //新增
 const dialogVisible = ref(false);
 //表单
-const from = ref<AdDSystemconfig>({});
+const from = ref<AdDSystemconfig>({
+  natureofPatientName: "",
+  naturecode: "",
+  typeinsurance: "",
+  hospitallogo: "",
+  status: "",
+  natureTypeCard: "",
+  medicaltype: "",
+  remarks: "",
+  concurrencyStamp: "",
+  creationTime: "",
+  creatorId: "",
+  lastModificationTime: "",
+  lastModifierId: "",
+  isDeleted: false,
+  deleterId: "",
+  deletionTime: "",
+});
 
 //确定添加
 const insert = () => {

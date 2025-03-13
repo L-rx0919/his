@@ -4,6 +4,7 @@ using Lazy.Captcha.Core.Generator;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -67,18 +68,30 @@ public class HISHttpApiHostModule : AbpModule
         ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context, configuration);
         ConfigureLocalization();
+        //配置SignalR
+        //ConfigureSignalR(context);
 
     }
+    ///// <summary>
+    ///// 配置signalR
+    ///// </summary>
+    ///// <param name="context"></param>
+    //private void ConfigureSignalR(ServiceConfigurationContext context)
+    //{
+       
+    //    context.Services.AddSignalR(options =>
+    //    {
+    //        options.KeepAliveInterval = TimeSpan.FromSeconds(5); // 心跳间隔
+    //    });
 
-
-
-
+    //}
     /// <summary>
     /// 配置验证码
     /// </summary>
     /// <param name="context"></param>
     private void ConfigureCaptcha(ServiceConfigurationContext context)
     {
+
         var builder = context.Services;
         var configuration = context.Services.GetConfiguration();
 
@@ -330,7 +343,7 @@ public class HISHttpApiHostModule : AbpModule
         app.UseAuthentication();
 
 
-
+        app.UseWebSockets();
         app.UseUnitOfWork();
         app.UseDynamicClaims();
         app.UseAuthorization();
