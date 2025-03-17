@@ -1,0 +1,13 @@
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\bin\Release\net9.0\HIS.Domain.Shared.deps.json
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\bin\Release\net9.0\HIS.Domain.Shared.dll
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\bin\Release\net9.0\HIS.Domain.Shared.pdb
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.csproj.AssemblyReference.cache
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.EmbeddedFilesManifest.cache
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.AssemblyInfoInputs.cache
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.AssemblyInfo.cs
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.csproj.CoreCompileInputs.cache
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.dll
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\refint\HIS.Domain.Shared.dll
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\HIS.Domain.Shared.pdb
+E:\HIS\aspnet-core\src\HIS.Domain.Shared\obj\Release\net9.0\ref\HIS.Domain.Shared.dll

@@ -1,0 +1,15 @@
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\bin\Release\net9.0\HIS.Application.Contracts.deps.json
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\bin\Release\net9.0\HIS.Application.Contracts.dll
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\bin\Release\net9.0\HIS.Application.Contracts.pdb
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\bin\Release\net9.0\HIS.Domain.Shared.dll
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\bin\Release\net9.0\HIS.Domain.Shared.pdb
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Application.Contracts.csproj.AssemblyReference.cache
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Application.Contracts.AssemblyInfoInputs.cache
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Application.Contracts.AssemblyInfo.cs
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Application.Contracts.csproj.CoreCompileInputs.cache
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Appl.1B5335DD.Up2Date
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Application.Contracts.dll
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\refint\HIS.Application.Contracts.dll
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\HIS.Application.Contracts.pdb
+E:\HIS\aspnet-core\src\HIS.Application.Contracts\obj\Release\net9.0\ref\HIS.Application.Contracts.dll

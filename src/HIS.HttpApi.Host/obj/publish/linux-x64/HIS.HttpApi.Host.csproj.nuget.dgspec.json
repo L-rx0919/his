@@ -1,0 +1,720 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\HIS\\aspnet-core\\src\\HIS.HttpApi.Host\\HIS.HttpApi.Host.csproj": {}
+  },
+  "projects": {
+    "E:\\HIS\\aspnet-core\\HIS.Utility\\HIS.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HIS\\aspnet-core\\HIS.Utility\\HIS.Utility.csproj",
+        "projectName": "HIS.Utility",
+        "projectPath": "E:\\HIS\\aspnet-core\\HIS.Utility\\HIS.Utility.csproj",
+        "packagesPath": "C:\\Users\\x1317\\.nuget\\packages\\",
+        "outputPath": "E:\\HIS\\aspnet-core\\HIS.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "E:\\HIS\\aspnet-core\\NuGet.Config",
+          "C:\\Users\\x1317\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\x1317\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\HIS\\aspnet-core\\src\\HIS.Application.Contracts\\HIS.Application.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HIS\\aspnet-core\\src\\HIS.Application.Contracts\\HIS.Application.Contracts.csproj",
+        "projectName": "HIS.Application.Contracts",
+        "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Application.Contracts\\HIS.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\x1317\\.nuget\\packages\\",
+        "outputPath": "E:\\HIS\\aspnet-core\\src\\HIS.Application.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "E:\\HIS\\aspnet-core\\NuGet.Config",
+          "C:\\Users\\x1317\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\x1317\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\HIS.Domain.Shared.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\HIS.Domain.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Volo.Abp.Ddd.Domain": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.ObjectExtending": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.SettingManagement.Application.Contracts": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\HIS\\aspnet-core\\src\\HIS.Application\\HIS.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HIS\\aspnet-core\\src\\HIS.Application\\HIS.Application.csproj",
+        "projectName": "HIS.Application",
+        "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Application\\HIS.Application.csproj",
+        "packagesPath": "C:\\Users\\x1317\\.nuget\\packages\\",
+        "outputPath": "E:\\HIS\\aspnet-core\\src\\HIS.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "E:\\HIS\\aspnet-core\\NuGet.Config",
+          "C:\\Users\\x1317\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\x1317\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "E:\\HIS\\aspnet-core\\HIS.Utility\\HIS.Utility.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\HIS.Utility\\HIS.Utility.csproj"
+              },
+              "E:\\HIS\\aspnet-core\\src\\HIS.Application.Contracts\\HIS.Application.Contracts.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Application.Contracts\\HIS.Application.Contracts.csproj"
+              },
+              "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\HIS.Domain.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\HIS.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CSRedisCore": {
+              "target": "Package",
+              "version": "[3.8.804, )"
+            },
+            "Lazy.Captcha.Core": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.Azure.Management.Network": {
+              "target": "Package",
+              "version": "[26.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "UAParser": {
+              "target": "Package",
+              "version": "[3.1.47, )"
+            },
+            "Volo.Abp.SettingManagement.Application": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\HIS.Domain.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\HIS.Domain.Shared.csproj",
+        "projectName": "HIS.Domain.Shared",
+        "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\HIS.Domain.Shared.csproj",
+        "packagesPath": "C:\\Users\\x1317\\.nuget\\packages\\",
+        "outputPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "E:\\HIS\\aspnet-core\\NuGet.Config",
+          "C:\\Users\\x1317\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\x1317\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Microsoft.Extensions.FileProviders.Embedded": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Volo.Abp.AuditLogging.Domain.Shared": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.BackgroundJobs.Domain.Shared": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.SettingManagement.Domain.Shared": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\HIS.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\HIS.Domain.csproj",
+        "projectName": "HIS.Domain",
+        "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\HIS.Domain.csproj",
+        "packagesPath": "C:\\Users\\x1317\\.nuget\\packages\\",
+        "outputPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "E:\\HIS\\aspnet-core\\NuGet.Config",
+          "C:\\Users\\x1317\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\x1317\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\HIS.Domain.Shared.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain.Shared\\HIS.Domain.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Volo.Abp.AuditLogging.Domain": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.BackgroundJobs.Domain": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.OpenIddict.Domain": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\HIS\\aspnet-core\\src\\HIS.EntityFrameworkCore\\HIS.EntityFrameworkCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HIS\\aspnet-core\\src\\HIS.EntityFrameworkCore\\HIS.EntityFrameworkCore.csproj",
+        "projectName": "HIS.EntityFrameworkCore",
+        "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.EntityFrameworkCore\\HIS.EntityFrameworkCore.csproj",
+        "packagesPath": "C:\\Users\\x1317\\.nuget\\packages\\",
+        "outputPath": "E:\\HIS\\aspnet-core\\src\\HIS.EntityFrameworkCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "E:\\HIS\\aspnet-core\\NuGet.Config",
+          "C:\\Users\\x1317\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\x1317\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\HIS.Domain.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Domain\\HIS.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Volo.Abp.AuditLogging.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.BackgroundJobs.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.EntityFrameworkCore.MySQL": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.SettingManagement.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\HIS\\aspnet-core\\src\\HIS.HttpApi.Host\\HIS.HttpApi.Host.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HIS\\aspnet-core\\src\\HIS.HttpApi.Host\\HIS.HttpApi.Host.csproj",
+        "projectName": "HIS.HttpApi.Host",
+        "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.HttpApi.Host\\HIS.HttpApi.Host.csproj",
+        "packagesPath": "C:\\Users\\x1317\\.nuget\\packages\\",
+        "outputPath": "E:\\HIS\\aspnet-core\\src\\HIS.HttpApi.Host\\obj\\publish\\linux-x64\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "E:\\HIS\\aspnet-core\\NuGet.Config",
+          "C:\\Users\\x1317\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\x1317\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "E:\\HIS\\aspnet-core\\src\\HIS.Application\\HIS.Application.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.Application\\HIS.Application.csproj"
+              },
+              "E:\\HIS\\aspnet-core\\src\\HIS.EntityFrameworkCore\\HIS.EntityFrameworkCore.csproj": {
+                "projectPath": "E:\\HIS\\aspnet-core\\src\\HIS.EntityFrameworkCore\\HIS.EntityFrameworkCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CSRedisCore": {
+              "target": "Package",
+              "version": "[3.8.804, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Serilog.Sinks.Async": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Volo.Abp.AspNetCore.Serilog": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.Autofac": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Volo.Abp.Swashbuckle": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[9.0.3, 9.0.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
