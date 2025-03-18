@@ -136,6 +136,19 @@ export default defineMock([
                 params: null,
               },
             },
+            {
+              path: "message-send",
+              component: "system/MessageSend",
+              name: "MessageSend",
+              meta: {
+                title: "发送消息",
+                icon: "message",
+                hidden: false,
+                keepAlive: true,
+                alwaysShow: false,
+                params: null,
+              },
+            },
           ],
         },
         {
@@ -1419,7 +1432,7 @@ export default defineMock([
               type: "MENU",
               routeName: null,
               routePath: "dict-demo",
-              component: "demo/dict",
+              component: "demo/dictionary",
               sort: 4,
               visible: 1,
               icon: "",
