@@ -23,6 +23,7 @@
 
   <ItemGroup>  
     <PackageReference Include="CSRedisCore" Version="3.8.804" />
+	  <PackageReference Include="AlibabaCloud.SDK.Dysmsapi20170525" Version="3.1.1" />
     <PackageReference Include="Lazy.Captcha.Core" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />

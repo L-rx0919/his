@@ -7,7 +7,7 @@
         </div>
       </template>
 
-      <el-form ref="smsFormRef" label-width="100px" @submit.prevent>
+      <el-form ref="smsFormRef" label-width="100px">
         <el-form-item label="手机号码" prop="phoneNumber">
           <el-input v-model="smsForm.phoneNumber" placeholder="请输入手机号码" />
         </el-form-item>
@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import SMSAPI, { dto } from "@/api/his/sms/sms";
+import SMSAPI, { dto } from "@/api/his/sms/index";
 
 const smsForm = ref<dto>({
   phoneNumber: "",

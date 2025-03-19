@@ -78,7 +78,7 @@ import patientChenterApi, {
   queryDto,
   queryId,
   queryList,
-} from "@/api/his/patientCenter/index";
+} from "@/api/his/PatientInformation/patientCenter/index";
 
 //切换患者
 const dialogVisible = ref(false);

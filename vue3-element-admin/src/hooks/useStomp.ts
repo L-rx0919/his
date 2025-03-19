@@ -44,7 +44,7 @@ export function useStomp(options: UseStompOptions = {}) {
       client.value = new Client({
         brokerURL: brokerURL.value,
         reconnectDelay: options.reconnectDelay ?? 5000,
-        debug: options.debug ? (msg) => console.log("[STOMP]", msg) : () => {},
+        debug: options.debug ? (msg) => console.log("[STOMP]", msg) : () => { },
         connectHeaders: {
           Authorization: `Bearer ${token}`,
         },

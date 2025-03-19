@@ -94,7 +94,7 @@ import PatientAPI, {
   type GetPatientNameAndIdDto,
   type GetDepartmentDto,
   type PatientCardInfoList,
-} from "@/api/his/patient/index";
+} from "@/api/his/PatientInformation/patient/index";
 
 const tableData = ref<PatientCardInfoList[]>([]);
 
