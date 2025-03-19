@@ -38,8 +38,8 @@ namespace HIS.SytstemMenu
                 Data = new List<SysMenuDto> {
 
                     new SysMenuDto
-{
-    Component = "Layout",
+                    {
+                   Component = "Layout",
     Name = "/system/user",
     Path = "/his",
     Redirect = "/system/user/settlementSystem",
@@ -65,7 +65,7 @@ namespace HIS.SytstemMenu
                 Icon = "el-icon-User",
                 Title = "病人信息"
             },
-            Children = new List<SysMenuDto> {
+             Children = new List<SysMenuDto> {
                 new SysMenuDto
                 {
                     Component = "his/PatientInformation/patient/index",
@@ -83,7 +83,7 @@ namespace HIS.SytstemMenu
                 {
                     Component = "his/PatientInformation/patientCenter/index",
                     Name = "patientCenter",
-                    Path = "patientCenter",
+                              Path = "patientCenter",
                     Meta = new Meta
                     {
                         AlwaysShow = false,
@@ -92,9 +92,9 @@ namespace HIS.SytstemMenu
                         Title = "住院患者中心"
                     }
                 }
-            }
-        },
-                            new SysMenuDto
+                      }
+                    },
+                          new SysMenuDto
                             {
                                 Component = "his/inpatientRecord/index",
                                 Name = "Inpatientmanagement",
